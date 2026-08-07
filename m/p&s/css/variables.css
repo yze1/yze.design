@@ -1,0 +1,16 @@
+
+:root {
+    /* --text: #7f7f7f; */
+
+    /* --black: #101010;
+    --white: #f8f9fa; */
+    --black: #1d1d1d;
+    /* --white: #dedede; */
+    --white: #FAF9F6;
+    /* --red: #ff0000; */
+    --red: #ff2e24;
+
+    --margin: 150px;
+    --columns: 12; --gutter: 25px; --spacing: 30px;
+    --inner-gap: calc(var(--spacing) / 2);
+}

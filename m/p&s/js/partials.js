@@ -1,0 +1,64 @@
+const projectRoot = new URL("../../", document.currentScript.src);
+
+async function loadPartial(selector, filePath) {
+    const element = document.querySelector(selector);
+
+    if (!element) {
+        console.error(`Partial container not found: ${selector}`);
+        return;
+    }
+
+    try {
+        const response = await fetch(new URL(filePath, projectRoot), {
+            cache: "no-store"
+        });
+
+        if (!response.ok) {
+            throw new Error(
+                `Could not load ${filePath}: ${response.status}`
+            );
+        }
+
+        element.innerHTML = await response.text();
+
+        element.querySelectorAll("[href^='/']").forEach(link => {
+            link.href = new URL(link.getAttribute("href").slice(1), projectRoot);
+        });
+
+        const theme = element.dataset.theme;
+
+        if (theme && element.firstElementChild) {
+            element.firstElementChild.classList.add(theme);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await Promise.all([
+        loadPartial(
+            "#header",
+            "p&s/partials/header.html"
+        ),
+        loadPartial(
+            "#footer",
+            "p&s/partials/footer.html"
+        )
+    ]);
+
+    document.dispatchEvent(new Event("partialsloaded"));
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+            const open = mobileMenu.classList.toggle("open");
+
+            menuToggle.textContent = open ? "×" : "=";
+            menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+            menuToggle.setAttribute("aria-expanded", String(open));
+        });
+    }
+});

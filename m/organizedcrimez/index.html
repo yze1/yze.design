@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>organizedcrimez</title>
+    <meta
+      name="description"
+      content="Minimal editorial brand website with Shopify-linked product pages."
+    />
+    <meta property="og:title" content="organizedcrimez" />
+    <meta
+      property="og:description"
+      content="Minimal editorial brand website with Shopify-linked product pages."
+    />
+    <meta property="og:image" content="assets/images/og-placeholder.jpg" />
+    <link rel="canonical" href="https://example.com/" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/layout.js" defer></script>
+    <script src="js/main.js?v=2" defer></script>
+  </head>
+  <body class="launch-locked">
+    <div class="loading-screen" data-loader>
+      <div class="loader-logo">
+        <img
+          src="assets/logos/logo.svg"
+          alt="organizedcrimez"
+          onerror="
+            this.hidden = true;
+            this.nextElementSibling.hidden = false;
+          "
+        />
+        <span hidden>organizedcrimez</span>
+      </div>
+    </div>
+    <section
+      class="launch-gate"
+      data-launch-gate
+      aria-label="Organized Crimez launch access"
+    >
+      <video
+        class="launch-gate__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="auto"
+        disablepictureinpicture
+        controlslist="nodownload noplaybackrate noremoteplayback"
+        aria-hidden="true"
+      >
+        <source src="assets/videos/lightning.mp4" type="video/mp4" />
+      </video>
+      <div class="launch-gate__overlay" aria-hidden="true"></div>
+      <div class="launch-gate__content">
+        <img
+          class="launch-gate__logo"
+          src="assets/logos/logo_white.svg"
+          alt="organizedcrimez"
+        />
+        <div class="countdown" data-countdown aria-label="Launch countdown">
+          <div class="countdown__unit">
+            <span data-countdown-days>60</span>
+            <small>Days</small>
+          </div>
+          <div class="countdown__unit">
+            <span data-countdown-hours>00</span>
+            <small>Hours</small>
+          </div>
+          <div class="countdown__unit">
+            <span data-countdown-minutes>00</span>
+            <small>Minutes</small>
+          </div>
+          <div class="countdown__unit">
+            <span data-countdown-seconds>00</span>
+            <small>Seconds</small>
+          </div>
+        </div>
+        <form class="signup-form launch-gate__signup" novalidate>
+          <label class="sr-only" for="launch-email">Email address</label
+          ><input
+            id="launch-email"
+            name="email"
+            type="email"
+            placeholder="Email address"
+            autocomplete="email"
+            inputmode="email"
+            required
+          /><input
+            class="signup-form__bot-field"
+            name="website"
+            type="text"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          /><button type="submit">Subscribe</button>
+        </form>
+        <p class="signup-consent">
+          By subscribing, you agree to receive email updates. You can unsubscribe at any time.
+        </p>
+        <div class="form-message" aria-live="polite"></div>
+        <form class="password-form" data-password-form novalidate hidden>
+          <!-- <label for="launch-password">Enter using password</label> -->
+          <div class="password-form__row">
+            <input
+              id="launch-password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="Enter using password"
+              data-password-input
+            /><button type="submit">Enter</button>
+          </div>
+          <div class="password-message" data-password-message aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+    <div data-site-header></div>
+    <main>
+      <section class="hero">
+        <!-- <div class="video-placeholder">Hero product video pending</div> -->
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="assets/images/lightning-poster.jpg"
+        >
+          <source src="assets/videos/showcase.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-cta centered">
+          <form class="signup-form" novalidate>
+            <label class="sr-only" for="hero-email">Email address</label
+            ><input
+              id="hero-email"
+              name="email"
+              type="email"
+              placeholder="Email address"
+              autocomplete="email"
+              inputmode="email"
+              required
+            /><input
+              class="signup-form__bot-field"
+              name="website"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            /><button type="submit">Subscribe</button>
+          </form>
+          <p class="signup-consent">
+            By subscribing, you agree to receive email updates. You can unsubscribe at any time.
+          </p>
+          <div class="form-message" aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="section intro fade-in">
+        <p>
+          <!-- Brand introduction placeholder. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Morbi sollicitudin rutrum nunc, sed
+          tincidunt dolor congue in. Integer tristique vulputate gravida. -->
+          Not for the weak<br>made for the few
+        </p>
+      </section>
+      <section class="section" id="shop" data-horizontal-gallery-section>
+        <div class="section-heading">
+          <h2>Current products</h2>
+        </div>
+        <div class="two-row-gallery" data-product-gallery></div>
+      </section>
+    </main>
+    <section class="product-overlay" data-product-overlay aria-hidden="true">
+      <div class="product-overlay__backdrop" data-product-close></div>
+      <div
+        class="product-overlay__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="product-overlay-title"
+      >
+        <button
+          class="product-overlay__close"
+          type="button"
+          data-product-close
+          aria-label="Close product"
+        >
+          <img src="assets/icons/close.svg" alt="" aria-hidden="true" />
+        </button>
+        <div class="product-layout" data-product-page>
+          <section class="product-info fade-in">
+            <span class="product-meta" data-product-availability hidden></span>
+            <h1
+              class="product-title"
+              id="product-overlay-title"
+              data-product-name
+            >
+              Product
+            </h1>
+            <p data-product-description></p>
+            <ul class="details" data-product-details></ul>
+          </section>
+          <section
+            class="product-media image-stack fade-in"
+            data-product-images
+          ></section>
+          <aside class="product-actions fade-in">
+            <span class="eyebrow">Select size</span>
+            <div class="size-grid" data-product-sizes></div>
+            <a
+              class="button"
+              data-shopify-link
+              href="https://organizedcrimez.com/password"
+              target="_blank"
+              rel="noopener"
+              >View on Shopify</a
+            >
+          </aside>
+        </div>
+        <section class="product-related fade-in" data-product-related hidden>
+          <div class="section-heading">
+            <h2>More products</h2>
+          </div>
+          <div class="two-row-gallery" data-related-product-gallery></div>
+        </section>
+      </div>
+    </section>
+    <section
+      class="image-overlay"
+      data-image-overlay
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Product image"
+    >
+      <button
+        class="image-overlay__backdrop"
+        type="button"
+        data-image-close
+        aria-label="Close image"
+      ></button>
+      <div class="image-overlay__panel">
+        <button
+          class="image-overlay__close"
+          type="button"
+          data-image-close
+          aria-label="Close image"
+        >
+          <img src="assets/icons/close.svg" alt="" aria-hidden="true" />
+        </button>
+        <figure class="image-overlay__figure">
+          <img data-image-overlay-img alt="" />
+          <figcaption data-image-overlay-caption></figcaption>
+        </figure>
+      </div>
+    </section>
+    <div data-site-footer></div>
+  </body>
+</html>

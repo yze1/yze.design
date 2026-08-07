@@ -58,3 +58,13 @@ m/thewatertraveler/images/hero-crew.jpg filter=lfs diff=lfs merge=lfs -text
 m/scy/contact/media/newsletter.JPEG filter=lfs diff=lfs merge=lfs -text
 m/scy/about/media/about.jpg filter=lfs diff=lfs merge=lfs -text
 m/scy/assets/media/home-screen.jpg filter=lfs diff=lfs merge=lfs -text
+democratising/process/content/ColourTransfer02Comparisson.mp4 filter=lfs diff=lfs merge=lfs -text
+papas/process/content/ColourTransfer02Comparisson.mp4 filter=lfs diff=lfs merge=lfs -text
+m/thewatertraveler/dist/images/tahoe[[:space:]]video.mp4 filter=lfs diff=lfs merge=lfs -text
+m/thewatertraveler/images/tahoe[[:space:]]video.mp4 filter=lfs diff=lfs merge=lfs -text
+dynamic/process/Content/Packaging/ProductAnimation/2.mp4 filter=lfs diff=lfs merge=lfs -text
+offgrid/process/Content/Packaging/ProductAnimation/2.mp4 filter=lfs diff=lfs merge=lfs -text
+dynamic/process/Content/Swatch/22.mov filter=lfs diff=lfs merge=lfs -text
+offgrid/process/Content/Swatch/22.mov filter=lfs diff=lfs merge=lfs -text
+dynamic/process/Content/Typography/Research/SonanticAnimation.gif filter=lfs diff=lfs merge=lfs -text
+offgrid/process/Content/Typography/Research/SonanticAnimation.gif filter=lfs diff=lfs merge=lfs -text

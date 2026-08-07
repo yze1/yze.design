@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="codex-tooltips-style">.ct{z-index:999;opacity:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none;-webkit-transition:opacity 50ms ease-in,-webkit-transform 70ms cubic-bezier(.215,.61,.355,1);transition:opacity 50ms ease-in,-webkit-transform 70ms cubic-bezier(.215,.61,.355,1);transition:opacity 50ms ease-in,transform 70ms cubic-bezier(.215,.61,.355,1);transition:opacity 50ms ease-in,transform 70ms cubic-bezier(.215,.61,.355,1),-webkit-transform 70ms cubic-bezier(.215,.61,.355,1);will-change:opacity,top,left;-webkit-box-shadow:0 8px 12px 0 rgba(29,32,43,.17),0 4px 5px -3px rgba(5,6,12,.49);box-shadow:0 8px 12px 0 rgba(29,32,43,.17),0 4px 5px -3px rgba(5,6,12,.49);border-radius:9px}.ct,.ct:before{position:absolute;top:0;left:0}.ct:before{content:"";bottom:0;right:0;background-color:#1d202b;z-index:-1;border-radius:4px}@supports(-webkit-mask-box-image:url("")){.ct:before{border-radius:0;-webkit-mask-box-image:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M10.71 0h2.58c3.02 0 4.64.42 6.1 1.2a8.18 8.18 0 013.4 3.4C23.6 6.07 24 7.7 24 10.71v2.58c0 3.02-.42 4.64-1.2 6.1a8.18 8.18 0 01-3.4 3.4c-1.47.8-3.1 1.21-6.11 1.21H10.7c-3.02 0-4.64-.42-6.1-1.2a8.18 8.18 0 01-3.4-3.4C.4 17.93 0 16.3 0 13.29V10.7c0-3.02.42-4.64 1.2-6.1a8.18 8.18 0 013.4-3.4C6.07.4 7.7 0 10.71 0z"/></svg>') 48% 41% 37.9% 53.3%}}@media (--mobile){.ct{display:none}}.ct__content{padding:6px 10px;color:#cdd1e0;font-size:12px;text-align:center;letter-spacing:.02em;line-height:1em}.ct:after{content:"";width:8px;height:8px;position:absolute;background-color:#1d202b;z-index:-1}.ct--bottom{-webkit-transform:translateY(5px);transform:translateY(5px)}.ct--bottom:after{top:-3px;left:50%;-webkit-transform:translateX(-50%) rotate(-45deg);transform:translateX(-50%) rotate(-45deg)}.ct--top{-webkit-transform:translateY(-5px);transform:translateY(-5px)}.ct--top:after{top:auto;bottom:-3px;left:50%;-webkit-transform:translateX(-50%) rotate(-45deg);transform:translateX(-50%) rotate(-45deg)}.ct--left{-webkit-transform:translateX(-5px);transform:translateX(-5px)}.ct--left:after{top:50%;left:auto;right:0;-webkit-transform:translate(41.6%,-50%) rotate(-45deg);transform:translate(41.6%,-50%) rotate(-45deg)}.ct--right{-webkit-transform:translateX(5px);transform:translateX(5px)}.ct--right:after{top:50%;left:0;-webkit-transform:translate(-41.6%,-50%) rotate(-45deg);transform:translate(-41.6%,-50%) rotate(-45deg)}.ct--shown{opacity:1;-webkit-transform:none;transform:none}</style><style id="editor-js-styles">:root{--selectionColor: #e1f2ff;--inlineSelectionColor: #d4ecff;--bg-light: #eff2f5;--grayText: #707684;--color-dark: #1D202B;--color-active-icon: #388AE5;--color-gray-border: rgba(201, 201, 204, .48);--content-width: 650px;--narrow-mode-right-padding: 50px;--toolbox-buttons-size: 26px;--toolbox-buttons-size--mobile: 36px;--icon-size: 20px;--icon-size--mobile: 28px;--block-padding-vertical: .4em;--color-line-gray: #EFF0F1 }.codex-editor{position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:1}.codex-editor .hide{display:none}.codex-editor__redactor [contenteditable]:empty:after{content:"\feff"}@media (min-width: 651px){.codex-editor--narrow .codex-editor__redactor{margin-right:50px}}@media (min-width: 651px){.codex-editor--narrow.codex-editor--rtl .codex-editor__redactor{margin-left:50px;margin-right:0}}@media (min-width: 651px){.codex-editor--narrow .ce-toolbar__actions{right:-5px}}.codex-editor-copyable{position:absolute;height:1px;width:1px;top:-400%;opacity:.001}.codex-editor-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:999;pointer-events:none;overflow:hidden}.codex-editor-overlay__container{position:relative;pointer-events:auto;z-index:0}.codex-editor-overlay__rectangle{position:absolute;pointer-events:none;background-color:#2eaadc33;border:1px solid transparent}.codex-editor svg{max-height:100%}.codex-editor path{stroke:currentColor}.codex-editor ::-moz-selection{background-color:#d4ecff}.codex-editor ::selection{background-color:#d4ecff}.codex-editor--toolbox-opened [contentEditable=true][data-placeholder]:focus:before{opacity:0!important}.ce-scroll-locked{overflow:hidden}.ce-scroll-locked--hard{overflow:hidden;top:calc(-1 * var(--window-scroll-offset));position:fixed;width:100%}.ce-toolbar{position:absolute;left:0;right:0;top:0;-webkit-transition:opacity .1s ease;transition:opacity .1s ease;will-change:opacity,top;display:none}.ce-toolbar--opened{display:block}.ce-toolbar__content{max-width:650px;margin:0 auto;position:relative}.ce-toolbar__plus{color:#1d202b;cursor:pointer;width:26px;height:26px;border-radius:7px;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-ms-flex-negative:0;flex-shrink:0}@media (max-width: 650px){.ce-toolbar__plus{width:36px;height:36px}}@media (hover: hover){.ce-toolbar__plus:hover{background-color:#eff2f5}}.ce-toolbar__plus--active{background-color:#eff2f5;-webkit-animation:bounceIn .75s 1;animation:bounceIn .75s 1;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}.ce-toolbar__plus-shortcut{opacity:.6;word-spacing:-2px;margin-top:5px}@media (max-width: 650px){.ce-toolbar__plus{position:absolute;background-color:#fff;border:1px solid #E8E8EB;-webkit-box-shadow:0 3px 15px -3px rgba(13,20,33,.13);box-shadow:0 3px 15px -3px #0d142121;border-radius:6px;z-index:2;position:static}.ce-toolbar__plus--left-oriented:before{left:15px;margin-left:0}.ce-toolbar__plus--right-oriented:before{left:auto;right:15px;margin-left:0}}.ce-toolbar__actions{position:absolute;right:100%;opacity:0;display:-webkit-box;display:-ms-flexbox;display:flex;padding-right:5px}.ce-toolbar__actions--opened{opacity:1}@media (max-width: 650px){.ce-toolbar__actions{right:auto}}.ce-toolbar__settings-btn{color:#1d202b;width:26px;height:26px;border-radius:7px;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;margin-left:3px;cursor:pointer;user-select:none}@media (max-width: 650px){.ce-toolbar__settings-btn{width:36px;height:36px}}@media (hover: hover){.ce-toolbar__settings-btn:hover{background-color:#eff2f5}}.ce-toolbar__settings-btn--active{background-color:#eff2f5;-webkit-animation:bounceIn .75s 1;animation:bounceIn .75s 1;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}@media (min-width: 651px){.ce-toolbar__settings-btn{width:24px}}.ce-toolbar__settings-btn--hidden{display:none}@media (max-width: 650px){.ce-toolbar__settings-btn{position:absolute;background-color:#fff;border:1px solid #E8E8EB;-webkit-box-shadow:0 3px 15px -3px rgba(13,20,33,.13);box-shadow:0 3px 15px -3px #0d142121;border-radius:6px;z-index:2;position:static}.ce-toolbar__settings-btn--left-oriented:before{left:15px;margin-left:0}.ce-toolbar__settings-btn--right-oriented:before{left:auto;right:15px;margin-left:0}}.ce-toolbar__plus svg,.ce-toolbar__settings-btn svg{width:24px;height:24px}@media (min-width: 651px){.codex-editor--narrow .ce-toolbar__plus{left:5px}}@media (min-width: 651px){.codex-editor--narrow .ce-toolbox .ce-popover{right:0;left:auto;left:initial}}.ce-inline-toolbar{--y-offset: 8px;--color-background-icon-active: rgba(56, 138, 229, .1);--color-text-icon-active: #388AE5;--color-text-primary: black;position:absolute;visibility:hidden;-webkit-transition:opacity .25s ease;transition:opacity .25s ease;will-change:opacity,left,top;top:0;left:0;z-index:3;opacity:1;visibility:visible}.ce-inline-toolbar [hidden]{display:none!important}.ce-inline-toolbar__toggler-and-button-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;padding:0 6px}.ce-inline-toolbar__buttons{display:-webkit-box;display:-ms-flexbox;display:flex}.ce-inline-toolbar__dropdown{display:-webkit-box;display:-ms-flexbox;display:flex;padding:6px;margin:0 6px 0 -6px;-webkit-box-align:center;-ms-flex-align:center;align-items:center;cursor:pointer;border-right:1px solid rgba(201,201,204,.48);-webkit-box-sizing:border-box;box-sizing:border-box}@media (hover: hover){.ce-inline-toolbar__dropdown:hover{background:#eff2f5}}.ce-inline-toolbar__dropdown--hidden{display:none}.ce-inline-toolbar__dropdown-content,.ce-inline-toolbar__dropdown-arrow{display:-webkit-box;display:-ms-flexbox;display:flex}.ce-inline-toolbar__dropdown-content svg,.ce-inline-toolbar__dropdown-arrow svg{width:20px;height:20px}.ce-inline-toolbar__shortcut{opacity:.6;word-spacing:-3px;margin-top:3px}.ce-inline-tool{color:var(--color-text-primary);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border:0;border-radius:4px;line-height:normal;height:100%;padding:0;width:28px;background-color:transparent;cursor:pointer}@media (max-width: 650px){.ce-inline-tool{width:36px;height:36px}}@media (hover: hover){.ce-inline-tool:hover{background-color:#f8f8f8}}.ce-inline-tool svg{display:block;width:20px;height:20px}@media (max-width: 650px){.ce-inline-tool svg{width:28px;height:28px}}.ce-inline-tool--link .icon--unlink,.ce-inline-tool--unlink .icon--link{display:none}.ce-inline-tool--unlink .icon--unlink{display:inline-block;margin-bottom:-1px}.ce-inline-tool-input{background:#F8F8F8;border:1px solid rgba(226,226,229,.2);border-radius:6px;padding:4px 8px;font-size:14px;line-height:22px;outline:none;margin:0;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;display:none;font-weight:500;-webkit-appearance:none;font-family:inherit}@media (max-width: 650px){.ce-inline-tool-input{font-size:15px;font-weight:500}}.ce-inline-tool-input::-webkit-input-placeholder{color:#707684}.ce-inline-tool-input::-moz-placeholder{color:#707684}.ce-inline-tool-input:-ms-input-placeholder{color:#707684}.ce-inline-tool-input::-ms-input-placeholder{color:#707684}.ce-inline-tool-input::placeholder{color:#707684}.ce-inline-tool-input--showed{display:block}.ce-inline-tool--active{background:var(--color-background-icon-active);color:var(--color-text-icon-active)}@-webkit-keyframes fade-in{0%{opacity:0}to{opacity:1}}@keyframes fade-in{0%{opacity:0}to{opacity:1}}.ce-block{-webkit-animation:fade-in .3s ease;animation:fade-in .3s ease;-webkit-animation-fill-mode:none;animation-fill-mode:none;-webkit-animation-fill-mode:initial;animation-fill-mode:initial}.ce-block:first-of-type{margin-top:0}.ce-block--selected .ce-block__content{background:#e1f2ff}.ce-block--selected .ce-block__content [contenteditable]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.ce-block--selected .ce-block__content img,.ce-block--selected .ce-block__content .ce-stub{opacity:.55}.ce-block--stretched .ce-block__content{max-width:none}.ce-block__content{position:relative;max-width:650px;margin:0 auto;-webkit-transition:background-color .15s ease;transition:background-color .15s ease}.ce-block--drop-target .ce-block__content:before{content:"";position:absolute;top:100%;left:-20px;margin-top:-1px;height:8px;width:8px;border:solid #388AE5;border-width:1px 1px 0 0;-webkit-transform-origin:right;transform-origin:right;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.ce-block--drop-target .ce-block__content:after{content:"";position:absolute;top:100%;height:1px;width:100%;color:#388ae5;background:repeating-linear-gradient(90deg,#388AE5,#388AE5 1px,#fff 1px,#fff 6px)}.ce-block a{cursor:pointer;-webkit-text-decoration:underline;text-decoration:underline}.ce-block b{font-weight:700}.ce-block i{font-style:italic}@-webkit-keyframes bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}20%{-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}60%{-webkit-transform:scale3d(1,1,1);transform:scaleZ(1)}}@keyframes bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}20%{-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}60%{-webkit-transform:scale3d(1,1,1);transform:scaleZ(1)}}@-webkit-keyframes selectionBounce{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}50%{-webkit-transform:scale3d(1.01,1.01,1.01);transform:scale3d(1.01,1.01,1.01)}70%{-webkit-transform:scale3d(1,1,1);transform:scaleZ(1)}}@keyframes selectionBounce{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}50%{-webkit-transform:scale3d(1.01,1.01,1.01);transform:scale3d(1.01,1.01,1.01)}70%{-webkit-transform:scale3d(1,1,1);transform:scaleZ(1)}}@-webkit-keyframes buttonClicked{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{-webkit-transform:scale3d(.95,.95,.95);transform:scale3d(.95,.95,.95)}60%{-webkit-transform:scale3d(1.02,1.02,1.02);transform:scale3d(1.02,1.02,1.02)}80%{-webkit-transform:scale3d(1,1,1);transform:scaleZ(1)}}@keyframes buttonClicked{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{-webkit-transform:scale3d(.95,.95,.95);transform:scale3d(.95,.95,.95)}60%{-webkit-transform:scale3d(1.02,1.02,1.02);transform:scale3d(1.02,1.02,1.02)}80%{-webkit-transform:scale3d(1,1,1);transform:scaleZ(1)}}.cdx-block{padding:.4em 0}.cdx-block::-webkit-input-placeholder{line-height:normal!important}.cdx-input{border:1px solid rgba(201,201,204,.48);-webkit-box-shadow:inset 0 1px 2px 0 rgba(35,44,72,.06);box-shadow:inset 0 1px 2px #232c480f;border-radius:3px;padding:10px 12px;outline:none;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.cdx-input[data-placeholder]:before{position:static!important}.cdx-input[data-placeholder]:before{display:inline-block;width:0;white-space:nowrap;pointer-events:none}.cdx-settings-button{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;border-radius:3px;cursor:pointer;border:0;outline:none;background-color:transparent;vertical-align:bottom;color:inherit;margin:0;min-width:26px;min-height:26px}.cdx-settings-button--focused{background:rgba(34,186,255,.08)!important}.cdx-settings-button--focused{-webkit-box-shadow:inset 0 0 0px 1px rgba(7,161,227,.08);box-shadow:inset 0 0 0 1px #07a1e314}.cdx-settings-button--focused-animated{-webkit-animation-name:buttonClicked;animation-name:buttonClicked;-webkit-animation-duration:.25s;animation-duration:.25s}.cdx-settings-button--active{color:#388ae5}.cdx-settings-button svg{width:auto;height:auto}@media (max-width: 650px){.cdx-settings-button svg{width:28px;height:28px}}@media (max-width: 650px){.cdx-settings-button{width:36px;height:36px;border-radius:8px}}@media (hover: hover){.cdx-settings-button:hover{background-color:#eff2f5}}.cdx-loader{position:relative;border:1px solid rgba(201,201,204,.48)}.cdx-loader:before{content:"";position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-11px 0 0 -11px;border:2px solid rgba(201,201,204,.48);border-left-color:#388ae5;border-radius:50%;-webkit-animation:cdxRotation 1.2s infinite linear;animation:cdxRotation 1.2s infinite linear}@-webkit-keyframes cdxRotation{0%{-webkit-transform:rotate(0deg);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes cdxRotation{0%{-webkit-transform:rotate(0deg);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.cdx-button{padding:13px;border-radius:3px;border:1px solid rgba(201,201,204,.48);font-size:14.9px;background:#fff;-webkit-box-shadow:0 2px 2px 0 rgba(18,30,57,.04);box-shadow:0 2px 2px #121e390a;color:#707684;text-align:center;cursor:pointer}@media (hover: hover){.cdx-button:hover{background:#FBFCFE;-webkit-box-shadow:0 1px 3px 0 rgba(18,30,57,.08);box-shadow:0 1px 3px #121e3914}}.cdx-button svg{height:20px;margin-right:.2em;margin-top:-2px}.ce-stub{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:12px 18px;margin:10px 0;border-radius:10px;background:#eff2f5;border:1px solid #EFF0F1;color:#707684;font-size:14px}.ce-stub svg{width:20px;height:20px}.ce-stub__info{margin-left:14px}.ce-stub__title{font-weight:500;text-transform:capitalize}.codex-editor.codex-editor--rtl{direction:rtl}.codex-editor.codex-editor--rtl .cdx-list{padding-left:0;padding-right:40px}.codex-editor.codex-editor--rtl .ce-toolbar__plus{right:-26px;left:auto}.codex-editor.codex-editor--rtl .ce-toolbar__actions{right:auto;left:-26px}@media (max-width: 650px){.codex-editor.codex-editor--rtl .ce-toolbar__actions{margin-left:0;margin-right:auto;padding-right:0;padding-left:10px}}.codex-editor.codex-editor--rtl .ce-settings{left:5px;right:auto}.codex-editor.codex-editor--rtl .ce-settings:before{right:auto;left:25px}.codex-editor.codex-editor--rtl .ce-settings__button:not(:nth-child(3n+3)){margin-left:3px;margin-right:0}.codex-editor.codex-editor--rtl .ce-conversion-tool__icon{margin-right:0;margin-left:10px}.codex-editor.codex-editor--rtl .ce-inline-toolbar__dropdown{border-right:0px solid transparent;border-left:1px solid rgba(201,201,204,.48);margin:0 -6px 0 6px}.codex-editor.codex-editor--rtl .ce-inline-toolbar__dropdown .icon--toggler-down{margin-left:0;margin-right:4px}@media (min-width: 651px){.codex-editor--narrow.codex-editor--rtl .ce-toolbar__plus{left:0;right:5px}}@media (min-width: 651px){.codex-editor--narrow.codex-editor--rtl .ce-toolbar__actions{left:-5px}}.cdx-search-field{--icon-margin-right: 10px;background:#F8F8F8;border:1px solid rgba(226,226,229,.2);border-radius:6px;padding:2px;display:grid;grid-template-columns:auto auto 1fr;grid-template-rows:auto}.cdx-search-field__icon{width:26px;height:26px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-right:var(--icon-margin-right)}.cdx-search-field__icon svg{width:20px;height:20px;color:#707684}.cdx-search-field__input{font-size:14px;outline:none;font-weight:500;font-family:inherit;border:0;background:transparent;margin:0;padding:0;line-height:22px;min-width:calc(100% - 26px - var(--icon-margin-right))}.cdx-search-field__input::-webkit-input-placeholder{color:#707684;font-weight:500}.cdx-search-field__input::-moz-placeholder{color:#707684;font-weight:500}.cdx-search-field__input:-ms-input-placeholder{color:#707684;font-weight:500}.cdx-search-field__input::-ms-input-placeholder{color:#707684;font-weight:500}.cdx-search-field__input::placeholder{color:#707684;font-weight:500}.ce-popover{--border-radius: 6px;--width: 200px;--max-height: 270px;--padding: 6px;--offset-from-target: 8px;--color-border: #EFF0F1;--color-shadow: rgba(13, 20, 33, .1);--color-background: white;--color-text-primary: black;--color-text-secondary: #707684;--color-border-icon: rgba(201, 201, 204, .48);--color-border-icon-disabled: #EFF0F1;--color-text-icon-active: #388AE5;--color-background-icon-active: rgba(56, 138, 229, .1);--color-background-item-focus: rgba(34, 186, 255, .08);--color-shadow-item-focus: rgba(7, 161, 227, .08);--color-background-item-hover: #F8F8F8;--color-background-item-confirm: #E24A4A;--color-background-item-confirm-hover: #CE4343;--popover-top: calc(100% + var(--offset-from-target));--popover-left: 0;--nested-popover-overlap: 4px;--icon-size: 20px;--item-padding: 3px;--item-height: calc(var(--icon-size) + 2 * var(--item-padding))}.ce-popover__container{min-width:var(--width);width:var(--width);max-height:var(--max-height);border-radius:var(--border-radius);overflow:hidden;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-box-shadow:0px 3px 15px -3px var(--color-shadow);box-shadow:0 3px 15px -3px var(--color-shadow);position:absolute;left:var(--popover-left);top:var(--popover-top);background:var(--color-background);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;z-index:4;opacity:0;max-height:0;pointer-events:none;padding:0;border:none}.ce-popover--opened>.ce-popover__container{opacity:1;padding:var(--padding);max-height:var(--max-height);pointer-events:auto;-webkit-animation:panelShowing .1s ease;animation:panelShowing .1s ease;border:1px solid var(--color-border)}@media (max-width: 650px){.ce-popover--opened>.ce-popover__container{-webkit-animation:panelShowingMobile .25s ease;animation:panelShowingMobile .25s ease}}.ce-popover--open-top .ce-popover__container{--popover-top: calc(-1 * (var(--offset-from-target) + var(--popover-height)))}.ce-popover--open-left .ce-popover__container{--popover-left: calc(-1 * var(--width) + 100%)}.ce-popover__items{overflow-y:auto;-ms-scroll-chaining:none;overscroll-behavior:contain}@media (max-width: 650px){.ce-popover__overlay{position:fixed;top:0;bottom:0;left:0;right:0;background:#1D202B;z-index:3;opacity:.5;-webkit-transition:opacity .12s ease-in;transition:opacity .12s ease-in;will-change:opacity;visibility:visible}}.ce-popover__overlay--hidden{display:none}@media (max-width: 650px){.ce-popover .ce-popover__container{--offset: 5px;position:fixed;max-width:none;min-width:calc(100% - var(--offset) * 2);left:var(--offset);right:var(--offset);bottom:calc(var(--offset) + env(safe-area-inset-bottom));top:auto;border-radius:10px}}.ce-popover__search{margin-bottom:5px}.ce-popover__nothing-found-message{color:#707684;display:none;cursor:default;padding:3px;font-size:14px;line-height:20px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ce-popover__nothing-found-message--displayed{display:block}.ce-popover--nested .ce-popover__container{--popover-left: calc(var(--nesting-level) * (var(--width) - var(--nested-popover-overlap)));top:calc(var(--trigger-item-top) - var(--nested-popover-overlap));position:absolute}.ce-popover--open-top.ce-popover--nested .ce-popover__container{top:calc(var(--trigger-item-top) - var(--popover-height) + var(--item-height) + var(--offset-from-target) + var(--nested-popover-overlap))}.ce-popover--open-left .ce-popover--nested .ce-popover__container{--popover-left: calc(-1 * (var(--nesting-level) + 1) * var(--width) + 100%)}.ce-popover-item-separator{padding:4px 3px}.ce-popover-item-separator--hidden{display:none}.ce-popover-item-separator__line{height:1px;background:var(--color-border);width:100%}.ce-popover-item-html--hidden{display:none}.ce-popover-item{--border-radius: 6px;border-radius:var(--border-radius);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:var(--item-padding);color:var(--color-text-primary);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:none;background:transparent}@media (max-width: 650px){.ce-popover-item{padding:4px}}.ce-popover-item:not(:last-of-type){margin-bottom:1px}.ce-popover-item__icon{width:26px;height:26px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.ce-popover-item__icon svg{width:20px;height:20px}@media (max-width: 650px){.ce-popover-item__icon{width:36px;height:36px;border-radius:8px}.ce-popover-item__icon svg{width:28px;height:28px}}.ce-popover-item__icon--tool{margin-right:4px}.ce-popover-item__title{font-size:14px;line-height:20px;font-weight:500;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-right:auto}@media (max-width: 650px){.ce-popover-item__title{font-size:16px}}.ce-popover-item__secondary-title{color:var(--color-text-secondary);font-size:12px;white-space:nowrap;letter-spacing:-.1em;padding-right:5px;opacity:.6}@media (max-width: 650px){.ce-popover-item__secondary-title{display:none}}.ce-popover-item--active{background:var(--color-background-icon-active);color:var(--color-text-icon-active)}.ce-popover-item--disabled{color:var(--color-text-secondary);cursor:default;pointer-events:none}.ce-popover-item--focused:not(.ce-popover-item--no-focus){background:var(--color-background-item-focus)!important}.ce-popover-item--hidden{display:none}@media (hover: hover){.ce-popover-item:hover{cursor:pointer}.ce-popover-item:hover:not(.ce-popover-item--no-hover){background-color:var(--color-background-item-hover)}}.ce-popover-item--confirmation{background:var(--color-background-item-confirm)}.ce-popover-item--confirmation .ce-popover-item__title,.ce-popover-item--confirmation .ce-popover-item__icon{color:#fff}@media (hover: hover){.ce-popover-item--confirmation:not(.ce-popover-item--no-hover):hover{background:var(--color-background-item-confirm-hover)}}.ce-popover-item--confirmation:not(.ce-popover-item--no-focus).ce-popover-item--focused{background:var(--color-background-item-confirm-hover)!important}@-webkit-keyframes panelShowing{0%{opacity:0;-webkit-transform:translateY(-8px) scale(.9);transform:translateY(-8px) scale(.9)}70%{opacity:1;-webkit-transform:translateY(2px);transform:translateY(2px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes panelShowing{0%{opacity:0;-webkit-transform:translateY(-8px) scale(.9);transform:translateY(-8px) scale(.9)}70%{opacity:1;-webkit-transform:translateY(2px);transform:translateY(2px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}@-webkit-keyframes panelShowingMobile{0%{opacity:0;-webkit-transform:translateY(14px) scale(.98);transform:translateY(14px) scale(.98)}70%{opacity:1;-webkit-transform:translateY(-4px);transform:translateY(-4px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes panelShowingMobile{0%{opacity:0;-webkit-transform:translateY(14px) scale(.98);transform:translateY(14px) scale(.98)}70%{opacity:1;-webkit-transform:translateY(-4px);transform:translateY(-4px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}.wobble{-webkit-animation-name:wobble;animation-name:wobble;-webkit-animation-duration:.4s;animation-duration:.4s}@-webkit-keyframes wobble{0%{-webkit-transform:translate3d(0,0,0);transform:translateZ(0)}15%{-webkit-transform:translate3d(-9%,0,0);transform:translate3d(-9%,0,0)}30%{-webkit-transform:translate3d(9%,0,0);transform:translate3d(9%,0,0)}45%{-webkit-transform:translate3d(-4%,0,0);transform:translate3d(-4%,0,0)}60%{-webkit-transform:translate3d(4%,0,0);transform:translate3d(4%,0,0)}75%{-webkit-transform:translate3d(-1%,0,0);transform:translate3d(-1%,0,0)}to{-webkit-transform:translate3d(0,0,0);transform:translateZ(0)}}@keyframes wobble{0%{-webkit-transform:translate3d(0,0,0);transform:translateZ(0)}15%{-webkit-transform:translate3d(-9%,0,0);transform:translate3d(-9%,0,0)}30%{-webkit-transform:translate3d(9%,0,0);transform:translate3d(9%,0,0)}45%{-webkit-transform:translate3d(-4%,0,0);transform:translate3d(-4%,0,0)}60%{-webkit-transform:translate3d(4%,0,0);transform:translate3d(4%,0,0)}75%{-webkit-transform:translate3d(-1%,0,0);transform:translate3d(-1%,0,0)}to{-webkit-transform:translate3d(0,0,0);transform:translateZ(0)}}.ce-popover-header{margin-bottom:8px;margin-top:4px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ce-popover-header__text{font-size:18px;font-weight:600}.ce-popover-header__back-button{border:0;background:transparent;width:36px;height:36px;color:var(--color-text-primary)}.ce-popover-header__back-button svg{display:block;width:28px;height:28px}.ce-popover--inline{--height: 38px;--height-mobile: 46px;--container-padding: 4px;position:relative}.ce-popover--inline .ce-popover__custom-content{margin-bottom:0}.ce-popover--inline .ce-popover__items{display:-webkit-box;display:-ms-flexbox;display:flex}.ce-popover--inline .ce-popover__container{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding:var(--container-padding);height:var(--height);top:0;min-width:-webkit-max-content;min-width:-moz-max-content;min-width:max-content;width:-webkit-max-content;width:-moz-max-content;width:max-content;-webkit-animation:none;animation:none}@media (max-width: 650px){.ce-popover--inline .ce-popover__container{height:var(--height-mobile);position:absolute}}.ce-popover--inline .ce-popover-item-separator{padding:0 4px}.ce-popover--inline .ce-popover-item-separator__line{height:100%;width:1px}.ce-popover--inline .ce-popover-item{border-radius:4px;padding:4px}.ce-popover--inline .ce-popover-item__icon--tool{-webkit-box-shadow:none;box-shadow:none;background:transparent;margin-right:0}.ce-popover--inline .ce-popover-item__icon{width:auto;width:initial;height:auto;height:initial}.ce-popover--inline .ce-popover-item__icon svg{width:20px;height:20px}@media (max-width: 650px){.ce-popover--inline .ce-popover-item__icon svg{width:28px;height:28px}}.ce-popover--inline .ce-popover-item:not(:last-of-type){margin-bottom:0;margin-bottom:initial}.ce-popover--inline .ce-popover-item-html{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ce-popover--inline .ce-popover-item__icon--chevron-right{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.ce-popover--inline .ce-popover--nested-level-1 .ce-popover__container{--offset: 3px;left:0;top:calc(var(--height) + var(--offset))}@media (max-width: 650px){.ce-popover--inline .ce-popover--nested-level-1 .ce-popover__container{top:calc(var(--height-mobile) + var(--offset))}}.ce-popover--inline .ce-popover--nested .ce-popover__container{min-width:var(--width);width:var(--width);height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding:6px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.ce-popover--inline .ce-popover--nested .ce-popover__items{display:block;width:100%}.ce-popover--inline .ce-popover--nested .ce-popover-item{border-radius:6px;padding:3px}@media (max-width: 650px){.ce-popover--inline .ce-popover--nested .ce-popover-item{padding:4px}}.ce-popover--inline .ce-popover--nested .ce-popover-item__icon--tool{margin-right:4px}.ce-popover--inline .ce-popover--nested .ce-popover-item__icon{width:26px;height:26px}.ce-popover--inline .ce-popover--nested .ce-popover-item-separator{padding:4px 3px}.ce-popover--inline .ce-popover--nested .ce-popover-item-separator__line{width:100%;height:1px}.codex-editor [data-placeholder]:empty:before,.codex-editor [data-placeholder][data-empty=true]:before{pointer-events:none;color:#707684;cursor:text;content:attr(data-placeholder)}.codex-editor [data-placeholder-active]:empty:before,.codex-editor [data-placeholder-active][data-empty=true]:before{pointer-events:none;color:#707684;cursor:text}.codex-editor [data-placeholder-active]:empty:focus:before,.codex-editor [data-placeholder-active][data-empty=true]:focus:before{content:attr(data-placeholder-active)}
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>editq</title>
+    <link rel="stylesheet" href="./styles.css">
+  <style>.ce-hint--align-start{text-align:left}.ce-hint--align-center{text-align:center}.ce-hint__description{opacity:.6;margin-top:3px}</style><style type="text/css">.cdx-notify--error{background:#fffbfb!important}.cdx-notify--error::before{background:#fb5d5d!important}.cdx-notify__input{max-width:130px;padding:5px 10px;background:#f7f7f7;border:0;border-radius:3px;font-size:13px;color:#656b7c;outline:0}.cdx-notify__input:-ms-input-placeholder{color:#656b7c}.cdx-notify__input::placeholder{color:#656b7c}.cdx-notify__input:focus:-ms-input-placeholder{color:rgba(101,107,124,.3)}.cdx-notify__input:focus::placeholder{color:rgba(101,107,124,.3)}.cdx-notify__button{border:none;border-radius:3px;font-size:13px;padding:5px 10px;cursor:pointer}.cdx-notify__button:last-child{margin-left:10px}.cdx-notify__button--cancel{background:#f2f5f7;box-shadow:0 2px 1px 0 rgba(16,19,29,0);color:#656b7c}.cdx-notify__button--cancel:hover{background:#eee}.cdx-notify__button--confirm{background:#34c992;box-shadow:0 1px 1px 0 rgba(18,49,35,.05);color:#fff}.cdx-notify__button--confirm:hover{background:#33b082}.cdx-notify__btns-wrapper{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;margin-top:5px}.cdx-notify__cross{position:absolute;top:5px;right:5px;width:10px;height:10px;padding:5px;opacity:.54;cursor:pointer}.cdx-notify__cross::after,.cdx-notify__cross::before{content:'';position:absolute;left:9px;top:5px;height:12px;width:2px;background:#575d67}.cdx-notify__cross::before{transform:rotate(-45deg)}.cdx-notify__cross::after{transform:rotate(45deg)}.cdx-notify__cross:hover{opacity:1}.cdx-notifies{position:fixed;z-index:2;bottom:20px;left:20px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif}.cdx-notify{position:relative;width:220px;margin-top:15px;padding:13px 16px;background:#fff;box-shadow:0 11px 17px 0 rgba(23,32,61,.13);border-radius:5px;font-size:14px;line-height:1.4em;word-wrap:break-word}.cdx-notify::before{content:'';position:absolute;display:block;top:0;left:0;width:3px;height:calc(100% - 6px);margin:3px;border-radius:5px;background:0 0}@keyframes bounceIn{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.05)}70%{transform:scale(.9)}100%{transform:scale(1)}}.cdx-notify--bounce-in{animation-name:bounceIn;animation-duration:.6s;animation-iteration-count:1}.cdx-notify--success{background:#fafffe!important}.cdx-notify--success::before{background:#41ffb1!important}</style><style>.ce-paragraph{line-height:1.6em;outline:none}.ce-block:only-of-type .ce-paragraph[data-placeholder-active]:empty:before,.ce-block:only-of-type .ce-paragraph[data-placeholder-active][data-empty=true]:before{content:attr(data-placeholder-active)}.ce-paragraph p:first-of-type{margin-top:0}.ce-paragraph p:last-of-type{margin-bottom:0}</style><style>.ce-header{padding:.6em 0 3px;margin:0;line-height:1.25em;outline:none}.ce-header p,.ce-header div{padding:0!important;margin:0!important}</style><style>.cdx-checklist{gap:6px;display:flex;flex-direction:column}.cdx-checklist__item{display:flex;box-sizing:content-box;align-items:flex-start}.cdx-checklist__item-text{outline:none;flex-grow:1;line-height:1.57em}.cdx-checklist__item-checkbox{width:22px;height:22px;display:flex;align-items:center;margin-right:8px;margin-top:calc(.785em - 11px);cursor:pointer}.cdx-checklist__item-checkbox svg{opacity:0;height:20px;width:20px;position:absolute;left:-1px;top:-1px;max-height:20px}@media (hover: hover){.cdx-checklist__item-checkbox:not(.cdx-checklist__item-checkbox--no-hover):hover .cdx-checklist__item-checkbox-check svg{opacity:1}}.cdx-checklist__item-checkbox-check{cursor:pointer;display:inline-block;flex-shrink:0;position:relative;width:20px;height:20px;box-sizing:border-box;margin-left:0;border-radius:5px;border:1px solid #C9C9C9;background:#fff}.cdx-checklist__item-checkbox-check:before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;border-radius:100%;background-color:#369fff;visibility:hidden;pointer-events:none;transform:scale(1);transition:transform .4s ease-out,opacity .4s}@media (hover: hover){.cdx-checklist__item--checked .cdx-checklist__item-checkbox:not(.cdx-checklist__item--checked .cdx-checklist__item-checkbox--no-hover):hover .cdx-checklist__item-checkbox-check{background:#0059AB;border-color:#0059ab}}.cdx-checklist__item--checked .cdx-checklist__item-checkbox-check{background:#369FFF;border-color:#369fff}.cdx-checklist__item--checked .cdx-checklist__item-checkbox-check svg{opacity:1}.cdx-checklist__item--checked .cdx-checklist__item-checkbox-check svg path{stroke:#fff}.cdx-checklist__item--checked .cdx-checklist__item-checkbox-check:before{opacity:0;visibility:visible;transform:scale(2.5)}</style><style>.tc-wrap{--color-background:#f9f9fb;--color-text-secondary:#7b7e89;--color-border:#e8e8eb;--cell-size:34px;--toolbox-icon-size:18px;--toolbox-padding:6px;--toolbox-aiming-field-size:calc(var(--toolbox-icon-size) + var(--toolbox-padding)*2);border-left:0;position:relative;height:100%;width:100%;margin-top:var(--toolbox-icon-size);box-sizing:border-box;display:grid;grid-template-columns:calc(100% - var(--cell-size)) var(--cell-size);z-index:0}.tc-wrap--readonly{grid-template-columns:100% var(--cell-size)}.tc-wrap svg{vertical-align:top}@media print{.tc-wrap{border-left-color:var(--color-border);border-left-style:solid;border-left-width:1px;grid-template-columns:100% var(--cell-size)}}@media print{.tc-wrap .tc-row:after{display:none}}.tc-table{position:relative;width:100%;height:100%;display:grid;font-size:14px;border-top:1px solid var(--color-border);line-height:1.4}.tc-table:after{width:calc(var(--cell-size));height:100%;left:calc(var(--cell-size)*-1);top:0}.tc-table:after,.tc-table:before{position:absolute;content:""}.tc-table:before{width:100%;height:var(--toolbox-aiming-field-size);top:calc(var(--toolbox-aiming-field-size)*-1);left:0}.tc-table--heading .tc-row:first-child{font-weight:600;border-bottom:2px solid var(--color-border);position:sticky;top:0;z-index:2;background:var(--color-background)}.tc-table--heading .tc-row:first-child [contenteditable]:empty:before{content:attr(heading);color:var(--color-text-secondary)}.tc-table--heading .tc-row:first-child:after{bottom:-2px;border-bottom:2px solid var(--color-border)}.tc-add-column,.tc-add-row{display:flex;color:var(--color-text-secondary)}@media print{.tc-add{display:none}}.tc-add-column{display:grid;border-top:1px solid var(--color-border);grid-template-columns:var(--cell-size);grid-auto-rows:var(--cell-size);place-items:center}.tc-add-column svg{padding:5px;position:sticky;top:0;background-color:var(--color-background)}.tc-add-column--disabled{visibility:hidden}@media print{.tc-add-column{display:none}}.tc-add-row{height:var(--cell-size);align-items:center;padding-left:4px;position:relative}.tc-add-row--disabled{display:none}.tc-add-row:before{content:"";position:absolute;right:calc(var(--cell-size)*-1);width:var(--cell-size);height:100%}@media print{.tc-add-row{display:none}}.tc-add-column,.tc-add-row{transition:0s;cursor:pointer;will-change:background-color}.tc-add-column:hover,.tc-add-row:hover{transition:background-color .1s ease;background-color:var(--color-background)}.tc-add-row{margin-top:1px}.tc-add-row:hover:before{transition:.1s;background-color:var(--color-background)}.tc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(10px,1fr));position:relative;border-bottom:1px solid var(--color-border)}.tc-row:after{content:"";pointer-events:none;position:absolute;width:var(--cell-size);height:100%;bottom:-1px;right:calc(var(--cell-size)*-1);border-bottom:1px solid var(--color-border)}.tc-row--selected{background:var(--color-background)}.tc-row--selected:after{background:var(--color-background)}.tc-cell{border-right:1px solid var(--color-border);padding:6px 12px;overflow:hidden;outline:none;line-break:normal}.tc-cell--selected{background:var(--color-background)}.tc-wrap--readonly .tc-row:after{display:none}.tc-toolbox{--toolbox-padding:6px;--popover-margin:30px;--toggler-click-zone-size:30px;--toggler-dots-color:#7b7e89;--toggler-dots-color-hovered:#1d202b;position:absolute;cursor:pointer;z-index:1;opacity:0;transition:opacity .1s;will-change:left,opacity}.tc-toolbox--column{top:calc(var(--toggler-click-zone-size)*-1);transform:translate(calc(var(--toggler-click-zone-size)*-1/2));will-change:left,opacity}.tc-toolbox--row{left:calc(var(--popover-margin)*-1);transform:translateY(calc(var(--toggler-click-zone-size)*-1/2));margin-top:-1px;will-change:top,opacity}.tc-toolbox--showed{opacity:1}.tc-toolbox .tc-popover{position:absolute;top:0;left:var(--popover-margin)}.tc-toolbox__toggler{display:flex;align-items:center;justify-content:center;width:var(--toggler-click-zone-size);height:var(--toggler-click-zone-size);color:var(--toggler-dots-color);opacity:0;transition:opacity .15s ease;will-change:opacity}.tc-toolbox__toggler:hover{color:var(--toggler-dots-color-hovered)}.tc-toolbox__toggler svg{fill:currentColor}.tc-wrap:hover .tc-toolbox__toggler{opacity:1}.tc-settings .cdx-settings-button{width:50%;margin:0}.tc-popover{--color-border:#eaeaea;--color-background:#fff;--color-background-hover:rgba(232,232,235,.49);--color-background-confirm:#e24a4a;--color-background-confirm-hover:#d54040;--color-text-confirm:#fff;background:var(--color-background);border:1px solid var(--color-border);box-shadow:0 3px 15px -3px #0d142121;border-radius:6px;padding:6px;display:none;will-change:opacity,transform}.tc-popover--opened{display:block;animation:menuShowing .1s cubic-bezier(.215,.61,.355,1) forwards}.tc-popover__item{display:flex;align-items:center;padding:2px 14px 2px 2px;border-radius:5px;cursor:pointer;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;user-select:none}.tc-popover__item:hover{background:var(--color-background-hover)}.tc-popover__item:not(:last-of-type){margin-bottom:2px}.tc-popover__item-icon{display:inline-flex;width:26px;height:26px;align-items:center;justify-content:center;background:var(--color-background);border-radius:5px;border:1px solid var(--color-border);margin-right:8px}.tc-popover__item-label{line-height:22px;font-size:14px;font-weight:500}.tc-popover__item--confirm{background:var(--color-background-confirm);color:var(--color-text-confirm)}.tc-popover__item--confirm:hover{background-color:var(--color-background-confirm-hover)}.tc-popover__item--confirm .tc-popover__item-icon{background:var(--color-background-confirm);border-color:#0000001a}.tc-popover__item--confirm .tc-popover__item-icon svg{transition:transform .2s ease-in;transform:rotate(90deg) scale(1.2)}.tc-popover__item--hidden{display:none}@keyframes menuShowing{0%{opacity:0;transform:translateY(-8px) scale(.9)}70%{opacity:1;transform:translateY(2px)}to{transform:translateY(0)}}</style></head>
+  <body>
+    <main class="shell">
+      <section id="auth-panel" class="auth-panel">
+        <div class="auth-card">
+          <div class="auth-intro">
+            <h1>editq</h1>
+            <label class="language-select" for="locale-select-auth">
+              <span data-i18n="language.label">Language</span>
+              <select id="locale-select-auth">
+                <option value="en" selected>EN</option>
+                <option value="fr">FR</option>
+              </select>
+            </label>
+            <p id="auth-subtitle" data-i18n="auth.login.subtitle">Sign in to get back to your workspace.</p>
+          </div>
+
+          <div id="login-view" class="auth-view">
+            <form id="login-form" class="auth-form" novalidate>
+              <h2 data-i18n="auth.login.title">Sign in</h2>
+              <label for="login-username" data-i18n="auth.username">Username</label>
+              <input id="login-username" autocomplete="username">
+
+              <label for="login-password" data-i18n="auth.password">Password</label>
+              <input id="login-password" type="password" autocomplete="current-password">
+
+              <label for="login-otp" data-i18n="auth.otp">OTP code</label>
+              <input id="login-otp" inputmode="numeric" autocomplete="one-time-code" maxlength="6">
+
+              <button type="submit" data-i18n="auth.login.submit">Sign in</button>
+            </form>
+
+            <p class="auth-switch hidden">
+              <span data-i18n="auth.no_account">No account yet?</span>
+              <button id="show-register" class="link-button" type="button" data-i18n="auth.create_account">Create account</button>
+            </p>
+          </div>
+
+          <div id="register-view" class="auth-view hidden">
+            <form id="register-form" class="auth-form">
+              <h2 data-i18n="auth.register.title">Create account</h2>
+              <label for="register-username" data-i18n="auth.username">Username</label>
+              <input id="register-username" autocomplete="username" required="">
+
+              <label for="register-email" data-i18n="auth.email">Email</label>
+              <input id="register-email" type="email" autocomplete="email" required="">
+
+              <label for="register-password" data-i18n="auth.password">Password</label>
+              <input id="register-password" type="password" autocomplete="new-password" minlength="8" required="">
+
+              <label for="register-password-confirm" data-i18n="auth.password_confirm">Confirm password</label>
+              <input id="register-password-confirm" type="password" autocomplete="new-password" minlength="8" required="">
+
+              <fieldset id="register-plan-options" class="plan-options hidden">
+                <legend data-i18n="billing.plan">Plan</legend>
+                <label class="plan-option">
+                  <input type="radio" name="register-plan" value="free" checked="">
+                  <span>
+                    <strong data-i18n="billing.free">Free</strong>
+                    <small data-i18n="billing.free_detail">10 pages, 10,000 agent tokens per month</small>
+                  </span>
+                </label>
+                <label class="plan-option is-disabled">
+                  <input type="radio" name="register-plan" value="paid" disabled="">
+                  <span>
+                    <strong data-i18n="billing.paid">Paid</strong>
+                    <small data-i18n="billing.paid_detail">100,000 pages, 1,000,000 agent tokens per month, CHF 10/month</small>
+                  </span>
+                </label>
+              </fieldset>
+
+              <button type="submit" class="secondary-button" data-i18n="auth.register.submit">Create account</button>
+            </form>
+
+            <div id="otp-setup" class="otp-setup hidden">
+              <p data-i18n="auth.otp.instructions">Scan this QR code with your authenticator app.</p>
+              <img id="otp-qr" class="otp-qr" alt="OTP QR code" data-i18n-alt="auth.otp.alt">
+              <code id="otp-secret"></code>
+              <button id="go-stripe-after-register" class="secondary-button hidden" type="button" data-i18n="auth.stripe.continue">Continue to Stripe</button>
+              <button id="go-login-after-register" type="button" data-i18n="auth.login.submit">Sign in</button>
+            </div>
+
+            <p class="auth-switch">
+              <span data-i18n="auth.already_account">Already have an account?</span>
+              <button id="show-login" class="link-button" type="button" data-i18n="auth.back_login">Back to sign in</button>
+            </p>
+          </div>
+
+          <p id="auth-message" class="muted"></p>
+        </div>
+      </section>
+
+      <section id="workspace" class="workspace hidden">
+      <input id="pages-toggle" class="pages-toggle" type="checkbox" aria-hidden="true">
+      <section class="editor-toolbar">
+        <div class="brand-block">
+          <div class="brand-row">
+            <label class="pages-toggle-button" for="pages-toggle" aria-label="Pages">
+              <img src="./assets/icons/text.page.svg" alt="" aria-hidden="true">
+              <span data-i18n="tree.title">Pages</span>
+            </label>
+            <h1>editq</h1>
+          </div>
+          <p id="api-message" data-i18n="app.loading">editq API active</p>
+        </div>
+        <div class="toolbar-options">
+          <button id="more-options-button" class="icon-button more-options-button" type="button" aria-label="More options" aria-expanded="false">
+            <img src="./assets/icons/more.svg" alt="" aria-hidden="true">
+          </button>
+          <div id="user-menu" class="user-menu" hidden>
+            <label class="language-select compact" for="locale-select-workspace">
+              <span data-i18n="language.label">Language</span>
+              <select id="locale-select-workspace">
+                <option value="en" selected>EN</option>
+                <option value="fr">FR</option>
+              </select>
+            </label>
+            <span id="billing-summary" class="billing-summary hidden"></span>
+            <span id="pdf-export-status" class="pdf-export-status" aria-live="polite"></span>
+            <button id="theme-toggle-button" class="secondary-button theme-toggle-button" type="button" aria-label="Dark mode" aria-pressed="false">
+              <img src="./assets/icons/moon.svg" alt="" aria-hidden="true">
+            </button>
+            <button id="pdf-export-button" class="secondary-button pdf-export-button" type="button" data-i18n-aria-label="pdf.export" aria-label="PDF">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M9 14h6"></path>
+                <path d="M9 17h4"></path>
+              </svg>
+              <span data-i18n="pdf.export">PDF</span>
+            </button>
+            <button id="billing-button" class="secondary-button hidden" type="button" data-i18n="billing.plan">Plan</button>
+            <button id="logout-button" class="secondary-button" type="button" data-i18n="auth.logout.submit">Sign out</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="editor-layout">
+        <aside class="tree-panel">
+          <div class="tree-panel-header">
+            <h2 id="tree-page-count">Pages</h2>
+            <div class="tree-panel-actions">
+              <button id="add-page-button" class="icon-button tree-add-page-button" type="button" data-action="add-page" data-tooltip="Add Page" aria-label="Add Page">
+                <img src="./assets/icons/plus.svg" alt="" aria-hidden="true">
+              </button>
+              <button id="page-search-button" class="icon-button tree-search-button" type="button" aria-label="Search Pages">
+                <img src="./assets/icons/magnifyingglass.svg" alt="" aria-hidden="true">
+              </button>
+            </div>
+          </div>
+          <input id="page-search-input" class="page-search-input hidden" type="search" placeholder="Search Pages" aria-label="Search Pages">
+          <nav id="page-tree" class="page-tree" aria-label="Page tree" data-i18n-aria-label="tree.aria">
+        
+    <div class="tree-drop-zone" style="--depth: 0" data-drop-parent-id="" data-drop-after-id="" aria-hidden="true"></div>
+  
+        <div class="tree-node" style="--depth: 0" data-page-node-id="cf1db708-712d-4e1b-a238-773fd13264e6">
+          <div class="tree-row active" draggable="true" data-page-id="cf1db708-712d-4e1b-a238-773fd13264e6" data-drop-child-id="cf1db708-712d-4e1b-a238-773fd13264e6">
+            <button class="tree-action add-sibling" type="button" data-action="add-sibling" data-page-id="cf1db708-712d-4e1b-a238-773fd13264e6" data-tooltip="Add Subpage" aria-label="Add Subpage"><img src="./assets/icons/plus.svg" alt="" aria-hidden="true"></button>
+            <span class="tree-handle" aria-hidden="true"><img src="./assets/icons/arrow.up.arrow.down.svg" alt=""></span>
+            <button class="tree-title" type="button" data-action="select" data-page-id="cf1db708-712d-4e1b-a238-773fd13264e6">
+              <span data-fr="Accueil">Home</span>
+            </button>
+            <button class="tree-action delete-page" type="button" data-action="delete" data-page-id="cf1db708-712d-4e1b-a238-773fd13264e6" data-tooltip="Delete page" aria-label="Delete page"><img src="./assets/icons/trash.svg" alt="" aria-hidden="true"></button>
+          </div>
+          <div class="tree-children">
+          
+          </div>
+        </div>
+      
+        
+    <div class="tree-drop-zone" style="--depth: 0" data-drop-parent-id="" data-drop-after-id="cf1db708-712d-4e1b-a238-773fd13264e6" aria-hidden="true"></div>
+  
+        <div class="tree-node" style="--depth: 0" data-page-node-id="e47bc747-8840-4372-bedd-a8b5ef89a638">
+          <div class="tree-row" draggable="false" data-page-id="e47bc747-8840-4372-bedd-a8b5ef89a638" data-drop-child-id="e47bc747-8840-4372-bedd-a8b5ef89a638">
+            <button class="tree-action add-sibling" type="button" data-action="add-sibling" data-page-id="e47bc747-8840-4372-bedd-a8b5ef89a638" data-tooltip="Add Subpage" aria-label="Add Subpage"><img src="./assets/icons/plus.svg" alt="" aria-hidden="true"></button>
+            <span class="tree-handle" aria-hidden="true"><img src="./assets/icons/arrow.up.arrow.down.svg" alt=""></span>
+            <button class="tree-title" type="button" data-action="select" data-page-id="e47bc747-8840-4372-bedd-a8b5ef89a638">
+              <span data-fr="Théorie des Nombres">Number Theory</span>
+            </button>
+            <button class="tree-action delete-page" type="button" data-action="delete" data-page-id="e47bc747-8840-4372-bedd-a8b5ef89a638" data-tooltip="Delete page" aria-label="Delete page"><img src="./assets/icons/trash.svg" alt="" aria-hidden="true"></button>
+          </div>
+          <div class="tree-children">
+          
+          </div>
+        </div>
+      
+        
+    <div class="tree-drop-zone" style="--depth: 0" data-drop-parent-id="" data-drop-after-id="e47bc747-8840-4372-bedd-a8b5ef89a638" aria-hidden="true"></div>
+  
+        <div class="tree-node" style="--depth: 0" data-page-node-id="a4297aa4-48c8-494e-aa56-5693644e2742">
+          <div class="tree-row" draggable="false" data-page-id="a4297aa4-48c8-494e-aa56-5693644e2742" data-drop-child-id="a4297aa4-48c8-494e-aa56-5693644e2742">
+            <button class="tree-action add-sibling" type="button" data-action="add-sibling" data-page-id="a4297aa4-48c8-494e-aa56-5693644e2742" data-tooltip="Add Subpage" aria-label="Add Subpage"><img src="./assets/icons/plus.svg" alt="" aria-hidden="true"></button>
+            <span class="tree-handle" aria-hidden="true"><img src="./assets/icons/arrow.up.arrow.down.svg" alt=""></span>
+            <button class="tree-title" type="button" data-action="select" data-page-id="a4297aa4-48c8-494e-aa56-5693644e2742">
+              <span data-fr="Langue Française">French Language</span>
+            </button>
+            <button class="tree-action delete-page" type="button" data-action="delete" data-page-id="a4297aa4-48c8-494e-aa56-5693644e2742" data-tooltip="Delete page" aria-label="Delete page"><img src="./assets/icons/trash.svg" alt="" aria-hidden="true"></button>
+          </div>
+          <div class="tree-children">
+          
+          </div>
+        </div>
+      
+        
+    <div class="tree-drop-zone" style="--depth: 0" data-drop-parent-id="" data-drop-after-id="a4297aa4-48c8-494e-aa56-5693644e2742" aria-hidden="true"></div>
+  
+        <div class="tree-node" style="--depth: 0" data-page-node-id="7f2b13d7-d331-496c-aff0-cdbf70b444d3">
+          <div class="tree-row" draggable="false" data-page-id="7f2b13d7-d331-496c-aff0-cdbf70b444d3" data-drop-child-id="7f2b13d7-d331-496c-aff0-cdbf70b444d3">
+            <button class="tree-action add-sibling" type="button" data-action="add-sibling" data-page-id="7f2b13d7-d331-496c-aff0-cdbf70b444d3" data-tooltip="Add Subpage" aria-label="Add Subpage"><img src="./assets/icons/plus.svg" alt="" aria-hidden="true"></button>
+            <span class="tree-handle" aria-hidden="true"><img src="./assets/icons/arrow.up.arrow.down.svg" alt=""></span>
+            <button class="tree-title" type="button" data-action="select" data-page-id="7f2b13d7-d331-496c-aff0-cdbf70b444d3">
+              <span data-fr="Nombres Décimaux">Decimal Numbers</span>
+            </button>
+            <button class="tree-action delete-page" type="button" data-action="delete" data-page-id="7f2b13d7-d331-496c-aff0-cdbf70b444d3" data-tooltip="Delete page" aria-label="Delete page"><img src="./assets/icons/trash.svg" alt="" aria-hidden="true"></button>
+          </div>
+          <div class="tree-children">
+          
+          </div>
+        </div>
+      
+    <div class="tree-drop-zone" style="--depth: 0" data-drop-parent-id="" data-drop-after-id="7f2b13d7-d331-496c-aff0-cdbf70b444d3" aria-hidden="true"></div>
+  </nav>
+          <p id="tree-empty" class="muted hidden" data-i18n="tree.empty">No pages.</p>
+        </aside>
+        <div class="layout-resizer layout-resizer-tree" data-resizer="tree" aria-hidden="true"></div>
+
+        <article class="editor-panel">
+          <input id="page-title" class="title-input" autocomplete="off" value="Title">
+          <div id="editorjs"><div class="codex-editor"><div class="codex-editor__redactor" style="padding-bottom: 300px;"><div class="ce-block" data-id="pbPM8yw9Y1"><div class="ce-block__content"><h2 class="ce-header" contenteditable="true" data-placeholder="" data-empty="false" data-fr="Accueil">Home</h2></div></div><div class="ce-block" data-id="sRVZwcl3sa"><div class="ce-block__content"><div class="ce-paragraph cdx-block" contenteditable="true" data-placeholder-active="Start writing..." data-empty="false" data-fr="Commence a rediger cette page.">Start writing this page.</div></div></div><div class="ce-block" data-id="UAIrvaS7E3"><div class="ce-block__content"><h2 class="ce-header" contenteditable="true" data-placeholder="" data-empty="false" data-fr="Présentation de CDS Engineering SA">Overview of CDS Engineering SA</h2></div></div><div class="ce-block" data-id="5uf7yNvEGh"><div class="ce-block__content"><div class="ce-paragraph cdx-block" contenteditable="true" data-placeholder-active="Start writing..." data-empty="false" data-fr="CDS Engineering SA est une société spécialisée dans les services d’ingénierie et les solutions techniques destinées aux secteurs industriels et technologiques."><b>CDS Engineering SA</b> is a company specializing in engineering services and technical solutions for industrial and technology sectors.</div></div></div><div class="ce-block" data-id="Fn-Gg0TBVP"><div class="ce-block__content"><div class="ce-paragraph cdx-block" contenteditable="true" data-placeholder-active="Start writing..." data-empty="false" data-fr="L’entreprise accompagne ses clients dans la conception, le développement et l’optimisation de projets complexes en mettant l’accent sur l’innovation, la qualité et la performance.">The company supports clients in the design, development, and optimization of <b>complex</b> projects, with a focus on <b>innovation</b>, <b>quality</b>, and <b>performance</b>.</div></div></div><div class="ce-block" data-id="l7Jp6FMX7C"><div class="ce-block__content"><div class="ce-paragraph cdx-block" contenteditable="true" data-placeholder-active="Start writing..." data-empty="false" data-fr="Grâce à une équipe d’experts multidisciplinaires, CDS Engineering SA intervient sur différentes phases des projets : étude, planification, intégration de systèmes, gestion technique et suivi opérationnel. Bonjour">With a multidisciplinary team of specialists, CDS Engineering SA works across different project phases: study, planning, system integration, technical management, and operational follow-up.</div></div></div><div class="ce-block" data-id="u4F324_mLO"><div class="ce-block__content"><div class="ce-paragraph cdx-block" contenteditable="true" data-placeholder-active="Start writing..." data-empty="false" data-fr="La société s’engage à fournir des solutions adaptées aux besoins spécifiques de chaque client tout en respectant les exigences de sécurité, de durabilité et d’efficacité.">The company is committed to delivering solutions tailored to each client's specific needs while meeting requirements for <b>safety</b>, <b>sustainability</b>, and <b>efficiency</b>.</div></div></div><div class="ce-block" data-id="ChB5ZWWk5Q"><div class="ce-block__content"><h2 class="ce-header" contenteditable="true" data-placeholder="" data-empty="false" data-fr="Secteur d’activité">Business Sector</h2></div></div><div class="ce-block" data-id="8ED1AyXH9E"><div class="ce-block__content"><div class="ce-paragraph cdx-block" contenteditable="true" data-placeholder-active="Start writing..." data-empty="false" data-fr="CDS Engineering SA évolue dans le secteur de l’ingénierie industrielle et technologique. L’entreprise fournit des services spécialisés en conception technique, intégration de systèmes et gestion de projets pour des environnements industriels exigeants.">CDS Engineering SA operates in the field of <b>industrial and technological engineering</b>. The company provides specialized services in technical design, system integration, and project management for demanding industrial environments.</div></div></div><div class="ce-block" data-id="7-XXJ43dnC"><div class="ce-block__content"><div class="ce-paragraph cdx-block" contenteditable="true" data-placeholder-active="Start writing..." data-empty="false" data-fr="Ses activités couvrent notamment l’optimisation des processus, le développement de solutions techniques sur mesure, l’automatisation et l’accompagnement opérationnel des infrastructures industrielles.">Its activities include process optimization, the development of custom technical solutions, automation, and operational support for industrial infrastructure.</div></div></div><div class="ce-block" data-id="IvDXJrCQwo"><div class="ce-block__content"><div class="ce-paragraph cdx-block" contenteditable="true" data-placeholder-active="Start writing..." data-empty="false" data-fr="Grâce à son expertise multidisciplinaire, CDS Engineering SA intervient auprès d’entreprises recherchant des solutions fiables, innovantes et conformes aux standards de qualité et de sécurité.">Through its multidisciplinary expertise, CDS Engineering SA supports companies looking for reliable, innovative solutions that meet quality and safety standards.</div></div></div></div><div class="codex-editor-overlay"><div class="codex-editor-overlay__container"><div class="codex-editor-overlay__rectangle" style="display: none;"></div></div></div><div class="ce-inline-toolbar"></div><div class="ce-toolbar ce-toolbar--opened" style="top: 117px;"><div class="ce-toolbar__content"><div class="ce-toolbar__actions ce-toolbar__actions--opened"><button class="ce-toolbar-icon" type="button" aria-label="Add block"><img src="./assets/icons/plus.svg" alt="" aria-hidden="true"></button><button class="ce-toolbar-icon" type="button" aria-label="Move block"><img src="./assets/icons/arrow.up.arrow.down.svg" alt="" aria-hidden="true"></button><button class="ce-toolbar-icon" type="button" aria-label="Delete block"><img src="./assets/icons/trash.svg" alt="" aria-hidden="true"></button></div></div></div></div></div>
+          <p id="save-state" class="muted"></p>
+        </article>
+        <div class="layout-resizer layout-resizer-chat" data-resizer="chat" aria-hidden="true"></div>
+
+        <aside class="chat-panel" aria-label="Chatbot assistant" data-i18n-aria-label="chat.aria">
+          <header class="chat-header">
+            <div>
+              <p class="chat-kicker" data-i18n="chat.kicker">Assistant</p>
+              <h2 data-i18n="chat.title">Chatbot</h2>
+              <p id="chat-model-label" class="chat-model-label">Model: ChatGPT</p>
+            </div>
+            <span class="chat-status" data-i18n="chat.online">Online</span>
+          </header>
+
+          <div id="chat-log" class="chat-log" aria-live="polite"><article class="chat-message user-message"><p data-fr="dans la page d'accueil, décrit la société cds engineering sa">On the home page, describe CDS Engineering SA.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="J’ai ajouté une description de CDS Engineering SA à la page d’accueil.">I added a description of CDS Engineering SA to the home page.</p><p class="chat-action-summary">1 Page Updated</p></article><article class="chat-message user-message"><p data-fr="décrit son secteur d'activité">Describe its business sector.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="J’ai ajouté une description du secteur d’activité de CDS Engineering SA.">I added a description of CDS Engineering SA's business sector.</p><p class="chat-action-summary">1 Page Updated</p></article><article class="chat-message user-message"><p data-fr="decrit les produits de CDS engineering SA dans une nouvelle page produit">Describe CDS Engineering SA's products in a new product page.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="Une nouvelle page dédiée aux produits de CDS Engineering SA a été créée.">A new page dedicated to CDS Engineering SA's products has been created.</p><div class="chat-action-row"><p class="chat-action-summary">1 Page Created</p><button type="button" class="chat-source-toggle" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M10 13a5 5 0 0 0 7.1 0l2.1-2.1a5 5 0 0 0-7.1-7.1L11 4.9"></path>
+        <path d="M14 11a5 5 0 0 0-7.1 0l-2.1 2.1a5 5 0 0 0 7.1 7.1L13 19.1"></path>
+      </svg>
+      <span>View Sources</span>
+      <span class="chat-source-count">8</span>
+    </button></div><div class="chat-source-panel" hidden><ul class="chat-sources"><li><a href="https://www.cds-engineering.com/" target="_blank" rel="noreferrer">CDS Engineering</a></li><li><a href="https://www.cds-profil.ch/" target="_blank" rel="noreferrer">CDS Profil</a></li><li><a href="https://cdstechno.com/" target="_blank" rel="noreferrer">Cdstechno</a></li><li><a href="https://www.cdsengineering.it/" target="_blank" rel="noreferrer">Cdsengineering</a></li><li><a href="https://www.cds-usa.com/" target="_blank" rel="noreferrer">CDS USA</a></li><li><a href="https://cdsiengineering.com/" target="_blank" rel="noreferrer">Cdsiengineering</a></li><li><a href="https://cdmsengineering.com/" target="_blank" rel="noreferrer">Cdmsengineering</a></li><li><a href="https://www.local.ch/fr/d/villeneuve-vd/1844/conseils-et-prestations-en-informatique/cds-engineering-sa-9ULc7O35tind72QVlDtu6Q" target="_blank" rel="noreferrer">Conseils et Prestations en Informatique / Cds Engineering Sa 9ULc7O35tind72QVlDtu6Q</a></li></ul><div class="chat-source-actions"><button type="button" class="chat-source-add">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5v14"></path>
+          <path d="M5 12h14"></path>
+        </svg>
+        <span class="chat-source-add-label">Add to page</span>
+      </button></div></div></article><article class="chat-message user-message"><p data-fr="ajoute une page qui liste les clients de CDS">Add a page listing CDS clients.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="La page des clients de CDS a été préparée.">The CDS clients page has been prepared.</p><div class="chat-action-row"><p class="chat-action-summary">1 Page Created</p><button type="button" class="chat-source-toggle" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M10 13a5 5 0 0 0 7.1 0l2.1-2.1a5 5 0 0 0-7.1-7.1L11 4.9"></path>
+        <path d="M14 11a5 5 0 0 0-7.1 0l-2.1 2.1a5 5 0 0 0 7.1 7.1L13 19.1"></path>
+      </svg>
+      <span>View Sources</span>
+      <span class="chat-source-count">8</span>
+    </button></div><div class="chat-source-panel" hidden><ul class="chat-sources"><li><a href="https://www.cds-engineering.com/" target="_blank" rel="noreferrer">CDS Engineering</a></li><li><a href="https://cds-engineering.com/about-us.html" target="_blank" rel="noreferrer">About Us</a></li><li><a href="https://www.cds-engineering.com/contact-us.html" target="_blank" rel="noreferrer">Contact Us</a></li><li><a href="https://www.cds-profil.ch/" target="_blank" rel="noreferrer">CDS Profil</a></li><li><a href="https://www.cds-engineering.com/services.html" target="_blank" rel="noreferrer">Services</a></li><li><a href="https://cdstechno.com/" target="_blank" rel="noreferrer">Cdstechno</a></li><li><a href="https://www.cds-profil.ch/en/homepage-2/" target="_blank" rel="noreferrer">En / Homepage 2</a></li><li><a href="https://www.cds-engineering.com/careers.html" target="_blank" rel="noreferrer">Careers</a></li></ul><div class="chat-source-actions"><button type="button" class="chat-source-add">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5v14"></path>
+          <path d="M5 12h14"></path>
+        </svg>
+        <span class="chat-source-add-label">Add to page</span>
+      </button></div></div></article><article class="chat-message user-message"><p data-fr="cree une page sur la theorie des nombres">Create a page about number theory.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="La page sur la théorie des nombres a été créée.">The page about number theory has been created.</p><div class="chat-action-row"><p class="chat-action-summary">1 Page Created</p><button type="button" class="chat-source-toggle" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M10 13a5 5 0 0 0 7.1 0l2.1-2.1a5 5 0 0 0-7.1-7.1L11 4.9"></path>
+        <path d="M14 11a5 5 0 0 0-7.1 0l-2.1 2.1a5 5 0 0 0 7.1 7.1L13 19.1"></path>
+      </svg>
+      <span>View Sources</span>
+      <span class="chat-source-count">8</span>
+    </button></div><div class="chat-source-panel" hidden><ul class="chat-sources"><li><a href="https://fr.wikisource.org/wiki/Th%C3%A9orie_des_nombres/Introduction" target="_blank" rel="noreferrer" data-fr="Théorie des Nombres / Introduction">Number Theory / Introduction</a></li><li><a href="https://fr.wikiversity.org/wiki/Introduction_%C3%A0_la_th%C3%A9orie_des_nombres/Pr%C3%A9sentation_de_la_le%C3%A7on" target="_blank" rel="noreferrer" data-fr="Introduction À la Théorie des Nombres / Présentation de la Leçon">Introduction to Number Theory / Lesson Overview</a></li><li><a href="https://fr.wikiversity.org/wiki/Introduction_%C3%A0_la_th%C3%A9orie_des_nombres" target="_blank" rel="noreferrer" data-fr="Wiki / Introduction À la Théorie des Nombres">Wiki / Introduction to Number Theory</a></li><li><a href="https://www.editions-eni.fr/livre/les-sciences-informatiques-de-turing-a-l-intelligence-artificielle-9782409052262/arsenal-mathematique" target="_blank" rel="noreferrer" data-fr="Les Sciences Informatiques de Turing a l Intelligence Artificielle / Arsenal Mathematique">Computer Science from Turing to Artificial Intelligence / Mathematical Toolkit</a></li><li><a href="https://www.dsm.ma/livre/introduction-a-la-theorie-des-nombres/" target="_blank" rel="noreferrer" data-fr="Livre / Introduction a la Theorie des Nombres">Book / Introduction to Number Theory</a></li><li><a href="https://www.studysmarter.fr/resumes/mathematiques/mathematiques-pures/theorie-des-nombres/" target="_blank" rel="noreferrer" data-fr="Mathematiques Pures / Theorie des Nombres">Pure Mathematics / Number Theory</a></li><li><a href="https://wikiland.org/fr/Elementary_number_theory" target="_blank" rel="noreferrer" data-fr="Fr / Elementary Number Theory">FR / Elementary Number Theory</a></li><li><a href="https://www.cheneliere.ca/en/intro-theorie-des-nombres-9782891135009.html" target="_blank" rel="noreferrer" data-fr="En / Intro Theorie des Nombres">EN / Introduction to Number Theory</a></li></ul><div class="chat-source-actions"><button type="button" class="chat-source-add">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5v14"></path>
+          <path d="M5 12h14"></path>
+        </svg>
+        <span class="chat-source-add-label">Add to page</span>
+      </button></div></div></article><article class="chat-message user-message"><p data-fr="cree une page sur la recherche numérique">Create a page about digital research.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="La page sur la recherche numérique a été créée.">The page about digital research has been created.</p><div class="chat-action-row"><p class="chat-action-summary">1 Page Created</p><button type="button" class="chat-source-toggle" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M10 13a5 5 0 0 0 7.1 0l2.1-2.1a5 5 0 0 0-7.1-7.1L11 4.9"></path>
+        <path d="M14 11a5 5 0 0 0-7.1 0l-2.1 2.1a5 5 0 0 0 7.1 7.1L13 19.1"></path>
+      </svg>
+      <span>View Sources</span>
+      <span class="chat-source-count">8</span>
+    </button></div><div class="chat-source-panel" hidden><ul class="chat-sources"><li><a href="https://www.techtarget.com/searchcio/definition/strategic-innovation" target="_blank" rel="noreferrer">Definition / Strategic Innovation</a></li><li><a href="https://www.ptc.com/fr/blogs/corporate/innovation-numerique-definition-et-enjeux" target="_blank" rel="noreferrer" data-fr="Corporate / Innovation Numerique Definition et Enjeux">Corporate / Digital Innovation Definition and Challenges</a></li><li><a href="https://consultport.com/fr/simply-explained/quest-ce-que-linnovation-numerique/" target="_blank" rel="noreferrer" data-fr="Simply Explained / Quest Ce Que Linnovation Numerique">Simply Explained / What Is Digital Innovation</a></li><li><a href="https://www.ibm.com/fr-fr/topics/digital-transformation" target="_blank" rel="noreferrer">Topics / Digital Transformation</a></li><li><a href="https://exed.centralesupelec.fr/actualites/souverainete-numerique-definition-enjeux-strategiques/" target="_blank" rel="noreferrer" data-fr="Actualites / Souverainete Numerique Definition Enjeux Strategiques">News / Digital Sovereignty Definition and Strategic Issues</a></li><li><a href="https://www.prelium.fr/blog/mrp-15/la-continuite-numerique-tendance-majeure-dans-l-industrie-2506" target="_blank" rel="noreferrer" data-fr="Mrp 15 / La Continuite Numerique Tendance Majeure Dans l Industrie 2506">MRP 15 / Digital Continuity as a Major Industry Trend</a></li><li><a href="https://www.salesforce.com/fr/resources/definition/transformation-digitale/" target="_blank" rel="noreferrer" data-fr="Definition / Transformation Digitale">Definition / Digital Transformation</a></li><li><a href="https://www.universalis.fr/encyclopedie/innovation/" target="_blank" rel="noreferrer" data-fr="Encyclopedie / Innovation">Encyclopedia / Innovation</a></li></ul><div class="chat-source-actions"><button type="button" class="chat-source-add">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5v14"></path>
+          <path d="M5 12h14"></path>
+        </svg>
+        <span class="chat-source-add-label">Add to page</span>
+      </button></div></div></article><article class="chat-message user-message"><p data-fr="crée une page qui décrit la théorie des nombres">Create a page that describes number theory.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="Voici une description de la théorie des nombres avec les informations demandées">Here is a description of number theory with the requested information.</p><p class="chat-action-summary">1 Page Created</p></article><article class="chat-message user-message"><p data-fr="cree une page qui décrit la langue francaise">Create a page that describes the French language.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="Voici une description de la langue française avec les éléments demandés.">Here is a description of the French language with the requested details.</p><p class="chat-action-summary">1 Page Created</p></article><article class="chat-message user-message"><p data-fr="décrit ce que sont les nombres décimaux">Describe what decimal numbers are.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p>I created a new page for decimal numbers. Here's the content: brief explanation of decimal numbers, their properties, and examples.</p><p class="chat-action-summary">1 Page Created</p></article><article class="chat-message user-message"><p data-fr="décrit ce que sont les nombres décimaux">Describe what decimal numbers are.</p></article><article class="chat-message assistant-message"><h3>Assistant</h3><p data-fr="Voici une explication sur les nombres décimaux :">Here is an explanation of decimal numbers:</p><p class="chat-action-summary">1 Page Created</p></article></div>
+
+          <form id="chat-form" class="chat-composer">
+            <button class="chat-icon-button composer-add" type="button" aria-label="Add attachment" data-i18n-aria-label="chat.attach">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 5v14"></path>
+                <path d="M5 12h14"></path>
+              </svg>
+            </button>
+            <textarea id="chat-input" rows="1" placeholder="Ask a question" aria-label="Question for the chatbot" data-i18n-placeholder="chat.input.placeholder" data-i18n-aria-label="chat.input.aria"></textarea>
+            <!--<button class="chat-icon-button" type="button" aria-label="Dicter">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <path d="M12 19v3"></path>
+              </svg>
+            </button>-->
+            <button class="chat-send" type="submit" aria-label="Send" data-i18n-aria-label="chat.send">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14"></path>
+                <path d="M13 6l6 6-6 6"></path>
+              </svg>
+            </button>
+          </form>
+        </aside>
+      </section>
+      </section>
+    </main>
+
+    <div id="alert-overlay" class="alert-overlay hidden" role="alertdialog" aria-modal="true" aria-labelledby="alert-title" aria-describedby="alert-message">
+      <div class="alert-dialog">
+        <h2 id="alert-title" data-i18n="alert.title">Error</h2>
+        <p id="alert-message"></p>
+        <button id="alert-close" type="button" data-i18n="common.ok">OK</button>
+      </div>
+    </div>
+
+    <div id="tour-overlay" class="tour-overlay hidden" aria-hidden="true"></div>
+    <div id="tour-popover" class="tour-popover hidden" role="dialog" aria-labelledby="tour-title" aria-describedby="tour-message">
+      <div id="tour-arrow" class="tour-arrow" aria-hidden="true"></div>
+      <p id="tour-step" class="tour-step"></p>
+      <h2 id="tour-title"></h2>
+      <p id="tour-message"></p>
+      <div class="tour-actions">
+        <button id="tour-skip" class="secondary-button" type="button" data-i18n="common.skip">Skip</button>
+        <button id="tour-next" type="button" data-i18n="common.next">Next</button>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const authPanel = document.getElementById("auth-panel");
+        const workspace = document.getElementById("workspace");
+        const loginForm = document.getElementById("login-form");
+        const logoutButton = document.getElementById("logout-button");
+        const moreOptionsButton = document.getElementById("more-options-button");
+        const moreOptionsIcon = moreOptionsButton?.querySelector("img");
+        const userMenu = document.getElementById("user-menu");
+        const themeToggleButton = document.getElementById("theme-toggle-button");
+        const themeToggleIcon = themeToggleButton?.querySelector("img");
+        const pageTree = document.getElementById("page-tree");
+        const pageCount = document.getElementById("tree-page-count");
+        const pageSearchButton = document.getElementById("page-search-button");
+        const pageSearchIcon = pageSearchButton?.querySelector("img");
+        const pageSearchInput = document.getElementById("page-search-input");
+        const chatPanel = document.querySelector(".chat-panel");
+        const editorLayout = document.querySelector(".editor-layout");
+        const treePanel = document.querySelector(".tree-panel");
+        const editorPanel = document.querySelector(".editor-panel");
+        const editor = document.querySelector("#editorjs .codex-editor");
+        const editorToolbar = editor?.querySelector(".ce-toolbar");
+        const toolbarContent = editorToolbar?.querySelector(".ce-toolbar__content");
+
+        const showLogin = () => {
+          authPanel?.classList.remove("hidden");
+          workspace?.classList.add("hidden");
+        };
+
+        const showWorkspace = () => {
+          authPanel?.classList.add("hidden");
+          workspace?.classList.remove("hidden");
+        };
+
+        showLogin();
+
+        loginForm?.addEventListener("submit", (event) => {
+          event.preventDefault();
+          showWorkspace();
+        });
+
+        logoutButton?.addEventListener("click", (event) => {
+          event.preventDefault();
+          showLogin();
+        });
+
+        const setDarkMode = (isDarkMode) => {
+          document.documentElement.classList.toggle("dark-mode", isDarkMode);
+          themeToggleButton?.setAttribute("aria-pressed", String(isDarkMode));
+          if (themeToggleIcon) {
+            themeToggleIcon.src = isDarkMode ? "./assets/icons/sun.max.svg" : "./assets/icons/moon.svg";
+          }
+        };
+
+        setDarkMode(localStorage.getItem("editq-theme") === "dark");
+
+        themeToggleButton?.addEventListener("click", () => {
+          const isDarkMode = !document.documentElement.classList.contains("dark-mode");
+          setDarkMode(isDarkMode);
+          localStorage.setItem("editq-theme", isDarkMode ? "dark" : "light");
+        });
+
+        const updatePageCount = () => {
+          if (!pageTree || !pageCount) return;
+          const count = pageTree.querySelectorAll(".tree-node").length;
+          pageCount.textContent = `${count} ${count === 1 ? "Page" : "Pages"}`;
+        };
+
+        updatePageCount();
+
+        if (pageTree) {
+          new MutationObserver(updatePageCount).observe(pageTree, {
+            childList: true,
+            subtree: true,
+          });
+        }
+
+        moreOptionsButton?.addEventListener("click", () => {
+          const isOpening = userMenu?.hasAttribute("hidden");
+          userMenu?.toggleAttribute("hidden", !isOpening);
+          moreOptionsButton.setAttribute("aria-expanded", String(isOpening));
+          if (moreOptionsIcon) {
+            moreOptionsIcon.src = isOpening ? "./assets/icons/xmark.svg" : "./assets/icons/more.svg";
+          }
+        });
+
+        pageSearchButton?.addEventListener("click", () => {
+          if (!pageSearchInput) return;
+          const isHidden = pageSearchInput.classList.toggle("hidden");
+          const isOpen = !isHidden;
+          pageSearchButton.setAttribute("aria-expanded", String(isOpen));
+          if (pageSearchIcon) {
+            pageSearchIcon.src = isOpen ? "./assets/icons/xmark.svg" : "./assets/icons/magnifyingglass.svg";
+          }
+          if (isOpen) {
+            pageSearchInput.focus();
+          } else {
+            pageSearchInput.value = "";
+            pageSearchInput.dispatchEvent(new Event("input"));
+          }
+        });
+
+        pageSearchInput?.addEventListener("input", () => {
+          const query = pageSearchInput.value.trim().toLowerCase();
+          pageTree?.querySelectorAll(".tree-node").forEach((node) => {
+            const title = node.querySelector(".tree-title")?.textContent?.toLowerCase() || "";
+            node.classList.toggle("hidden", Boolean(query) && !title.includes(query));
+          });
+        });
+
+        document.querySelectorAll(".assistant-message > h3").forEach((heading) => heading.remove());
+
+        document.querySelectorAll(".chat-action-summary").forEach((summary) => {
+          summary.textContent = summary.textContent.replace(/\bpage\b/g, "Page").replace(/\bcreated\b/g, "Created").replace(/\bupdated\b/g, "Updated");
+        });
+
+        document.querySelectorAll(".chat-source-toggle span:first-of-type").forEach((label) => {
+          if (label.textContent.trim().toLowerCase() === "view sources") {
+            label.textContent = "View Sources";
+          }
+        });
+
+        document.querySelectorAll(".chat-source-toggle").forEach((button) => {
+          button.addEventListener("click", () => {
+            const panel = button.closest(".assistant-message")?.querySelector(".chat-source-panel");
+            if (!panel) return;
+
+            const isHidden = panel.hasAttribute("hidden");
+            panel.toggleAttribute("hidden", !isHidden);
+            button.setAttribute("aria-expanded", String(isHidden));
+          });
+        });
+
+        let chatTouchStart = 0;
+
+        chatPanel?.addEventListener("touchstart", (event) => {
+          chatTouchStart = event.changedTouches[0]?.clientY || 0;
+        }, { passive: true });
+
+        chatPanel?.addEventListener("touchend", (event) => {
+          const end = event.changedTouches[0]?.clientY || 0;
+          const delta = end - chatTouchStart;
+          if (delta < -45) chatPanel.classList.add("is-expanded");
+          if (delta > 45) chatPanel.classList.remove("is-expanded");
+        }, { passive: true });
+
+        document.querySelectorAll(".layout-resizer").forEach((handle) => {
+          handle.addEventListener("pointerdown", (event) => {
+            if (!editorLayout || !treePanel || !editorPanel || !chatPanel || window.matchMedia("(max-width: 1180px)").matches) return;
+            event.preventDefault();
+
+            const mode = handle.dataset.resizer;
+            const startX = event.clientX;
+            const startTree = treePanel.getBoundingClientRect().width;
+            const startEditor = editorPanel.getBoundingClientRect().width;
+            const startChat = chatPanel.getBoundingClientRect().width;
+
+            editorLayout.style.setProperty("--tree-col", `${startTree}px`);
+            editorLayout.style.setProperty("--editor-col", `${startEditor}px`);
+            editorLayout.style.setProperty("--chat-col", `${startChat}px`);
+            handle.classList.add("is-dragging");
+            document.body.classList.add("is-resizing-layout");
+            handle.setPointerCapture(event.pointerId);
+
+            const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+            const onPointerMove = (moveEvent) => {
+              const delta = moveEvent.clientX - startX;
+
+              if (mode === "tree") {
+                const total = startTree + startEditor;
+                const treeWidth = clamp(startTree + delta, 140, total - 260);
+                editorLayout.style.setProperty("--tree-col", `${treeWidth}px`);
+                editorLayout.style.setProperty("--editor-col", `${total - treeWidth}px`);
+              }
+
+              if (mode === "chat") {
+                const total = startEditor + startChat;
+                const editorWidth = clamp(startEditor + delta, 260, total - 280);
+                editorLayout.style.setProperty("--editor-col", `${editorWidth}px`);
+                editorLayout.style.setProperty("--chat-col", `${total - editorWidth}px`);
+              }
+            };
+
+            const onPointerUp = () => {
+              handle.classList.remove("is-dragging");
+              document.body.classList.remove("is-resizing-layout");
+              handle.removeEventListener("pointermove", onPointerMove);
+              handle.removeEventListener("pointerup", onPointerUp);
+              handle.removeEventListener("pointercancel", onPointerUp);
+            };
+
+            handle.addEventListener("pointermove", onPointerMove);
+            handle.addEventListener("pointerup", onPointerUp);
+            handle.addEventListener("pointercancel", onPointerUp);
+          });
+        });
+
+        const positionEditorToolbar = (section) => {
+          if (!editor || !editorToolbar || !toolbarContent || !section) return;
+
+          const editorBox = editor.getBoundingClientRect();
+          const sectionBox = section.getBoundingClientRect();
+          const top = sectionBox.bottom - editorBox.top + 6;
+          const left = sectionBox.left - editorBox.left;
+
+          editorToolbar.style.top = `${top}px`;
+          toolbarContent.style.margin = "0";
+          toolbarContent.style.maxWidth = "none";
+          toolbarContent.style.transform = `translateX(${Math.max(0, left)}px)`;
+        };
+
+        editor?.querySelectorAll(".ce-block__content").forEach((section) => {
+          section.addEventListener("mouseenter", () => positionEditorToolbar(section));
+          section.addEventListener("focusin", () => positionEditorToolbar(section));
+        });
+      })();
+    </script>
+  
+
+<div class="ct"><div class="ct__content"></div></div></body></html>

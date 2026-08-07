@@ -11,8 +11,8 @@
 
 .blog-list {
     display: grid !important;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--spacing) var(--gutter) !important;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    column-gap: var(--gutter);
 }
 
 .blog-list[hidden] {

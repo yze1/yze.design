@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skippies | Made for big kid moments</title>
+    <meta
+      name="description"
+      content="Skippies creates everyday underwear with purpose, designed to support growing bodies with calm, science-informed confidence."
+    />
+    <meta property="og:title" content="Skippies | Made for big kid moments" />
+    <meta
+      property="og:description"
+      content="A one-page preview of the Skippies launch with a simple signup popup for launch updates."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/characters/SKIPPIES_SHAPE - CALM 1.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/characters/SKIPPIES_SHAPE - CALM 1.svg" />
+    <link rel="preload" href="assets/fonts/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="assets/fonts/Montserrat-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/load.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div id="site-loader" class="site-loader" aria-live="polite">
+      <div class="site-loader-inner">
+        <img
+          id="site-loader-character"
+          class="site-loader-character"
+          src="assets/characters/SKIPPIES_SHAPE - CALM 1.svg"
+          alt="Loading Skippies"
+          width="132"
+          height="132"
+        />
+      </div>
+    </div>
+
+    <div class="page-noise" aria-hidden="true"></div>
+    <div id="hourglass-canvas" class="canvas-shell" role="img" aria-label="Interactive hourglass with falling Skippies characters across the page"></div>
+
+    <header class="site-header" aria-label="Primary">
+      <div class="header-shell">
+        <a class="brand-link" href="#top" aria-label="Back to top">
+          <img
+            class="brand-logo"
+            src="assets/logos/LOGO - Navy.svg"
+            alt="Skippies"
+            width="170"
+            height="52"
+          />
+        </a>
+
+        <button id="notify-trigger-header" class="notify-trigger notify-trigger-header" type="button" aria-haspopup="dialog" aria-controls="notify-modal">
+          Join the list
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="top" class="hero" aria-label="Skippies launch preview">
+        <div class="hero-intro">
+          <p class="eyebrow">Launching soon</p>
+          <h1>Made for big kid moments</h1>
+          <p class="hero-lead">
+            Everyday underwear with purpose, shaped by science and designed to help children learn, grow, and go with more confidence.
+          </p>
+
+          <div class="hero-actions">
+            <button id="notify-trigger" class="notify-trigger" type="button" aria-haspopup="dialog" aria-controls="notify-modal">
+              <span class="bell-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.25 18.75C14.25 19.3467 14.0129 19.919 13.591 20.341C13.169 20.7629 12.5967 21 12 21C11.4033 21 10.831 20.7629 10.409 20.341C9.98705 19.919 9.75 19.3467 9.75 18.75"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.75 9.75C18.75 8.375 18.2038 7.056 17.231 6.08318C16.2582 5.11038 14.9391 4.5642 13.5641 4.5642H10.4359C9.06092 4.5642 7.7418 5.11038 6.769 6.08318C5.7962 7.056 5.25 8.375 5.25 9.75V12.513L4.01969 15.5828C3.95358 15.7477 3.92968 15.9265 3.95005 16.1028C3.97042 16.2792 4.03443 16.4478 4.13647 16.5929C4.23851 16.7381 4.3754 16.8552 4.53455 16.9338C4.6937 17.0123 4.87006 17.0497 5.0475 17.0428H18.9525C19.1299 17.0497 19.3063 17.0123 19.4654 16.9338C19.6246 16.8552 19.7615 16.7381 19.8635 16.5929C19.9656 16.4478 20.0296 16.2792 20.05 16.1028C20.0703 15.9265 20.0464 15.7477 19.9803 15.5828L18.75 12.513V9.75Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>Notify me</span>
+            </button>
+          </div>
+
+          <dl class="hero-facts" aria-label="Brand highlights">
+            <div>
+              <!-- <dt>Primary message</dt> -->
+              <!-- <dd>Confidence over pressure</dd> -->
+              <dd>Supporting confidence at every step</dd>
+            </div>
+            <div>
+              <!-- <dt>Built for</dt> -->
+              <!-- <dd>Learning, growing, and going</dd> -->
+              <dd>Designed for learning, growing, and going</dd>
+            </div>
+            <div>
+              <!-- <dt>Approach</dt> -->
+              <!-- <dd>Calm, clear, science-informed support</dd> -->
+              <dd>Support you can trust, built on real research</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-stage">
+          <div class="hourglass-frame" aria-hidden="true">
+            <div class="canvas-copy">
+              <p class="canvas-caption">Tap inside to drop characters.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="updates" class="section section-cta" aria-labelledby="cta-title">
+        <div class="countdown-card" data-countdown-target="2026-04-30T23:59:59+01:00" aria-labelledby="countdown-title">
+          <!-- <p class="eyebrow">Countdown</p> -->
+          <h2 id="countdown-title">Countdown to launch</h2>
+          <div class="countdown-grid" aria-live="polite">
+            <div class="countdown-unit">
+              <span id="countdown-days" class="countdown-value">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-unit">
+              <span id="countdown-hours" class="countdown-value">00</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-unit">
+              <span id="countdown-minutes" class="countdown-value">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-unit">
+              <span id="countdown-seconds" class="countdown-value">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-panel">
+          <div>
+            <!-- <p class="eyebrow">Stay close</p> -->
+            <h2 id="cta-title">Join the list for launch updates</h2>
+            <p>We’ll share first access, product news, and the next big kid moments worth knowing about.</p>
+          </div>
+          <button id="notify-trigger-footer" class="notify-trigger" type="button" aria-haspopup="dialog" aria-controls="notify-modal">
+            <!-- Open signup -->
+             Sign Up
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="assets/logos/LOGO - Navy.svg" alt="Skippies" width="144" height="44" />
+        <!-- <p>Thoughtful, science-informed support for children and the families raising them.</p> -->
+      </div>
+
+      <div class="footer-links" aria-label="Legal and contact">
+        <a href="mailto:hello@skippies.com">hello@skippies.com</a>
+      </div>
+    </footer>
+
+    <div id="notify-modal" class="notify-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="notify-title">
+      <div class="notify-backdrop" data-close-modal="true"></div>
+      <section class="notify-panel" role="document">
+        <button id="notify-close" class="notify-close" type="button" aria-label="Close signup form">Close</button>
+        <p class="eyebrow">Launch updates</p>
+        <h2 id="notify-title">Be first to hear from Skippies</h2>
+        <p>Join the list for launch news, early access, and a heads-up when the full collection goes live.</p>
+        <form id="notify-form" class="notify-form" novalidate>
+          <label class="sr-only" for="email-input">Email address</label>
+          <input id="email-input" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="you@example.com" />
+          <button id="notify-submit" type="submit">Notify me</button>
+          <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+
+:root {
+    --black: #101010;
+    --white: #ffffff;
+    --red: #ff0000;
+
+    --margin: 100px;
+    --columns: 12; --gutter: 30px; --spacing: 30px;
+}

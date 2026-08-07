@@ -1,0 +1,66 @@
+const cursor = document.getElementById("cursor");
+
+let mouseX = 0;
+let mouseY = 0;
+let x = 0;
+let y = 0;
+
+window.addEventListener("pointermove", e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.classList.toggle("over-red", Boolean(e.target.closest(".red")));
+});
+
+function animate() {
+    x += (mouseX - x) * 0.2;
+    y += (mouseY - y) * 0.2;
+
+    cursor.style.transform =
+        `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+const reel = document.querySelector("mux-player[metadata-video-title='reel']");
+
+if (reel) {
+    const cursorLabel = cursor.querySelector("h4");
+    let hoveringReel = false;
+    const updateLabel = () => {
+        if (hoveringReel) {
+            // cursorLabel.textContent = reel.muted ? "UNMUTE" : reel.paused ? "PLAY" : "PAUSE";
+            cursorLabel.textContent = reel.muted ? "🔇" : reel.paused ? "▶" : "⏸";
+        }
+    };
+    const toggleReel = () => {
+        if (reel.muted) {
+            reel.muted = false;
+            reel.play();
+        } else {
+            reel.paused ? reel.play() : reel.pause();
+        }
+    };
+
+    reel.addEventListener("pointerenter", () => {
+        hoveringReel = true;
+        cursor.classList.add("video-hover");
+        updateLabel();
+    });
+    reel.addEventListener("pointerleave", () => {
+        hoveringReel = false;
+        cursor.classList.remove("video-hover");
+        cursorLabel.innerHTML = "<strong>&amp;</strong>";
+    });
+    reel.addEventListener("play", updateLabel);
+    reel.addEventListener("pause", updateLabel);
+    reel.addEventListener("volumechange", updateLabel);
+    reel.addEventListener("click", toggleReel);
+    reel.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleReel();
+        }
+    });
+}

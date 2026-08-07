@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Black Set",
+    "slug": "blackset",
+    "shopifyUrl": "https://organizedcrimez.com/password",
+    "price": "$150",
+    "description": "Baggy slim fit black and red stripe set in heavyweight 100% cotton with rhinestone sided stripes and premium OCZ patch details.",
+    "details": [
+      "$150",
+      "Fit: Baggy slim fit",
+      "Fabric: 500+ GSM 100% Cotton",
+      "No color bleeding",
+      "No fading after washing",
+      "No fuzzies after use",
+      "Color and trim: Blk & red stripe",
+      "Production details: Rhinestone sided stripes, Exclusive Ocz brand patch, premium chrome Chanel patch"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "thumbnailImage": "products/blackset/371A5BC7-07FF-4E0D-9E0F-C3F237406011.png",
+    "additionalImages": [
+      "products/blackset/6225447E-C557-4338-A74A-937127B8EDDA.png",
+      "products/blackset/7766134A-1097-4D87-B593-C165DD70F3E2.png",
+      "products/blackset/BE5EA410-4803-4F55-BCB8-3629C0BAFD84.png",
+      "products/blackset/C13B5E2E-B8E8-47C6-8DCF-4B2E48C7F091.png"
+    ]
+  },
+  {
+    "name": "Pink Set",
+    "slug": "pinkset",
+    "shopifyUrl": "https://organizedcrimez.com/password",
+    "price": "$150",
+    "description": "Baggy slim fit pink and white stripe set in heavyweight 100% cotton with rhinestone sided stripes and premium OCZ patch details.",
+    "details": [
+      "$150",
+      "Fit: Baggy slim fit",
+      "Fabric: 500+ GSM 100% Cotton",
+      "No color bleeding",
+      "No fading after washing",
+      "No fuzzies after use",
+      "Color and trim: Pink & white stripe",
+      "Production details: Rhinestone sided stripes, Exclusive Ocz brand patch, premium chrome Chanel patch"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "thumbnailImage": "products/pinkset/7E9AC854-8964-4848-A105-ABDE6709CAD6.png",
+    "additionalImages": [
+      "products/pinkset/5BDF341E-7469-4374-8663-772A4281EEED.png",
+      "products/pinkset/68E37E9C-0B9F-4772-929D-0D5DA287560D.png",
+      "products/pinkset/A4D5A943-1307-40AA-92A9-4FE220F01926.png",
+      "products/pinkset/B0CB7001-66ED-48A6-8614-39B218707AEB.png",
+      "products/pinkset/C90D8135-50FE-4B10-A6F4-9ABD2DA30154.png"
+    ]
+  },
+  {
+    "name": "Splat Set",
+    "slug": "splatset",
+    "shopifyUrl": "https://organizedcrimez.com/password",
+    "price": "$150",
+    "description": "Premium black fleece hoodie set with a bold pink splash graphic and an oversized streetwear-inspired fit.",
+    "details": [
+      "$150",
+      "Fit: Baggy slim fit",
+      "Fabric: 500+ GSM 100% Cotton",
+      "No color bleeding",
+      "No fading after washing",
+      "No fuzzies after use",
+      "Color and trim: Pink & blk",
+      "Production: Premium black fleece hoodie with bold pink splash graphic",
+      "Oversized streetwear-inspired fit",
+      "Soft heavyweight material for comfort and warmth"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "thumbnailImage": "products/splatset/6D730FD0-ADCC-453B-B0E6-76D3EDD57C95.png",
+    "additionalImages": [
+      "products/splatset/32089BD7-9B42-470A-9A02-4F51F56DC516.png"
+    ]
+  },
+  {
+    "name": "Z Tee",
+    "slug": "ztee",
+    "shopifyUrl": "https://organizedcrimez.com/password",
+    "price": "$60",
+    "description": "Black oversized T-shirt made from 300+ GSM cotton.",
+    "details": [
+      "$60",
+      "Black oversized T-shirt",
+      "300+ GSM Cotton"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "thumbnailImage": "products/ztee/C360338A-C77A-4174-A9A5-1D4AD980ED44.png",
+    "additionalImages": [
+      "products/ztee/68E62563-902D-462B-9E9E-ECBE1ADD5D38.png"
+    ]
+  }
+]
