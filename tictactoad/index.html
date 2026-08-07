@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>TicTacToad</title>
+    <link href="/css/variables.css" rel="stylesheet">
+    <link href="/css/typography.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+    <link href="/css/ai.css?v=2" rel="stylesheet">
+    <link href="/css/cursor.css" rel="stylesheet">
+</head>
+<body class="spacious">
+    <div id="header"></div>
+    <main>
+        <section class="compact presentation">
+            <div class="s12">
+                <div class="slide">
+                    <img alt="" class="slide-media" id="slide-image">
+                    <video autoplay class="slide-media" hidden id="slide-video" loop muted playsinline></video>
+                </div>
+            </div>
+            <div class="s6 slide-controls">
+                <p><span aria-label="Previous slide" id="previous" role="button" tabindex="0">&lt;-</span> <span aria-label="Next slide" id="next" role="button" tabindex="0">-&gt;</span></p>
+            </div>
+            <div aria-live="polite" class="s6 end slide-notes">
+                <p id="slide-notes"></p>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="/js/presentation.js"></script>
+    <script src="/js/load.js"></script>
+    <script src="/js/partials.js"></script>
+    <script src="/js/cursor.js"></script>
+    <script src="/js/media.js"></script>
+    <script src="/js/layout.js"></script>
+    <script src="/js/archive.js"></script>
+    <script src="/js/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+* { box-sizing: border-box; }
+
+html, body { margin: 0; min-height: 100%; }
+
+body {
+  background: #071a2d;
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  font-synthesis: none;
+}
+
+h1, p, ul { margin: 0; }
+
+.slide-title {
+  color: var(--green);
+  font-size: 2.8125cqw;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.87;
+}
+
+.slide-subtitle {
+  font-size: 2.8125cqw;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.87;
+}
+
+.dark .slide-title { color: var(--yellow); }
+.dark .slide-subtitle { color: var(--paper); }
+
+.subtitle-mobile {
+  display: none;
+}
+
+.body-copy {
+  font-size: 1.171875cqw;
+  letter-spacing: -0.01em;
+  line-height: 1.1667;
+}
+
+.dark .body-copy { color: var(--paper); }
+
+.calls {
+  color: var(--yellow);
+  font-size: 0.703125cqw;
+  line-height: 1.28;
+  list-style: none;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.call-line {
+  display: inline;
+}
+
+.call-line + .call-line::before {
+  content: " ";
+}
+
+.caption {
+  font-size: 0.703125cqw;
+  line-height: 1.28;
+}
+
+@media (max-width: 700px) and (orientation: portrait) {
+  .slide-title,
+  .slide-subtitle {
+    font-size: clamp(22px, 6.6vw, 27px);
+    letter-spacing: -0.035em;
+    line-height: 0.94;
+    width: 100%;
+  }
+
+  .subtitle-desktop {
+    display: none;
+  }
+
+  .subtitle-mobile {
+    display: inline;
+  }
+
+  .materials .slide-title {
+    font-size: clamp(20px, 6vw, 25px);
+  }
+
+  .about .about-copy,
+  .strategy .strategy-copy,
+  .body-copy,
+  .room .room-text .body-copy,
+  .focus-detail .detail-copy .body-copy,
+  .materials-lower .body-copy,
+  .summary-left .summary-copy {
+    font-size: clamp(11px, 3.05vw, 13px) !important;
+    letter-spacing: -0.012em;
+    line-height: 1.18 !important;
+  }
+
+  .calls {
+    font-size: clamp(8px, 2.35vw, 10px);
+    line-height: 1.22;
+    text-align: left;
+  }
+
+  .call-line {
+    display: block;
+  }
+
+  .call-line + .call-line::before {
+    content: none;
+  }
+
+  .caption,
+  .material .caption {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+}

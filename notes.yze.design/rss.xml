@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>YZE Notes</title>
+    <link>https://notes.yze.design/</link>
+    <description>Notes on design, AI, creative technology and generative systems by Eddie Cranmer.</description>
+    <language>en-gb</language>
+    <item>
+      <title>The Value of Hallucination</title>
+      <link>https://notes.yze.design/TheValueOfHallucination/</link>
+      <guid>https://notes.yze.design/TheValueOfHallucination/</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0100</pubDate>
+      <description>Thoughts on the role and potential value of hallucination in frontier AI models.</description>
+    </item>
+  </channel>
+</rss>

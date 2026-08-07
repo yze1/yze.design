@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+:root {
+    --strokeWidth: 0.1px;
+
+    --columnWidth: 320px;
+    --indexColumnWidth: calc(var(--columnWidth) / 2);
+
+    --horizontalMargin: 20px;
+    --verticalMargin: calc(var(--horizontalMargin) / 2);
+    --columnWorkingArea: calc(var(--columnWidth) - (var(--horizontalMargin) * 2));
+
+    --headerRowHeight: 36px;
+
+    --notesDisplay: none;
+}
+
+
+/* Custom cursor styling */
+body {
+    --textColour: black;
+    --backgroundColour: white;
+
+    --h1Weight: 380;
+    --h2Weight: 340;
+    --h3Weight: 500;
+    --h4Weight: 340;
+    --pWeight: 200;
+    --ulWeight: 200;
+
+    cursor: none;
+
+    /* overflow-x: hidden; */
+}
+.dark-mode {
+    --textColour: white;
+    --backgroundColour: black;
+
+    --h1Weight: 320;
+    --h2Weight: 280;
+    --h3Weight: 280;
+    --h4Weight: 280;
+    --pWeight: 160;
+    --ulWeight: 160;
+}
+.dev-mode {
+    --notesDisplay: block;
+}
+
+
+.custom-cursor {
+    position: fixed;
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: var(--textColour);
+    pointer-events: none; /* Ensure it doesn't interfere with other elements */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.1s ease; /* Smooth following */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, p, ul {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--textColour);
+    padding-left: var(--horizontalMargin);
+    padding-right: var(--horizontalMargin);
+}
+
+/* Heading Styles with Baseline Alignment */
+h1 {
+    font-size: 20pt;
+    font-weight: var(--h1Weight);
+}
+h2 { 
+    font-size: 16pt;
+    font-weight: var(--h2Weight);
+}
+h3 {
+    font-size: 12pt;
+    font-weight: var(--h3Weight);
+
+    margin-bottom: 6px;
+}
+h4, h5 {
+    font-size: 12pt;
+    font-weight: var(--h4Weight);
+    
+    font-style: italic;
+    text-align: center;
+    margin-top: 12pt;
+    margin-bottom: 12pt;
+}
+p {
+    font-size: 12pt;
+    font-weight: var(--pWeight);
+}
+ul {
+    font-size: 12pt;
+    font-weight: var(--pWeight);
+
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: var(--horizontalMargin);
+}
+a {
+    color: var(--textColour);
+}
+h5 {
+    color: red;
+    display: var(--notesDisplay);
+}
+.summary {
+    font-style: italic;
+}
+.p_hidden {
+    color: var(--backgroundColour);
+}
+.p_hidden:hover
+{
+    color: var(--backgroundColour);
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+button:hover, .AOC > *:hover {
+    font-weight: var(--h2Weight);
+}
+
+.enquiry h1:hover, .enquiry h2:hover, .enquiry h3:hover, .enquiry h4:hover, .enquiry h5:hover, .enquiry p:hover, .enquiry ul:hover, .enquiry a:hover { color: #00ad41; } 
+.knowledge h1:hover, .knowledge h2:hover, .knowledge h3:hover, .knowledge h4:hover, .knowledge h5:hover, .knowledge p:hover, .knowledge ul:hover, .knowledge a:hover  { color: #19d6d0; } 
+.process h1:hover, .process h2:hover, .process h3:hover, .process h4:hover, .process h5:hover, .process p:hover, .process ul:hover, .process a:hover { color: #ffe42b; } 
+.communication h1:hover, .communication h2:hover, .communication h3:hover, .communication h4:hover, .communication h5:hover, .communication p:hover, .communication ul:hover, .communication a:hover { color: #ff8b1d; } 
+.realisation h1:hover, .realisation h2:hover, .realisation h3:hover, .realisation h4:hover, .realisation h5:hover, .realisation p:hover, .realisation ul:hover, .realisation a:hover { color: #d6a0fc; } 
+
+.enquiry p:hover, .knowledge p:hover, .process p:hover, .communication p:hover, .realisation p:hover { 
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    transition-property: color;
+} 
+
+.enquiryImg:hover { filter: drop-shadow(0 0 10px #00ad41);}
+.processImg:hover { filter: drop-shadow(0 0 10px #ffe42b);}
+.realisationImg:hover { filter: drop-shadow(0 0 10px #d6a0fc);}
+
+.divider {
+    width: 100%; /* Full width of the column */
+    border-top: calc(var(--strokeWidth) * 10) solid var(--textColour);
+    height: 2px;
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+.spacer {
+    width: 100%; /* Full width of the column */
+    border-top: calc(var(--strokeWidth) * 10) solid var(--textColour);
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* IMAGE & VIDEO */
+img, video {
+    max-width: var(--columnWorkingArea);
+    border-radius: var(--verticalMargin);
+}
+.imgContainer {
+    width: 100%; /* Ensure the container width matches column width */
+}
+.twoImgContainer {
+    width: 100%; /* Ensure the container width matches column width */
+    display: flex;
+}
+.imgContainer, .twoImgContainer, .threeImgContainer, video{
+    margin-left: var(--horizontalMargin);
+    margin-top: var(--verticalMargin);
+    margin-bottom: var(--verticalMargin);
+}
+.imgContainer img{ 
+    width: 100%; 
+}
+.twoImgContainer img{ 
+    width: calc((var(--columnWorkingArea) - var(--verticalMargin)) / 2); 
+    margin-right: var(--verticalMargin);
+}
+.threeImgContainer img{ 
+    width: calc((var(--columnWorkingArea) - (var(--verticalMargin) * 2)) / 3);
+    margin-right: var(--verticalMargin); 
+}
+
+.modal { /* Modal styling */
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it’s on top */
+}
+.modal-content { /* Fullscreen image styling */
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain; /* Ensures proportional scaling */
+    border-radius: 10px;
+}
+
+.masterContainer {
+    display: block;
+    z-index: 0;
+}
+
+/* .container, .column:first-child {
+    margin-left: var(--indexColumnWidth);
+} */
+
+/* .columnContainer {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+} */
+
+/* ROW HEIGHTS */
+.headingContainer { height: var(--headerRowHeight); }
+.columnContainer { height: calc(100vh - var(--headerRowHeight)); }
+
+.headingContainer, .columnContainer {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    border-collapse: collapse;
+}
+
+.heading, .column {
+    display: block;
+    padding-top: var(--verticalMargin);
+    padding-bottom: var(--verticalMargin);
+    justify-content: left;
+    width: var(--columnWidth); /* Default column width */
+
+    border: var(--strokeWidth) solid var(--textColour); /* Border between items */
+    border-left: none; border-bottom: none;
+
+    box-sizing: border-box;
+
+    background-color: var(--backgroundColour);
+}
+.column { /* UNNECESSARY? */
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.indexColumn {
+    width: var(--indexColumnWidth);
+    height: 100vh;
+    position: fixed; /* Sticks to the left side of the screen */
+    top: 0;
+    left: 0;
+    
+
+    z-index: 1;
+}
+
+/* Scroll snapping */
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+}
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+
+/* SECTION SIZES */
+.one { width: calc(var(--columnWidth) * 1); }
+.two { width: calc(var(--columnWidth) * 2); }
+.three { width: calc(var(--columnWidth) * 3); }
+.four { width: calc(var(--columnWidth) * 4); }
+.five { width: calc(var(--columnWidth) * 5); }
+.six { width: calc(var(--columnWidth) * 6); }
+.seven { width: calc(var(--columnWidth) * 7); }
+.eight { width: calc(var(--columnWidth) * 8); }
+.nine { width: calc(var(--columnWidth) * 9); }
+.ten { width: calc(var(--columnWidth) * 10); }
+.eleven { width: calc(var(--columnWidth) * 11); }
+.twelve { width: calc(var(--columnWidth) * 12); }

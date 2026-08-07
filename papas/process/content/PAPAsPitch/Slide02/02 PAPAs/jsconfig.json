@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "checkJs": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true
+  },
+  "include": [
+    "*.js",
+    "**/*.js",
+    "p5.d.ts"
+  ]
+}

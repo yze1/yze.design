@@ -1,0 +1,495 @@
+[
+  {
+    "number": 1,
+    "id": "54EABEF0-7B1F-44A2-89EE-0D80E38C8CE5",
+    "image": "assets/slides/54EABEF0-7B1F-44A2-89EE-0D80E38C8CE5.jpg",
+    "title": "Welcome",
+    "notes": "This project investigates whether principles of graphic design can be represented computationally. Rather than generating graphics with machine learning, the objective was to analyse existing compositions and make design decisions measurable.",
+    "video": "assets/media/prototype-final.mp4"
+  },
+  {
+    "number": 2,
+    "id": "22E02529-6DEA-4D08-A811-35790B7B4912",
+    "image": "assets/slides/22E02529-6DEA-4D08-A811-35790B7B4912.jpg",
+    "title": "Composition Analysis Model",
+    "notes": "The project explores whether established compositional principles can be translated into objective rules that a machine learning system can identify and evaluate."
+  },
+  {
+    "number": 3,
+    "id": "F41A1DAA-5571-4CA6-B999-E9FB0844A6C8",
+    "image": "assets/slides/F41A1DAA-5571-4CA6-B999-E9FB0844A6C8.jpg",
+    "title": "Concept",
+    "notes": "The research began with an interest in understanding whether visual composition could be analysed computationally. If compositional relationships can be measured consistently, they may become easier to teach and study."
+  },
+  {
+    "number": 4,
+    "id": "463A3BBD-E879-4357-8A74-4C3366209D6C",
+    "image": "assets/slides/463A3BBD-E879-4357-8A74-4C3366209D6C.jpg",
+    "title": "Objective",
+    "notes": "The objective was to detect graphical elements within a composition before analysing their positional and proportional relationships against established design principles."
+  },
+  {
+    "number": 5,
+    "id": "DDD234D4-2EEF-4BCF-8E88-9C1064FE0127",
+    "image": "assets/slides/DDD234D4-2EEF-4BCF-8E88-9C1064FE0127.jpg",
+    "title": "Principles",
+    "notes": "To keep the project achievable, the research focused on two principles that could be represented mathematically and therefore translated into computational logic."
+  },
+  {
+    "number": 6,
+    "id": "2B373F00-1060-40BB-9D40-6C306A8A796E",
+    "image": "assets/slides/2B373F00-1060-40BB-9D40-6C306A8A796E.jpg",
+    "title": "Rule of Thirds",
+    "notes": "The Rule of Thirds was selected because it defines clear positional relationships, making it well suited to algorithmic comparison."
+  },
+  {
+    "number": 7,
+    "id": "2085A532-129F-4191-B545-478C13192D10",
+    "image": "assets/slides/2085A532-129F-4191-B545-478C13192D10.jpg",
+    "title": "Canvas",
+    "notes": "The first stage was defining the composition boundary that all positional measurements would reference."
+  },
+  {
+    "number": 8,
+    "id": "CB757126-4E28-4954-A630-74F34C5F9B7E",
+    "image": "assets/slides/CB757126-4E28-4954-A630-74F34C5F9B7E.jpg",
+    "title": "3×3 Grid",
+    "notes": "Dividing the canvas into a regular grid transforms an abstract design principle into measurable coordinates."
+  },
+  {
+    "number": 9,
+    "id": "A1F6CFC9-AB47-4975-A1A8-1F7A4EE5CFF1",
+    "image": "assets/slides/A1F6CFC9-AB47-4975-A1A8-1F7A4EE5CFF1.jpg",
+    "title": "Focal Points",
+    "notes": "These intersection points provide reference locations where visual attention is commonly directed."
+  },
+  {
+    "number": 10,
+    "id": "BA7AB077-8518-43FD-865C-5522C48F6859",
+    "image": "assets/slides/BA7AB077-8518-43FD-865C-5522C48F6859.jpg",
+    "title": "Attention Distribution",
+    "notes": "The percentages illustrate approximate visual weighting across the composition, providing a basis for comparison rather than strict rules."
+  },
+  {
+    "number": 11,
+    "id": "5134EE1E-A7F8-4ABB-A1AF-A991203D3D23",
+    "image": "assets/slides/5134EE1E-A7F8-4ABB-A1AF-A991203D3D23.jpg",
+    "title": "Element Placement",
+    "notes": "Detected elements could later be compared against these intersections to determine whether they align with the Rule of Thirds."
+  },
+  {
+    "number": 12,
+    "id": "F0D3D5F1-BA5C-4A2D-9070-D23EF8CD278C",
+    "image": "assets/slides/F0D3D5F1-BA5C-4A2D-9070-D23EF8CD278C.jpg",
+    "title": "Rows",
+    "notes": "The same grid can also be interpreted horizontally to evaluate broader structural alignment."
+  },
+  {
+    "number": 13,
+    "id": "220F96D0-0F66-4AF6-9469-B4A42F010228",
+    "image": "assets/slides/220F96D0-0F66-4AF6-9469-B4A42F010228.jpg",
+    "title": "Columns",
+    "notes": "Column alignment provides another measurable interpretation of the same compositional framework."
+  },
+  {
+    "number": 14,
+    "id": "8F957543-F87F-4B89-9B0A-0A1A93E46C30",
+    "image": "assets/slides/8F957543-F87F-4B89-9B0A-0A1A93E46C30.jpg",
+    "title": "Examples",
+    "notes": "Professional examples were collected to understand how consistently these principles appear in existing graphic design."
+  },
+  {
+    "number": 15,
+    "id": "3A42D35D-D7F9-46DB-A45A-84DCE774FF97",
+    "image": "assets/slides/3A42D35D-D7F9-46DB-A45A-84DCE774FF97.jpg",
+    "title": "Golden Ratio",
+    "notes": "Unlike the Rule of Thirds, the Golden Ratio focuses on proportional relationships and visual hierarchy rather than position."
+  },
+  {
+    "number": 16,
+    "id": "D8B5B1F3-2171-4CEB-B514-E44DE75DD332",
+    "image": "assets/slides/D8B5B1F3-2171-4CEB-B514-E44DE75DD332.jpg",
+    "title": "Golden Ratio Diagram",
+    "notes": "The geometric construction provides a mathematical framework that can potentially be measured computationally."
+  },
+  {
+    "number": 17,
+    "id": "4C6712A6-EBF6-434B-AA9C-5EE0752176D9",
+    "image": "assets/slides/4C6712A6-EBF6-434B-AA9C-5EE0752176D9.jpg",
+    "title": "Mathematical Representation",
+    "notes": "Understanding the mathematical relationship was necessary before considering how it could be translated into software."
+  },
+  {
+    "number": 18,
+    "id": "18496E48-AE30-4684-AEC6-F6C242397447",
+    "image": "assets/slides/18496E48-AE30-4684-AEC6-F6C242397447.jpg",
+    "title": "Visual Hierarchy",
+    "notes": "The Golden Ratio can be interpreted as a way of comparing the relative importance of visual elements."
+  },
+  {
+    "number": 19,
+    "id": "270CE653-FE65-4E7C-A7F3-F182FC543DDD",
+    "image": "assets/slides/270CE653-FE65-4E7C-A7F3-F182FC543DDD.jpg",
+    "title": "Hierarchy",
+    "notes": "Rather than measuring placement, this stage considers proportional relationships between detected elements."
+  },
+  {
+    "number": 20,
+    "id": "0C28880D-0FED-4427-A09D-89C58B32DF45",
+    "image": "assets/slides/0C28880D-0FED-4427-A09D-89C58B32DF45.jpg",
+    "title": "Typography Example",
+    "notes": "Typography provides a straightforward demonstration of proportional hierarchy in practice."
+  },
+  {
+    "number": 21,
+    "id": "B098122E-5231-4FA9-B56E-C2C5B51C3AD2",
+    "image": "assets/slides/B098122E-5231-4FA9-B56E-C2C5B51C3AD2.jpg",
+    "title": "Application",
+    "notes": "With the principles defined, the next stage was identifying an appropriate machine learning approach."
+  },
+  {
+    "number": 22,
+    "id": "3F80B517-70E2-40A2-BC1F-EEBE5B265639",
+    "image": "assets/slides/3F80B517-70E2-40A2-BC1F-EEBE5B265639.jpg",
+    "title": "Template Selection",
+    "notes": "Object detection was chosen because compositional analysis first requires an understanding of what visual elements are present."
+  },
+  {
+    "number": 23,
+    "id": "CDEE3395-6E7E-48A9-BA39-288F3715C4E7",
+    "image": "assets/slides/CDEE3395-6E7E-48A9-BA39-288F3715C4E7.jpg",
+    "title": "Object Detection",
+    "notes": "Bounding boxes provide a simplified representation of graphical elements that can later be analysed mathematically."
+  },
+  {
+    "number": 24,
+    "id": "48348734-2135-4CDA-81F7-4733C4C43BC3",
+    "image": "assets/slides/48348734-2135-4CDA-81F7-4733C4C43BC3.jpg",
+    "title": "Dataset Selection",
+    "notes": "The chosen dataset needed consistent layouts, recognisable elements and similar aspect ratios to support meaningful comparisons."
+  },
+  {
+    "number": 25,
+    "id": "80EB7D00-F52B-493F-9590-236547A4F11B",
+    "image": "assets/slides/80EB7D00-F52B-493F-9590-236547A4F11B.jpg",
+    "title": "Car Posters",
+    "notes": "Car posters satisfied these requirements through repeated visual structures while still offering compositional variety."
+  },
+  {
+    "number": 26,
+    "id": "5C9E134B-6205-4FFD-BE8D-A5E9A54788A4",
+    "image": "assets/slides/5C9E134B-6205-4FFD-BE8D-A5E9A54788A4.jpg",
+    "title": "Example Poster",
+    "notes": "A single poster was used to demonstrate the proposed analytical workflow."
+  },
+  {
+    "number": 27,
+    "id": "4DC3CE07-E742-4F5F-A839-8CBCD1E93E08",
+    "image": "assets/slides/4DC3CE07-E742-4F5F-A839-8CBCD1E93E08.jpg",
+    "title": "Bounding Boxes",
+    "notes": "Each detected object is simplified into a geometric boundary for later analysis."
+  },
+  {
+    "number": 28,
+    "id": "B8EA7C96-523B-4D06-8705-CB7814A0F9D3",
+    "image": "assets/slides/B8EA7C96-523B-4D06-8705-CB7814A0F9D3.jpg",
+    "title": "Centre Points",
+    "notes": "The centre point of each bounding box provides a consistent positional reference."
+  },
+  {
+    "number": 29,
+    "id": "9370BB55-4456-4C33-B8F5-9CFCA0C54D34",
+    "image": "assets/slides/9370BB55-4456-4C33-B8F5-9CFCA0C54D34.jpg",
+    "title": "Overlay",
+    "notes": "A Rule of Thirds grid can then be overlaid directly onto the composition."
+  },
+  {
+    "number": 30,
+    "id": "F5D45CE0-428C-4F7E-9902-D3CA3F071703",
+    "image": "assets/slides/F5D45CE0-428C-4F7E-9902-D3CA3F071703.jpg",
+    "title": "Initial Comparison",
+    "notes": "The relationship between detected centre points and grid lines becomes computationally measurable."
+  },
+  {
+    "number": 31,
+    "id": "A8730E9E-0F69-43D5-AE31-16747E07EF03",
+    "image": "assets/slides/A8730E9E-0F69-43D5-AE31-16747E07EF03.jpg",
+    "title": "Limitation",
+    "notes": "A direct point-to-line comparison proved too strict to be practically useful."
+  },
+  {
+    "number": 32,
+    "id": "063AFEE2-EFA1-4BCE-8E58-47A61F869D31",
+    "image": "assets/slides/063AFEE2-EFA1-4BCE-8E58-47A61F869D31.jpg",
+    "title": "Tolerance",
+    "notes": "Increasing the width of the guide lines introduced tolerance into the analysis, making the system more reliable."
+  },
+  {
+    "number": 33,
+    "id": "369C7852-A629-4404-B681-4608EFCCC6A2",
+    "image": "assets/slides/369C7852-A629-4404-B681-4608EFCCC6A2.jpg",
+    "title": "Row and Column Detection",
+    "notes": "Bounding boxes could also be analysed against rows and columns, extending the Rule of Thirds beyond intersection points."
+  },
+  {
+    "number": 34,
+    "id": "4474D6BA-253E-47E4-95FE-9DBE77174EA5",
+    "image": "assets/slides/4474D6BA-253E-47E4-95FE-9DBE77174EA5.jpg",
+    "title": "Golden Ratio Extension",
+    "notes": "The same detected elements could later support proportional analysis using the Golden Ratio."
+  },
+  {
+    "number": 35,
+    "id": "DFE512E3-628E-42F1-8CDE-7A9AC0C36D79",
+    "image": "assets/slides/DFE512E3-628E-42F1-8CDE-7A9AC0C36D79.jpg",
+    "title": "Detection Accuracy",
+    "notes": "Object detection accuracy became a significant limitation because compositional measurements depend entirely on reliable detection."
+  },
+  {
+    "number": 36,
+    "id": "9E21E473-B461-4870-96D1-C87BB947038A",
+    "image": "assets/slides/9E21E473-B461-4870-96D1-C87BB947038A.jpg",
+    "title": "Case Study",
+    "notes": "A single element was isolated to investigate how inaccuracies influence the analytical process."
+  },
+  {
+    "number": 37,
+    "id": "7532D684-9796-4E11-B5A9-49B6D8814E06",
+    "image": "assets/slides/7532D684-9796-4E11-B5A9-49B6D8814E06.jpg",
+    "title": "Standard Detection",
+    "notes": "Traditional object detection produces bounding boxes based on physical boundaries rather than perceived visual importance."
+  },
+  {
+    "number": 38,
+    "id": "2978E097-3032-41A1-BA9C-16489C072515",
+    "image": "assets/slides/2978E097-3032-41A1-BA9C-16489C072515.jpg",
+    "title": "Bounding Box Accuracy",
+    "notes": "Although technically correct, the detected boundary does not necessarily represent the visual weight of the object."
+  },
+  {
+    "number": 39,
+    "id": "62D7480A-C315-494E-8643-B5EC84A153B7",
+    "image": "assets/slides/62D7480A-C315-494E-8643-B5EC84A153B7.jpg",
+    "title": "Perceived Size",
+    "notes": "Visual importance depends on more than physical dimensions, introducing another variable into the analysis."
+  },
+  {
+    "number": 40,
+    "id": "CA91320F-C7C3-4473-92D1-D5C9146592CA",
+    "image": "assets/slides/CA91320F-C7C3-4473-92D1-D5C9146592CA.jpg",
+    "title": "Average Colour",
+    "notes": "Average colour was explored as a reference point for measuring visual contrast."
+  },
+  {
+    "number": 41,
+    "id": "4DB65CCD-3654-4FC8-878A-949208DC05BD",
+    "image": "assets/slides/4DB65CCD-3654-4FC8-878A-949208DC05BD.jpg",
+    "title": "Contrast",
+    "notes": "This led to the idea that contrast may provide a better representation of visual significance than object size alone."
+  },
+  {
+    "number": 42,
+    "id": "C85A8E37-2264-4153-8C7C-E1A44C043F27",
+    "image": "assets/slides/C85A8E37-2264-4153-8C7C-E1A44C043F27.jpg",
+    "title": "Alternative Approach",
+    "notes": "An alternative method was proposed that measures only the visually dominant regions of each detected object."
+  },
+  {
+    "number": 43,
+    "id": "B8FE9428-B7F5-4ECD-B581-73EA99C84F21",
+    "image": "assets/slides/B8FE9428-B7F5-4ECD-B581-73EA99C84F21.jpg",
+    "title": "Photoshop Prototype",
+    "notes": "The concept was validated manually before considering automation."
+  },
+  {
+    "number": 44,
+    "id": "6BE17E2D-4A0D-4236-9F80-96E35AC66088",
+    "image": "assets/slides/6BE17E2D-4A0D-4236-9F80-96E35AC66088.jpg",
+    "title": "Practical Decision",
+    "notes": "Given the project timeframe, the simpler bounding box approach was retained for the working prototype."
+  },
+  {
+    "number": 45,
+    "id": "7BA2F09C-7CB9-4534-BE95-A0786F027313",
+    "image": "assets/slides/7BA2F09C-7CB9-4534-BE95-A0786F027313.jpg",
+    "title": "Validation",
+    "notes": "Additional examples demonstrated that conventional object detection remained sufficiently accurate for proof-of-concept testing."
+  },
+  {
+    "number": 46,
+    "id": "2609B5FE-E8A1-468B-95DD-F10C91DDAAC2",
+    "image": "assets/slides/2609B5FE-E8A1-468B-95DD-F10C91DDAAC2.jpg",
+    "title": "Training",
+    "notes": "The next stage focused on producing a custom object detection model."
+  },
+  {
+    "number": 47,
+    "id": "F46EE9AE-0C43-4915-9E77-9947F70B0954",
+    "image": "assets/slides/F46EE9AE-0C43-4915-9E77-9947F70B0954.jpg",
+    "title": "Dataset Collection",
+    "notes": "Training images were collected to maximise visual consistency while maintaining compositional variation."
+  },
+  {
+    "number": 48,
+    "id": "B2B2F03E-FE13-4D4C-857E-DD965D883265",
+    "image": "assets/slides/B2B2F03E-FE13-4D4C-857E-DD965D883265.jpg",
+    "title": "Image Selection",
+    "notes": "A relatively small but carefully selected dataset was assembled for the prototype."
+  },
+  {
+    "number": 49,
+    "id": "A4402018-CDF4-4E88-8EF9-F2D522AC1699",
+    "image": "assets/slides/A4402018-CDF4-4E88-8EF9-F2D522AC1699.jpg",
+    "title": "Annotation",
+    "notes": "Roboflow accelerated the annotation process while maintaining consistent labels."
+  },
+  {
+    "number": 50,
+    "id": "5598E798-E1EA-4F47-A2D2-4AA8A174E145",
+    "image": "assets/slides/5598E798-E1EA-4F47-A2D2-4AA8A174E145.jpg",
+    "title": "Data Augmentation",
+    "notes": "Image augmentation improved dataset diversity without altering the underlying compositions."
+  },
+  {
+    "number": 51,
+    "id": "319A8336-9993-4F46-9428-516E41536404",
+    "image": "assets/slides/319A8336-9993-4F46-9428-516E41536404.jpg",
+    "title": "Export",
+    "notes": "The completed dataset was transferred into Create ML for training."
+  },
+  {
+    "number": 52,
+    "id": "3E91AA45-225E-49CE-A3EA-A06833B36941",
+    "image": "assets/slides/3E91AA45-225E-49CE-A3EA-A06833B36941.jpg",
+    "title": "Model Training",
+    "notes": "Training continued until improvements became marginal relative to computation time."
+  },
+  {
+    "number": 53,
+    "id": "6198E8F4-CBE9-4442-A464-6C6D6142639A",
+    "image": "assets/slides/6198E8F4-CBE9-4442-A464-6C6D6142639A.jpg",
+    "title": "Initial Testing",
+    "notes": "The resulting model produced sufficiently accurate detections for compositional experimentation."
+  },
+  {
+    "number": 54,
+    "id": "1385C1C0-948A-4C65-9307-43E8E9C9A62B",
+    "image": "assets/slides/1385C1C0-948A-4C65-9307-43E8E9C9A62B.jpg",
+    "title": "Deployment",
+    "notes": "Attention shifted from model performance towards how the analysis could be experienced by users."
+  },
+  {
+    "number": 55,
+    "id": "C7936952-EDC2-4CCA-BCD8-2311B4AD7B05",
+    "image": "assets/slides/C7936952-EDC2-4CCA-BCD8-2311B4AD7B05.jpg",
+    "title": "Initial App",
+    "notes": "The first deployment demonstrated successful object detection but limited compositional analysis.",
+    "video": "assets/media/prototype-initial.mp4"
+  },
+  {
+    "number": 56,
+    "id": "C76E3C7F-6CE3-40EC-B7C6-0B90F2E201A7",
+    "image": "assets/slides/C76E3C7F-6CE3-40EC-B7C6-0B90F2E201A7.jpg",
+    "title": "Grid Alignment",
+    "notes": "The analytical overlay was corrected so it referenced the image rather than the display."
+  },
+  {
+    "number": 57,
+    "id": "B8F35C7D-EB7D-48E7-9CE0-07FAE715C53A",
+    "image": "assets/slides/B8F35C7D-EB7D-48E7-9CE0-07FAE715C53A.jpg",
+    "title": "Improved Visualisation",
+    "notes": "Aligning the guides with the image made compositional relationships easier to interpret."
+  },
+  {
+    "number": 58,
+    "id": "5AFC4DC4-47D1-46CE-AB30-E86F863BB1A6",
+    "image": "assets/slides/5AFC4DC4-47D1-46CE-AB30-E86F863BB1A6.jpg",
+    "title": "Row Detection",
+    "notes": "The revised interface made row alignment immediately visible."
+  },
+  {
+    "number": 59,
+    "id": "A9ADFEE3-4BA2-4915-AD06-007302EB4B36",
+    "image": "assets/slides/A9ADFEE3-4BA2-4915-AD06-007302EB4B36.jpg",
+    "title": "Grid Detection",
+    "notes": "Grid-line relationships also became significantly clearer."
+  },
+  {
+    "number": 60,
+    "id": "073F58BE-F176-4852-9B17-95772573ADF0",
+    "image": "assets/slides/073F58BE-F176-4852-9B17-95772573ADF0.jpg",
+    "title": "Reflection",
+    "notes": "The prototype demonstrated that established compositional principles could be visualised computationally."
+  },
+  {
+    "number": 61,
+    "id": "264ACEBA-FEDC-43AB-822C-3DF9640CB2B1",
+    "image": "assets/slides/264ACEBA-FEDC-43AB-822C-3DF9640CB2B1.jpg",
+    "title": "Refinement",
+    "notes": "Interface improvements focused on improving clarity rather than adding functionality."
+  },
+  {
+    "number": 62,
+    "id": "1EAB8014-6239-4E8E-81EE-08AEF3F07152",
+    "image": "assets/slides/1EAB8014-6239-4E8E-81EE-08AEF3F07152.jpg",
+    "title": "Analysis Interface",
+    "notes": "Visual feedback was refined to better communicate the underlying analysis."
+  },
+  {
+    "number": 63,
+    "id": "F193E1E9-96D4-48A7-B352-CCD90289AC53",
+    "image": "assets/slides/F193E1E9-96D4-48A7-B352-CCD90289AC53.jpg",
+    "title": "Row Logic",
+    "notes": "Additional logic was introduced to detect elements fully contained within rows or columns."
+  },
+  {
+    "number": 64,
+    "id": "B1A9E594-FD3E-44CC-AD00-828259B86217",
+    "image": "assets/slides/B1A9E594-FD3E-44CC-AD00-828259B86217.jpg",
+    "title": "Thresholding",
+    "notes": "Simple thresholds reduced false positives by considering the relative size of detected elements."
+  },
+  {
+    "number": 65,
+    "id": "B0709BB8-C025-4C76-8517-DE943353045A",
+    "image": "assets/slides/B0709BB8-C025-4C76-8517-DE943353045A.jpg",
+    "title": "Final Prototype",
+    "notes": "The completed prototype demonstrated the intended workflow on previously unseen data.",
+    "video": "assets/media/prototype-final.mp4"
+  },
+  {
+    "number": 66,
+    "id": "88CB4428-82DB-4D80-BAF4-5F9F898C75F7",
+    "image": "assets/slides/88CB4428-82DB-4D80-BAF4-5F9F898C75F7.jpg",
+    "title": "Golden Ratio Future Work",
+    "notes": "Proportional analysis remained unfinished but the underlying detection pipeline was already capable of supporting it."
+  },
+  {
+    "number": 67,
+    "id": "CF954EEE-371E-4F18-9895-65F487AC52BF",
+    "image": "assets/slides/CF954EEE-371E-4F18-9895-65F487AC52BF.jpg",
+    "title": "Real-World Deployment",
+    "notes": "The long-term objective was analysing real posters captured with a mobile device rather than curated images."
+  },
+  {
+    "number": 68,
+    "id": "F84A59BF-44EF-4455-8E6E-FA9DDE7535C2",
+    "image": "assets/slides/F84A59BF-44EF-4455-8E6E-FA9DDE7535C2.jpg",
+    "title": "Next Steps",
+    "notes": "Future work would expand the range of detectable elements, improve dataset quality and transition from descriptive analysis towards computational design assistance."
+  },
+  {
+    "number": 69,
+    "id": "F7365219-2651-447D-8A38-6C6AD8BE1A4C",
+    "image": "assets/slides/F7365219-2651-447D-8A38-6C6AD8BE1A4C.jpg",
+    "title": "Ethics",
+    "notes": "The intention was never to automate graphic design. The project investigates whether computational analysis can make established design principles more transparent and accessible while preserving creative judgement."
+  },
+  {
+    "number": 70,
+    "id": "63593D02-F246-40C5-8FF3-25D15D68BAF3",
+    "image": "assets/slides/63593D02-F246-40C5-8FF3-25D15D68BAF3.jpg",
+    "title": "Conclusion",
+    "notes": "This project established the technical and conceptual foundations for later research into computational approaches to graphic design education and analysis."
+  }
+]

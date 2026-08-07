@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "YZE";
+    src: url("assets/YZE.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.blog {
+    flex: 1;
+}
+
+.blog-list {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing) var(--gutter) !important;
+}
+
+.blog-list[hidden] {
+    display: none !important;
+}
+
+.blog-post {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.blog-post p {
+    line-height: 1.18;
+}
+
+.blog-post h4 {
+    width: 100%;
+}
+
+.blog-post > img {
+    width: 100%;
+}
+
+.blog-post-meta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.blog-post-meta p:last-child {
+    text-align: right;
+}

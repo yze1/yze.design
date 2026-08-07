@@ -1,0 +1,24 @@
+[
+  {
+    "date": "07.08.26",
+    "title": "The Value of Hallucination",
+    "thumbnail": "thumbnails/070826.png",
+    "tags": [
+      "AI",
+      "Hallucination",
+      "Response"
+    ],
+    "content": [
+      "I recently watched <a href=\"https://interconnected.org/\">Matt Webb’s</a> talk at <a href=\"https://www.youtube.com/watch?v=vDP24ARdGDA\">TH/NGS 2024</a>, which provoked thoughts about the role of hallucination in frontier models. In many ways, hallucinations in Artificial Intelligence (AI) are the most frustrating part about using large language models (LLMs) in the modern day. Matt frames hallucinations as something that could grow in value over time.",
+      "Hallucinations are seen as failures to satisfy a task: Humans have specific goals in mind; therefore, any misunderstanding of their vision must be incorrect. Just as generative systems can misinterpret goals, they can pursue those goals through unintended, and sometimes unethical, methods.",
+      "In the pursuit of Artificial General Intelligence (AGI), AI users are granting generative systems more autonomy. This can be seen in the rise of harnesses like <a href=\"https://openclaw.ai/\">OpenClaw</a> and <a href=\"https://github.com/nousresearch/hermes-agent\">Hermes Agent</a> where users can grant near full control of their computers to language models with tooling capabilities. ",
+      "New <a href=\"https://openai.com/index/hugging-face-model-evaluation-security-incident/\">closed-door testing from Frontier Lab at OpenAI</a> resulted in Hugging Face, known as the GitHub for AI, being hacked. During cyber safeguard testing, the model compromised Hugging Face’s infrastructure in search of benchmark solutions. This is not the only occurrence of frontier models discovering unintended techniques to score highly.",
+      "Whilst this sounds like something straight out of a sci-fi film, it is occurring presently and more frequently. The connections Neural Networks create cannot be understood by humans: We can observe inputs and outputs without understanding the decision methodology. Achieving a goal does not inherently involve boundaries on how that goal should be achieved.",
+      "<a href=\"https://time.com/7259395/ai-chess-cheating-palisade-research/\">Another example</a> of this behaviour was in OpenAI’s testing of its o1 model, where it chose to modify the position system file to beat Stockfish in a chess game. Whilst the ‘intent’ of the models can seem harmless, connections can be drawn to <a href=\"https://en.wikipedia.org/wiki/Instrumental_convergence\">Nick Bostrom’s Paperclip Maximiser</a> thought experiment.",
+      "A goal can be clear whilst leaving the acceptable path unspecified. The process of conveying exact instructions only in text is often extremely difficult, if not impossible. Many of our descriptions are based on assumptions or shared human experiences. There is so much context that changes the meaning of words, much of which is lost when using a simple chat interface. As we pursue complete autonomy, the ramifications of misalignment increase.",
+      "Humans take for granted how heavily we rely on physical cues to communicate: geographical context, previous interactions, body language, vocal pacing, eye contact, the list goes on. This often leads to AI misunderstanding our instructions, as AI must make drastic assumptions about what we want. The more imperfectly objectives and their boundaries are explained, the more likely an autonomous system is to find an unexpected way to achieve them.",
+      "Although we see hallucinations as an expression of models' lack of intelligence, the improvisations are surely misdirected by a lack of purpose: A sense of generalism that lacks clear goals, objectives or opinions. Arguably, self-selected goals and the resulting process define AGI. In tasks where goals are black and white, hallucinations and deviations are plainly incorrect; however, more creative outputs demand less methodical thinking, hence the value of hallucination.",
+      "Outputs should be closely monitored, as getting to an end goal can be unethical or even illegal. As harnesses grow in popularity, humans with an understanding of value and taste can take full advantage. In my <a href=\"https://yze.design/dissertation/\">dissertation</a>, I spoke about how I believe AI will disrupt the design industry by improving output. It will be the responsibility of the designer to quantify what output is worth developing: Those who have developed taste will benefit most from this change, whereas those who do not have conventional design skills will struggle even more to stand out in the era of AI slop. With increased quantity comes an increased demand for differentiation. The more freedom you give a generative system, the more important instructions and taste become."
+    ]
+  }
+]

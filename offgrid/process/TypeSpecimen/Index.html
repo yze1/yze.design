@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Font Tester</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .font-preview {
+            font-family: 'YZEVF', sans-serif;
+            font-size: 5rem;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .control-panel {
+            margin-bottom: 20px;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .slider-container label {
+            flex: 1;
+        }
+
+        .slider-container input[type="range"] {
+            flex: 3;
+        }
+
+        .slider-container input[type="number"] {
+            width: 60px;
+            margin-left: 10px;
+        }
+
+        .info-panel {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .info-panel p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">OffGrid Font tester</h1>
+
+        <!-- Font Preview Section -->
+        <div id="fontPreview" contenteditable="true" class="font-preview">
+            Click and type here
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel" id="sliderContainer">
+            <!-- Sliders will be dynamically generated here -->
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel" id="fontInfo">
+            <!-- <h3>Font Axes Information</h3> -->
+            <!-- Font axes will be displayed here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

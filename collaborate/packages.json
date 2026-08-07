@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Basic",
+        "description": "Basic package for 1 garment.",
+        "designs": 1,
+        "revisions": 1,
+        "price": "$120",
+        "price-per-design": "$120",
+        "delivery": "5 days"
+    },
+    {
+        "name": "Standard",
+        "description": "Standard package for a 3 garment drop.",
+        "designs": 3,
+        "revisions": 1,
+        "price": "$330",
+        "price-per-design": "$110",
+        "delivery": "6 days"
+    },
+    {
+        "name": "Premium",
+        "description": "Premium package for a full collection.",
+        "designs": 5,
+        "revisions": 1,
+        "price": "$500",
+        "price-per-design": "$100",
+        "delivery": "7 days"
+    }
+]

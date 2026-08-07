@@ -1,0 +1,379 @@
+*{
+  font-family: VT323;
+  /* font-size: 10pt; */
+  font-size: 1.5vh;
+
+  margin: 0;
+  box-sizing: border-box;
+
+  text-shadow: 1px 1px 2px black, 0 0 1em green, 0 0 0.2em green;
+}
+
+body {
+  background-color: black;
+
+  margin: 0;
+}
+
+.background {
+  width: 100vh;
+  height: 100vh;
+
+  z-index: 0;
+  pointer-events: none;
+
+  position: absolute;
+  margin: auto;
+  top: auto;
+}
+
+/* .container { */
+  /* background-color: blueviolet; */
+
+  /* width: 100vh;
+  height: 100vh;
+
+  margin: auto;
+  background-position: center center; */
+/* } */
+
+.video-player {
+  height: 100%;
+  width: 100%;
+}
+
+/* buttons */
+.player-controls {
+  opacity: 0%;
+}
+
+.leftbutton {
+  background: red;
+
+  width: 11vh;
+  height: 11vh;
+  border-radius: 100%;
+
+  margin-left: 31vh;
+  margin-top: 76vh;
+
+  position: absolute;
+  z-index: 5;
+}
+
+.rightbutton {
+  background: blue;
+
+  width: 11vh;
+  height: 11vh;
+  border-radius: 100%;
+
+  margin-left: 58vh;
+  margin-top: 76vh;
+
+  position: absolute;
+  z-index: 5;
+}
+
+.topbutton {
+  background: purple;
+
+  width: 34vh;
+  height: 6vh;
+
+  margin-left: 33vh;
+  margin-top: 18vh;
+
+  position: absolute;
+  z-index: 5;
+}
+
+.middlebutton {
+  background: green;
+
+  width: 11vh;
+  height: 11vh;
+  border-radius: 100%;
+
+  margin-left: 44.5vh;
+  margin-top: 79vh;
+
+  position: absolute;
+  z-index: 5;
+}
+
+/* videos */
+.left {
+  width: 100vh;
+  height: 100vh;
+
+  z-index: 4;
+  pointer-events: none;
+
+  position: absolute;
+  margin: auto;
+  top: auto;
+}
+
+.right {
+  width: 100vh;
+  height: 100vh;
+
+  z-index: 4;
+  pointer-events: none;
+
+  position: absolute;
+  margin: auto;
+  top: auto;
+}
+
+.intro {
+  width: 100vh;
+  height: 100vh;
+
+  z-index: 4;
+  pointer-events: none;
+
+  position: absolute;
+  margin: auto;
+  top: auto;
+}
+
+
+
+/* counter */
+#counter {
+  color: white;
+
+  position: absolute;
+  z-index: 3;
+
+  width: 100vh;
+
+  margin-top: 12vh;
+
+  text-align: center;
+}
+
+
+.miniwrapper {
+  width: 4.8vh;
+  height: 4.8vh; 
+  border-radius: 100%;
+
+  z-index: 1;
+  pointer-events: none;
+
+  position: absolute;
+  margin-left: 47.6vh;
+  margin-top: 10.3vh;
+
+  overflow: hidden;
+}
+
+.miniscanlines {
+  opacity: 40%;
+  
+  height: 33vh;
+  width: 33vh;
+  position:absolute;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  
+  z-index: 2;
+  pointer-events: none;
+}
+
+#minioverlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  mix-blend-mode: lighten;
+  opacity: 30%;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+
+@media all and (max-width: 903px) {
+  .container {
+  background-color: purple; 
+
+  width: 100vh;
+  height: 100vh;
+
+  margin: auto;
+  background-position: center center;
+  
+  overflow: hidden;
+  }
+}
+
+@media all and (min-width: 903px) {
+  .container {
+  /* background-color: blueviolet; */
+
+  width: 100vh;
+  height: 100vh;
+
+  margin: auto;
+  background-position: center center;
+
+  overflow: hidden;
+  align-content: center;
+  }
+}
+
+
+/* wrapper */
+.chat {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: black;
+  overflow: scroll;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vh 0px 2vh;
+  z-index: 2;
+
+}
+
+.scanlines {
+  opacity: 30%;
+  
+  height: 100%;
+  width: 100%;
+  position:absolute;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  
+  z-index: 2;
+  pointer-events: none;
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  mix-blend-mode: lighten;
+  opacity: 30%;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.messages {
+  flex: 1 0 auto;
+}
+
+.messages div {
+  max-width: 60%;
+  width: fit-content;
+  display: block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.messages div a {
+  color: rgb(255, 0, 0);
+}
+
+.messages div a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.messages .bot {
+  text-align: left;
+  margin-right: auto;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+}
+
+.messages .self {
+  text-align: right;
+  margin-right: 20px;
+  margin-left: auto;
+  color: green;
+}
+
+.placeholder {
+  background: #000000;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.actions {
+  flex-shrink: 0;
+  width: 100%;
+  position: sticky;
+  bottom: -1px;
+  padding: 10px 0px 20px;
+}
+
+.actions input {
+  height: 30px;
+  display: block;
+  width: 100%;
+  outline: 0;
+  border-top: 0px solid black;
+  border-right: 0px solid black;
+  border-bottom: 2px solid black;
+  color: green;
+  border-left: 0px;
+}
+
+input:focus {
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+
+.wrapper {
+  background-color: blueviolet;
+
+  width: 41vh;
+  height: 41vh; 
+
+  border-radius: 3.5vh;
+  overflow: hidden;
+
+  position: absolute;
+  align-items: center;
+
+  margin: 29.5vh;
+  z-index: 1;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

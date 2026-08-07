@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/favicon.png" rel="icon" type="image/png">
+    <title>YZE Typeface</title>
+    <link href="/css/variables.css" rel="stylesheet">
+    <link href="/css/typography.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+    <link href="/css/cursor.css" rel="stylesheet">
+    <style>
+        .typeface-page h1 {
+            font-size: clamp(72px, 9vw, 160px);
+            line-height: .86;
+            letter-spacing: -.045em;
+        }
+
+        .typeface-page h2 {
+            font-size: clamp(52px, 6vw, 96px);
+            line-height: .9;
+            letter-spacing: -.035em;
+        }
+
+        .character-line {overflow-wrap: anywhere;}
+
+        .tester-controls input,
+        .tester-controls select {width: 100%;}
+
+        .type-tester-output {
+            width: 100%;
+            min-height: calc(var(--spacing) * 12);
+            padding: var(--spacing);
+            overflow-wrap: anywhere;
+            background: var(--white);
+            color: var(--text);
+            font-family: "YZE", sans-serif;
+            font-size: 72px;
+            line-height: .9;
+            letter-spacing: -.02em;
+            outline: none;
+        }
+
+        .type-tester-output.dark {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .typeface-page h1 {font-size: clamp(52px, 17vw, 88px);}
+            .typeface-page h2 {font-size: clamp(42px, 13vw, 68px);}
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <main class="typeface-page">
+        <section class="tall">
+            <div class="s4">
+                <p class="caption">YZE Typeface</p>
+            </div>
+            <div class="s8">
+                <h3><strong>YZE</strong> is a geometric typeface designed for personal identity, editorial layouts and digital interfaces.</h3>
+                <p>Basic forms, perfect circles and controlled curves retain clarity across display and interface scales.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="s4">
+                <p class="caption">01 / Principles</p>
+            </div>
+            <div class="s8">
+                <h3>Built from <strong>basic forms</strong>, refined for <strong>maximum legibility</strong>.</h3>
+            </div>
+            <div class="s4">
+                <h5><strong>Geometric</strong></h5>
+                <p>Letters are informed by circles, straight lines and controlled curves.</p>
+            </div>
+            <div class="s4">
+                <h5><strong>Legible</strong></h5>
+                <p>Distinct letterforms reduce ambiguity across interfaces and body text.</p>
+            </div>
+            <div class="s4">
+                <h5><strong>Technical</strong></h5>
+                <p>Digital in character without becoming cryptic or difficult to read.</p>
+            </div>
+        </section>
+
+        <section class="black bleed">
+            <div class="s4">
+                <p class="caption">02 / Hierarchy</p>
+            </div>
+            <div class="s8">
+                <h3>Most typography remains <strong>quiet</strong>. Essential information becomes <strong>clear</strong>.</h3>
+                <p>Grey supports. White emphasises. Blue identifies interaction.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="s3"><p class="caption">H1 / Display</p></div>
+            <div class="s9"><h1>Perfect <strong>circles</strong></h1></div>
+            <div class="s3"><p class="caption">H2 / Statement</p></div>
+            <div class="s9"><h2>Technical, not <strong>cryptic</strong>.</h2></div>
+            <div class="s3"><p class="caption">H3 / Section</p></div>
+            <div class="s9"><h3>Designed for digital systems.</h3></div>
+            <div class="s3"><p class="caption">H4 / Subsection</p></div>
+            <div class="s9"><h4>One typeface, multiple levels of emphasis.</h4></div>
+            <div class="s3"><p class="caption">H5 / Component</p></div>
+            <div class="s9"><h5>Interface labels and supporting headings.</h5></div>
+            <div class="s3"><p class="caption">Paragraph / Body</p></div>
+            <div class="s6"><p>Supporting language remains grey and key information becomes <strong>black</strong>.</p></div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <div class="s4">
+                <p class="caption">03 / Character Set</p>
+            </div>
+            <div class="s8">
+                <h3 class="character-line">ABCDEFGHIJKLMNOPQRSTUVWXYZ</h3>
+                <h3 class="character-line">abcdefghijklmnopqrstuvwxyz</h3>
+                <h3 class="character-line">0123456789</h3>
+                <h3 class="character-line">.,:;!?()[]{}+-=/%&amp;@#*</h3>
+            </div>
+        </section>
+
+        <section>
+            <div class="s4">
+                <p class="caption">04 / Custom Glyphs</p>
+                <p>Contextual alternatives extend the typeface into navigation, status and interface controls.</p>
+            </div>
+            <div class="s8">
+                <h3>.star &nbsp; -&gt; &nbsp; == &nbsp; \close</h3>
+            </div>
+            <div class="s3 t3 m2"><h3>.star</h3><p class="caption">Status</p></div>
+            <div class="s3 t3 m2"><h3>-&gt;</h3><p class="caption">Direction</p></div>
+            <div class="s3 t3 m2"><h3>==</h3><p class="caption">Menu</p></div>
+            <div class="s3 t3 m2"><h3>\close</h3><p class="caption">Close</p></div>
+            <div class="s12">
+                <button type="button">View project -&gt;</button>
+            </div>
+        </section>
+
+        <section>
+            <div class="s4">
+                <p class="caption">05 / Legibility</p>
+                <p>Distinct forms reduce ambiguity at display, body and interface sizes.</p>
+            </div>
+            <div class="s8">
+                <h3>Il1 O0 rn m <strong>S5 B8 2Z</strong></h3>
+                <p>Interface typography remains clear when letterforms, numerals and punctuation appear together.</p>
+                <p class="caption">Il1 O0 rn m c e a o S5 B8 2Z</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="s4">
+                <p class="caption">06 / Components</p>
+            </div>
+            <div class="s8">
+                <div class="tags">
+                    <button class="tag" type="button">Typeface</button>
+                    <button class="tag is-active" type="button">Geometric</button>
+                    <button class="tag" type="button">Interface</button>
+                </div>
+                <p>A <a href="/work/">link remains blue</a> while essential information becomes <strong>black</strong>.</p>
+                <button type="button">Primary button</button>
+            </div>
+        </section>
+
+        <section>
+            <div class="s4">
+                <p class="caption">07 / Interface Context</p>
+            </div>
+            <article class="s8 project-card">
+                <div class="metadata">
+                    <h5><strong>System-based identity</strong></h5>
+                    <p class="year">2026</p>
+                </div>
+                <p>A working component using typography, metadata, tags and an interaction.</p>
+                <div class="tags">
+                    <button class="tag" type="button">Identity</button>
+                    <button class="tag" type="button">Digital</button>
+                </div>
+                <button type="button">View project</button>
+            </article>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <div class="s4 tester-controls">
+                <p class="caption">08 / Type Tester</p>
+                <p><label for="tester-size">Size <output id="tester-size-value">72px</output></label></p>
+                <input id="tester-size" max="160" min="16" type="range" value="72">
+                <p><label for="tester-tracking">Tracking <output id="tester-tracking-value">-0.02em</output></label></p>
+                <input id="tester-tracking" max="10" min="-8" type="range" value="-2">
+                <p><label for="tester-leading">Line height <output id="tester-leading-value">0.9</output></label></p>
+                <input id="tester-leading" max="14" min="8" type="range" value="9">
+                <p><label for="tester-align">Alignment</label></p>
+                <select id="tester-align">
+                    <option value="left">Left</option>
+                    <option value="center">Centre</option>
+                    <option value="right">Right</option>
+                </select>
+                <button id="tester-theme" type="button">Light / Dark</button>
+            </div>
+            <div class="s8">
+                <div class="type-tester-output" contenteditable="true" id="type-tester-output" role="textbox" spellcheck="false">Build with clarity.</div>
+            </div>
+        </section>
+
+        <section>
+            <div class="s4">
+                <p class="caption">09 / Technical Information</p>
+            </div>
+            <div class="s4">
+                <h5><strong>Typeface</strong></h5><p>YZE</p>
+                <h5><strong>Style</strong></h5><p>Regular</p>
+                <h5><strong>Format</strong></h5><p>TrueType</p>
+            </div>
+            <div class="s4">
+                <h5><strong>Use</strong></h5><p>Identity, editorial, interface and display</p>
+                <h5><strong>Features</strong></h5><p>Ligatures, contextual alternates and discretionary ligatures</p>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="/js/typeface.js"></script>
+    <script src="/js/load.js"></script>
+    <script src="/js/partials.js"></script>
+    <script src="/js/cursor.js"></script>
+    <script src="/js/media.js"></script>
+    <script src="/js/layout.js"></script>
+    <script src="/js/archive.js"></script>
+    <script src="/js/projects.js"></script>
+</body>
+</html>

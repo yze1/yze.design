@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <title>YZE</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Font Loading */
+    @font-face {
+        font-family: 'Helvetica Neue';
+        src: url('assets/HelveticaNeue.ttc') format('truetype-collection');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Gallique';
+        src: url('assets/Gallique.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    :root {
+        /* Typography */
+        --font-helvetica: 'Helvetica Neue', -apple-system, sans-serif;
+        --font-gallique: 'Gallique', Georgia, serif;
+    }
+
+    .helvetica {
+        font-family: var(--font-helvetica);
+        font-weight: 700;
+    }
+    .gallique {
+        margin-top: 4px;
+        font-family: var(--font-gallique);
+    }
+
+    h1.helvetica, h1.gallique { font-size: 42px; }
+    h2.helvetica, h2.gallique { font-size: 26px; }
+    h3.helvetica, h3.gallique { font-size: 16px; }
+    p.helvetica, p.gallique { font-size: 14px; }
+
+    .originalcrest {
+        width: 100px;
+        height: auto;
+        justify-self: flex-end;
+    }
+</style>
+
+</head>
+<body>
+  <div class="container">
+
+    <div id="header"></div>
+
+    <div class="grid-container project"></div>
+
+    <div class="grid-container column-index">
+        <div class="grid-item">
+            <h1 class="gallique">01</h1>
+        </div>
+        <div class="grid-item">
+            <h1 class="helvetica">Typography</h1>
+        </div>
+        <div class="grid-item">
+            <p class="helvetica">Typographic direction.</p>
+        </div>
+        <div class="grid-item">
+            <h1 class="gallique">02</h1>
+        </div>
+        <div class="grid-item">
+            <h1 class="helvetica">Crest</h1>
+        </div>
+        <div class="grid-item">
+            <p class="helvetica">Crest design.</p>
+        </div>
+        <div class="grid-item">
+            <h1 class="gallique">03</h1>
+        </div>
+        <div class="grid-item">
+            <h1 class="helvetica">Colours</h1>
+        </div>
+        <div class="grid-item">
+            <p class="helvetica">Colour palette.</p>
+        </div>
+        <div class="grid-item">
+            <h1 class="gallique">04</h1>
+        </div>
+        <div class="grid-item">
+            <h1 class="helvetica">Gradients</h1>
+        </div>
+        <div class="grid-item">
+            <p class="helvetica">Gradients.</p>
+        </div>
+        <div class="grid-item">
+            <h1 class="gallique">05</h1>
+        </div>
+        <div class="grid-item">
+            <h1 class="helvetica">Mockups</h1>
+        </div>
+        <div class="grid-item">
+            <p class="helvetica">Mockups.</p>
+        </div>
+    </div>
+
+    <div class="grid-container column-index">
+        <div class="grid-item">
+            <h1 class="helvetica">H1</h1>
+            <h2 class="helvetica">H2</h2>
+            <h3 class="helvetica">H3</h3>
+            <p class="helvetica">P</p>
+        </div>
+        <div class="grid-item">
+            <h1 class="helvetica">Helvetica Neue</h1>
+        </div>
+        <div class="grid-item">
+            <p class="helvetica">
+                Bold variation for headings (H1, H2, H3)
+                <br>Regular variation for body text (P)
+                <br>Font of the UAL logo
+                <br>Minimal, legible & versatile
+            </p>
+        </div>
+        
+        <div class="grid-item">
+            <h1 class="gallique">H1</h1>
+            <h2 class="gallique">H2</h2>
+            <h3 class="gallique">H3</h3>
+            <p class="gallique">P</p>
+        </div>
+        <div class="grid-item">
+            <h1 class="gallique">Gallique</h1>
+        </div>
+        <div class="grid-item">
+            <p class="gallique">
+                Ornamental, heraldic, artistic
+                <br>Contrasts the functionality of Helvetica
+                <br>Italic: Conveys motion
+            </p>
+        </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-double">
+        <img src="content/crestsimplified.svg" alt="crest simplified">
+      </div>
+      <div class="grid-double">
+        <img src="content/crestdetailed.svg" alt="crest detailed">
+      </div>
+    </div>
+
+    <div class="grid-container full-bleed">
+        <div class="grid-double">
+            <img src="content/bull.gif" alt="bull">
+        </div>
+        <div class="grid-double">
+            <img src="content/dragon.gif" alt="dragon">
+        </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-triple">
+        <p class="helvetica">
+            Original composition & key elements maintained
+            <br>Enhanced detail in bull & dragon
+            <br>Reduced unnecessary elements for legibility & scaleability whilst maintaining heraldic aesthetic
+        </p>
+      </div>
+      <div class="grid-triple">
+        <p class="helvetica">
+            Secondary minimal crest for different contexts
+            <br>Interchangeable "FC" text for other UAL sports teams
+        </p>
+      </div>
+      <div class="grid-triple">
+        <img class="originalcrest" src="content/originalcrest.svg" alt="original crest">
+      </div>
+    </div>
+
+    <h4 class="gallique right-align">Sizing</h4>
+    <div class="grid-container">
+      <div class="grid-heavy">
+        <img class="no-radius"src="content/crestsizing.svg" alt="crest sizing">
+      </div>
+      <div class="grid-light">
+        <p class="helvetica">
+            Ornamental crest must have a minimum width of 300px
+            <br>ARTS crest must have a minimum width of 200px
+            <br>Simplified crests must have a minimum width of 100px
+        </p>
+      </div>
+    </div>
+
+    <h4 class="gallique right-align">Colours</h4>
+    <div class="grid-container full-bleed">
+        <div class="grid-double">
+            <img src="content/colourblack.svg" alt="black">
+        </div>
+        <div class="grid-double">
+            <img src="content/colourwhite.svg" alt="white">
+        </div>
+        <div class="grid-double">
+            <img src="content/colourblue.svg" alt="blue">
+        </div>
+        <div class="grid-double">
+            <img src="content/colourpink.svg" alt="pink">
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-triple">
+            <p class="helvetica">
+                Black & white: Legibility
+                <br>Blue & pink: ARTS SU
+            </p>
+        </div>
+    </div>
+
+    <h4 class="gallique right-align">Monogram</h4>
+    <div class="grid-container full-bleed">
+        <div class="grid-double">
+            <img src="content/monogramblack.svg" alt="monoblack">
+        </div>
+        <div class="grid-double">
+            <img src="content/monogramwhite.svg" alt="monowhite">
+        </div>
+        <div class="grid-double">
+            <img src="content/monogramblue.svg" alt="monoblue">
+        </div>
+        <div class="grid-double">
+            <img src="content/monogrampink.svg" alt="monopink">
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-triple">
+            <p class="helvetica">
+                Black & white: Legibility
+                <br>Blue & pink: ARTS SU
+            </p>
+        </div>
+    </div>
+
+    <h4 class="gallique right-align">Kit Concepts</h4>
+    <div class="grid-container">
+        <div class="grid-quadruple">
+            <img src="content/concepthomeback.png" alt="home kit back">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/concepthomefront.png" alt="home kit front">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/concepthomeshortsback.png" alt="home shorts kit back">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/concepthomeshortsfront.png" alt="home shorts kit front">
+        </div>
+
+        <div class="grid-quadruple">
+            <img src="content/conceptawayback.png" alt="away kit back">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/conceptawayfront.png" alt="away kit front">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/conceptawayshortsback.png" alt="away shorts kit back">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/conceptawayshortsfront.png" alt="away shorts kit front">
+        </div>
+
+        <div class="grid-quadruple">
+            <img src="content/concepttrainingback.png" alt="training kit back">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/concepttrainingfront.png" alt="training kit front">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/concepttrainingzipback.png" alt="training zip back">
+        </div>
+        <div class="grid-quadruple">
+            <img src="content/concepttrainingzipfront.png" alt="training zip front">
+        </div>
+
+        <div class="grid-triple">
+            <p class="helvetica">
+                Home, away, training & quarter zip concepts with new crests
+            </p>
+        </div>
+    </div>
+
+    <h4 class="gallique right-align">Gradients</h4>
+    <div class="grid-container">
+        <div class="grid-triple">
+            <img src="content/gradient01.png" alt="gradient 01">
+        </div>
+        <div class="grid-triple">
+            <img src="content/gradient02.png" alt="gradient 02">
+        </div>
+        <div class="grid-triple">
+            <img src="content/gradient03.png" alt="gradient 03">
+        </div>
+
+        <div class="grid-triple">
+            <img src="content/gradient04.png" alt="gradient 04">
+        </div>
+        <div class="grid-triple">
+            <img src="content/gradient05.png" alt="gradient 05">
+        </div>
+        <div class="grid-triple">
+            <img src="content/gradient06.png" alt="gradient 06">
+        </div>
+
+        <div class="grid-triple">
+            <img src="content/gradient07.png" alt="gradient 07">
+        </div>
+        <div class="grid-triple">
+            <img src="content/gradient08.png" alt="gradient 08">
+        </div>
+        <div class="grid-triple">
+            <img src="content/gradient09.png" alt="gradient 09">
+        </div>
+
+        <div class="grid-triple">
+            <p class="helvetica">
+                Swirling gradients to convey sense of motion
+            </p>
+        </div>
+        <div class="grid-triple">
+            <p class="helvetica">
+                Visual distinctions between types of posts
+            </p>
+        </div>
+    </div>
+
+    <h4 class="gallique right-align">Post Templates</h4>
+    <div class="grid-container">
+        <div class="grid-double">
+            <img src="content/templateteamsheet.png" alt="teamsheet">
+        </div>
+        <div class="grid-double">
+            <img src="content/templatelineup.png" alt="lineup">
+        </div>
+
+        <div class="grid-double">
+            <img src="content/templateupdate.png" alt="update">
+        </div>
+        <div class="grid-double">
+            <img src="content/templateresult.png" alt="result">
+        </div>
+        <div class="grid-triple">
+            <p class="helvetica">
+                Match information templates for social media.
+            </p>
+        </div>
+    </div>
+
+    <h4 class="gallique right-align">Profile Templates</h4>
+        <div class="grid-container">
+            <div class="grid-triple">
+                <img src="content/portraitwill.png" alt="will">
+            </div>
+            <div class="grid-triple">
+                <img src="content/portraittom.png" alt="tom">
+            </div>
+            <div class="grid-triple">
+                <img src="content/portraithugo.png" alt="hugo">
+            </div>
+        </div>
+        <div class="grid-triple">
+            <p class="helvetica">
+               Player portraits for social media.
+            </p>
+        </div>
+	  <h4 class="gallique right-align">Video Content</h4>
+        <div class="grid-container">
+            <div class="grid-double">
+                <img src="content/bulllandscape.gif" alt="bull landscape">
+            </div>
+            <div class="grid-double">
+                <img src="content/dragonlandscape.gif" alt="dragon landscape">
+            </div>
+
+            <div class="grid-double">
+                <img src="content/bullportrait.gif" alt="bull portrait">
+            </div>
+            <div class="grid-double">
+                <img src="content/dragonportrait.gif" alt="bull portrait">
+            </div>
+        </div>
+	        <div class="grid-triple">
+	            <p class="helvetica">
+	               Additional motion assets for social media.
+	            </p>
+	        </div>
+	  </div>
+      <div id="footer"></div>
+	  <script src="main.js"></script>
+      <script src="/js/partials.js"></script>
+</body>
+</html> 

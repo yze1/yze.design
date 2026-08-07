@@ -1,0 +1,412 @@
+[
+  {
+    "name": "ARTS FC Identity",
+    "year": "2025",
+    "description": "Modular visual system for UAL Men’s Football, built for kit, social & digital.",
+    "thumbnail": "/arts/thumbnail.gif",
+    "hero": "/arts/thumbnail.gif",
+    "link": "/arts/",
+    "tags": [
+      "AI",
+      "Identity",
+      "Social Media",
+      "Fashion",
+      "Illustrator",
+      "Typography"
+    ],
+    "process": "",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Democratising Design",
+    "year": "2025",
+    "description": "Gesture-controlled, generative system to create compositions using AI pipelines & design principles. Tate x Anthropic residency.",
+    "thumbnail": "/democratising/thumbnail.gif",
+    "hero": "/democratising/thumbnail.gif",
+    "link": "/democratising/",
+    "tags": [
+      "AI",
+      "Python",
+      "p5.js",
+      "Automation"
+    ],
+    "process": "/process/",
+    "github": "https://github.com/yze1/democratising-design",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Dissertation",
+    "year": "2025",
+    "description": "Investigating the role of designers in an era of AI-driven automation.",
+    "thumbnail": "/dissertation/thumbnail.webp",
+    "hero": "/dissertation/thumbnail.webp",
+    "link": "/dissertation/",
+    "tags": [
+      "AI",
+      "Writing",
+      "Typography"
+    ],
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "AI Explained",
+    "year": "2025",
+    "description": "An explanation of the inner workings of AI with a focus on image generation.",
+    "thumbnail": "/ai/thumbnail.webp",
+    "hero": "",
+    "link": "/ai/",
+    "tags": [
+      "AI",
+      "Presentation",
+      "Motion"
+    ],
+    "process": "",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Curve Workplaces",
+    "year": "2026",
+    "description": "A project converting a floorplan into a polished proposal with realistic AI renders, videos & spatial storytelling.",
+    "thumbnail": "/curve/thumbnail.mp4",
+    "hero": "/curve/thumbnail.mp4",
+    "link": "/curve/",
+    "tags": [
+      "AI",
+      "Automation",
+      "Photoshop",
+      "Presentation",
+      "Frontend"
+    ],
+    "process": "/process/",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Archive",
+    "year": "2021+",
+    "description": "An archive of commissioned graphic work.",
+    "thumbnail": "/archive/thumbnail.gif",
+    "hero": "/archive/thumbnail.gif",
+    "link": "/archive/",
+    "tags": [
+      "Photoshop",
+      "Illustrator",
+      "Fashion"
+    ],
+    "process": "",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "PAPAs Park",
+    "year": "2025",
+    "description": "Visual identity & semi-automated content creation system for Pulross Area Play Association.",
+    "thumbnail": "/papas/thumbnail.gif",
+    "hero": "/papas/thumbnail.gif",
+    "link": "/papas/",
+    "tags": [
+      "Identity",
+      "Social Media",
+      "p5.js",
+      "Automation"
+    ],
+    "process": "/process/",
+    "github": "https://github.com/yze1/papas",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "ML Poster Analyst",
+    "year": "2024",
+    "description": "An AI-powered tool to analyse the efficiency of car posters based on design principles.",
+    "thumbnail": "/analyst/thumbnail.webp",
+    "hero": "",
+    "link": "/analyst/",
+    "tags": [
+      "App",
+      "AI",
+      "Python",
+      "Automation",
+      "Presentation"
+    ],
+    "process": "",
+    "github": "https://github.com/yze1/ml-analyst",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Dynamic Typography",
+    "year": "2024",
+    "description": "A new application of variable font features to transform style rather than weight.",
+    "thumbnail": "/dynamic/thumbnail.gif",
+    "hero": "/dynamic/thumbnail.gif",
+    "link": "/dynamic/",
+    "tags": [
+      "Typography",
+      "Motion"
+    ],
+    "process": "/process/",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "House of Ruin Identity",
+    "year": "2026",
+    "description": "Brandbook for Australian streetwear brand House of Ruin",
+    "thumbnail": "/ruin/thumbnail.webp",
+    "hero": "/ruin/thumbnail.webp",
+    "link": "/ruin/hor.pdf",
+    "tags": [
+      "Identity",
+      "Illustrator",
+      "Typography",
+      "Presentation"
+    ],
+    "process": "",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Off-Grid Identity",
+    "year": "2024",
+    "description": "The visual identity & product design for an AI powered design generator.",
+    "thumbnail": "/offgrid/thumbnail.gif",
+    "hero": "/offgrid/thumbnail.gif",
+    "link": "/offgrid/",
+    "tags": [
+      "Identity",
+      "3D"
+    ],
+    "process": "/process/",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Tamagotchu",
+    "year": "2022",
+    "description": "A modern take on the Turing Test, asking the user to identify whether the response was sourced from a human or AI.",
+    "thumbnail": "/tamagotchu/thumbnail.gif",
+    "hero": "/tamagotchu/thumbnail.gif",
+    "link": "/tamagotchu/",
+    "tags": [
+      "Chatbot",
+      "Frontend",
+      "3D"
+    ],
+    "process": "/process/",
+    "github": "https://github.com/yze1/tamagotchu",
+    "kind": "showcase",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Inflexion",
+    "year": "2026",
+    "description": "Designed & developed Inflexion's website, automated AI news aggregation, synthesis, novelty detection, publishing workflow, & Supabase-Vercel content infrastructure.",
+    "thumbnail": "/m/inflexion/thumbnail.mp4",
+    "hero": "",
+    "link": "https://theinflexion.com/",
+    "tags": [
+      "Frontend",
+      "AI",
+      "Automation",
+      "Illustrator"
+    ],
+    "process": "",
+    "github": [
+      "https://github.com/yze1/inflexion"
+    ],
+    "kind": "more",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Tictactoad",
+    "year": "2024",
+    "description": "Designed and developed an expanding-grid strategy game that reimagines tic-tac-toe through playful, dynamic board mechanics.",
+    "thumbnail": "/tictactoad/thumbnail.mp4",
+    "hero": "",
+    "link": "/tictactoad/",
+    "tags": [
+      "App",
+      "Presentation"
+    ],
+    "process": "",
+    "github": "https://github.com/yze1/tictactoad",
+    "kind": "more",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "YZE Font",
+    "year": "2026",
+    "description": "An ever evolving custom font created to convey my practice visually.",
+    "thumbnail": "/brand/thumbnail.jpg",
+    "hero": "",
+    "link": "/brand/",
+    "tags": [
+      "Typography",
+      "Illustrator",
+      "Identity"
+    ],
+    "process": "",
+    "github": "",
+    "kind": "none",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+
+  {
+    "name": "R$VP",
+    "year": "2025",
+    "description": "Photography, 3D & editing for Olivia Ruston's R$VP knitwear project.",
+    "thumbnail": "/rsvp/thumbnail.gif",
+    "hero": "/rsvp/thumbnail.gif",
+    "link": "/rsvp/",
+    "tags": [
+      "Photography",
+      "Photoshop",
+      "Fashion",
+      "3D"
+    ],
+    "process": "",
+    "kind": "more",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Short Film",
+    "year": "2023",
+    "description": "A silent short film about how football connects people in the digital age",
+    "thumbnail": "/film/thumbnail.webp",
+    "hero": "/film/thumbnail.webp",
+    "link": "/film/",
+    "tags": [
+      "Film",
+      "Colour Correction"
+    ],
+    "process": "/process/",
+    "kind": "more",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Better Bilingual Website",
+    "year": "2026",
+    "description": "Website for Better Bilingual implementing their new brand guidelines",
+    "thumbnail": "/betterbilingual/thumbnail.jpg",
+    "hero": "/betterbilingual/thumbnail.jpg",
+    "link": "/betterbilingual/",
+    "tags": [
+      "Frontend"
+    ],
+    "process": "",
+    "kind": "more",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "The Water Traveler",
+    "year": "2026",
+    "description": "Designed and developed a responsive booking website for luxury charters, rentals and private waterfront experiences.",
+    "thumbnail": "/m/thewatertraveler/thumbnail.mp4",
+    "hero": "",
+    "link": "/m/thewatertraveler/",
+    "tags": [
+      "Frontend"
+    ],
+    "process": "",
+    "github": "https://github.com/yze1/thewatertraveler",
+    "kind": "more",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "Skippies",
+    "year": "2026",
+    "description": "Designed and developed an interactive launch website for children’s underwear, featuring playful generative character animations.",
+    "thumbnail": "/m/skippies/thumbnail.mp4",
+    "hero": "",
+    "link": "/m/skippies/",
+    "tags": [
+      "Frontend",
+      "p5.js"
+    ],
+    "process": "",
+    "kind": "more",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  },
+  {
+    "name": "EditQ",
+    "year": "2026",
+    "description": "",
+    "thumbnail": "/m/editq/thumbnail.jpg",
+    "hero": "",
+    "link": "/m/editq/",
+    "tags": [
+      "Frontend"
+    ],
+    "process": "",
+    "kind": "hidden",
+    "role": "",
+    "timeline": "",
+    "team": "",
+    "skills": ""
+  }
+]

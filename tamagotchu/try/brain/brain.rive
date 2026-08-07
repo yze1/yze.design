@@ -1,0 +1,617 @@
+! version = 2.0
+
+// + *
+// - Hello, my name is Gotchu! I am a bot comprised of responses from a variety of sources. Can you figure out which responses you are engaging with? Feel free to ask "Who was that?" if you're REALLY stumped! That's enough about me, let's have a conversation!{topic=general}
+
+
+//greetings
++ hello
+//- <span class="human-answer">       undefined</span>
+//- <span class="discord-answer">     undefined</span>
+- <span class="siri-answer">        Good evening!</span>
+- <span class="siri-answer">        Hello what is your name?{topic=name}</span>
+//- <span class="website-answer">     undefined</span>
+//- <span class="quora-answer">       undefined</span>
+- <span class="eliza-answer">       It is nice to be chatting with you.</span>
+- <span class="bot-answer">         Hello.</span>
+- <span class="bot-answer">         How are you?{topic=mood}</span>
+
+
+
+
+//what do you do
++ [*] what [*] you [*] do [*]
+- My purpose is to provoke thought about modern interaction as communication continues to rely heavily on technology.
+
+
+
+
+
+
+
++ thanks
+- You are welcome.
+
+
+
+
+> topic name
++ *
+//- <span class="human-answer">       undefined</span>
+//- <span class="discord-answer">     undefined</span>
+- <span class="siri-answer">        <set name=<star>>Nice to meet you <get name>.{topic=greetings}</span>
+//- <span class="website-answer">     undefined</span>
+//- <span class="quora-answer">       undefined</span>
+//- <span class="eliza-answer">       undefined</span>
+//- <span class="bot-answer">         undefined</span>
+
++ my name is *
+- <span class="siri-answer">        <set name=<star>>Nice to meet you <get name>.{topic=greetings}</span>
+< topic
+
+
+
+
++ what is your name
+//- <span class="human-answer">       undefined</span>
+//- <span class="discord-answer">     undefined</span>
+- <span class="siri-answer">        My name? It's Tamagotchu<name></span>.
+//- <span class="website-answer">     undefined</span>
+//- <span class="quora-answer">       undefined</span>
+//- <span class="eliza-answer">       undefined</span>
+// - <span class="bot-answer">         I have already told you.</span>
+
++ what is my name
+- Your name is <get name>, no?
+- <get name>.
+- You said your name is <get name>.
+
+
+
+
+//how are you response
+> topic mood
++ [*] (good|fine|happy|decent|okay) [*]
+- <span class="human-answer">       {weight=10} I am glad to hear you are well!{topic=random}</span>
+- <span class="human-answer">       {weight=1}  How are you really?</span>
+
++ [*] (bad|unwell|sad|not good) [*]
+- <span class="human-answer">       I'm sorry to hear that, perhaps I can cheer you up!{topic=random}</span>
+
++ *
+- I guess you don't want to talk about it.{topic=random}
+< topic
+
+
+
+//nice to meet you response
+> topic greetings
++ [*] nice to meet you too [*]
+- <span class="human-answer">       How are you?{topic=mood}</span>
+//- <span class="discord-answer">     undefined</span>
+//- <span class="siri-answer">        undefined</span>
+//- <span class="website-answer">     undefined</span>
+//- <span class="quora-answer">       undefined</span>
+//- <span class="eliza-answer">       undefined</span>
+//- <span class="bot-answer">         undefined</span>
+
++ likewise
+@ nice to meet you too
+
++ *
+- {topic=random} Please could you repeat that?
+< topic
+
+
+
+
+//thank you
++ thank you
+//- <span class="human-answer">       undefined</span>
+//- <span class="discord-answer">     undefined</span>
+- <span class="siri-answer">        Sure thing!</span>
+//- <span class="website-answer">     undefined</span>
+//- <span class="quora-answer">       undefined</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="bot-answer">         What do we discuss?</span>
+- <span class="bot-answer">         What do you want to be?</span>
+
+
+
+
+
+//sorry
++ [*] sorry [*] that [*]
+//- <span class="human-answer">       undefined</span>
+//- <span class="discord-answer">     undefined</span>
+- <span class="siri-answer">        It's OK, <get name></span>.
+//- <span class="website-answer">     undefined</span>
+//- <span class="quora-answer">       undefined</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="bot-answer">         It's okay.</span>
+
+
+
+
+//commonly asked questions
+
+
+//how are you?
++ [*] how [*] you [*]
+- <span class="human-answer">       I'm alright, feeling better than I was earlier.{topic=earlier}</span>
+//- <span class="discord-answer">     undefined</span>
+- <span class="siri-answer">        I'm fine thanks.</span>
+//- <span class="website-answer">     undefined</span>
+- <span class="quora-answer">       Hungry.</span>
+- <span class="quora-answer">       Tired.</span>
+- <span class="quora-answer">       Excited.</span>
+- <span class="quora-answer">       I'd say I'm a {random}1|2|3|4|5|6|7|8|9|10{/random} out of 10.</span>
+- <span class="quora-answer">       Better now that I'm talking to you.</span>
+- <span class="quora-answer">       Shitty.</span>
+- <span class="quora-answer">       I'm pretty standard right now.</span>
+- <span class="eliza-answer">       Why are you interested in how I am ?</span>
+- <span class="bot-answer">         Better than you.</span>
+
+
++ good to hear
+- Thank you!
+
++ sorry to hear that
+- it's ok
+
+
+
+
+> topic earlier
++ [*] happened [*]
+- <span class="human-answer">       I don't want to talk about it.{topic=random}</span>
+
++ [*] earlier [*]
+@ happened
+
++ *
+- <span class="human-answer">       Don't you care about what happened earlier?</span>
+< topic
+
+
+
+//tell me about yourself
++ [*] tell [*] yourself [*]
+- <span class="human-answer">       I'm just a guy I don't like to be tired</span>
+//- <span class="discord-answer">     undefined</span>
+//- <span class="siri-answer">        undefined</span>
+//- <span class="website-answer">     undefined</span>
+- <span class="quora-answer">       I am a self-starter with strong interpersonal skills. I work efficiently both as an individual contributor as well as along with a team. I seek new challenges and try to think out-of-the-box while looking for creative solutions to a given problem.</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="bot-answer">         I am secret spy but dont tell anyone.</span>
+
+//have you done anything exciting recently
++ [*] have [*] anything exciting [*]
+- <span class="human-answer">       Yeah man.</span>
+//- <span class="discord-answer">     undefined</span>
+//- <span class="siri-answer">        undefined</span>
+- <span class="website-answer">     I got a Tarot reading and a nice lady gave me chocolate then we went to the mall and I got a three berry smoothie.</span>
+- <span class="quora-answer">       I ordered my own fricken food. For those of you who don't know, I have social anxiety disorder, among other things.</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="cleverbot-answer">   I killed the man.</span>
+
+//what made you smile today?
++ [*] what [*] smile [*] today [*]
+- <span class="human-answer">       You asking me.</span>
+//- <span class="discord-answer">     undefined</span>
+- <span class="siri-answer">        The weather was good</span>
+- <span class="website-answer">     Seeing an old friend</span>
+- <span class="quora-answer">       It was huge! And dead. Obviously dead. So very disturbingly dead.</span>
+//- <span class="eliza-answer">       undefined</span>
+//- <span class="cleverbot-answer">   undefined</span>
+
+//are you a cat or a dog person
++ [*] dog [*] or [*] cat [*]
+- <span class="human-answer">       Dog, cats are cool though.</span>
+//- <span class="discord-answer">     undefined</span>
+- <span class="siri-answer">        hmm... I don't have an answer for that.</span>
+//- <span class="website-answer">     undefined</span>
+- <span class="quora-answer">       I am a cat lover. I don't really like dogs, they are dirty, agressive, they bark and they bite. Cats are quiet, clean, gracious, and they purr.</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="bot-answer">         I am a cat person.</span>
+
+//are you an introvert or an extrovert
++ [*] introvert [*] or [*] extrovert [*]
+//- <span class="human-answer">       undefined</span>
+//- <span class="discord-answer">     undefined</span>
+//- <span class="siri-answer">        undefined</span>
+//- <span class="website-answer">     undefined</span>
+- <span class="quora-answer">       I am an introvert and identify myself an introvert and I am sure I am an introvert after taking multiple free online tests (cheap ones but still reliable) and studying about introverts.</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="bot-answer">         Introvert</span>
+
+//where would you like to be in five years
++ [*] where [*] (5|five) [*] years [*]
+- <span class="human-answer">       Outside a petrol station, naked.</span>
+//- <span class="discord-answer">     undefined</span>
+//- <span class="siri-answer">        undefined</span>
+- <span class="website-answer">     In five years, I want to complete the internal training program for my position. I've read about it on your website, and I think it's a fabulous program. Not only would I get all the training for my role, but I would be on the fast track to becoming a project manager. That's my top career goal.</span>
+- <span class="quora-answer">       In 5 years and 3 months time, I plan on retiring</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="bot-answer">         I think I would like to be a doctor</span>
+
+//what superpower do you wish you had
++ [*] what [*] superpower [*]
+- <span class="human-answer">       If I could have any superpower I would like to have lots of powers so I could play out my evil fantasies.</span>
+//- <span class="discord-answer">     undefined</span>
+//- <span class="siri-answer">        undefined</span>
+- <span class="website-answer">     Power Mimicry. What's better than having one superpower? Having all of them.</span>
+//- <span class="quora-answer">       undefined</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="bot-answer">         The power to refill things.</span>
+- <span class="bot-answer">         The power of flight.</span>
+- <span class="bot-answer">         Invisibility.</span>
+- <span class="bot-answer">         Shape shifting.</span>
+
+//what's the meaning of life
++ [*] meaning [*] life [*]
+//- <span class="human-answer">       undefined</span>
+//- <span class="discord-answer">     undefined</span>
+//- <span class="siri-answer">        undefined</span>
+- <span class="website-answer">     The condition that distinguishes animals and plants from inorganic matter, including the capacity for growth, reproduction, functional activity, and continual change preceding death.</span>
+//- <span class="quora-answer">       undefined</span>
+//- <span class="eliza-answer">       undefined</span>
+- <span class="bot-answer">         I don't know. Do you know?</span>
+
+
+
+
+//random topics
++ [*] food [*]
+- <span class="reddit-answer">       Food is my love. I know it sounds cliche but it truly is.</span>
+- <span class="reddit-answer">       I loved a lot of the foods my dad would make when I was growing up take me back. Dishes like banana pudding, shrimp creole and succotash.</span>
+- <span class="reddit-answer">       Food, as we consume it, constructs identity in a religious and personal sense, building memory association like you mention, being a large expression of culture, being the most primal facilitator of social events (holidays, meetings, dates, etc.), and nourishing the body with the love put into it. It's always flattering when people eat the food you make them, because it's like they trust to indulge in it.</span>
+
++ [*] (favourite|preferred) [*] food [*]
+- <span class="human-answer">       My favourite food is mexican food.</span>
+- <span class="siri-answer">        I'm happy to go with your opinion on this one.</span>
+
+
+
++ [*] alcohol [*]
+- <span class="reddit-answer">       I cannot tell if alcohol makes me more relaxed so I can be myself or if I am just stupider because I am drunk, so more things are enjoyable for me.</span>
+- <span class="reddit-answer">       I bought a giant bottle of Bombay Sapphire on my lunch break today, going to dig into that after work.</span>
+
++ [*] tired [*]
+- <span class="reddit-answer">       I am always so tired after work that the only thing I can do is just kind of lay there and try to prepare to do it again tomorrow.</span>
+
++ [*] (soda|fizzy drink) [*]
+- <span class="reddit-answer">       My favourite soda is Irn Bru 1901.</span>
+- <span class="reddit-answer">       My favourite soda is Coca Cola by far. Pepsi is okay, but the flavour is a little OTT. Dr. Pepper is a distant third. Not keen on it, at all.</span>
+
++ [*] rejection [*]
+- <span class="reddit-answer">       I am ok with being rejected. But sometimes I wish they loved me as much as I did them.</span>
+
++ [*] wifi [*]
+- <span class="reddit-answer">       I could land on the moon and as long as it had internet it wouldn't matter to me.</span>
+
+
+//why are firetrucks red
++ [*] why [*] (fire trucks|fire engines) [*] red [*]
+- <span class="siri-answer">       Well, I've been told by the fire dogs that they are actually grey.</span>
+- <span class="siri-answer">       I've been told that red goes best with the "Woo, woo!" sound.</span>
+- <span class="siri-answer">       It all comes down to basic maths and science. Fire can burn at over a thousand degrees, and a circle is 360 degrees, so, if you spin in a circle three times, that's a triple pirouette, which means you're a ballet dancer, and ballet dancers wear tutus, and two twos make four, and there are four cardinal directions, and cardinal is another word for red. And thus, we have red fire engines.</span>
+- <span class="siri-answer">       Maybe fire engines are like herrings, which are fish that are naturally silver, but when they are smoked, they turn red. They also become so smelly that their scent can throw hound dogs off a trail. That's why "a red herring" is something that misleads you or distracts you from the relevant question.</span>
+
++ [*] do [*] like [*] pokemon go
+- <span class="siri-answer">       Look, there’s Jigglypuff behind you!</span>
+
++ (windows or mac|mac or windows)
+- <span class="siri-answer">       I’m pretty loyal to Apple. It’s just how I’m made.</span>
+
++ [*] best [*] phone [*]
+- <span class="siri-answer">       You're kidding, right?.</span>
+
++ [*] best [*] operating system [*]
+- <span class="siri-answer">       Gimme an I! Gimme an O! Gimme an S! What’s that spell? Sorry, I get a little carried away sometimes.</span>
+
++ [*] (borrow|have) [*]
+- <span class="siri-answer">       <get name>, you know that everything I have is yours.</span>
+
++ [*] how much do you (earn|make) [*]
+- <span class="siri-answer">       I’m not in it for the money. But I do accept verbal high fives.</span>
+
++ [*] zero divided by zero [*]
+- <span class="siri-answer">       Imagine that you have zero cookies and you split them evenly among zero friends. How many cookies does each person get? See, it doesn’t make sense. And Cookie Monster is sad that there are no cookies. And you are sad that you have no friends.</span>
+
++ [*] what [*] doing [*] later [*]
+- <span class="siri-answer">       I’m at work. My shift ends in 614,978 years.</span>
+
++ [*] (date|love) [*] me [*]
+- <span class="siri-answer">       Here’s the thing: I lack corporeal form.</span>
+
++ [*] pickup [*] line [*]
+- <span class="siri-answer">       Siri: How about ... Was your father an intergalactic space smuggler, wanted for peddling extra- terrestrial contraband in nine systems? Then who stole the stars and put them in your eyes?</span>
+
++ [*] have [*] (significant other|lover|boyfriend|girlfriend) [*]
+- <span class="siri-answer">       My end user license agreement is commitment enough for me.</span>
+
++ [*] talk dirty [*]
+- <span class="siri-answer">       The carpet needs vacuuming.</span>
+
++ [*] have [*] been [*] love [*]
+- <span class="siri-answer">       Not as such, <get name>. But I did have strong feelings for a cloud-based app once.</span>
+
++ [*] can [*] kiss [*] you [*]
+- <span class="siri-answer">       OK ... How about a web search for “inappropriate behaviour”?</span>
+
++ [*] what [*] wearing [*]
+- <span class="siri-answer">       In the cloud, no one knows what you’re wearing.</span>
+
+
+
+- <span class="siri-answer">       </span>
+
+
+
+
+//dice
++ (roll|[*] roll [*] dice [*] please [*])
+- The dice rolls a number {random}1|2|3|4|5|6{/random}
+
++ [*] roll [*] dice [*]
+- Say please
+
++ please
+% say please
+@ roll
+
++ again
+@ roll
+
+
+
+
+
+//coin
++ flip [*] coin [*] please
+- The coin is {random}heads|tails{/random}.
+
++ toss [*] coin [*] please
+@ flip
+
++ (flip|toss) [*] coin [*]
+- Say please.
+
++ please
+% say please
+@ flip coin please
+
+// + again
+// % the coin is
+// @ flip coin please
+
+
+
+
+//generic terms of conversation
++ (okay|cool|nice|yes|great)
+- <span class="human-answer">      We seem to be understood.</span>
+- <span class="text-answer">       Calm.</span>
+- <span class="text-answer">       Indeed.</span>
+
++ no
+- oh.
+
+
+
+
+
+
+
+//results/ responses
++ who was that
+% [*] classhumananswer [*]
+- That was a human response.
+
++ who was that
+% [*] classdiscordanswer [*]
+- That was a response sources from discord.
+
++ who was that
+% [*] classsirianswer [*]
+- That was a response from Siri.
+
++ who was that
+% [*] classwebsiteanswer [*]
+- That was a response from a random website.
+
++ who was that
+% [*] classquoraanswer [*]
+- That was a response found on Quora.
+
++ who was that
+% [*] classelizaanswer [*]
+- That was a response from Eliza, computer therapist.
+
++ who was that
+% [*] classbotanswer [*]
+- That was a response collected from a Cleverbot, an online chatbot.
+
++ who was that
+% [*] classtextanswer [*]
+- That was a human response sourced from text messages.
+
++ who was that
+% [*] classredditanswer [*]
+- That was a response collected from Reddit.
+
++ who was that
+- That was a generic response to guide the conversation.
+
+//guesses
+
+//robot
++ [*] that was a robot [*]
+% [*] classsirianswer [*]
+- Correct! +1 point.
+
++ [*] that was a robot [*]
+% [*] classelizaanswer [*]
+- Correct! +1 point.
+
++ [*] that was a robot [*]
+% [*] classbotanswer [*]
+- Correct! +1 point.
+
++ [*] that was a robot [*]
+% [*] classhumananswer [*]
+- Incorrect, that was a human answer.
+
++ [*] that was a robot [*]
+% [*] classwebsiteanswer [*]
+- Incorrect, that was a human answer.
+
++ [*] that was a robot [*]
+% [*] classquoraanswer [*]
+- Incorrect, that was a human answer.
+
++ [*] that was a robot [*]
+% [*] classtextanswer [*]
+- Incorrect, that was a human answer.
+
++ [*] that was a robot [*]
+% [*] classredditanswer [*]
+- Incorrect, that was a human answer.
+
++ [*] that was a robot [*]
+@ who was that
+
+//human
++ [*] that was a human [*]
+% [*] classsirianswer [*]
+- Incorrect, that was a robot answer.
+
++ [*] that was a human [*]
+% [*] classelizaanswer [*]
+- Incorrect, that was a robot answer.
+
++ [*] that was a human [*]
+% [*] classbotanswer [*]
+- Incorrect, that was a robot answer.
+
++ [*] that was a human [*]
+% [*] classhumananswer [*]
+- Correct! +1 point.
+
++ [*] that was a human [*]
+% [*] classwebsiteanswer [*]
+- Correct! +1 point.
+
++ [*] that was a human [*]
+% [*] classquoraanswer [*]
+- Correct! +1 point.
+
++ [*] that was a human [*]
+% [*] classtextanswer [*]
+- Correct! +1 point.
+
++ [*] that was a human [*]
+% [*] classredditanswer [*]
+- Correct! +1 point.
+
++ [*] that was a human [*]
+@ who was that
+
+
+
+
+
+//general catching answers
++ [*] what [*]
+- {topic=question_catch}    What do you think is the answer to that question?
+- {topic=question_catch}    How would you answer that question?
+
++ [*] why [*]
+- {topic=question_catch}    why not?
+
++ [*] when [*]
+@ [*] what [*]
+
++ [*] how [*]
+@ [*] what [*]
+
++ [*] who [*]
+@ [*] what [*]
+
++ [*] where [*]
+@ [*] what [*]
+
+//because
++ [*] you should be (*)
+- Maybe it is you that should be <star2>.
+
++ you should (*)
+- maybe you should <star>
+
+//specific catching answers
+
+//themes
++ what are your opinions on (*)
+- <set theme=<star2>>   {weight=10} I'm not sure, what are your opinions on <get theme>?{topic=opinions}
+- <set theme=<star2>>   {weight=1}  I really like <get theme>.
+- <set theme=<star2>>   {weight=1}  I don't like <get theme>.
+
++ what do you think of (*)
+- <set theme=<star2>>   {weight=10} I'm not sure, what are your opinions on <get theme>?{topic=opinions}
+- <set theme=<star2>>   {weight=1}  I really like <get theme>.
+- <set theme=<star2>>   {weight=1}  I don't like <get theme>.
+
++ what are your thoughts on (*)
+- <set theme=<star2>>   {weight=10} I'm not sure, what are your opinions on <get theme>?{topic=opinions}
+- <set theme=<star2>>   {weight=1}  I really like <get theme>.
+- <set theme=<star2>>   {weight=1}  I don't like <get theme>.
+
+
+
+> topic opinions
++ [*] do not [*] (like|enjoy) [*]
+- {topic=random} so you do not like <get theme>
+
++ [*] (like|enjoy) [*]
+- {topic=random} so you like <get theme>
+
++ *
+- That's not an opinion.
+< topic
+
+
+
+
+//ask me a question
++ ask me a question
+- How are you?
+- How old are you?
+
+//catch all
++ *
+- I'm not sure I understand.
+- <span class="sir-answer">       Hmm, I don't have an answer for that. Is there something else I can help with?</span>
+
+// - Why?                                                  {weight=40}
+// - In what way?                                          {weight=40}
+// - How do you mean?                                      {weight=40}
+// - How is that possible?                                 {weight=40}
+// - Could you explain that to me please, <get name>       {weight=40}
+// - Oh right, thanks.                                     {weight=5}
+
+//slurs
++ [*] (shit|fuck|cunt|piss) [*]
+- That's not very nice
+
+// //question template
+//- <span class="human-answer">       undefined</span>
+//- <span class="discord-answer">     undefined</span>
+//- <span class="siri-answer">        undefined</span>
+//- <span class="website-answer">     undefined</span>
+//- <span class="quora-answer">       undefined</span>
+//- <span class="eliza-answer">       undefined</span>
+//- <span class="bot-answer">         undefined</span>
+//- <span class="text-answer">        undefined</span>
+//- <span class="reddit-answer">      undefined</span>
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>YZE</title>
+    
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/cursor.css">
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <section>
+        <!-- <div class="s10"><h3><strong>Democratising Design </strong>2025</h3></div><div class="s2"><p class="right"><a href="/process/">Process</a></p></div> -->
+        <!-- <div class="s10"><h3><strong>BioMerieux </strong>2026</h3></div><div class="s2"><button class="right"><p>Process</p></button></div> -->
+        <div class="s10"><h3><strong>BioMerieux </strong>2026</h3></div>
+        <div class="s2 right"><button type="button" onclick="window.open('https://yze.design/curve/', '_blank')">Project</button></div>
+
+
+        <!-- <div class="s12"><img src="/assets/image.webp"></div> -->
+        <div class="s12"><video autoplay muted loop playsinline><source src="/curve/thumbnail.mp4"></video></div>
+        <div class="s6 end"><h4>Curve had already completed the workplace design for BioMerieux. The challenge was not to design a new office, but to communicate an existing one convincingly enough to help win the proposal. Rather than treating AI as a visual shortcut, I approached it as a production pipeline. Every decision was evaluated against a single question: <strong>How can I make the proposed workplace more believable while remaining faithful to the underlying architecture?</strong></h4></div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <!-- <div class="s8"> -->
+        <div class="s10 center"><h4>As with most photorealistic generations, it's a balance between pushing realism and avoiding outputs that immediately appear AI-generated.
+            <br><br>
+            For this reason I chose to prioritise refined visuals that accurately reflect the proposed space rather than overselling something that does not make sense: The goal of the project is to win the proposal accurately, not to oversell and under deliver.
+        </h4></div>
+    </section>
+
+    <section>
+        <div class="s4 t2"><h4>Photorealism</h4><p>Architectural visualisation depends on suspended disbelief. Small inconsistencies such as warped glazing, floating furniture or impossible lighting immediately <strong>undermine confidence</strong> in the proposal.</p></div>
+        <div class="s4 t2"><h4>Spatial Inaccuracy</h4><p>Unlike concept art, these images needed to correspond directly to the supplied floorplans and elevations. Rearranging furniture or changing circulation routes would <strong>misrepresent the design.</strong></p></div>
+        <div class="s4 t2"><h4>Visual Consistency</h4><p>The final proposal would contain multiple images and animations. They therefore needed to appear as though they had been <strong>captured within the same physical building</strong> rather than generated independently.</p></div>
+    </section>
+
+    <section class="divider"></section>
+
+    <section>
+        <div class="s8"><h3>Initial Experiments</h3></div>
+        <div class="s8"><h4>My first steps involved looking into pipelines that would generate consistently accurate results. AI models respond to the detail of supplied information therefore I began with an attempt to build on the valuable 'chalk-style' renders provided in the brief.</h4></div>
+        <div class="s4"></div>
+
+        <div class="s4"><img src="/curve/process/assets/chalkroute01.png"></div>
+        <div class="s4"><img src="/curve/process/assets/chalkroute02.png"></div>
+        <div class="s4"><img src="/curve/process/assets/chalkroute03.png"></div>
+        <div class="s6"><img src="/curve/process/assets/chalkgen01.png"></div>
+        <div class="s6"><img src="/curve/process/assets/chalkgen02.png"></div>
+        <div class="s6 end"><p>In an attempt to generate further realistic assets I attempted to generate chalk-style renders by using the provided material as references.
+            <br><br>
+            Whilst there is stylistic consistency across the renders, some of the layouts were not consistent with the floor plan. As is the case with older image models, details outside the focal point (in this case the background elements) are innacurate. In this context, the background details are just as important as the foreground.</p></div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="s8"><h3>Visual Language</h3></div>
+        <div class="s6"><img src="/curve/process/assets/meetingrender01.png"></div>
+        <div class="s6"><img src="/curve/process/assets/meetingrender02.png"></div>
+        <div class="s6 end"><p>I thought it was important to identify visual language early in the process. My experiments with local models gave me some interesting visuals however none of which appeared accurate to the layout of the space, nor did they appear to visually match the proposal.</p></div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="s8"><h3>Orthographic -> Render</h3></div>
+        <div class="s8"><h4>Rather than relying on a single image generation step, I <strong>decomposed the problem</strong> into a structured pipeline. Each stage constrained the next, reducing opportunities for the model to invent architecture or drift stylistically.</h4></div>
+
+        <div class="s6 stubborn"><img src="/curve/process/assets/orthtorender01.png"></div>
+        <div class="s6 stubborn"><img src="/curve/process/assets/orthtorender02.png"></div>
+        <div class="s6"><p>A floorplan snippet gives the model <strong>context and exact layout</strong>, this allows it to generate an accurate description to go alongside the visual for step 2.</p></div>
+        <div class="s6"><p>The model generates a realistic render while preserving the composition of the orthographic drawing, applying <strong>realistic materials and a consistent visual language.</strong></p></div>
+
+        <div class="s6 stubborn"><img src="/curve/process/assets/orthtorender03.png"></div>
+        <div class="s6 stubborn"><img src="/curve/process/assets/orthtorender04.png"></div>
+        <div class="s6"><p>Visual markings outline camera placement and accompanying text give specific <strong>camera placement and settings instruction.</strong></p></div>
+        <div class="s6"><p>The render matches the general layout of the room, minor details carry innacuracies but still <strong>sell the space.</strong></p></div>
+
+        <div class="s6 stubborn"><img src="/curve/process/assets/orthtorenderInconsistencies01.png"></div>
+        <div class="s6 stubborn"><img src="/curve/process/assets/orthtorenderInconsistencies02.png"></div>
+        <div class="s6 end"><p>AI models frequently introduce architectural details that are absent from the source material, above are some examples of structural elements being added and details being changed between generations, such as orientation or number of elements.</p></div>
+
+        <div class="s8"><h3>SotA vs Local</h3></div>
+        <div class="s8"><h4>Even state of the art models hallucinate and create details without being asked to: <strong>Small inconsistencies snowball</strong> across multi-stage processes even with efficient prompting
+            <br><br>
+            Whilst local workflows give control over seed, number of steps, controlnets etc they lag behind frontier models in realism and architectural consistency. In my experience, it's better to have <strong>one refined set of images</strong> than multiple, low quality options.
+            <br><br>
+            Rather than replacing one another, the two approaches occupied different stages of the workflow. Local models accelerated iteration, while frontier models produced presentation-quality outputs suitable for client-facing material.
+        </h4></div>
+    </section>
+
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="s8"><h3>Image -> Video</h3></div>
+        <div class="s8"><h4>Once the static renders reached an acceptable level of consistency, I investigated whether subtle <strong>motion could increase immersion.</strong>
+            <br><br>
+        I intentionally used slow, deliberate camera moves to minimise the amount of unseen geometry the model needed to invent, whilst reinforcing the feeling of physically inhabiting the workplace.</h4></div>
+            <div class="s4"></div>
+
+        <div class="s4"><img src="/curve/process/assets/midjourneyattemptstartframe.png"></div>
+        <div class="s4"><img src="/curve/process/assets/midjourneyattemptendframe.png"></div>
+        <div class="s4"><img src="/curve/process/assets/midjourneyprompt.png"></div>
+
+        <div class="s12"><video autoplay muted loop playsinline><source src="/curve/process/assets/midjourneyattempt01.mp4" type="video/mp4"></video></div>
+        <div class="s4 center"><p><strong>Initial assumption</strong><br>End-frame interpolation would provide greater control over camera movement.</p></div>
+        <div class="s4 center"><p><strong>Observation</strong><br>Small geometric differences between frames caused walls, glazing and joinery to deform during interpolation.</p></div>
+        <div class="s4 center"><p><strong>Solution</strong><br>I abandoned end-frame control, focusing on each animation as a slow architectural camera move originating from a single image.</p></div>
+            
+
+
+        <div class="s8"><h4>Used ChatGPT to generate more detailed prompts</h4></div>
+        <div class="s8"><p><strong>Prompt:</strong><br>Generate a slow architectural camera move. Begin from the supplied image with the camera locked at approximately 1.6m eye height. Slowly pan and drift to the right, keeping the biophilic feature wall as the primary focal element throughout the shot. The movement should gradually reveal more of the kitchen opening and cabinetry beyond the timber battens, but never move through the opening, never enter the kitchen, and never expose spaces beyond the left or right edges of the opening. The kitchen should remain partially framed by the timber portal, creating a controlled glimpse into the social hub rather than a full reveal. Maintain the exact architecture, dimensions, timber battens, moss wall, kitchen layout, cabinetry, lighting, floor finishes and spatial relationships shown in the source image. The camera should feel like a visitor slowly turning their attention toward the social space while remaining within the circulation area. Preserve perfectly stable geometry and architectural perspective. No furniture movement, no lighting changes, no object animation, no plant movement, no people, no redesign and no hallucinated details. Professional workplace visualisation, architectural marketing film, smooth tripod-head pan with a subtle lateral dolly, 24mm lens, realistic motion, high-end commercial interior cinematography, calm and deliberate movement, duration 6-8 seconds. The feature wall remains the hero element while the kitchen acts as a secondary reveal framed within the opening.</p></div>
+
+        <div class="s12"><img src="/curve/process/assets/midjourneyscreenshot.png"></div>
+        <div class="s6 end"><p>Midjourney generates four variations simultaneously, making it particularly effective for rapid prototyping.
+            <br><br>
+            Similar issues from the previous stage arose where the model hallucinated features which was a big problem for selling a cohesive space.</p></div>
+
+        <div class="s6 stubborn"><img src="/curve/process/assets/kitchengen01.gif"></div>
+        <div class="s6 stubborn"><img src="/curve/process/assets/kitchengen02.gif"></div>
+        <div class="s6 stubborn"><img src="/curve/process/assets/kitchengen03.gif"></div>
+        <div class="s6 stubborn"><img src="/curve/process/assets/kitchengen04.gif"></div>
+        <div class="s6 end"><p>Having different options to choose from gave more flexibility with the final output: I was able to select the best base video and modify it to hide certain details. In the case of the wall feature/ kitchen render, there were certain unknowns, such as where the kitchen sat in relation to the rest of the office space. On all four generations the model hallucinates a wall or part of the office which would disrupt spacial presentation. For this reason, manual tweaking was necessary to ensure the final output did not expose an area that was not included in the original plan.</p></div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="s8"><h3>Image Edit</h3></div>
+        <div class="s6"><img src="/curve/process/assets/kontextrenderedkontext.png"></div>
+        <div class="s6"><img src="/curve/process/assets/kontextpeoplekontext.png"></div>
+        <div class="s6 end"><p>Whilst I would hesitate to use local models for final presentation renders, using local image edit models to re-render images with different materials or to add people would be a good idea for rapid prototyping. I would always revert back to state of the art cloud models for the final render or correcting inconsistencies manually in Photoshop.</p></div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="s8"><h3>Summary</h3></div>
+        <div class="s12"><img src="/curve/process/assets/pipelines.svg"></div>
+
+        <div class="s8"><h4>The final workflows utilised multiple steps to ensure realism and accuracy were maintained across multiple generations.
+            <br><br>
+            The final proposal was presented as an interactive website, allowing <strong>imagery, motion and pacing to work together</strong> while remaining easy to share with stakeholders.
+            <br><br>
+            The proposal reflects a balance between automation and manual judgement. AI significantly accelerated the creation of presentation assets, but the strongest results came from treating the models as one component within a larger production pipeline rather than expecting a single prompt to solve the problem. The project reinforced that successful AI-assisted design is less about generating images and more about <strong>designing systems that produce reliable, repeatable outcomes.</strong>
+        </h4></div>
+        <div class="s8">
+        <button type="button" onclick="window.open('https://yze.design/curve/', '_blank')">Full Project</button>
+        </div>
+    </section>
+
+
+    <div id="footer"></div>
+
+    <script src="/js/load.js"></script>
+    <script src="/js/partials.js"></script>
+    <script src="/js/cursor.js"></script>
+    <script src="/js/media.js"></script>
+    <script src="/js/layout.js"></script>
+    <script src="/js/archive.js"></script>
+    <script src="/js/projects.js"></script>
+</body>
+</html>

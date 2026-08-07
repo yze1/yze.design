@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPAs Font Display</title>
+    <style>
+        @font-face {
+            font-family: 'PAPAsVF';
+            src: url('PAPAsVF.ttf') format('truetype-variations');
+            font-weight: 200 600;
+            font-style: normal;
+        }
+        
+        :root {
+            --cell-size: 60px; /* Reduced from original size */
+            --grid-cols: 8;
+            --grid-rows: 5;
+            --grid-gap-v: calc(var(--cell-size) * 0.05); /* Reduced vertical gap */
+            --grid-gap-h: calc(var(--cell-size) * 0.05); /* Reduced horizontal gap */
+            --total-width: calc((var(--cell-size) * var(--grid-cols)) + (var(--grid-gap-h) * (var(--grid-cols) - 1)));
+            --total-height: calc((var(--cell-size) * var(--grid-rows)) + (var(--grid-gap-v) * (var(--grid-rows) - 1)));
+            --font-size: calc(var(--cell-size) * 0.6); /* Reduced by additional 5% */
+        }
+        
+        body {
+            font-family: 'PAPAsVF', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            margin: 0;
+            background-color: white;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .main-container {
+            display: flex;
+            width: 80vw;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .left-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(var(--grid-cols), 1fr);
+            grid-gap: var(--grid-gap-v) var(--grid-gap-h);
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .character {
+            font-size: var(--font-size);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: normal;
+            aspect-ratio: 1/1;
+        }
+        
+        .font-container {
+            width: 100%;
+        }
+        
+        .slider-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            width: 60%;
+            max-width: 200px;
+        }
+        
+        /* Range input styling */
+        input[type="range"] {
+            width: 100%;
+            height: 2px;
+            -webkit-appearance: none;
+            background: #000;
+            border-radius: 0;
+            margin: 20px 0;
+        }
+        
+        /* Range input thumb (slider handle) */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 8px;
+            height: 8px;
+            background: #000;
+            border: 1px solid #000;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* Firefox-specific slider styling */
+        input[type="range"]::-moz-range-thumb {
+            width: 8px;
+            height: 8px;
+            background: #000;
+            border: 1px solid #000;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="range"]::-moz-range-track {
+            height: 2px;
+            background: #000;
+            border-radius: 0;
+        }
+        
+        /* Edge/IE-specific slider styling */
+        input[type="range"]::-ms-thumb {
+            width: 8px;
+            height: 8px;
+            background: #000;
+            border: 1px solid #000;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="range"]::-ms-track {
+            height: 2px;
+            background: #000;
+            border-radius: 0;
+            color: transparent;
+            border-color: transparent;
+        }
+        
+        /* Media query for landscape orientation */
+        @media (orientation: landscape) and (max-height: 800px) {
+            :root {
+                --cell-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="font-container">
+                <div class="grid-container">
+                    <!-- Row 1: A-H -->
+                    <div class="character">A</div>
+                    <div class="character">B</div>
+                    <div class="character">C</div>
+                    <div class="character">D</div>
+                    <div class="character">E</div>
+                    <div class="character">F</div>
+                    <div class="character">G</div>
+                    <div class="character">H</div>
+                    
+                    <!-- Row 2: I-P -->
+                    <div class="character">I</div>
+                    <div class="character">J</div>
+                    <div class="character">K</div>
+                    <div class="character">L</div>
+                    <div class="character">M</div>
+                    <div class="character">N</div>
+                    <div class="character">O</div>
+                    <div class="character">P</div>
+                    
+                    <!-- Row 3: Q-X -->
+                    <div class="character">Q</div>
+                    <div class="character">R</div>
+                    <div class="character">S</div>
+                    <div class="character">T</div>
+                    <div class="character">U</div>
+                    <div class="character">V</div>
+                    <div class="character">W</div>
+                    <div class="character">X</div>
+                    
+                    <!-- Row 4: Y-Z and punctuation -->
+                    <div class="character">Y</div>
+                    <div class="character">Z</div>
+                    <div class="character">.</div>
+                    <div class="character">,</div>
+                    <div class="character">:</div>
+                    <div class="character">;</div>
+                    <div class="character">'</div>
+                    <div class="character">"</div>
+                    
+                    <!-- Row 5: Special characters -->
+                    <div class="character">!</div>
+                    <div class="character">?</div>
+                    <div class="character">%</div>
+                    <div class="character">£</div>
+                    <div class="character">&</div>
+                    <div class="character">/</div>
+                    <div class="character">(</div>
+                    <div class="character">)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slider-container">
+        <input type="range" min="200" max="600" value="400" class="weight-slider" id="weightSlider">
+    </div>
+
+    <script>
+        const slider = document.getElementById('weightSlider');
+        const characters = document.querySelectorAll('.character');
+        
+        // Initialize all characters with the starting weight
+        characters.forEach(char => {
+            char.style.fontVariationSettings = `"wght" ${slider.value}`;
+        });
+        
+        slider.addEventListener('input', function() {
+            const weight = this.value;
+            characters.forEach(char => {
+                char.style.fontVariationSettings = `"wght" ${weight}`;
+            });
+        });
+    </script>
+</body>
+</html> 

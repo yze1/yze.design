@@ -1,0 +1,18 @@
+.DS_Store
+.vscode/
+
+# Files exceeding GitHub's normal 100 MB limit
+democratising/process/content/ColourTransfer02Comparisson.mp4
+papas/process/content/ColourTransfer02Comparisson.mp4
+m/thewatertraveler/dist/images/tahoe video.mp4
+m/thewatertraveler/images/tahoe video.mp4
+
+# Optional source and duplicate media
+dynamic/process/Content/Packaging/ProductAnimation/2.mp4
+offgrid/process/Content/Packaging/ProductAnimation/2.mp4
+dynamic/process/Content/Swatch/22.mov
+offgrid/process/Content/Swatch/22.mov
+dynamic/process/Content/Typography/Research/SonanticAnimation.gif
+offgrid/process/Content/Typography/Research/SonanticAnimation.gif.DS_Store
+
+/m/

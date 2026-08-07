@@ -1,0 +1,627 @@
+[
+  {
+    "number": 1,
+    "id": "30s",
+    "title": "Slide 1",
+    "notes": "",
+    "video": "assets/media/30s.mp4"
+  },
+  {
+    "number": 2,
+    "id": "54EABEF0-7B1F-44A2-89EE-0D80E38C8CE5",
+    "image": "assets/slides/54EABEF0-7B1F-44A2-89EE-0D80E38C8CE5.jpg",
+    "title": "Slide 2",
+    "notes": "Hello I’m Eddie I study BA Graphic Design @ Camberwell"
+  },
+  {
+    "number": 3,
+    "id": "39599C36-3BC7-4F21-8A95-5AF7212F80C6",
+    "image": "assets/slides/39599C36-3BC7-4F21-8A95-5AF7212F80C6.jpg",
+    "title": "Slide 3",
+    "notes": "allow me to introduce"
+  },
+  {
+    "number": 4,
+    "id": "54AC88D3-604A-4900-AD4B-B8A8D81580DB",
+    "image": "assets/slides/54AC88D3-604A-4900-AD4B-B8A8D81580DB.jpg",
+    "title": "Slide 4",
+    "notes": ""
+  },
+  {
+    "number": 5,
+    "id": "8618F2B7-319E-4401-A99C-0F706B58031F",
+    "image": "assets/slides/8618F2B7-319E-4401-A99C-0F706B58031F.jpg",
+    "title": "Slide 5",
+    "notes": ""
+  },
+  {
+    "number": 6,
+    "id": "584FEF7F-134C-427E-AA27-E6A7C616A9D9",
+    "image": "assets/slides/584FEF7F-134C-427E-AA27-E6A7C616A9D9.jpg",
+    "title": "Slide 6",
+    "notes": ""
+  },
+  {
+    "number": 7,
+    "id": "C856071D-F1C1-44BB-AD6C-51589F914030",
+    "image": "assets/slides/C856071D-F1C1-44BB-AD6C-51589F914030.jpg",
+    "title": "Slide 7",
+    "notes": "here’s a brief rundown of the presentation I will play a demonstration of the app run through my research showcase my development and ﬁnally, reﬂect on the process"
+  },
+  {
+    "number": 8,
+    "id": "7BBC6B52-66A8-49F3-BD64-79E9C747D92B",
+    "image": "assets/slides/7BBC6B52-66A8-49F3-BD64-79E9C747D92B.jpg",
+    "title": "Slide 8",
+    "notes": "here is TicTacToad it is a play on tic tac toe with an expanding board user input informs the size and proportion of the grid up to a 6rows by 6column board points are also accumulated instead of the game ending after one sequence"
+  },
+  {
+    "number": 9,
+    "id": "77ED3D20-052B-47C9-804C-747751BFF3AA",
+    "image": "assets/slides/77ED3D20-052B-47C9-804C-747751BFF3AA.jpg",
+    "title": "Slide 9",
+    "notes": "let’s ﬁrst rewind how did I get here?",
+    "video": "assets/media/gameplay.mov"
+  },
+  {
+    "number": 10,
+    "id": "422C74B3-F0B0-4135-842E-6D995DE599F6",
+    "image": "assets/slides/422C74B3-F0B0-4135-842E-6D995DE599F6.jpg",
+    "title": "Slide 10",
+    "notes": "the inspiration behind my concept stemmed from these candle holders that reminded me of chess pieces thus leading to my ﬁrst concept: toad-themed chess The gap between toads and board games was immediately bridged"
+  },
+  {
+    "number": 11,
+    "id": "45E814D5-2F54-4E03-981B-DC1EEBFCF8A8",
+    "image": "assets/slides/45E814D5-2F54-4E03-981B-DC1EEBFCF8A8.jpg",
+    "title": "Slide 11",
+    "notes": "with the brief of the app revolving around playfulness, opting for a game seemed like the most logical solution."
+  },
+  {
+    "number": 12,
+    "id": "196A76FA-8F35-4097-8A0A-788B318E975A",
+    "image": "assets/slides/196A76FA-8F35-4097-8A0A-788B318E975A.jpg",
+    "title": "Slide 12",
+    "notes": "the context of the application was also very important to consider I envisaged the game being played in the Toad Bakery queue so building oﬀ an existing game was important, to make things appear familiar I also wanted the aesthetic and feel of the app to be lighthearted but gratifying: something with a skill ceiling but a low barrier of entry chess seemed even more like a logical starting point I began with some research on the client: Toad bakery"
+  },
+  {
+    "number": 13,
+    "id": "9B0939C6-1B97-4666-A8A9-C3C032C30F00",
+    "image": "assets/slides/9B0939C6-1B97-4666-A8A9-C3C032C30F00.jpg",
+    "title": "Slide 13",
+    "notes": "Toad bakery is an independent bakery in South East London with a laid back atmosphere I paid close attention to the colours used in their branding which later informed aesthetic choices I felt a cheerful application would ﬁt the ambiance I then researched how I could create a new game"
+  },
+  {
+    "number": 14,
+    "id": "DC3141B0-C251-463F-AB81-DEF4F254CD08",
+    "image": "assets/slides/DC3141B0-C251-463F-AB81-DEF4F254CD08.jpg",
+    "title": "Slide 14",
+    "notes": "I considered how minor changes in mechanics can drastically change chess Here are some examples of the starting board eﬀecting gameplay"
+  },
+  {
+    "number": 15,
+    "id": "27C8C2AA-64ED-492A-B618-F367B0487105",
+    "image": "assets/slides/27C8C2AA-64ED-492A-B618-F367B0487105.jpg",
+    "title": "Slide 15",
+    "notes": "by simply changing the starting position of pieces, the necessity to remember opening lines in prevented instead, players are forced to rely on opening theory and intuition this helps prevent repetitiveness in the early stages of the game similarly…"
+  },
+  {
+    "number": 16,
+    "id": "A7B97364-C995-4572-A1B5-4DF9A3C2B940",
+    "image": "assets/slides/A7B97364-C995-4572-A1B5-4DF9A3C2B940.jpg",
+    "title": "Slide 16",
+    "notes": "…facing an army of pawns changes all gameplay dynamics entirely. sacriﬁcing pieces becomes far more common and the board feels more claustrophobic. the opposite of claustrophobia in chess is…"
+  },
+  {
+    "number": 17,
+    "id": "4D8F12F9-B410-499D-9447-EE34BCA2C089",
+    "image": "assets/slides/4D8F12F9-B410-499D-9447-EE34BCA2C089.jpg",
+    "title": "Slide 17",
+    "notes": "…borderless chess the limitless board increases the value of pieces with range less linear & diagonal movement. the lack of constriction also opens the board more easily for the rooks, changing the early-game theory."
+  },
+  {
+    "number": 18,
+    "id": "8F637197-8FA7-4357-B795-5ABC3447E252",
+    "image": "assets/slides/8F637197-8FA7-4357-B795-5ABC3447E252.jpg",
+    "title": "Slide 18",
+    "notes": "I then looked into diﬀerent chess pieces and their movements You can imagine how replacing a conventional chess piece with one of the following would distance the game from traditional chess"
+  },
+  {
+    "number": 19,
+    "id": "F98DB2E3-DE49-4C96-B07C-C2F71A4F621C",
+    "image": "assets/slides/F98DB2E3-DE49-4C96-B07C-C2F71A4F621C.jpg",
+    "title": "Slide 19",
+    "notes": "here is an example of a new piece, a Ferz, that can only move one square diagonally or can jump two squares diagonally quite unlike any other chess piece"
+  },
+  {
+    "number": 20,
+    "id": "E5F2464E-7DBC-4941-A988-893BA62A2403",
+    "image": "assets/slides/E5F2464E-7DBC-4941-A988-893BA62A2403.jpg",
+    "title": "Slide 20",
+    "notes": "in a similar realm, this piece: called a Wazir, can only move one square horizontally or vertically it can also also jump"
+  },
+  {
+    "number": 21,
+    "id": "AF6CB454-B234-485D-8BB7-9C697048CF51",
+    "image": "assets/slides/AF6CB454-B234-485D-8BB7-9C697048CF51.jpg",
+    "title": "Slide 21",
+    "notes": "new pieces do not have to have completely new pieces either, they can be a play on existing movement mechanics or could blend two or more pieces movement mechanics into one"
+  },
+  {
+    "number": 22,
+    "id": "64C3D734-1F60-492B-A89A-5208045DF2F3",
+    "image": "assets/slides/64C3D734-1F60-492B-A89A-5208045DF2F3.jpg",
+    "title": "Slide 22",
+    "notes": "the nightrider piece is an interesting example of how a minor change to an existing movement mechanic can have big changes the piece is particularly interesting as it builds on the knight’s hopping movement mechanic but does not restrict it. this is an interesting start point when thinking about the movement of toads in relation to chess pieces."
+  },
+  {
+    "number": 23,
+    "id": "7A0D3104-BBEC-4D9C-94E3-E8EC97BFDD34",
+    "image": "assets/slides/7A0D3104-BBEC-4D9C-94E3-E8EC97BFDD34.jpg",
+    "title": "Slide 23",
+    "notes": "the Empress is a hybrid between a rook and a knight combining an irregular and diﬃcult to visualise movement system with a rigid and predictable one"
+  },
+  {
+    "number": 24,
+    "id": "00E71D17-3150-402E-9710-22B180B82EEB",
+    "image": "assets/slides/00E71D17-3150-402E-9710-22B180B82EEB.jpg",
+    "title": "Slide 24",
+    "notes": "to summarise, changing, adding and removing pieces drastically changes gameplay theory. the inclusion of further variables forces players to think about how to use the new pieces and will have to conclude their value independently. instead of relying on pre-calculated strategies the game becomes more intuitive which, in my opinion, adds a further degree of playfulness to an otherwise rigid game."
+  },
+  {
+    "number": 25,
+    "id": "84D41081-FD52-4139-99D6-4A2ECB48AC01",
+    "image": "assets/slides/84D41081-FD52-4139-99D6-4A2ECB48AC01.jpg",
+    "title": "Slide 25",
+    "notes": "Looking at the execution of a chess puzzle game in a mobile app format shed light on how to approach my app One game that experiments with the rules of chess is a game called PocketChess."
+  },
+  {
+    "number": 26,
+    "id": "CD6BB54F-79C0-43AE-9E1F-BEF1A7526159",
+    "image": "assets/slides/CD6BB54F-79C0-43AE-9E1F-BEF1A7526159.jpg",
+    "title": "Slide 26",
+    "notes": "The changed dynamic forces intuitive moves: helping to cement theory."
+  },
+  {
+    "number": 27,
+    "id": "D9FB2EEF-98C0-4B07-9F7B-FCFEE9567AB8",
+    "image": "assets/slides/D9FB2EEF-98C0-4B07-9F7B-FCFEE9567AB8.jpg",
+    "title": "Slide 27",
+    "notes": "The puzzles increase in diﬃculty as progression is made and there are daily puzzles and weekend challenges to keep the user refreshed once all challenges are completed."
+  },
+  {
+    "number": 28,
+    "id": "6898B40C-E469-46D0-A091-ADFEF39BF393",
+    "image": "assets/slides/6898B40C-E469-46D0-A091-ADFEF39BF393.jpg",
+    "title": "Slide 28",
+    "notes": "To begin development I kept things simple I identiﬁed Tic Tac Toe as it allowed me to understand how moves are stored and wins are achieved"
+  },
+  {
+    "number": 29,
+    "id": "8FB88229-0130-45A2-81A4-9443C3872404",
+    "image": "assets/slides/8FB88229-0130-45A2-81A4-9443C3872404.jpg",
+    "title": "Slide 29",
+    "notes": "I wanted to make sure I understood the logic of my application before breaking and reconstructing it. I found a SwiftUI tutorial which was straightforward to follow I soon had a functioning application."
+  },
+  {
+    "number": 30,
+    "id": "361169E6-8769-41A6-843A-66A67BE594AB",
+    "image": "assets/slides/361169E6-8769-41A6-843A-66A67BE594AB.jpg",
+    "title": "Slide 30",
+    "notes": "there were lots of technical methods that were made understandable by the tutorial the process shed a lot of light on how similar applications work and how mine could work."
+  },
+  {
+    "number": 31,
+    "id": "1B427687-B447-4B2F-9462-BC1BF538CA7A",
+    "image": "assets/slides/1B427687-B447-4B2F-9462-BC1BF538CA7A.jpg",
+    "title": "Slide 31",
+    "notes": "I then developed further from the tutorial ﬁrstly, by …"
+  },
+  {
+    "number": 32,
+    "id": "537CFA96-05BC-4D5D-9980-C42160D050D7",
+    "image": "assets/slides/537CFA96-05BC-4D5D-9980-C42160D050D7.jpg",
+    "title": "Slide 32",
+    "notes": "…Toad-ifying the counters"
+  },
+  {
+    "number": 33,
+    "id": "3531E6B9-0910-4884-95AD-C495511783A6",
+    "image": "assets/slides/3531E6B9-0910-4884-95AD-C495511783A6.jpg",
+    "title": "Slide 33",
+    "notes": "the aesthetic changed to mimic the environment of a toad & Toad bakery speciﬁcally turning the counters into lily pads and the colours to something closer to Toad’s branding"
+  },
+  {
+    "number": 34,
+    "id": "669905BF-5E0B-4C25-AAF0-88D403ABFBFA",
+    "image": "assets/slides/669905BF-5E0B-4C25-AAF0-88D403ABFBFA.jpg",
+    "title": "Slide 34",
+    "notes": "I then began to change the rules of the game I thought the best way to do this was by changing the board itself I added more rows and columns to see how more space would eﬀect gameplay mechanics. I found that more space in the case of 3-in-a-row destroyed the game logic: whoever moved ﬁrst could easily win by placing two consecutive counters in the middle of the board."
+  },
+  {
+    "number": 35,
+    "id": "3E2CF618-D33D-4A2A-B567-EED08E8790E0",
+    "image": "assets/slides/3E2CF618-D33D-4A2A-B567-EED08E8790E0.jpg",
+    "title": "Slide 35",
+    "notes": "I looked into turning the win sequence into 4-in-a-row and added an option for the board size to mimic the connect four board game."
+  },
+  {
+    "number": 36,
+    "id": "211823F5-B4EA-4613-B134-EBC8ACDB5D22",
+    "image": "assets/slides/211823F5-B4EA-4613-B134-EBC8ACDB5D22.jpg",
+    "title": "Slide 36",
+    "notes": "The introduction for two players was also added at this stage, I also had the intention of adding additional gameplay mechanics such as gravity. This format was cluttered and confusing. Potentially giving the user too much input for a fun, lighthearted game."
+  },
+  {
+    "number": 37,
+    "id": "9B0D6B11-9449-478B-BC32-485359E81849",
+    "image": "assets/slides/9B0D6B11-9449-478B-BC32-485359E81849.jpg",
+    "title": "Slide 37",
+    "notes": "One of the problems with the existing system developed from the tutorial was that the win system was inﬂexible to continue breaking rules I needed to create a diﬀerent method"
+  },
+  {
+    "number": 38,
+    "id": "E513335D-E5B2-44F8-ABF4-F33384EEAC62",
+    "image": "assets/slides/E513335D-E5B2-44F8-ABF4-F33384EEAC62.jpg",
+    "title": "Slide 38",
+    "notes": "the system used in the tutorial required manually typing out the individual winning combinations therefore, every time a new board size was loaded the winning sequences changed completely and they would all be re-written manually. This was very ineﬃcient and was not future-proof."
+  },
+  {
+    "number": 39,
+    "id": "78D8B646-D1A5-4F28-938C-313A7AC84DF2",
+    "image": "assets/slides/78D8B646-D1A5-4F28-938C-313A7AC84DF2.jpg",
+    "title": "Slide 39",
+    "notes": "instead of having an array of arrays for each individual board size, and each sequence size, I decided to automate"
+  },
+  {
+    "number": 40,
+    "id": "C9AF301B-ACAC-4CF8-9291-BFA2E4CA3F7C",
+    "image": "assets/slides/C9AF301B-ACAC-4CF8-9291-BFA2E4CA3F7C.jpg",
+    "title": "Slide 40",
+    "notes": "In this code, the application is checking for a horizontal win in short, it ﬁnds the ﬁrst cell to start counting from before moving onto the next horizontal cell if this cell is the same emoji as the previous cell, it will continue on to the next one if the consecutive count reaches the win requirement, 3-in-a-row for example, the game won function will be called a similar method was used for vertical and diagonal sequences the fundamental winning mechanic faults still remained but the demonstration of minor rule changes in relation to gameplay approach was eﬀective."
+  },
+  {
+    "number": 41,
+    "id": "F3CC0E39-50FD-480C-92F7-77C9AB585C5A",
+    "image": "assets/slides/F3CC0E39-50FD-480C-92F7-77C9AB585C5A.jpg",
+    "title": "Slide 41",
+    "notes": "I also made some developments visually, cleaning up the menu marginally and beginning to move closer to chess aesthetically."
+  },
+  {
+    "number": 42,
+    "id": "F0FFE99A-D4F3-45A2-8DB5-7BD19E3744E3",
+    "image": "assets/slides/F0FFE99A-D4F3-45A2-8DB5-7BD19E3744E3.jpg",
+    "title": "Slide 42",
+    "notes": "I then had to think about the direction of the app Should I try something more complex and begin developing a chess themed app? I was conﬂicted between honouring my original chess-based concept but saw potential in developing tic tac toe into a new game entirely. I decided to continue with my Tic Tac Toe inspired app, matching the complexity I desired this way"
+  },
+  {
+    "number": 43,
+    "id": "5D4D9BBF-4AC7-48C6-A5D1-63FDB54E7743",
+    "image": "assets/slides/5D4D9BBF-4AC7-48C6-A5D1-63FDB54E7743.jpg",
+    "title": "Slide 43",
+    "notes": "One of the ways I set out to achieve this complexity was dynamism It was also very important that the game maintained it’s playful, low-barrier of entry properties Changing the board with minimal or even no user input seemed a great way of adding interest Progressive disclosure was very important"
+  },
+  {
+    "number": 44,
+    "id": "5CA849CF-1EC3-480E-B3C3-FF88788CFA46",
+    "image": "assets/slides/5CA849CF-1EC3-480E-B3C3-FF88788CFA46.jpg",
+    "title": "Slide 44",
+    "notes": "I created a system that expanded the board automatically I did this by deﬁning a new variable and generating a random number between 1 and 4"
+  },
+  {
+    "number": 45,
+    "id": "3B973BC1-E2A6-46CA-B7E3-EA079EA838D5",
+    "image": "assets/slides/3B973BC1-E2A6-46CA-B7E3-EA079EA838D5.jpg",
+    "title": "Slide 45",
+    "notes": "the numbers corresponded to the direction in which the board would expand"
+  },
+  {
+    "number": 46,
+    "id": "871C6964-194D-4E53-A347-35CBF8E98D8C",
+    "image": "assets/slides/871C6964-194D-4E53-A347-35CBF8E98D8C.jpg",
+    "title": "Slide 46",
+    "notes": "I then made sure that the board was not expanding past it’s limitations"
+  },
+  {
+    "number": 47,
+    "id": "58B4DF87-EAA3-48F6-98A3-F56F818F8B0E",
+    "image": "assets/slides/58B4DF87-EAA3-48F6-98A3-F56F818F8B0E.jpg",
+    "title": "Slide 47",
+    "notes": "I then had to re-evaluate how much user input I wanted in the application I came to the conclusion that perhaps I had stumbled across a new…"
+  },
+  {
+    "number": 48,
+    "id": "1A4E1EE2-1037-4D3A-A1EF-3F405A4AD1AA",
+    "image": "assets/slides/1A4E1EE2-1037-4D3A-A1EF-3F405A4AD1AA.jpg",
+    "title": "Slide 48",
+    "notes": "…tactical mechanic perhaps putting the power to change the board in the users hands was not the issue it was the frequency and lack of limitation that was the problem"
+  },
+  {
+    "number": 49,
+    "id": "7468D688-8A44-4C4C-8013-8940D87E3F4B",
+    "image": "assets/slides/7468D688-8A44-4C4C-8013-8940D87E3F4B.jpg",
+    "title": "Slide 49",
+    "notes": "I continued thinking about what stage of the game the user should be able to change the board The obvious answer was when a win occurred once a player had won a point, the next player in line could chose to expand the board up, down, left or right before making their own move this way they could get back on level terms and the game would remain balanced"
+  },
+  {
+    "number": 50,
+    "id": "F0805990-C816-49F2-B532-FF527E594CB9",
+    "image": "assets/slides/F0805990-C816-49F2-B532-FF527E594CB9.jpg",
+    "title": "Slide 50",
+    "notes": "the solution I came up with was integrated with my automatic system…"
+  },
+  {
+    "number": 51,
+    "id": "B69B8C24-1DDB-4788-A56E-9DABA14E95B5",
+    "image": "assets/slides/B69B8C24-1DDB-4788-A56E-9DABA14E95B5.jpg",
+    "title": "Slide 51",
+    "notes": "…when the code above is called, the board is checked for how full it is if it is full enough, the expansion boolean becomes true…"
+  },
+  {
+    "number": 52,
+    "id": "B5858338-DACB-4F79-A780-C3978AF22C31",
+    "image": "assets/slides/B5858338-DACB-4F79-A780-C3978AF22C31.jpg",
+    "title": "Slide 52",
+    "notes": "…and the next player has the opportunity to expand in the direction that suits them best"
+  },
+  {
+    "number": 53,
+    "id": "E8AC84E2-A9DD-433E-A494-F0D21225C425",
+    "image": "assets/slides/E8AC84E2-A9DD-433E-A494-F0D21225C425.jpg",
+    "title": "Slide 53",
+    "notes": "before that, however, there are measures in place to keep the board within it’s bounds"
+  },
+  {
+    "number": 54,
+    "id": "185FFA7E-D71C-4AEF-B700-084766A1E2AA",
+    "image": "assets/slides/185FFA7E-D71C-4AEF-B700-084766A1E2AA.jpg",
+    "title": "Slide 54",
+    "notes": "the functions above are then available to be called"
+  },
+  {
+    "number": 55,
+    "id": "5C007E99-BC9C-464F-8074-A6B09C36044F",
+    "image": "assets/slides/5C007E99-BC9C-464F-8074-A6B09C36044F.jpg",
+    "title": "Slide 55",
+    "notes": "let’s take the addRowAbove function as an example: the “expansion” boolean is reset so the user can only expand once a row is added and so the visuals change an empty move is inserted at the start of the array times the number of columns this oﬀsets the existing moves by a row so the general composition of the board remains unchanged another factor, an old problem in fact, to consider is the…"
+  },
+  {
+    "number": 56,
+    "id": "D46CCDD8-2551-4007-B84E-07714D641E2A",
+    "image": "assets/slides/D46CCDD8-2551-4007-B84E-07714D641E2A.jpg",
+    "title": "Slide 56",
+    "notes": "…sequence generation I have also added the opportunity for additional win sequence sizes to be won: 3, 4 & 5 now more points are rewarded for the longer sequences this adds a further level of complexity that had to be accounted for let’s to a quick rundown of how the sequence generation works we’ll take the…"
+  },
+  {
+    "number": 57,
+    "id": "595BF937-434F-470F-A5D6-09139C9882FC",
+    "image": "assets/slides/595BF937-434F-470F-A5D6-09139C9882FC.jpg",
+    "title": "Slide 57",
+    "notes": "…horizontal win sequences for example"
+  },
+  {
+    "number": 58,
+    "id": "5828322E-7630-44B1-B8D5-FAEF326CC623",
+    "image": "assets/slides/5828322E-7630-44B1-B8D5-FAEF326CC623.jpg",
+    "title": "Slide 58",
+    "notes": "ﬁrst, the entire win array is reset"
+  },
+  {
+    "number": 59,
+    "id": "683A5D01-1A30-495F-9293-1AA1903E3C1A",
+    "image": "assets/slides/683A5D01-1A30-495F-9293-1AA1903E3C1A.jpg",
+    "title": "Slide 59",
+    "notes": "second, a for loop that relates to the win lengths is initialised"
+  },
+  {
+    "number": 60,
+    "id": "5BA8ABD3-F28B-482B-8136-18ADC2E98AD5",
+    "image": "assets/slides/5BA8ABD3-F28B-482B-8136-18ADC2E98AD5.jpg",
+    "title": "Slide 60",
+    "notes": "third, a temporary win array is created to hold the new sequences"
+  },
+  {
+    "number": 61,
+    "id": "27098B59-AAC7-4F07-9139-ADA36E9013BB",
+    "image": "assets/slides/27098B59-AAC7-4F07-9139-ADA36E9013BB.jpg",
+    "title": "Slide 61",
+    "notes": "fourth, the column number (or board width) is compared to the win length to see if the board can accommodate a horizontal win of any kind"
+  },
+  {
+    "number": 62,
+    "id": "474EEEE3-C000-4359-B4C0-601602ADBC86",
+    "image": "assets/slides/474EEEE3-C000-4359-B4C0-601602ADBC86.jpg",
+    "title": "Slide 62",
+    "notes": "ﬁfth, the number of horizontal sequences on each row is calculated"
+  },
+  {
+    "number": 63,
+    "id": "F0167F83-A0CB-4B39-A8A2-9F0F7D91A938",
+    "image": "assets/slides/F0167F83-A0CB-4B39-A8A2-9F0F7D91A938.jpg",
+    "title": "Slide 63",
+    "notes": "sixth, the start of each column is found"
+  },
+  {
+    "number": 64,
+    "id": "D582913B-9109-4B5D-A0E8-91715A2B23F2",
+    "image": "assets/slides/D582913B-9109-4B5D-A0E8-91715A2B23F2.jpg",
+    "title": "Slide 64",
+    "notes": "seventh, a temporary array is setup to store each winning sequence"
+  },
+  {
+    "number": 65,
+    "id": "12FF2E45-D781-444D-8A75-19315BC896F0",
+    "image": "assets/slides/12FF2E45-D781-444D-8A75-19315BC896F0.jpg",
+    "title": "Slide 65",
+    "notes": "eighth, the sequence size is calculated based on the winLength"
+  },
+  {
+    "number": 66,
+    "id": "1CF2E5D0-B537-4620-A1B7-7F14FCDF364E",
+    "image": "assets/slides/1CF2E5D0-B537-4620-A1B7-7F14FCDF364E.jpg",
+    "title": "Slide 66",
+    "notes": "ninth, the start of each row is deﬁned"
+  },
+  {
+    "number": 67,
+    "id": "D2422E0E-8A9D-4884-84C6-94F823DA79A4",
+    "image": "assets/slides/D2422E0E-8A9D-4884-84C6-94F823DA79A4.jpg",
+    "title": "Slide 67",
+    "notes": "tenth, the start of the row is incremented"
+  },
+  {
+    "number": 68,
+    "id": "A8218E74-8340-4E5E-87D1-5AEE210F74BC",
+    "image": "assets/slides/A8218E74-8340-4E5E-87D1-5AEE210F74BC.jpg",
+    "title": "Slide 68",
+    "notes": "eleventh, the number is oﬀset based on the row being checked"
+  },
+  {
+    "number": 69,
+    "id": "A9CE3B3F-F238-432F-979D-AFA31969068C",
+    "image": "assets/slides/A9CE3B3F-F238-432F-979D-AFA31969068C.jpg",
+    "title": "Slide 69",
+    "notes": "twelfth, the sequence is added to the temporary win array"
+  },
+  {
+    "number": 70,
+    "id": "B7EBC9FA-55FE-40AD-BC5A-DC5E2824568C",
+    "image": "assets/slides/B7EBC9FA-55FE-40AD-BC5A-DC5E2824568C.jpg",
+    "title": "Slide 70",
+    "notes": "the same is then done for horizontal sequences minor diagonal sequences and major diagonal sequences ﬁnally, the temporary win array is added to the main win array…"
+  },
+  {
+    "number": 71,
+    "id": "2EAA3E4B-1B34-4ACC-BF4A-5EB6D31FC798",
+    "image": "assets/slides/2EAA3E4B-1B34-4ACC-BF4A-5EB6D31FC798.jpg",
+    "title": "Slide 71",
+    "notes": "…which is then used in the win check function wherein…"
+  },
+  {
+    "number": 72,
+    "id": "E6F7E001-A8DB-42A1-90C1-2381AF4EF741",
+    "image": "assets/slides/E6F7E001-A8DB-42A1-90C1-2381AF4EF741.jpg",
+    "title": "Slide 72",
+    "notes": "…the winning sequences, moves array and player counter are passed through"
+  },
+  {
+    "number": 73,
+    "id": "938F840D-103B-4E1A-9056-B83FD6A27A1A",
+    "image": "assets/slides/938F840D-103B-4E1A-9056-B83FD6A27A1A.jpg",
+    "title": "Slide 73",
+    "notes": "the sequences are then iterated through"
+  },
+  {
+    "number": 74,
+    "id": "08CE5B9E-7F32-4EB8-A78B-54FCACAED768",
+    "image": "assets/slides/08CE5B9E-7F32-4EB8-A78B-54FCACAED768.jpg",
+    "title": "Slide 74",
+    "notes": "a variable called score is initialised at zero"
+  },
+  {
+    "number": 75,
+    "id": "B865ABB5-EA7A-46BB-9F2D-489045925827",
+    "image": "assets/slides/B865ABB5-EA7A-46BB-9F2D-489045925827.jpg",
+    "title": "Slide 75",
+    "notes": "and each item in the moves array is cycled through"
+  },
+  {
+    "number": 76,
+    "id": "573FBCA5-7881-47C5-B4B4-AAEAC6E29900",
+    "image": "assets/slides/573FBCA5-7881-47C5-B4B4-AAEAC6E29900.jpg",
+    "title": "Slide 76",
+    "notes": "if the array at ‘match’ is a match to the player counter and the array is not in the usedWinArray the score is incremented"
+  },
+  {
+    "number": 77,
+    "id": "6CEA69D7-71FE-4BB1-A9A1-E4CD878EDB1C",
+    "image": "assets/slides/6CEA69D7-71FE-4BB1-A9A1-E4CD878EDB1C.jpg",
+    "title": "Slide 77",
+    "notes": "if the score is equal to a sequence length points are awarded and the board has the potential to change"
+  },
+  {
+    "number": 78,
+    "id": "50A2B8DC-AE54-4D11-ABF5-D727635FBEC3",
+    "image": "assets/slides/50A2B8DC-AE54-4D11-ABF5-D727635FBEC3.jpg",
+    "title": "Slide 78",
+    "notes": "there is a case that a win is not being checked for the purpose of which, is to update the usedWinArray when the board is re-drawn"
+  },
+  {
+    "number": 79,
+    "id": "55614F9F-AE77-4347-88E9-53EAE5160C65",
+    "image": "assets/slides/55614F9F-AE77-4347-88E9-53EAE5160C65.jpg",
+    "title": "Slide 79",
+    "notes": "Throughout the design process I was sharing my progress and receiving helpful user testing. in a more complete stage, I did some dedicated user testing which unearthed more bugs inevitably it was good to see how users that had not seen the app before approached it But the concept was clear and the game was just about playable"
+  },
+  {
+    "number": 80,
+    "id": "85188A83-01BF-4D6E-8D55-E4344608B794",
+    "image": "assets/slides/85188A83-01BF-4D6E-8D55-E4344608B794.jpg",
+    "title": "Slide 80",
+    "notes": "play audio"
+  },
+  {
+    "number": 81,
+    "id": "7AEC9AC3-2318-4D45-AB60-85948FDDA88A",
+    "image": "assets/slides/7AEC9AC3-2318-4D45-AB60-85948FDDA88A.jpg",
+    "title": "Slide 81",
+    "notes": "an additional comment received revolved around the reward system of the app should the loser gain the advantage to get back on level terms or should the winner be rewarded",
+    "audio": "assets/media/unite-building.m4a"
+  },
+  {
+    "number": 82,
+    "id": "37B31204-09E3-4143-8D8B-2AB7ED644BCE",
+    "image": "assets/slides/37B31204-09E3-4143-8D8B-2AB7ED644BCE.jpg",
+    "title": "Slide 82",
+    "notes": "as previously mentioned, a low barrier of entry of my app is very important linked to this is the appearance of the app in diﬀerent light and dark modes ﬁrst impressions of the app are very important"
+  },
+  {
+    "number": 83,
+    "id": "7A7EC1E4-79FD-437A-B252-78E5BDE80668",
+    "image": "assets/slides/7A7EC1E4-79FD-437A-B252-78E5BDE80668.jpg",
+    "title": "Slide 83",
+    "notes": "I would like to add cross device multiplayer and some sort of rating system."
+  },
+  {
+    "number": 84,
+    "id": "6AF0728A-3B00-41EC-B016-7B4C8491066F",
+    "image": "assets/slides/6AF0728A-3B00-41EC-B016-7B4C8491066F.jpg",
+    "title": "Slide 84",
+    "notes": "the introduction of an intelligent bot to play against would also add a lot of value to the game. I intend on looking into min-max algorithms and, in relation to the users ELO, diﬀerent opponents for diﬀerent skillsets."
+  },
+  {
+    "number": 85,
+    "id": "6B1BD7C5-7EF5-473D-9734-53DE1E17BF56",
+    "image": "assets/slides/6B1BD7C5-7EF5-473D-9734-53DE1E17BF56.jpg",
+    "title": "Slide 85",
+    "notes": "I would also like to work on haptic feedback, sounds and visuals as the satisfaction of a win could use a lot of work."
+  },
+  {
+    "number": 86,
+    "id": "291F6519-B8AB-48DB-9C59-F67E0F25B9C5",
+    "image": "assets/slides/291F6519-B8AB-48DB-9C59-F67E0F25B9C5.jpg",
+    "title": "Slide 86",
+    "notes": "I would also launch the app on TestFlight in the future and later the app store potentially"
+  },
+  {
+    "number": 87,
+    "id": "E0B580FE-22FE-4203-8E34-8F4C1AE359D6",
+    "image": "assets/slides/E0B580FE-22FE-4203-8E34-8F4C1AE359D6.jpg",
+    "title": "Slide 87",
+    "notes": "in general I am quite happy with TicTacToad I would have liked to continue with some user testing to see if the game logic worked as far as creating a game that is both simple and complex, I was bound to face issues it does feel like I commit a lifetime’s worth of work and still be unsatisﬁed with this app in particular however I did learn a lot about Swift and app development in general it feels like new opportunities have opened up"
+  },
+  {
+    "number": 88,
+    "id": "62C9C5AB-F0EB-42E4-8528-63E2CFB06B33",
+    "image": "assets/slides/62C9C5AB-F0EB-42E4-8528-63E2CFB06B33.jpg",
+    "title": "Slide 88",
+    "notes": ""
+  },
+  {
+    "number": 89,
+    "id": "CE734D9F-5B63-44D5-AB78-1E470EFD85E7",
+    "image": "assets/slides/CE734D9F-5B63-44D5-AB78-1E470EFD85E7.jpg",
+    "title": "Slide 89",
+    "notes": ""
+  }
+]

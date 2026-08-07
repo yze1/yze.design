@@ -1,0 +1,13 @@
+
+:root {
+    --text: #7f7f7f;
+    --black: #181818;
+    --white: #ffffff;
+    --blue: #2526e5;
+
+    --margin: 150px;
+    --columns: 12;
+    --gutter: 25px;
+    --spacing: 20px;
+    --inner-gap: calc(var(--spacing) / 2);
+}
