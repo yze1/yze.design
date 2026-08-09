@@ -42,12 +42,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ── Contact form submit ── */
-  const submitBtn = document.getElementById('contactSubmit');
-  if (submitBtn) {
-    submitBtn.addEventListener('click', () => {
-      submitBtn.textContent = 'Thanks for submitting! ✓';
-      submitBtn.style.background = '#2a8a93';
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      const submitBtn = document.getElementById('contactSubmit');
+      const status = document.getElementById('contactStatus');
       submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      status.textContent = '';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST', body: new FormData(contactForm), headers: { Accept: 'application/json' }
+        });
+        if (!response.ok) throw new Error('Submission failed');
+        contactForm.reset();
+        submitBtn.textContent = 'Message sent! ✓';
+        submitBtn.style.background = '#2a8a93';
+        status.textContent = 'Thank you — we’ll be in touch soon.';
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit';
+        status.textContent = 'Message could not be sent. Please email ali@thewatertraveler.com.';
+      }
     });
   }
 
