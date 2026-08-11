@@ -421,7 +421,7 @@
     const chatPanel = $("#chatPanel");
     if (!chatPanel) return;
 
-    const endpoint = "/arts/gemini.php";
+    const endpoint = "/gemini.php";
     const profileContext = `
 You are an assistant embedded on Eddie Cranmer's portfolio website.
 

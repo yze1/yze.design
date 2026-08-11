@@ -40,7 +40,7 @@ if (count($attempts) >= 20) {
 $attempts[] = $now;
 file_put_contents($rateFile, json_encode($attempts), LOCK_EX);
 
-$ch = curl_init('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent');
+$ch = curl_init('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent');
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST => true,
