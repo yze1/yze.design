@@ -421,9 +421,7 @@
     const chatPanel = $("#chatPanel");
     if (!chatPanel) return;
 
-    const model = "gemini-2.5-flash";
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
-    const apiKey = "AQ.Ab8RN6Jfm4IQPf1c1gMvU0I3pzlg_S14PiZTrC64Ga2Lm0a7HQ";
+    const endpoint = "/arts/gemini.php";
     const profileContext = `
 You are an assistant embedded on Eddie Cranmer's portfolio website.
 
@@ -532,7 +530,7 @@ Rules:
       try {
         const response = await fetch(endpoint, {
           method: "POST",
-          headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: buildPrompt(question) }] }] })
         });
         if (!response.ok) throw new Error(await response.text() || response.statusText);
