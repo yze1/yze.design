@@ -8,13 +8,20 @@
     <link href="https://yze.design/favicon.png" rel="icon" type="image/png">
     <link href="https://notes.yze.design/rss.xml" rel="alternate" title="YZE Notes RSS" type="application/rss+xml">
     <title>YZE Notes</title>
-    <link href="https://yze.design/css/variables.css" rel="stylesheet">
-    <link href="https://yze.design/css/typography.css" rel="stylesheet">
-    <link href="https://yze.design/css/layout.css" rel="stylesheet">
-    <link href="https://yze.design/css/cursor.css" rel="stylesheet">
-    <link href="https://notes.yze.design/style.css" rel="stylesheet">
+    <link data-local-href="/css/variables.css" href="https://yze.design/css/variables.css" rel="stylesheet">
+    <link data-local-href="/css/typography.css" href="https://yze.design/css/typography.css" rel="stylesheet">
+    <link data-local-href="/css/layout.css" href="https://yze.design/css/layout.css" rel="stylesheet">
+    <link data-local-href="/css/cursor.css" href="https://yze.design/css/cursor.css" rel="stylesheet">
+    <link data-local-href="/notes.yze.design/style.css" href="https://notes.yze.design/style.css" rel="stylesheet">
+    <script>
+        if (["localhost", "127.0.0.1"].includes(location.hostname)) {
+            document.querySelectorAll("[data-local-href]").forEach(link => {
+                link.href = `${location.origin}${link.dataset.localHref}`;
+            });
+        }
+    </script>
 </head>
-<body>
+<body class="spacious">
     <div id="header">
         <section class="nav header">
             <div class="s9 m2 site-logo"><h4><a href="/"><strong>.YZE</strong></a></h4></div>
@@ -44,6 +51,12 @@
         </section>
     </div>
     <script src="https://yze.design/js/cursor.js"></script>
-    <script src="https://notes.yze.design/main.js"></script>
+    <script>
+        const notesScript = document.createElement("script");
+        notesScript.src = ["localhost", "127.0.0.1"].includes(location.hostname)
+            ? `${location.origin}/notes.yze.design/main.js`
+            : "https://notes.yze.design/main.js";
+        document.body.append(notesScript);
+    </script>
 </body>
 </html>

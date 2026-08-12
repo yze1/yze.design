@@ -28,7 +28,11 @@
     line-height: 1.18;
 }
 
-.blog-post h4 {
+.blog-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--gutter);
     width: 100%;
 }
 
@@ -38,10 +42,8 @@
 
 .blog-post-meta {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.blog-post-meta p:last-child {
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
     text-align: right;
 }

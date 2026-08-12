@@ -1,6 +1,7 @@
 (() => {
   const scriptUrl = new URL(document.currentScript?.src || "./main.js", location.href);
   const base = new URL(".", scriptUrl);
+  const local = ["localhost", "127.0.0.1"].includes(location.hostname);
   const $ = (selector, scope = document) => scope.querySelector(selector);
   async function fetchNotes() {
     const response = await fetch(new URL("notes.json", base), { cache: "no-store" });
@@ -15,8 +16,17 @@
   }
 
   function currentSlug() {
+    const previewSlug = new URLSearchParams(location.search).get("note");
+    if (previewSlug) return previewSlug;
     const relative = location.pathname.replace(base.pathname, "").replace(/^\/|\/$/g, "");
     return relative.split("/").filter(Boolean).pop() || "";
+  }
+
+  function noteUrl(note) {
+    const slug = slugFromTitle(note.title);
+    return local
+      ? `${location.origin}/notes.yze.design/?note=${slug}`
+      : new URL(`${slug}/`, base).href;
   }
 
   function renderList(notes) {
@@ -33,7 +43,7 @@
       return `
         <article class="project-card" data-tags="${(note.tags || []).join("|")}">
           <div class="media-wrapper">
-            <a href="${new URL(`${slugFromTitle(note.title)}/`, base).href}">
+            <a href="${noteUrl(note)}">
               <img src="${new URL(note.thumbnail.replace(/^\//, ""), base).href}" alt="${note.title}">
             </a>
           </div>
@@ -55,17 +65,19 @@
     post.hidden = false;
     document.title = `${note.title} / YZE Notes`;
     post.innerHTML = `
-      <h4><strong>${note.title}</strong></h4>
-      <img src="${new URL(note.thumbnail.replace(/^\//, ""), base).href}" alt="${note.title}">
-      <div class="blog-post-meta">
-        <p>${note.date}</p>
-        <p>Eddie Cranmer</p>
+      <div class="blog-post-header">
+        <h4><strong>${note.title}</strong></h4>
+        <div class="blog-post-meta">
+          <p>${note.date}</p>
+          <p>Eddie Cranmer</p>
+        </div>
       </div>
+      <img src="${new URL(note.thumbnail.replace(/^\//, ""), base).href}" alt="${note.title}">
       <p>${note.content.join("<br><br>")}</p>
     `;
   }
 
-  document.addEventListener("DOMContentLoaded", async () => {
+  async function loadNotes() {
     const toggle = $(".mobile-menu-toggle");
     toggle?.addEventListener("click", () => {
       const open = document.body.classList.toggle("mobile-menu-open");
@@ -76,5 +88,11 @@
     const notes = await fetchNotes();
     const note = notes.find((item) => slugFromTitle(item.title) === currentSlug());
     note ? renderPost(note) : renderList(notes);
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => loadNotes().catch(console.error));
+  } else {
+    loadNotes().catch(console.error);
+  }
 })();
