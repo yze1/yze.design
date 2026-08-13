@@ -70,7 +70,7 @@ function updateUnderlaps() {
     measurements.forEach(({ section, offset }) => {
         section.style.setProperty(
             "--underlap-offset",
-            `${-offset}px`
+            `${Math.min(0, -offset)}px`
         );
     });
 }

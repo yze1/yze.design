@@ -1,4 +1,5 @@
 const cursor = document.getElementById("cursor");
+const cursorIcons = new URL("../assets/icons/", document.currentScript.src);
 
 let mouseX = 0;
 let mouseY = 0;
@@ -8,7 +9,7 @@ let y = 0;
 window.addEventListener("pointermove", e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursor.classList.toggle("over-red", Boolean(e.target.closest(".red")));
+    cursor.classList.toggle("over-red", Boolean(e.target.closest("section.red")));
 });
 
 function animate() {
@@ -30,8 +31,8 @@ if (reel) {
     let hoveringReel = false;
     const updateLabel = () => {
         if (hoveringReel) {
-            // cursorLabel.textContent = reel.muted ? "UNMUTE" : reel.paused ? "PLAY" : "PAUSE";
-            cursorLabel.textContent = reel.muted ? "🔇" : reel.paused ? "▶" : "⏸";
+            const icon = reel.muted ? "unmute" : reel.paused ? "play" : "pause";
+            cursorLabel.innerHTML = `<img src="${new URL(`${icon}.svg`, cursorIcons)}" alt="">`;
         }
     };
     const toggleReel = () => {

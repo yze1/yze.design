@@ -12,8 +12,78 @@
     <link rel="stylesheet" href="/css/cursor.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/noise.css">
     <link rel="stylesheet" href="./css/media.css">
     <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>
+    <style>
+        .gong-scroll {
+            position: relative;
+            height: 300vh;
+            padding: 0;
+            background: var(--black);
+        }
+
+        .gong-frame {
+            grid-column: 1 / -1;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: var(--black);
+        }
+
+        .gong-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(var(--gong-scale, 1));
+            mix-blend-mode: lighten;
+            will-change: transform;
+        }
+
+        .gong-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(var(--dot-radius, 0) * 2);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            will-change: width;
+        }
+
+        .gong-title {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            width: calc(100% - (var(--margin) * 2));
+            margin: 0;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+
+        .gong-title strong {color: inherit;}
+
+        .gong-title--blend {
+            color: var(--black);
+            clip-path: circle(var(--dot-radius, 0) at 50% 50%);
+            will-change: clip-path;
+        }
+
+        .gong-circle-noise {
+            position: absolute;
+            z-index: 2;
+            inset: 0;
+            pointer-events: none;
+            background: var(--noise) repeat;
+            background-size: 200px 200px;
+            opacity: 0.15;
+            clip-path: circle(var(--dot-radius, 0) at 50% 50%);
+            will-change: clip-path;
+        }
+    </style>
 </head>
 <body>
     <div id="cursor">
@@ -22,7 +92,24 @@
 
     <div id="header"></div>
 
-    <section class="compact underlap">
+    <section class="gong-scroll underlap" aria-label="Welcome to Pitch and Sync">
+        <div class="gong-frame">
+            <img src="./assets/media/record.png" alt="Gong">
+            <div class="gong-dot red" aria-hidden="true"></div>
+            <h2 class="gong-title red">Welcome to Pitch <strong>&</strong> Sync</h2>
+            <h2 class="gong-title gong-title--blend" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h2>
+            <div class="gong-circle-noise" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    <section class="red tall">
+        <div class="s12 center">
+            <h2>Tagline</h2>
+            <h3 class="mono">music supervision, composition,<br>sound design, audio post</h2>
+        </div>
+    </section>
+
+    <section class="compact">
         <div class="s12 bleed full">
             <mux-player
                 playback-id="seRlvZoaZbGdWFzHkgx3GicgxrrjtUezC01yohrRoIHo"
@@ -38,95 +125,142 @@
         </div>
     </section>
 
-    <section class="black tall">
-        <div class="s12 center"><h2>Welcome to Pitch <strong>&</strong> Sync</h2></div>
-    </section>
 
-    <section class="black tall">
-        <div class="s12 center"><h4>Gong Start</h4></div>
-    </section>
-
-    <section class="red tall">
-        <div class="s12 center"><h4>Gong End</h4></div>
-    </section>
-
-    <section class="black tall">
-         <div class="s10 center"><h2 class="heading">Hear the bigger picture</h2><div class="spacer"></div></div>
-         <div class="s10 center"><h4>Pitch & Sync is an independent music & sound agency dedicated to bringing stories to life through music – for forward-thinking brands & creatives.
-            <br><br>
-            We believe in the power of music to connect, transform, excite, and make you feel better.
-            <br><br><br>
-            From strategy to sound, our award-winning team covers every aural angle — from Music Supervision & Licensing to Audio Branding, Composition & Audio Post.
-            <br><br>
-            Get in touch to chat to us about your next project.
-        </h4></div>
-        <div class="s6 stubborn"><img src="./assets/media/image.webp"></div>
-        <div class="s6 stubborn"><img src="./assets/media/image.webp"></div>
-        <div class="s6 stubborn"><img src="./assets/media/image.webp"></div>
-        <div class="s6 stubborn"><img src="./assets/media/image.webp"></div>
-        <div class="s6 stubborn"><img src="./assets/media/image.webp"></div>
-        <div class="s6 stubborn"><img src="./assets/media/image.webp"></div>
-
-        <div class="s10 center"><h3 class="heading scale">360° BRAND CONSULTANCY FOR MUSIC AND AUDIO</h3></div>
-    </section>
-
-    <section class="horizontal-gallery" aria-label="Selected work">
-        <div class="s12"><h2>Work</h2></div>
-        <div class="spacer"></div>
-        <div class="horizontal-gallery__track"></div>
-    </section>
-
-    <section class="red tall">
-        <div class="s10 center"><h2>Contact</h2></div>
-        <div class="s10 center"><h4 class="mono">For new projects:
-            <br><a href="mailto:Cat@pitchandsync.com">Cat@pitchandsync.com</a>
-            <br><br>
-            For composers/music submissions:
-            <br><a href="mailto:Info@pitchandsync.com">Info@pitchandsync.com</a>
-            <br><br>
-            Sign up to our mailing list:</h4></div>
-        <div class="s10 center"><button>Here</button></div>
-
-            <div class="s4 stubborn row center">
-                <div class="icon instagram"></div>
-                <div class="icon linkedin"></div>
-                <!-- <p>Instagram LinkedIn</p> -->
-            </div>
-
-    </section>
-
-    <!-- <section>
-        <div class="s8"><img src="./assets/media/image.webp"></div>
-         <div class="s4 stretch"><h3 class="right">Pitch &<br>Sync</h3><p>Based in Shoreditch, our studio is where creativity meets craft. From sound design and foley to mixing, mastering, and voiceover, our in-house team of engineers bring projects to life with care,precision, and energy.</p></div>
-    </section>
-
-    <section class="black bleed">
-        <div class="s8"><img src="./assets/media/image.webp"></div>
-         <div class="s4 stretch"><h3 class="right">Pitch &<br>Sync</h3><p>Based in Shoreditch, our studio is where creativity meets craft. From sound design and foley to mixing, mastering, and voiceover, our in-house team of engineers bring projects to life with care,precision, and energy.</p></div>
-    </section>
-
-    <section>
-        <div class="s4"><h2>Work</h2>
-            <div class="spacer"></div>
-            <h4>Client#1</h4>
-            <h4>Client#2</h4>
-            <h4>Client#3</h4>
-            <h4>Client#4</h4>
-            <h4>Client#5</h4>
+    <section class="black collaborators">
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
         </div>
-        <div class="s8"><img src="./assets/media/image.webp"></div>
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
 
-        <div class="s4"></div>
-        <div class="s8"><h2>Project</h2><h4>Metadata</h4></div>
-    </section> -->
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="logo" src="./assets/logos/p&s.svg">
+        </div>
+
+    </section>
+
+    <section class="black">
+        <div class="s12"><h1 class="red">Work</h1><div class="spacer"></div></div>
+
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div>
+
+        <!-- <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gif.svg">
+         </div>
+
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gif.svg">
+         </div>
+
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gif.svg">
+         </div> -->
+    </section>
 
 
     <div id="footer"></div>
 
-    <script src="./js/cursor.js"></script>
-    <script src="./js/partials.js"></script>
+    <script src="./js/cursor.js?v=2"></script>
+    <script src="./js/partials.js?v=3"></script>
+    <script src="./js/noise.js"></script>
     <script src="./js/media.js"></script>
     <script src="/js/layout.js"></script>
+    <script>
+        const gongScroll = document.querySelector(".gong-scroll");
+        const gongFrame = document.querySelector(".gong-frame");
+
+        function updateGong() {
+            const distance = gongScroll.offsetHeight - innerHeight;
+            const progress = Math.max(0, Math.min(1, -gongScroll.getBoundingClientRect().top / distance));
+            const dotProgress = Math.max(0, (progress - 0.5) * 2);
+
+            gongFrame.style.setProperty("--gong-scale", 1 + Math.min(progress * 2, 1));
+            gongFrame.style.setProperty("--dot-radius", `${dotProgress * 75}vmax`);
+            const gongBounds = gongScroll.getBoundingClientRect();
+            const headerY = document.querySelector("#header")?.getBoundingClientRect().height / 2 || 0;
+            const radius = dotProgress * 0.75 * Math.max(innerWidth, innerHeight);
+            window.gongHeaderRed = gongBounds.bottom > 0 && radius >= Math.abs(innerHeight / 2 - headerY);
+            window.updateHeaderColor?.();
+        }
+
+        addEventListener("scroll", updateGong, {passive: true});
+        addEventListener("resize", updateGong);
+        updateGong();
+    </script>
 
 </body>
 </html>

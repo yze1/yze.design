@@ -1,5 +1,20 @@
 const projectRoot = new URL("../../", document.currentScript.src);
 
+function updateHeaderColor() {
+    const header = document.querySelector("#header");
+    if (!header?.firstElementChild) return;
+
+    const y = header.getBoundingClientRect().height / 2;
+    header.classList.toggle("over-red", Boolean(window.gongHeaderRed) || [...document.querySelectorAll("section.red")].some(section => {
+        const bounds = section.getBoundingClientRect();
+        return bounds.top <= y && bounds.bottom >= y;
+    }));
+}
+
+addEventListener("scroll", updateHeaderColor, { passive: true });
+addEventListener("resize", updateHeaderColor);
+document.addEventListener("partialsloaded", updateHeaderColor);
+
 async function loadPartial(selector, filePath) {
     const element = document.querySelector(selector);
 
@@ -61,4 +76,5 @@ document.addEventListener("DOMContentLoaded", async () => {
             menuToggle.setAttribute("aria-expanded", String(open));
         });
     }
+
 });
