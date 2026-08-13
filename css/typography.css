@@ -55,3 +55,18 @@ a:hover {
 
 .right {text-align: right; display: flex; justify-content: flex-end;}
 .center h1, .center h2, .center h3, .center h4, .center h5, .center p {text-align: center;}
+
+
+
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    display: block;
+    width: 54px;
+    height: 54px;
+}
