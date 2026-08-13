@@ -267,7 +267,7 @@ section div { /* increased spacing */
     content: "";
 }
 
-.site-cursor {
+/* .site-cursor {
     position: fixed;
     top: 0;
     left: 0;
@@ -280,7 +280,7 @@ section div { /* increased spacing */
     -webkit-mask: var(--cursor-art) center / contain no-repeat;
     transform: translate(-50%, -50%);
 }
-.site-cursor.cursor-red {background: var(--red);}
+.site-cursor.cursor-red {background: var(--red);} */
 
 .logo-cloud {align-items: start;}
 .logo-mark {grid-column: span 3; width: 100%;}
@@ -379,7 +379,7 @@ section div { /* increased spacing */
     #header .m1 {grid-column: span 1;}
 }
 
-@media (hover: none) { .site-cursor {display: none;} }
+/* @media (hover: none) { .site-cursor {display: none;} } */
 
 @media (prefers-reduced-motion: reduce) {
     .load-reveal, .mobile-menu {transition: none;}
