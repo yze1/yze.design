@@ -35,6 +35,9 @@ html {background-color: var(--black);}
 @font-face {font-family: 'CooperBold'; src: url('../assets/fonts/Cooper-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; }
 /* @font-face {font-family: 'Azeret'; src: url('../assets/fonts/AzeretMono-VariableFont_wght.ttf') format('truetype'); font-weight: 100 900; font-style: normal; } */
 @font-face {font-family: 'JetBrains'; src: url('../assets/fonts/JetBrainsMono-ExtraLight.ttf') format('truetype'); font-weight: 100 900; font-style: normal; }
+@font-face {font-family: 'JetBrainsThin'; src: url('../assets/fonts/JetBrainsMono-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; }
+
+@font-face {font-family: 'GeistMono'; src: url('../assets/fonts/GeistMono-VariableFont_wght.ttf') format('truetype'); font-weight: 100 900; font-style: normal; }
 
 h1, h2,
 h3.logo, h4.logo {
@@ -61,7 +64,7 @@ strong {
 }
 /* h3, h4, .caption { */
 .caption {
-    font-family: 'Azeret', sans-serif;
+    font-family: 'Jetbrains', sans-serif;
     font-weight: 400; font-style: normal; line-height: normal;
 }
 h4.scalable {font-weight: 800;}
@@ -96,27 +99,12 @@ a, button {
     color: var(--red);
 }
 
-#header > div > a {
-    /* text-decoration: none; */
-    color: var(--black);
-}
-#header > div > a:hover {text-decoration: underline;}
-
-#header > div > a, 
-#header > div > a > p,
-#header > div > h4 {
-    color: var(--red);
-}
-
-/* FIX! */
-/* #header > div > a > p { */
-.nav { 
-    color: pink;
-}
 
 
 
 #header a {
+    font-family: 'GeistMono', sans-serif;
+
     color: var(--red);
     text-decoration: none;
 }
@@ -144,6 +132,7 @@ a, button {
 
 #header .caption {
     text-transform: uppercase;
+    /* margin-top: calc(var(--spacing) * -1); */
 }
 
 
@@ -163,6 +152,12 @@ a, button {
 #footer a {
     color: var(--white);
     text-decoration: none;
+}
+
+.footer-copy, .footer-copy a {
+
+    font-family: 'JetbrainsThin', sans-serif;
+    font-weight: 100; font-style: normal; line-height: normal;
 }
 
 .spread-links {
@@ -393,14 +388,6 @@ img.logo, img.gif {
     h3 {font-size: 28px;}
     h4 {font-size: 19px;}
     h4:not(.mono) {font-weight: 600;}
-
-    /* UNUSED SYSTEM BUT COULD BE USEFUL */
-    /* h2.scale {
-        color: pink;
-        font-family: 'Azeret', sans-serif;
-        font-weight: 400; font-style: normal; line-height: normal;
-        font-size: 28px;
-    } */
 }
 
 
@@ -413,6 +400,11 @@ img.logo, img.gif {
     top: 0;
     right: var(--margin);
     left: var(--margin);
+}
+.header {padding-top: var(--spacing);}
+
+@media (max-width: 768px) {
+    .header {padding-top: calc(var(--inner-gap) / 2);}
 }
 .header-logo {grid-column: span 9;}
 

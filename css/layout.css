@@ -24,10 +24,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-section, #header, #footer {
-    /* padding-left: var(--margin); padding-right: var(--margin); */
-    /* ADDED THIS FOR SECTION MARGINS */
-}
 
 body.archive-page {background-color: #000;}
 .spacious {padding-left: calc(var(--margin) * 2); padding-right: calc(var(--margin) * 2);}
@@ -165,6 +161,10 @@ section > .vertically-center {
     transform-origin: left top;
 }
 
+.expansive {
+    padding-left: calc(var(--margin) * 0.5);
+    padding-right: calc(var(--margin) * 0.5);
+}
 
 /* .underlap {
     position: relative;

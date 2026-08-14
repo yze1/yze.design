@@ -20,7 +20,7 @@
             position: relative;
             height: 300vh;
             padding: 0;
-            background: var(--black);
+            background: #000000;
         }
 
         .gong-frame {
@@ -30,14 +30,14 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            background: var(--black);
+            background: #000000;
         }
 
         .gong-frame img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            transform: scale(var(--gong-scale, 1));
+            /* transform: scale(var(--gong-scale, 1)); */
             mix-blend-mode: lighten;
             will-change: transform;
         }
@@ -94,10 +94,14 @@
 
     <section class="gong-scroll underlap" aria-label="Welcome to Pitch and Sync">
         <div class="gong-frame">
-            <img src="./assets/media/record.png" alt="Gong">
+            <img src="./assets/media/record.gif" alt="Gong">
             <div class="gong-dot red" aria-hidden="true"></div>
-            <h2 class="gong-title red">Welcome to Pitch <strong>&</strong> Sync</h2>
-            <h2 class="gong-title gong-title--blend" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h2>
+
+            <!-- <h2 class="gong-title red">Welcome to Pitch <strong>&</strong> Sync</h2>
+            <h2 class="gong-title gong-title--blend" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h2> -->
+            <h3 class="gong-title red logo">Welcome to Pitch <strong>&</strong> Sync</h3>
+            <h3 class="gong-title gong-title--blend logo" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h3>
+
             <div class="gong-circle-noise" aria-hidden="true"></div>
         </div>
     </section>
@@ -105,7 +109,7 @@
     <section class="red tall">
         <div class="s12 center">
             <h2>Tagline</h2>
-            <h3 class="mono">music supervision, composition,<br>sound design, audio post</h2>
+            <h4 class="mono">music supervision, composition,<br>sound design, audio post</h4>
         </div>
     </section>
 
@@ -242,13 +246,15 @@
     <script>
         const gongScroll = document.querySelector(".gong-scroll");
         const gongFrame = document.querySelector(".gong-frame");
+        // const circleStart = 0.5; // 0 = immediately, 1 = at the end of the scroll section.
+        const circleStart = 0.2; // 0 = immediately, 1 = at the end of the scroll section.
 
         function updateGong() {
             const distance = gongScroll.offsetHeight - innerHeight;
             const progress = Math.max(0, Math.min(1, -gongScroll.getBoundingClientRect().top / distance));
-            const dotProgress = Math.max(0, (progress - 0.5) * 2);
+            const dotProgress = Math.max(0, (progress - circleStart) / (1 - circleStart));
 
-            gongFrame.style.setProperty("--gong-scale", 1 + Math.min(progress * 2, 1));
+            // gongFrame.style.setProperty("--gong-scale", 1 + Math.min(progress * 2, 1));
             gongFrame.style.setProperty("--dot-radius", `${dotProgress * 75}vmax`);
             const gongBounds = gongScroll.getBoundingClientRect();
             const headerY = document.querySelector("#header")?.getBoundingClientRect().height / 2 || 0;

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-noise="off">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>P&amp;S Noise</title>
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <style>
+        html, body, * {cursor: auto !important;}
+        body {padding: 0; background: #333;}
+
+        .noise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            min-height: 100vh;
+        }
+
+        .noise-block {
+            --tone: #ff2e24;
+            --ink: #1d1d1d;
+            --noise-opacity: .12;
+            --noise-size: 200px;
+            --noise-contrast: 100%;
+            --noise-brightness: 100%;
+            position: relative;
+            display: flex;
+            min-width: 0;
+            min-height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: clamp(28px, 4vw, 70px);
+            overflow: hidden;
+            background: var(--tone);
+            color: var(--ink);
+        }
+
+        .noise-block::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: var(--noise-tile) repeat;
+            background-size: var(--noise-size);
+            mix-blend-mode: var(--noise-blend, normal);
+            filter: contrast(var(--noise-contrast)) brightness(var(--noise-brightness));
+            opacity: var(--noise-opacity);
+        }
+
+        .noise-block > * {position: relative; z-index: 1;}
+        .noise-block[data-name="black"] {--ink: #faf9f6;}
+
+        .reference {display: grid; justify-items: center; gap: 12px; margin-bottom: var(--spacing);}
+        .upload-image {font: 100 14px JetBrains, monospace; text-transform: uppercase; text-decoration: underline;}
+        .upload-image input {position: absolute; width: 1px; height: 1px; opacity: 0;}
+        .reference-preview {position: relative; display: none; width: min(100%, 320px); aspect-ratio: 4 / 3; overflow: hidden; background: var(--ink);}
+        .reference-preview.is-visible {display: block;}
+        .reference-preview img {width: 100%; height: 100%; object-fit: contain;}
+        .image-average {position: absolute; inset: 50% auto auto 50%; margin: 0; color: #fff; font-size: clamp(30px, 4vw, 60px); text-shadow: 0 1px 10px #000; transform: translate(-50%, -50%);}
+
+        .hex-input {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            color: inherit;
+            font: 656 clamp(40px, 5vw, 80px)/.9 Inter, sans-serif;
+            letter-spacing: -.05em;
+            text-transform: uppercase;
+        }
+
+        .controls {display: grid; gap: 10px; margin-top: var(--spacing);}
+        .control {display: grid; grid-template-columns: 82px 1fr 62px; align-items: center; gap: 8px;}
+        .control label, .control output, .control select {font: 100 14px JetBrains, monospace; text-transform: uppercase;}
+        .control output {text-align: right;}
+        .control input[type="range"] {width: 100%; accent-color: currentColor;}
+        .control select {min-width: 0; border: 1px solid currentColor; background: transparent; color: inherit;}
+
+        .average-label {margin-bottom: 8px; color: inherit; font: 100 14px JetBrains, monospace; text-transform: uppercase;}
+        .average-value {margin: 0; color: inherit; font-size: clamp(42px, 5vw, 96px);}
+
+        .export-settings {position: fixed; z-index: 3; right: 20px; bottom: 20px; padding: 4px 10px; background: var(--red); color: var(--black); text-decoration: none;}
+
+        @media (max-width: 1024px) {
+            .noise-grid {grid-template-columns: 1fr;}
+            .noise-block {min-height: 100svh; padding: var(--margin);}
+        }
+    </style>
+</head>
+<body>
+    <main class="noise-grid">
+        <article class="noise-block" data-name="red" data-colour="#ff2e24">
+            <div>
+                <div class="reference">
+                    <label class="upload-image">Upload image<input type="file" accept="image/*" aria-label="Upload red reference image"></label>
+                    <div class="reference-preview"><img alt="Red reference"><h2 class="image-average"></h2></div>
+                </div>
+                <input class="hex-input" aria-label="Red HEX colour" value="#FF2E24" maxlength="7" spellcheck="false">
+                <div class="controls"></div>
+            </div>
+            <div><p class="average-label">Calculated with noise overlay</p><h2 class="average-value">#FF2E24</h2></div>
+        </article>
+        <article class="noise-block" data-name="white" data-colour="#faf9f6">
+            <div>
+                <div class="reference">
+                    <label class="upload-image">Upload image<input type="file" accept="image/*" aria-label="Upload white reference image"></label>
+                    <div class="reference-preview"><img alt="White reference"><h2 class="image-average"></h2></div>
+                </div>
+                <input class="hex-input" aria-label="White HEX colour" value="#FAF9F6" maxlength="7" spellcheck="false">
+                <div class="controls"></div>
+            </div>
+            <div><p class="average-label">Calculated with noise overlay</p><h2 class="average-value">#FAF9F6</h2></div>
+        </article>
+        <article class="noise-block" data-name="black" data-colour="#1d1d1d">
+            <div>
+                <div class="reference">
+                    <label class="upload-image">Upload image<input type="file" accept="image/*" aria-label="Upload black reference image"></label>
+                    <div class="reference-preview"><img alt="Black reference"><h2 class="image-average"></h2></div>
+                </div>
+                <input class="hex-input" aria-label="Black HEX colour" value="#1D1D1D" maxlength="7" spellcheck="false">
+                <div class="controls"></div>
+            </div>
+            <div><p class="average-label">Calculated with noise overlay</p><h2 class="average-value">#1D1D1D</h2></div>
+        </article>
+    </main>
+    <a class="export-settings" href="#" download="p-and-s-noise-settings.json">Export settings</a>
+
+    <script>
+        const size = 200;
+        const noiseCanvas = document.createElement("canvas");
+        const noiseContext = noiseCanvas.getContext("2d");
+        noiseCanvas.width = noiseCanvas.height = size;
+        const noisePixels = noiseContext.createImageData(size, size);
+
+        for (let i = 0; i < noisePixels.data.length; i += 4) {
+            const value = Math.random() * 255;
+            noisePixels.data[i] = noisePixels.data[i + 1] = noisePixels.data[i + 2] = value;
+            noisePixels.data[i + 3] = 255;
+        }
+
+        noiseContext.putImageData(noisePixels, 0, 0);
+        document.documentElement.style.setProperty("--noise-tile", `url(${noiseCanvas.toDataURL()})`);
+
+        const controls = [
+            ["opacity", "Opacity", 0, 100, 12, "%"],
+            ["size", "Scale", 25, 400, 200, "px"],
+            ["contrast", "Contrast", 0, 300, 100, "%"],
+            ["brightness", "Brightness", 0, 200, 100, "%"]
+        ];
+
+        const hexToRgb = hex => [1, 3, 5].map(index => parseInt(hex.slice(index, index + 2), 16));
+        const rgbToHex = rgb => `#${rgb.map(value => Math.round(value).toString(16).padStart(2, "0")).join("")}`.toUpperCase();
+
+        document.querySelectorAll(".noise-block").forEach(block => {
+            const hexInput = block.querySelector(".hex-input");
+            const colourPicker = document.createElement("input");
+            colourPicker.type = "color";
+            colourPicker.value = hexInput.value;
+            colourPicker.hidden = true;
+            block.append(colourPicker);
+            hexInput.title = "Double-click to open colour picker";
+            hexInput.addEventListener("dblclick", () => colourPicker.click());
+            colourPicker.addEventListener("input", () => {
+                hexInput.value = colourPicker.value.toUpperCase();
+                hexInput.dispatchEvent(new Event("input", {bubbles: true}));
+            });
+
+            const imageInput = block.querySelector('input[type="file"]');
+            imageInput.addEventListener("change", () => {
+                const file = imageInput.files[0];
+                if (!file) return;
+                const image = block.querySelector(".reference-preview img");
+                const preview = block.querySelector(".reference-preview");
+                const url = URL.createObjectURL(file);
+                image.onload = () => {
+                    const sample = document.createElement("canvas");
+                    const context = sample.getContext("2d", {willReadFrequently: true});
+                    const ratio = Math.min(1, 200 / Math.max(image.naturalWidth, image.naturalHeight));
+                    sample.width = Math.max(1, Math.round(image.naturalWidth * ratio));
+                    sample.height = Math.max(1, Math.round(image.naturalHeight * ratio));
+                    context.drawImage(image, 0, 0, sample.width, sample.height);
+                    const pixels = context.getImageData(0, 0, sample.width, sample.height).data;
+                    const total = [0, 0, 0];
+                    let count = 0;
+                    for (let i = 0; i < pixels.length; i += 4) {
+                        if (!pixels[i + 3]) continue;
+                        total[0] += pixels[i]; total[1] += pixels[i + 1]; total[2] += pixels[i + 2]; count++;
+                    }
+                    block.dataset.imageAverage = rgbToHex(total.map(value => value / (count || 1)));
+                    block.querySelector(".image-average").textContent = block.dataset.imageAverage;
+                    preview.classList.add("is-visible");
+                    URL.revokeObjectURL(url);
+                };
+                image.src = url;
+            });
+
+            const controlsRoot = block.querySelector(".controls");
+            controlsRoot.innerHTML = controls.map(([key, label, min, max, value, unit]) => `
+                <div class="control">
+                    <label for="${block.dataset.name}-${key}">${label}</label>
+                    <input id="${block.dataset.name}-${key}" data-key="${key}" type="range" min="${min}" max="${max}" value="${value}">
+                    <output>${value}${unit}</output>
+                </div>`).join("") + `
+                <div class="control">
+                    <label for="${block.dataset.name}-blend">Blend</label>
+                    <select id="${block.dataset.name}-blend" data-key="blend">
+                        <option>normal</option><option>multiply</option><option>screen</option><option>overlay</option><option>soft-light</option>
+                    </select>
+                    <output>normal</output>
+                </div>`;
+
+            const update = () => {
+                const hex = /^#[0-9a-f]{6}$/i.test(hexInput.value) ? hexInput.value : block.dataset.colour;
+                const values = Object.fromEntries([...block.querySelectorAll("[data-key]")].map(input => [input.dataset.key, input.value]));
+                block.style.setProperty("--tone", hex);
+                block.style.setProperty("--noise-opacity", values.opacity / 100);
+                block.style.setProperty("--noise-size", `${values.size}px`);
+                block.style.setProperty("--noise-contrast", `${values.contrast}%`);
+                block.style.setProperty("--noise-brightness", `${values.brightness}%`);
+                block.style.setProperty("--noise-blend", values.blend);
+
+                block.querySelectorAll("[data-key]").forEach(input => {
+                    const unit = input.dataset.key === "size" ? "px" : ["opacity", "contrast", "brightness"].includes(input.dataset.key) ? "%" : "";
+                    input.nextElementSibling.textContent = input.value + unit;
+                });
+
+                const sample = document.createElement("canvas");
+                const context = sample.getContext("2d", {willReadFrequently: true});
+                sample.width = sample.height = size;
+                context.fillStyle = hex;
+                context.fillRect(0, 0, size, size);
+                context.globalAlpha = values.opacity / 100;
+                context.globalCompositeOperation = values.blend;
+                context.filter = `contrast(${values.contrast}%) brightness(${values.brightness}%)`;
+                context.drawImage(noiseCanvas, 0, 0);
+                const pixels = context.getImageData(0, 0, size, size).data;
+                const total = [0, 0, 0];
+                for (let i = 0; i < pixels.length; i += 4) {
+                    total[0] += pixels[i]; total[1] += pixels[i + 1]; total[2] += pixels[i + 2];
+                }
+                block.querySelector(".average-value").textContent = rgbToHex(total.map(value => value / (pixels.length / 4)));
+            };
+
+            block.addEventListener("input", update);
+            update();
+        });
+
+        let exportUrl;
+        document.querySelector(".export-settings").addEventListener("click", event => {
+            const settings = [...document.querySelectorAll(".noise-block")].map(block => ({
+                name: block.dataset.name,
+                hex: block.querySelector(".hex-input").value,
+                averageWithNoise: block.querySelector(".average-value").textContent,
+                imageAverage: block.dataset.imageAverage || null,
+                ...Object.fromEntries([...block.querySelectorAll("[data-key]")].map(input => [input.dataset.key, input.value]))
+            }));
+            if (exportUrl) URL.revokeObjectURL(exportUrl);
+            exportUrl = URL.createObjectURL(new Blob([JSON.stringify(settings, null, 2)], {type: "application/json"}));
+            event.currentTarget.href = exportUrl;
+        });
+    </script>
+</body>
+</html>
