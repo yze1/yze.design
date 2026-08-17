@@ -76,6 +76,8 @@ h1, h2, h3, h4, h5, p, a, .caption {
     color: var(--black);
     font-variant-ligatures: common-ligatures contextual; font-feature-settings: "calt" on, "liga" on, "dlig" on;
     -moz-hyphens: none; -ms-hyphens: none; -webkit-hyphens: none; hyphens: none;
+
+    white-space: pre-wrap;
 }
 
 .caps, .mono.caps {
@@ -113,7 +115,11 @@ a, button {
     text-decoration: underline;
 }
 
-#header:has(+ .underlap) .header :is(h4, p, a, button, strong) {
+#header:has(+ .underlap) .header :is(p, a, button) {
+    color: var(--white);
+}
+/* #header:has(+ .underlap) .header :is(h4, p, a, button, strong) { */
+#header:has(+ .underlap) .header :has(h4, strong) {
     color: var(--red);
 }
 
@@ -168,7 +174,6 @@ a, button {
 }
 
 #footer > div > a:hover {text-decoration: underline;}
-
 
 .black div, .black h1, .black h2, .black h3, .black h4, .black h5, .black p, .black strong {color: var(--white);}
 .black .icon {background-color: var(--white);}
@@ -353,7 +358,7 @@ a:hover {
 }
 
 .spacer {
-   height: 30px;
+   height: 40px;
 } 
 .spacer-mini {
     height: 15px;

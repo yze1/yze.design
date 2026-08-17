@@ -101,6 +101,11 @@
 
         .gong-tagline :is(h2, h5) {color: inherit; text-align: center;}
 
+        .gong-tagline .spacer.center {
+            margin: 0 auto var(--spacing);
+            background-color: var(--black);
+        }
+
         .gong-circle-noise {
             position: absolute;
             z-index: 2;
@@ -118,6 +123,13 @@
             width: 100%;
             aspect-ratio: 1;
             object-fit: cover;
+        }
+
+        .quarter-divider {
+            grid-column: 1 / -1;
+            width: 25%;
+            margin-right: auto;
+            margin-left: auto;
         }
     </style>
 
@@ -189,27 +201,32 @@
             <h3 class="gong-title spread gong-title--blend logo" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h3> -->
 
             <div class="gong-title">
-                <h4 class="mono red">Welcome to</h4>
+                <h5 class="mono red caps">Welcome to</h5>
+                <div class="divider-mini"></div>
                 <!-- <h3 class="spread logo red">Pitch <strong>&</strong> Sync</h3> -->
-                 <h2 class="logo red">Pitch <strong>&</strong> Sync</h2>
+                 <h2 class="logo red spread">Pitch <strong>&</strong> Sync</h2>
             </div>
 
             <div class="gong-title gong-title--blend" aria-hidden="true">
-                <h4 class="mono">Welcome to</h4>
+                <h5 class="mono caps">Welcome to</h5>
+                <div class="divider-mini"></div>
                 <!-- <h3 class="spread logo">Pitch <strong>&</strong> Sync</h3> -->
-                 <h2 class="logo">Pitch <strong>&</strong> Sync</h2>
+                 <h2 class="logo spread">Pitch <strong>&</strong> Sync</h2>
             </div>
 
             <div class="gong-tagline">
-                <h2>Tagline</h2>
+                <h3 class="logo caps">A sound & music village stores</h3>
                 <!-- <h4 class="mono">music supervision, composition,<br>sound design, audio post</h4> -->
                 <!-- <h5 class="mono">music supervision, composition,<br>sound design, audio post</h5> -->
-                <h5 class="mono">music supervision * composition * sound design * audio post</h5>
+                <h5 class="mono caps">music supervision   *   composition   *   sound design   *   audio post</h5>
+                <!-- <div class="spacer center"></div> -->
             </div>
 
             <div class="gong-circle-noise" aria-hidden="true"></div>
         </div>
     </section>
+
+    <section class="red"><div class="spacer center quarter-divider"></div></section>
 
     <!-- <section class="compact">
         <div class="s12 bleed full">
@@ -291,8 +308,7 @@
 
     <section class="black">
         <div class="s12"><h2 class="red">Work</h2>
-            <!-- <div class="spacer"></div> -->
-             <div class="spacer-mini"></div>
+            <div class="spacer"></div>
         </div>
 
         <div class="s3 t2 m2">
