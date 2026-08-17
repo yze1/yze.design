@@ -1,9 +1,65 @@
 [
-    {"name": "September Gathering", "date": "2026-09-06", "caption": "Upcoming placeholder event", "image": "/m/scy/hob/media/image.jpg"},
-    {"name": "Spring Gathering", "date": "2026-05-16", "caption": "Placeholder event", "image": "/m/scy/hob/media/image.jpg"},
-    {"name": "Winter Gathering", "date": "2026-02-21", "caption": "Placeholder event", "image": "/m/scy/hob/media/image.jpg"},
-    {"name": "New Year Gathering", "date": "2026-01-10", "caption": "Placeholder event", "image": "/m/scy/hob/media/image.jpg"},
-    {"name": "Autumn Gathering", "date": "2025-10-18", "caption": "Placeholder event", "image": "/m/scy/hob/media/image.jpg"},
-    {"name": "Summer Gathering", "date": "2025-07-12", "caption": "Placeholder event", "image": "/m/scy/hob/media/image.jpg"},
-    {"name": "Spring Gathering", "date": "2025-04-05", "caption": "Placeholder event", "image": "/m/scy/hob/media/image.jpg"}
+    {
+        "name": "AWODN '26 Houseparty",
+        "date": "2026-06-22",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    },
+    {
+        "name": "Society.Exclusive Anniversary Party",
+        "date": "2025-12-20",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    },
+    {
+        "name": "You&Me x BLOSSOMING",
+        "date": "2025-08-01",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    },
+    {
+        "name": "All White on Dukes Night",
+        "date": "2025-06-22",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    },
+    {
+        "name": "BLOSSOMING Tour London",
+        "date": "2024-10-20",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    },
+    {
+        "name": "BLOSSOMING Tour Madrid",
+        "date": "2024-10-20",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    },
+    {
+        "name": "BLOSSOMING Tour Paris",
+        "date": "2024-10-20",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    },
+    {
+        "name": "All White on Dukes Night",
+        "date": "2024-06-22",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    },
+    {
+        "name": "BLOSSOMING OF HOUS x Uncensored",
+        "date": "2024-04-01",
+        "caption": "",
+        "image": "/m/scy/hob/media/image.jpg",
+        "url": ""
+    }
 ]

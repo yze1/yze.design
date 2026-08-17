@@ -99,13 +99,20 @@ h3 {font-size: 54px; letter-spacing: -0.05em;} */
 h2 {font-size: 68px; letter-spacing: -0.05em;}
 h3 {font-size: 42px; letter-spacing: -0.05em;} */
 
-h1 {font-size: 110px;}
+/* h1 {font-size: 110px;}
 h2 {font-size: 68px;}
 h3 {font-size: 42px;}
 h4 {font-size: 26px;}
 h5 {font-size: 16px;}
 p, button {font-size: 16px; line-height: 1.2;}
-.caption {font-size: 12px; letter-spacing: 0.05em;}
+.caption {font-size: 12px; letter-spacing: 0.05em;} */
+h1 {font-size: 82px;}
+h2 {font-size: 50px;}
+h3 {font-size: 32px;}
+h4 {font-size: 20px;}
+h5 {font-size: 12px;}
+p, button, a {font-size: 12px; line-height: 1.2;}
+.caption {font-size: 10px; letter-spacing: 0.05em;}
 
 /* h1, h1.strong {
     text-decoration: underline;
@@ -161,6 +168,13 @@ button.right {display: block; margin-left: auto; margin-right: 0;}
 a:hover {
     text-decoration: underline;
 }
+
+a::after {content: ">";}
+.social-links a::after,
+#header a::after,
+#footer a::after {content: none;}
+
+.hob-event-link {text-decoration: none;}
 
 
 .right {text-align: right; display: flex; justify-content: flex-end;}
@@ -282,7 +296,10 @@ section div { /* increased spacing */
 }
 .site-cursor.cursor-red {background: var(--red);} */
 
-.logo-cloud {align-items: start;}
+.logo-cloud {
+    align-items: start;
+    gap: calc(var(--spacing) / 2) calc(var(--gutter) / 2);
+}
 .logo-mark {grid-column: span 3; width: 100%;}
 .logo-mark img {aspect-ratio: 1; object-fit: contain;}
 .logo-mark:nth-child(4n + 1) {grid-column: 2 / span 3;}
