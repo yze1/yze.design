@@ -1,29 +1,72 @@
 :root {
-    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.0' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .2126 .7152 .0722 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
-html.noise-on body::after {
-    content: "";
-    position: fixed;
-    z-index: 999998;
-    inset: 0;
-    pointer-events: none;
-    background: var(--noise) repeat;
-    background-size: 200px 200px;
-    opacity: 0.12;
+html.noise-on :is(
+    body,
+    section.red,
+    div.red,
+    .spacer,
+    section.black,
+    div.black,
+    section.white,
+    div.white,
+    .horizontal-gallery__item
+):not(.gong-dot) {
+    position: relative;
+    isolation: isolate;
 }
 
-html.noise-on section.red,
-html.noise-on .spacer {position: relative;}
+html.noise-on .gong-dot {isolation: isolate;}
 
-html.noise-on section.red::after,
-html.noise-on .spacer::after {
+html.noise-on :is(
+    body,
+    section.red,
+    div.red,
+    .spacer,
+    section.black,
+    div.black,
+    section.white,
+    div.white,
+    .horizontal-gallery__item
+)::before {
     content: "";
     position: absolute;
+    z-index: -1;
     inset: 0;
     border-radius: inherit;
     pointer-events: none;
     background: var(--noise) repeat;
-    background-size: 200px 200px;
-    opacity: 0.08;
+    background-size: var(--noise-size);
+    mix-blend-mode: var(--noise-blend);
+    filter: contrast(var(--noise-contrast)) brightness(var(--noise-brightness));
+    opacity: var(--noise-opacity);
 }
+
+html.noise-on :is(body, section.white, div.white, .horizontal-gallery__item) {
+    --noise-opacity: 0.04;
+    --noise-size: 203px;
+    --noise-contrast: 125%;
+    --noise-brightness: 67%;
+    --noise-blend: normal;
+}
+
+html.noise-on :is(section.red, div.red, .spacer) {
+    --noise-opacity: 0.06;
+    --noise-size: 203px;
+    --noise-contrast: 125%;
+    --noise-brightness: 67%;
+    --noise-blend: normal;
+}
+
+html.noise-on :is(section.black, div.black) {
+    /* --noise-opacity: 0.79; */
+    --noise-opacity: 0.09;
+    --noise-size: 203px;
+    --noise-contrast: 125%;
+    --noise-brightness: 67%;
+    --noise-blend: normal;
+}
+
+/* The red dot now carries the red surface texture itself. */
+html.noise-on .gong-circle-noise {display: none;}

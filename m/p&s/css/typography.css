@@ -4,6 +4,7 @@ body {
     overscroll-behavior-y: none;
 }
 html {background-color: var(--black);}
+body {background-color: var(--white);}
 #cursor {
     position: fixed;
     top: 0;
@@ -154,7 +155,7 @@ a, button {
     text-decoration: none;
 }
 
-.footer-copy, .footer-copy a {
+.footer-copy, .footer-copy :is(p, a) {
 
     font-family: 'JetbrainsThin', sans-serif;
     font-weight: 100; font-style: normal; line-height: normal;
@@ -214,6 +215,7 @@ h1, h1.strong {font-size: 200px; letter-spacing: -0.05em;}
 h2, h2.strong {font-size: 128px; letter-spacing: -0.05em;}
 h3 {font-size: 54px; letter-spacing: -0.05em;}
 h4 {font-size: 28px;}
+h5 {font-size: 19px;}
 p, button {font-size: 19px;}
 .caption {font-size: 14px; letter-spacing: 0.05em;}
 
@@ -357,10 +359,10 @@ a:hover {
     height: 15px;
 }
 .spacer, .spacer-mini {
-    width: 40%;
     background-color: var(--red);
 
     margin-left: 15%;
+    margin-top: calc(var(--spacing) * -.5);
     margin-bottom: var(--spacing);
 }
 .red .spacer, .red .spacer-mini {background-color: var(--black);}
@@ -415,7 +417,18 @@ img.logo, img.gif {
     /* text-decoration: none; */
 }
 
+.header > div.mobile-logo,
 .header > div.mobile-nav {display: none;}
+
+@media (min-width: 1025px) {
+    .header > div.header-row {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .header-row > .caption {display: contents;}
+}
 
 
 
@@ -428,6 +441,10 @@ img.logo, img.gif {
     .header-nav,
     .header > div.desktop-link {
         display: none;
+    }
+
+    .header > div.mobile-logo {
+        display: flex;
     }
 
     .header > div.mobile-nav {

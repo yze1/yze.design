@@ -4,7 +4,7 @@ function setupContact() {
 
     if (form && heading && !form.dataset.contactReady) {
         form.dataset.contactReady = "true";
-        const matchHeadingWidth = () => form.style.width = `${heading.getBoundingClientRect().width}px`;
+        const matchHeadingWidth = () => form.style.width = `${heading.getBoundingClientRect().width * 0.75}px`;
         new ResizeObserver(matchHeadingWidth).observe(heading);
         document.fonts?.ready.then(matchHeadingWidth);
         matchHeadingWidth();

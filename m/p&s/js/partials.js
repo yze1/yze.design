@@ -51,7 +51,7 @@ async function loadPartial(selector, filePath) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    await Promise.all([
+    const partials = [
         loadPartial(
             "#header",
             "p&s/partials/header.html"
@@ -60,7 +60,16 @@ document.addEventListener("DOMContentLoaded", async () => {
             "#footer",
             "p&s/partials/footer.html"
         )
-    ]);
+    ];
+
+    if (document.querySelector("#contact-partial")) {
+        partials.push(loadPartial(
+            "#contact-partial",
+            "p&s/partials/contact.html"
+        ));
+    }
+
+    await Promise.all(partials);
 
     document.dispatchEvent(new Event("partialsloaded"));
 

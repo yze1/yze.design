@@ -6,7 +6,10 @@ function fitSpreadText() {
         element.style.fontSize = "";
 
         const naturalWidth = element.scrollWidth;
-        const availableWidth = container.clientWidth;
+        const containerStyle = getComputedStyle(container);
+        const availableWidth = container.clientWidth
+            - parseFloat(containerStyle.paddingLeft)
+            - parseFloat(containerStyle.paddingRight);
 
         if (!naturalWidth || !availableWidth) return;
 
@@ -24,6 +27,28 @@ function fitSpreadText() {
         element.style.justifyContent = "space-between";
         element.style.width = "100%";
     });
+
+    document.querySelectorAll(".spacer, .spacer-mini").forEach(spacer => {
+        const text = spacer.previousElementSibling;
+        if (text) spacer.style.width = `${text.getBoundingClientRect().width}px`;
+    });
+
+    const footerLogo = document.querySelector("#footer .footer-logo h2");
+    const footerLinks = document.querySelector("#footer .footer-nav .spread-links");
+
+    if (footerLogo && footerLinks) {
+        footerLogo.style.fontSize = "";
+
+        if (matchMedia("(min-width: 1025px)").matches) {
+            const logoHeight = footerLogo.getBoundingClientRect().height;
+            const linksHeight = footerLinks.getBoundingClientRect().height;
+            const fontSize = parseFloat(getComputedStyle(footerLogo).fontSize);
+
+            if (logoHeight && linksHeight) {
+                footerLogo.style.fontSize = `${fontSize * linksHeight / logoHeight}px`;
+            }
+        }
+    }
 }
 
 function scheduleSpreadUpdate() {

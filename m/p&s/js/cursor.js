@@ -24,7 +24,7 @@ function animate() {
 
 animate();
 
-const reel = document.querySelector("mux-player[metadata-video-title='reel']");
+const reel = document.querySelector("mux-player");
 
 if (reel) {
     const cursorLabel = cursor.querySelector("h4");

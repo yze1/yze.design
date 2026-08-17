@@ -20,57 +20,43 @@
         .holding-header .mobile-menu a:not([href$="/contact/"]):not([href="#contact"]) {display: none;}
 
         .twenty-years {
+            position: relative;
+            display: block;
             width: min(500px, 70vw);
+            aspect-ratio: 1;
             animation: rotate-twenty-years 30s linear infinite;
         }
 
-        .holding-socials {
-            flex-direction: row !important;
-            justify-content: center;
-            align-items: center;
-            gap: var(--inner-gap);
-        }
-
-        .mailing-list-form {
-            display: flex;
-            max-width: 100%;
-            background: var(--black);
-        }
-
-        .sr-only {
+        .twenty-years::before,
+        .twenty-years::after {
+            content: "";
             position: absolute;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
+            inset: 0;
+            -webkit-mask: url("../assets/media/20years.png") center / contain no-repeat;
+            mask: url("../assets/media/20years.png") center / contain no-repeat;
         }
 
-        .mailing-list-form input {
-            min-width: 0;
-            flex: 1;
-            border: 0;
-            outline: 0;
-            padding: calc(var(--spacing) / 8) calc(var(--spacing) / 2);
-            background: transparent;
-            color: var(--red);
-            font: 19px 'JetBrains', sans-serif;
-            text-align: left;
-            text-transform: uppercase;
+        .twenty-years::before {background: var(--red);}
+
+        .twenty-years::after {
+            background: var(--noise) repeat;
+            background-size: 203px;
+            filter: contrast(125%) brightness(67%);
+            opacity: 0;
         }
 
-        .mailing-list-form input::placeholder {color: var(--red); opacity: 1;}
+        html.noise-on .twenty-years::after {opacity: 0.06;}
 
-        .mailing-list-form button {
+        .holding-video {position: relative;}
+
+        .twenty-years-overlay {
+            position: absolute;
+            z-index: 1;
+            inset: 0;
             display: grid;
-            flex: 0 0 auto;
             place-items: center;
-            margin: 0;
-            padding: 0 calc(var(--spacing) / 2);
-            /* background: var(--red); */
-            background: var(--black);
+            pointer-events: none;
         }
-
-        .mailing-list-form button img {width: 24px; height: 24px;}
 
         @keyframes rotate-twenty-years {to {transform: rotate(360deg);}}
 
@@ -91,10 +77,10 @@
 
 
     <section class="compact underlap">
-        <div class="s12 bleed full">
+        <div class="s12 bleed full holding-video">
             <mux-player
-                playback-id="seRlvZoaZbGdWFzHkgx3GicgxrrjtUezC01yohrRoIHo"
-                metadata-video-title="reel"
+                playback-id="bm55J3LyyfzFat00ZVs2MlI3FfsBonjmFiJ8202v69yZs"
+                metadata-video-title="reel_trimmed"
                 autoplay="muted"
                 muted
                 loop
@@ -103,50 +89,24 @@
                 aria-label="Play reel with sound"
                 tabindex="0"
             ></mux-player>
+            <div class="twenty-years-overlay">
+                <span class="twenty-years" role="img" aria-label="20 Years of P&amp;S"></span>
+            </div>
         </div>
     </section>
 
     <section class="red">
         <div class="space"></div>
-
         <div class="s12 center">
             <h2>
                 New website
                 <br>coming soon
             </h2>
-            <h3 class="mono caps">One short line on services</h3>
+            <h4 class="mono caps">One short line on services</h4>
         </div>
     </section>
 
-    <section class="red bleed">
-        <div class="s12 center">
-            <img class="twenty-years" src="../assets/media/20years.png" alt="20 Years of P&amp;S">
-        </div>
-    </section>
-
-    <section id="contact" class="bleed red tall">
-        <div class="s10 center"><h2>Contact</h2></div>
-        <div class="s10 center"><h4 class="mono">For new projects:
-            <br><a href="mailto:Cat@pitchandsync.com">Cat@pitchandsync.com</a>
-            <br><br>
-            For composers/music submissions:
-            <br><a href="mailto:Info@pitchandsync.com">Info@pitchandsync.com</a>
-            <br><br>
-            Sign up to our mailing list:</h4>
-            <form class="mailing-list-form">
-                <label for="mailing-list-email" class="sr-only">Email address</label>
-                <input id="mailing-list-email" name="email" type="email" placeholder="Email input field" autocomplete="email" required>
-                <button type="submit" aria-label="Submit email address">
-                    <img src="../assets/icons/play.svg" alt="">
-                </button>
-            </form>
-        </div>
-
-        <div class="s12 center holding-socials">
-            <a href="https://www.instagram.com/pitchandsync/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><div class="icon instagram"></div></a>
-            <a href="https://www.linkedin.com/company/pitch-&-sync/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><div class="icon linkedin"></div></a>
-        </div>
-    </section>
+    <div id="contact-partial"></div>
 
 
     <div id="footer"></div>

@@ -34,8 +34,10 @@
         }
 
         .gong-frame img {
-            width: 100%;
+            width: calc(100% + var(--margin));
+            max-width: none;
             height: 100%;
+            margin-left: calc(var(--margin) * -0.5);
             object-fit: contain;
             /* transform: scale(var(--gong-scale, 1)); */
             mix-blend-mode: lighten;
@@ -62,15 +64,42 @@
             margin: 0;
             text-align: center;
             transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--inner-gap);
+        }
+
+        .gong-title :is(h3, h4) {
+            margin: 0;
+            line-height: 1;
+            color: inherit;
         }
 
         .gong-title strong {color: inherit;}
+        .gong-title .spread {width: max-content;}
 
         .gong-title--blend {
             color: var(--black);
             clip-path: circle(var(--dot-radius, 0) at 50% 50%);
             will-change: clip-path;
         }
+
+        .gong-tagline {
+            position: absolute;
+            z-index: 1;
+            top: 65%;
+            left: 50%;
+            width: calc(100% - var(--margin));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--black);
+            transform: translate(-50%, var(--tagline-offset, 35vh));
+            will-change: transform;
+        }
+
+        .gong-tagline :is(h2, h5) {color: inherit; text-align: center;}
 
         .gong-circle-noise {
             position: absolute;
@@ -83,7 +112,64 @@
             clip-path: circle(var(--dot-radius, 0) at 50% 50%);
             will-change: clip-path;
         }
+
+        img.gif {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
     </style>
+
+    <style>
+        .twenty-years {
+            position: relative;
+            display: block;
+            width: min(500px, 70vw);
+            aspect-ratio: 1;
+            animation: rotate-twenty-years 30s linear infinite;
+        }
+
+        .twenty-years::before,
+        .twenty-years::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            -webkit-mask: url("./assets/media/20years.png") center / contain no-repeat;
+            mask: url("./assets/media/20years.png") center / contain no-repeat;
+        }
+
+        .twenty-years::before {background: var(--red);}
+
+        .twenty-years::after {
+            background: var(--noise) repeat;
+            background-size: 203px;
+            filter: contrast(125%) brightness(67%);
+            opacity: 0;
+        }
+
+        html.noise-on .twenty-years::after {opacity: 0.06;}
+
+        .holding-video {position: relative;}
+
+        .twenty-years-overlay {
+            position: absolute;
+            z-index: 1;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            pointer-events: none;
+        }
+
+        @keyframes rotate-twenty-years {to {transform: rotate(360deg);}}
+
+        @media (prefers-reduced-motion: reduce) {
+            .twenty-years {animation: none;}
+        }
+
+        html, body {background-color: var(--black);}
+    </style>
+
 </head>
 <body>
     <div id="cursor">
@@ -93,27 +179,39 @@
     <div id="header"></div>
 
     <section class="gong-scroll underlap" aria-label="Welcome to Pitch and Sync">
-        <div class="gong-frame">
+        <div class="gong-frame expansive">
             <img src="./assets/media/record.gif" alt="Gong">
             <div class="gong-dot red" aria-hidden="true"></div>
 
             <!-- <h2 class="gong-title red">Welcome to Pitch <strong>&</strong> Sync</h2>
             <h2 class="gong-title gong-title--blend" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h2> -->
-            <h3 class="gong-title red logo">Welcome to Pitch <strong>&</strong> Sync</h3>
-            <h3 class="gong-title gong-title--blend logo" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h3>
+            <!-- <h3 class="gong-title spread red logo">Welcome to Pitch <strong>&</strong> Sync</h3>
+            <h3 class="gong-title spread gong-title--blend logo" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h3> -->
+
+            <div class="gong-title">
+                <h4 class="mono red">Welcome to</h4>
+                <!-- <h3 class="spread logo red">Pitch <strong>&</strong> Sync</h3> -->
+                 <h2 class="logo red">Pitch <strong>&</strong> Sync</h2>
+            </div>
+
+            <div class="gong-title gong-title--blend" aria-hidden="true">
+                <h4 class="mono">Welcome to</h4>
+                <!-- <h3 class="spread logo">Pitch <strong>&</strong> Sync</h3> -->
+                 <h2 class="logo">Pitch <strong>&</strong> Sync</h2>
+            </div>
+
+            <div class="gong-tagline">
+                <h2>Tagline</h2>
+                <!-- <h4 class="mono">music supervision, composition,<br>sound design, audio post</h4> -->
+                <!-- <h5 class="mono">music supervision, composition,<br>sound design, audio post</h5> -->
+                <h5 class="mono">music supervision * composition * sound design * audio post</h5>
+            </div>
 
             <div class="gong-circle-noise" aria-hidden="true"></div>
         </div>
     </section>
 
-    <section class="red tall">
-        <div class="s12 center">
-            <h2>Tagline</h2>
-            <h4 class="mono">music supervision, composition,<br>sound design, audio post</h4>
-        </div>
-    </section>
-
-    <section class="compact">
+    <!-- <section class="compact">
         <div class="s12 bleed full">
             <mux-player
                 playback-id="seRlvZoaZbGdWFzHkgx3GicgxrrjtUezC01yohrRoIHo"
@@ -126,6 +224,24 @@
                 aria-label="Play reel with sound"
                 tabindex="0"
             ></mux-player>
+        </div>
+    </section> -->
+    <section class="compact">
+        <div class="s12 bleed full holding-video">
+            <mux-player
+                playback-id="bm55J3LyyfzFat00ZVs2MlI3FfsBonjmFiJ8202v69yZs"
+                metadata-video-title="reel_trimmed"
+                autoplay="muted"
+                muted
+                loop
+                playsinline
+                no-muted-pref
+                aria-label="Play reel with sound"
+                tabindex="0"
+            ></mux-player>
+            <div class="twenty-years-overlay">
+                <span class="twenty-years" role="img" aria-label="20 Years of P&amp;S"></span>
+            </div>
         </div>
     </section>
 
@@ -174,47 +290,50 @@
     </section>
 
     <section class="black">
-        <div class="s12"><h1 class="red">Work</h1><div class="spacer"></div></div>
-
-        <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
-        </div>
-        <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
-        </div>
-        <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+        <div class="s12"><h2 class="red">Work</h2>
+            <!-- <div class="spacer"></div> -->
+             <div class="spacer-mini"></div>
         </div>
 
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/buttons.gif" alt="Buttons">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/dials.gif" alt="Dials">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/keyboard.gif" alt="Keyboard">
         </div>
 
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/mic.png" alt="Microphone">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/pan.gif" alt="Panning">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/paper.gif" alt="Paper">
         </div>
 
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/recording.gif" alt="Recording">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/rotate.gif" alt="Rotating">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
+            <img class="gif" src="./assets/media/gifs/speakers.gif" alt="Speakers">
         </div>
+
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gifs/zoom.gif" alt="Zoom">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gifs/violin.gif" alt="Violin">
+        </div>
+        <!-- <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gif.svg">
+        </div> -->
 
         <!-- <div class="s3 t2 m2">
             <img class="gif" src="./assets/media/gif.svg">
@@ -242,12 +361,25 @@
     <script src="./js/partials.js?v=3"></script>
     <script src="./js/noise.js"></script>
     <script src="./js/media.js"></script>
-    <script src="/js/layout.js"></script>
+    <script src="/js/layout.js?v=2"></script>
     <script>
         const gongScroll = document.querySelector(".gong-scroll");
         const gongFrame = document.querySelector(".gong-frame");
         // const circleStart = 0.5; // 0 = immediately, 1 = at the end of the scroll section.
         const circleStart = 0.2; // 0 = immediately, 1 = at the end of the scroll section.
+
+        function fitGongTitles() {
+            const frameStyle = getComputedStyle(gongFrame);
+            const availableWidth = gongFrame.clientWidth
+                - parseFloat(frameStyle.paddingLeft)
+                - parseFloat(frameStyle.paddingRight);
+
+            document.querySelectorAll(".gong-title .spread").forEach(title => {
+                title.style.fontSize = "";
+                const naturalSize = parseFloat(getComputedStyle(title).fontSize);
+                title.style.fontSize = `${naturalSize * availableWidth / title.scrollWidth}px`;
+            });
+        }
 
         function updateGong() {
             const distance = gongScroll.offsetHeight - innerHeight;
@@ -256,6 +388,7 @@
 
             // gongFrame.style.setProperty("--gong-scale", 1 + Math.min(progress * 2, 1));
             gongFrame.style.setProperty("--dot-radius", `${dotProgress * 75}vmax`);
+            gongFrame.style.setProperty("--tagline-offset", `${(1 - dotProgress) * 35}vh`);
             const gongBounds = gongScroll.getBoundingClientRect();
             const headerY = document.querySelector("#header")?.getBoundingClientRect().height / 2 || 0;
             const radius = dotProgress * 0.75 * Math.max(innerWidth, innerHeight);
@@ -265,6 +398,9 @@
 
         addEventListener("scroll", updateGong, {passive: true});
         addEventListener("resize", updateGong);
+        addEventListener("resize", fitGongTitles);
+        document.fonts?.ready.then(fitGongTitles);
+        fitGongTitles();
         updateGong();
     </script>
 
