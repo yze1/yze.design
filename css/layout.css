@@ -157,7 +157,7 @@ section > .vertically-center {
 
 .spread {
     display: inline-block;
-    white-space: nowrap;
+    white-space: pre;
     transform-origin: left top;
 }
 

@@ -9,7 +9,11 @@ let y = 0;
 window.addEventListener("pointermove", e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursor.classList.toggle("over-red", Boolean(e.target.closest("section.red")));
+    const gongRadius = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gong-radius")) || 0;
+    const overGongRed = document.body.classList.contains("gong-active")
+        && Math.hypot(e.clientX - innerWidth / 2, e.clientY - innerHeight / 2) <= gongRadius;
+
+    cursor.classList.toggle("over-red", Boolean(e.target.closest(".red")) || overGongRed);
 });
 
 function animate() {

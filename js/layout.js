@@ -1,5 +1,7 @@
 function fitSpreadText() {
     document.querySelectorAll(".spread").forEach(element => {
+        if (element.closest(".gong-frame")) return;
+
         const container = element.parentElement;
 
         // Remove the previous calculated size.

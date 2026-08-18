@@ -1,5 +1,6 @@
 :root {
     --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    --red-text-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='203' height='203'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.8375 0 0 0 -.08375 0 .8375 0 0 -.08375 0 0 .8375 0 -.08375 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.06'/%3E%3C/svg%3E");
 }
 
 html.noise-on :is(
@@ -60,13 +61,41 @@ html.noise-on :is(section.red, div.red, .spacer) {
 }
 
 html.noise-on :is(section.black, div.black) {
-    /* --noise-opacity: 0.79; */
-    --noise-opacity: 0.09;
-    --noise-size: 203px;
-    --noise-contrast: 125%;
-    --noise-brightness: 67%;
+    --noise-opacity: 0.79;
+    --noise-size: 86px;
+    --noise-contrast: 210%;
+    --noise-brightness: 8%;
     --noise-blend: normal;
 }
 
-/* The red dot now carries the red surface texture itself. */
+html.noise-on :is(h1, h2, h3, h4, h5, p, a, span).red {
+    color: transparent !important;
+    overflow: visible;
+    text-shadow: 0 0 var(--red);
+    background-color: var(--red) !important;
+    background-image: var(--red-text-noise) !important;
+    background-size: 203px !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
+html.noise-on :is(h1, h2, h3, h4, h5).red {
+    padding-right: 0.04em;
+    padding-left: 0.04em;
+    margin-right: -0.04em;
+    margin-left: -0.04em;
+}
+
+html.noise-on .gong-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: var(--noise) repeat;
+    background-size: 203px;
+    filter: contrast(125%) brightness(67%);
+    opacity: 0.06;
+}
+
 html.noise-on .gong-circle-noise {display: none;}

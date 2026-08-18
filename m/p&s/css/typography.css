@@ -30,6 +30,7 @@ body {background-color: var(--white);}
 }
 #cursor.video-hover h4 {color: var(--red);}
 #cursor.over-red :is(h4, strong) {color: var(--black);}
+#cursor.over-red img {filter: brightness(0) invert(11%);}
 
 @font-face {font-family: 'Inter'; src: url('../assets/fonts/Inter-VariableFont_opsz\,wght.ttf') format('truetype'); font-weight: 100 900; font-style: normal; }
 @font-face {font-family: 'Cooper'; src: url('../assets/fonts/Cooper-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
@@ -42,8 +43,10 @@ body {background-color: var(--white);}
 
 h1, h2,
 h3.logo, h4.logo {
-    font-family: 'Inter', sans-serif; color: var(--black);
-    font-weight: 656; font-style: normal; line-height: normal;
+    font-family: 'Inter', sans-serif !important;
+    color: var(--black);
+    font-weight: 656 !important;
+    font-style: normal; line-height: normal;
 }
 h3, h4 {
     font-family: 'Inter', sans-serif; color: var(--black);
@@ -111,9 +114,18 @@ a, button {
     color: var(--red);
     text-decoration: none;
 }
-#header a:hover {
-    text-decoration: underline;
+#header h4.logo {
+    /* background-color: pink !important; */
+    font-family: 'Inter', sans-serif; color: var(--black) !important;
+    font-weight: 656; font-style: normal; line-height: normal !important;
 }
+#header a:hover {
+    text-decoration: none;
+}
+
+#header:has(+ .underlap):not(.over-red) .caption a:hover {color: var(--red);}
+#header:has(+ .underlap):not(.over-red) .logo a:hover {color: var(--white);}
+#header.over-red .header a:hover {color: var(--white) !important;}
 
 #header:has(+ .underlap) .header :is(p, a, button) {
     color: var(--white);
@@ -194,6 +206,22 @@ section.red, div.red, .spacer {
 }
 
 @media (min-width: 1025px) {
+    #footer .footer-socials {
+        align-self: start;
+    }
+
+    #footer .footer-address {
+        grid-column: span 8;
+        align-self: start;
+        justify-content: flex-start;
+    }
+
+    #footer .footer-address p {
+        margin: 0;
+        line-height: 1;
+        text-align: right;
+    }
+
     #footer .footer-logo {grid-column: span 9;}
     #footer .footer-logo h2 {margin-bottom: 0;}
     #footer .footer-nav {

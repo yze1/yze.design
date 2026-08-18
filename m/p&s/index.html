@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="/css/cursor.css">
     <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/noise.css">
+    <link rel="stylesheet" href="./css/typography.css?v=2">
+    <link rel="stylesheet" href="./css/noise.css?v=2">
     <link rel="stylesheet" href="./css/media.css">
     <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>
     <style>
@@ -67,13 +67,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: var(--inner-gap);
+            gap: calc(var(--spacing) * 0.75);
         }
 
-        .gong-title :is(h3, h4) {
+        .gong-title :is(h2, h3, h4, h5) {
             margin: 0;
             line-height: 1;
             color: inherit;
+        }
+
+        .gong-title h2 {
+            padding: 0.15em 0.08em;
+            margin: -0.15em -0.08em;
         }
 
         .gong-title strong {color: inherit;}
@@ -88,25 +93,58 @@
         .gong-tagline {
             position: absolute;
             z-index: 1;
-            top: 65%;
+            bottom: 0;
             left: 50%;
             width: calc(100% - var(--margin));
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: var(--black);
             transform: translate(-50%, var(--tagline-offset, 35vh));
             will-change: transform;
+            gap: var(--spacing);
         }
 
-        .gong-tagline :is(h2, h5) {color: inherit; text-align: center;}
+        .gong-tagline :is(h3, h5) {margin: 0; text-align: center;}
+        .gong-tagline h3 {
+            width: max-content;
+            padding-right: 0.04em;
+            padding-left: 0.04em;
+            margin-right: -0.04em;
+            margin-left: -0.04em;
+        }
+        .gong-tagline:not(.gong-tagline--blend) h3 {color: var(--red);}
+        .gong-tagline:not(.gong-tagline--blend) h5 {color: var(--white);}
+
+        .gong-tagline:not(.gong-tagline--blend) {
+            -webkit-mask-image: radial-gradient(
+                circle var(--dot-radius, 0) at 50% calc(100% - 50vh - var(--tagline-offset, 35vh)),
+                transparent 99%,
+                black 100%
+            );
+            mask-image: radial-gradient(
+                circle var(--dot-radius, 0) at 50% calc(100% - 50vh - var(--tagline-offset, 35vh)),
+                transparent 99%,
+                black 100%
+            );
+        }
+
+        .gong-tagline--blend {
+            color: var(--black);
+            clip-path: circle(var(--dot-radius, 0) at 50% calc(100% - 50vh - var(--tagline-offset, 35vh)));
+            will-change: clip-path, transform;
+        }
+
+        .gong-tagline--blend :is(h3, h5) {color: inherit;}
 
         .gong-tagline .spacer.center {
             margin: 0 auto var(--spacing);
             background-color: var(--black);
         }
 
+        .tagline-divider-placeholder {visibility: hidden;}
+
         .gong-circle-noise {
+            display: none;
             position: absolute;
             z-index: 2;
             inset: 0;
@@ -127,10 +165,68 @@
 
         .quarter-divider {
             grid-column: 1 / -1;
-            width: 25%;
+            width: 25% !important;
             margin-right: auto;
+            /* margin-bottom: 0 !important; */
+            margin-bottom: calc(var(--spacing) * 2) !important;
             margin-left: auto;
+            margin-top: var(--tagline-lift, 0px) !important;
         }
+
+        body.gong-active #header .header :is(a, button),
+        body.gong-active #cursor strong {
+            --gong-outer-colour: var(--red);
+            color: transparent !important;
+            background-image:
+                radial-gradient(
+                    circle var(--gong-radius, 0px) at 50vw 50vh,
+                    var(--black) 99%,
+                    transparent 100%
+                ),
+                var(--red-text-noise),
+                linear-gradient(var(--gong-outer-colour), var(--gong-outer-colour));
+            background-attachment: fixed;
+            background-size: auto, 203px, auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        body.gong-active #header .caption a {
+            --gong-outer-colour: var(--white);
+            background-image:
+                radial-gradient(
+                    circle var(--gong-radius, 0px) at 50vw 50vh,
+                    var(--black) 99%,
+                    transparent 100%
+                ),
+                linear-gradient(var(--white), var(--white));
+            background-size: auto;
+        }
+
+        body.gong-active #header .caption a:hover {
+            background-image:
+                radial-gradient(
+                    circle var(--gong-radius, 0px) at 50vw 50vh,
+                    var(--white) 99%,
+                    transparent 100%
+                ),
+                var(--red-text-noise),
+                linear-gradient(var(--red), var(--red));
+            background-size: auto, 203px, auto;
+        }
+
+        body.gong-active #header .logo a:hover {
+            background-image: linear-gradient(var(--white), var(--white));
+            background-size: auto;
+        }
+
+        body.gong-active #cursor.over-red strong {
+            color: var(--black) !important;
+            background: none;
+            -webkit-background-clip: border-box;
+            background-clip: border-box;
+        }
+
     </style>
 
     <style>
@@ -140,6 +236,8 @@
             width: min(500px, 70vw);
             aspect-ratio: 1;
             animation: rotate-twenty-years 30s linear infinite;
+            /* filter: drop-shadow(0 4px 12px rgb(0 0 0 / 0.3)); */
+            filter: drop-shadow(0 4px 12px rgb(0 0 0 / 0.8));
         }
 
         .twenty-years::before,
@@ -204,29 +302,33 @@
                 <h5 class="mono red caps">Welcome to</h5>
                 <div class="divider-mini"></div>
                 <!-- <h3 class="spread logo red">Pitch <strong>&</strong> Sync</h3> -->
-                 <h2 class="logo red spread">Pitch <strong>&</strong> Sync</h2>
+                 <h2 class="logo red spread">Pitch     <strong>&</strong>     Sync</h2>
             </div>
 
             <div class="gong-title gong-title--blend" aria-hidden="true">
                 <h5 class="mono caps">Welcome to</h5>
                 <div class="divider-mini"></div>
                 <!-- <h3 class="spread logo">Pitch <strong>&</strong> Sync</h3> -->
-                 <h2 class="logo spread">Pitch <strong>&</strong> Sync</h2>
+                 <h2 class="logo spread">Pitch     <strong>&</strong>     Sync</h2>
             </div>
 
             <div class="gong-tagline">
-                <h3 class="logo caps">A sound & music village stores</h3>
+                <h3 class="logo red caps spread">A sound & music village stores</h3>
                 <!-- <h4 class="mono">music supervision, composition,<br>sound design, audio post</h4> -->
                 <!-- <h5 class="mono">music supervision, composition,<br>sound design, audio post</h5> -->
                 <h5 class="mono caps">music supervision   *   composition   *   sound design   *   audio post</h5>
-                <!-- <div class="spacer center"></div> -->
+                <div class="spacer center quarter-divider tagline-divider-placeholder"></div>
+            </div>
+
+            <div class="gong-tagline gong-tagline--blend" aria-hidden="true">
+                <h3 class="logo caps spread">A sound & music village stores</h3>
+                <h5 class="mono caps">music supervision   *   composition   *   sound design   *   audio post</h5>
+                <div class="spacer center quarter-divider"></div>
             </div>
 
             <div class="gong-circle-noise" aria-hidden="true"></div>
         </div>
     </section>
-
-    <section class="red"><div class="spacer center quarter-divider"></div></section>
 
     <!-- <section class="compact">
         <div class="s12 bleed full">
@@ -347,9 +449,9 @@
         <div class="s3 t2 m2">
             <img class="gif" src="./assets/media/gifs/violin.gif" alt="Violin">
         </div>
-        <!-- <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
-        </div> -->
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gifs/buttons.gif" alt="Buttons"> <!-- PLACEHOLDER -->
+        </div>
 
         <!-- <div class="s3 t2 m2">
             <img class="gif" src="./assets/media/gif.svg">
@@ -373,11 +475,11 @@
 
     <div id="footer"></div>
 
-    <script src="./js/cursor.js?v=2"></script>
+    <script src="./js/cursor.js?v=3"></script>
     <script src="./js/partials.js?v=3"></script>
     <script src="./js/noise.js"></script>
     <script src="./js/media.js"></script>
-    <script src="/js/layout.js?v=2"></script>
+    <script src="/js/layout.js?v=4"></script>
     <script>
         const gongScroll = document.querySelector(".gong-scroll");
         const gongFrame = document.querySelector(".gong-frame");
@@ -385,16 +487,28 @@
         const circleStart = 0.2; // 0 = immediately, 1 = at the end of the scroll section.
 
         function fitGongTitles() {
-            const frameStyle = getComputedStyle(gongFrame);
-            const availableWidth = gongFrame.clientWidth
-                - parseFloat(frameStyle.paddingLeft)
-                - parseFloat(frameStyle.paddingRight);
+            gongFrame.style.setProperty("--tagline-lift", "0px");
 
-            document.querySelectorAll(".gong-title .spread").forEach(title => {
+            document.querySelectorAll(".gong-title .spread, .gong-tagline h3.spread").forEach(title => {
+                const container = title.parentElement;
+                const containerStyle = getComputedStyle(container);
+                const availableWidth = container.clientWidth
+                    - parseFloat(containerStyle.paddingLeft)
+                    - parseFloat(containerStyle.paddingRight);
+
                 title.style.fontSize = "";
                 const naturalSize = parseFloat(getComputedStyle(title).fontSize);
-                title.style.fontSize = `${naturalSize * availableWidth / title.scrollWidth}px`;
+                const fill = title.closest(".gong-tagline") ? 0.6 : 0.98;
+                title.style.fontSize = `${naturalSize * availableWidth * fill / title.scrollWidth}px`;
             });
+
+            const title = document.querySelector(".gong-title:not(.gong-title--blend)");
+            const tagline = document.querySelector(".gong-tagline:not(.gong-tagline--blend)");
+            const gap = gongFrame.clientHeight / 2
+                - title.offsetHeight / 2
+                - tagline.offsetHeight;
+
+            gongFrame.style.setProperty("--tagline-lift", `${Math.max(0, gap * 2 / 3)}px`);
         }
 
         function updateGong() {
@@ -403,12 +517,16 @@
             const dotProgress = Math.max(0, (progress - circleStart) / (1 - circleStart));
 
             // gongFrame.style.setProperty("--gong-scale", 1 + Math.min(progress * 2, 1));
-            gongFrame.style.setProperty("--dot-radius", `${dotProgress * 75}vmax`);
-            gongFrame.style.setProperty("--tagline-offset", `${(1 - dotProgress) * 35}vh`);
-            const gongBounds = gongScroll.getBoundingClientRect();
-            const headerY = document.querySelector("#header")?.getBoundingClientRect().height / 2 || 0;
             const radius = dotProgress * 0.75 * Math.max(innerWidth, innerHeight);
-            window.gongHeaderRed = gongBounds.bottom > 0 && radius >= Math.abs(innerHeight / 2 - headerY);
+            const gongActive = gongScroll.getBoundingClientRect().top <= 0
+                && gongScroll.getBoundingClientRect().bottom > 0;
+
+            gongFrame.style.setProperty("--dot-radius", `${radius}px`);
+            gongFrame.style.setProperty("--tagline-offset", `${(1 - dotProgress) * 35}vh`);
+            document.documentElement.style.setProperty("--gong-radius", `${radius}px`);
+            document.documentElement.style.setProperty("--dot-progress", dotProgress);
+            document.body.classList.toggle("gong-active", gongActive);
+            window.gongHeaderRed = false;
             window.updateHeaderColor?.();
         }
 

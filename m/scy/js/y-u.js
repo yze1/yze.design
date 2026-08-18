@@ -1,4 +1,4 @@
-fetch("/m/scy/data/y-u.json")
+fetch("/m/scy/data/y-u.json?v=2")
     .then(response => {
         if (!response.ok) throw new Error(`Could not load Youth-Unlocked events: ${response.status}`);
         return response.json();
@@ -24,11 +24,15 @@ fetch("/m/scy/data/y-u.json")
                     const title = document.createElement("h5");
                     const date = document.createElement("p");
                     const artist = document.createElement("p");
+                    const link = document.createElement("a");
                     card.className = "s6";
+                    link.className = "hob-event-link";
                     title.textContent = event.title;
                     date.textContent = new Date(`${event.date}T00:00:00`).toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric"}).toUpperCase();
                     artist.textContent = event.artist.toUpperCase();
-                    card.append(title, date, artist);
+                    link.href = event.url;
+                    link.textContent = "Learn More";
+                    card.append(title, date, artist, link);
                     section.append(card);
                 });
 
