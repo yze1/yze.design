@@ -1,4 +1,4 @@
-fetch("/m/scy/data/hob.json?v=3")
+fetch("/m/scy/data/hob.json?v=4")
     .then(response => {
         if (!response.ok) throw new Error(`Could not load House of Blossoming events: ${response.status}`);
         return response.json();
