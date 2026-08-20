@@ -5,7 +5,7 @@ function updateHeaderColor() {
     if (!header?.firstElementChild) return;
 
     const y = header.getBoundingClientRect().height / 2;
-    header.classList.toggle("over-red", Boolean(window.gongHeaderRed) || [...document.querySelectorAll("section.red")].some(section => {
+    header.classList.toggle("over-red", [...document.querySelectorAll("section.red")].some(section => {
         const bounds = section.getBoundingClientRect();
         return bounds.top <= y && bounds.bottom >= y;
     }));

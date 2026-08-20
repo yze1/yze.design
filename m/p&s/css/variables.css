@@ -1,15 +1,13 @@
 
 :root {
-    /* --text: #7f7f7f; */
-
-    /* --black: #1d1d1d; */
-    --black: #1D1D1D;
-    /* --white: #dedede; */
+    /* --black: #1D1D1D; */
+    --black: #1a1a1a;
     --white: #FAF9F6;
-    /* --red: #ff0000; */
     --red: #FF2E24;
-
+    --noise-debug: #00FFFF;
     --margin: 150px;
-    --columns: 12; --gutter: 25px; --spacing: 30px;
+    --columns: 12;
+    --gutter: 25px;
+    --spacing: 30px;
     --inner-gap: calc(var(--spacing) / 2);
 }

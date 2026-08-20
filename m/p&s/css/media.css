@@ -11,6 +11,47 @@ mux-player {
     --controls: none;
 }
 
+/* Mux player anniversary overlay */
+.holding-video {
+    position: relative;
+}
+
+.holding-video mux-player {filter: brightness(0.7);}
+
+.twenty-years-overlay {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+}
+
+.twenty-years {
+    position: relative;
+    display: block;
+    width: min(500px, 70vw);
+    aspect-ratio: 1;
+    animation: rotate-twenty-years 30s linear infinite;
+    filter: drop-shadow(0 4px 12px rgb(from var(--black) r g b / 0.8));
+}
+
+.twenty-years::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--red);
+    background-image: var(--red-text-noise);
+    background-size: 203px;
+    -webkit-mask: url("../assets/media/20y.svg") center / contain no-repeat;
+    mask: url("../assets/media/20y.svg") center / contain no-repeat;
+}
+
+@keyframes rotate-twenty-years {to {transform: rotate(360deg);}}
+@media (prefers-reduced-motion: reduce) {
+    .twenty-years {animation: none;}
+}
+
 .horizontal-gallery__track {
     display: flex;
     gap: var(--gutter);
@@ -48,7 +89,7 @@ mux-player {
 }
 
 .horizontal-gallery__meta p {
-    font-family: 'Azeret', sans-serif;
+    font-family: "JetBrains", monospace;
     font-size: 14px;
 }
 

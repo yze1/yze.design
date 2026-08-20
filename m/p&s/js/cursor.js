@@ -9,9 +9,12 @@ let y = 0;
 window.addEventListener("pointermove", e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    const gongRadius = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gong-radius")) || 0;
+    const rootStyle = getComputedStyle(document.documentElement);
+    const gongRadius = parseFloat(rootStyle.getPropertyValue("--gong-radius")) || 0;
+    const gongX = parseFloat(rootStyle.getPropertyValue("--gong-center-x")) || innerWidth / 2;
+    const gongY = parseFloat(rootStyle.getPropertyValue("--gong-center-y")) || innerHeight / 2;
     const overGongRed = document.body.classList.contains("gong-active")
-        && Math.hypot(e.clientX - innerWidth / 2, e.clientY - innerHeight / 2) <= gongRadius;
+        && Math.hypot(e.clientX - gongX, e.clientY - gongY) <= gongRadius;
 
     cursor.classList.toggle("over-red", Boolean(e.target.closest(".red")) || overGongRed);
 });

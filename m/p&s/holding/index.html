@@ -2,73 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png">
-    
-    <title>P&S</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <title>P&S</title>
 
     <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="/css/cursor.css">
-    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/noise.css">
-    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/media.css?v=2">
     <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>
     <style>
         .holding-header .header-row .caption a:not([href$="/contact/"]):not([href="#contact"]),
         .holding-header .mobile-menu a:not([href$="/contact/"]):not([href="#contact"]) {display: none;}
-
-        .twenty-years {
-            position: relative;
-            display: block;
-            width: min(500px, 70vw);
-            aspect-ratio: 1;
-            animation: rotate-twenty-years 30s linear infinite;
-            filter: drop-shadow(0 4px 12px rgb(0 0 0 / 0.3));
-        }
-
-        .twenty-years::before,
-        .twenty-years::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            -webkit-mask: url("../assets/media/20years.png") center / contain no-repeat;
-            mask: url("../assets/media/20years.png") center / contain no-repeat;
-        }
-
-        .twenty-years::before {background: var(--red);}
-
-        .twenty-years::after {
-            background: var(--noise) repeat;
-            background-size: 203px;
-            filter: contrast(125%) brightness(67%);
-            opacity: 0;
-        }
-
-        html.noise-on .twenty-years::after {opacity: 0.06;}
-
-        .holding-video {position: relative;}
-
-        .twenty-years-overlay {
-            position: absolute;
-            z-index: 1;
-            inset: 0;
-            display: grid;
-            place-items: center;
-            pointer-events: none;
-        }
-
-        @keyframes rotate-twenty-years {to {transform: rotate(360deg);}}
-
-        @media (prefers-reduced-motion: reduce) {
-            .twenty-years {animation: none;}
-        }
-
-        html, body {background-color: var(--black);}
     </style>
 </head>
-<body>
+<body class="noise-black-surface">
     <div id="cursor">
         <h4><strong>&</strong></h4>
     </div>
@@ -117,7 +66,7 @@
     <script src="../js/noise.js"></script>
     <script src="../js/contact.js"></script>
     <script src="../js/media.js"></script>
-    <script src="/js/layout.js"></script>
+    <script src="../js/layout.js"></script>
 
 </body>
 </html>

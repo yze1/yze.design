@@ -1,34 +1,62 @@
 :root {
     --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     --red-text-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='203' height='203'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.8375 0 0 0 -.08375 0 .8375 0 0 -.08375 0 0 .8375 0 -.08375 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.06'/%3E%3C/svg%3E");
+    --white-text-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='161' height='161'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='2 0 0 0 0 0 2 0 0 0 0 0 2 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.04'/%3E%3C/svg%3E");
+    --black-text-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='86'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.168 0 0 0 -.044 0 .168 0 0 -.044 0 0 .168 0 -.044 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.79'/%3E%3C/svg%3E");
+    --red-noise-opacity: 0.26;
 }
 
-html.noise-on :is(
+/* Coloured surfaces */
+body,
+:is(section, div).white,
+.horizontal-gallery__item {
+    --surface-noise-opacity: 0.04;
+    --surface-noise-size: 161px;
+    --surface-noise-contrast: 100%;
+    --surface-noise-brightness: 200%;
+}
+
+:is(section, div).red,
+.spacer,
+.spacer-mini {
+    --surface-noise-opacity: var(--red-noise-opacity);
+    --surface-noise-size: 203px;
+    --surface-noise-contrast: 125%;
+    --surface-noise-brightness: 67%;
+}
+
+body.noise-black-surface,
+:is(section, div).black {
+    --surface-noise-opacity: 0.79;
+    --surface-noise-size: 86px;
+    --surface-noise-contrast: 210%;
+    --surface-noise-brightness: 8%;
+}
+
+body.noise-black-surface {background: var(--black);}
+
+html.noise-on :is(section.red, div.red, .spacer, .spacer-mini) {
+    background-color: var(--red);
+    background-image: var(--red-text-noise);
+    background-size: 203px;
+}
+
+:where(html.noise-on) :where(
     body,
-    section.red,
-    div.red,
-    .spacer,
-    section.black,
-    div.black,
-    section.white,
-    div.white,
+    section.black, div.black,
+    section.white, div.white,
+    .spacer, .spacer-mini,
     .horizontal-gallery__item
-):not(.gong-dot) {
+) {
     position: relative;
     isolation: isolate;
 }
 
-html.noise-on .gong-dot {isolation: isolate;}
-
-html.noise-on :is(
+:where(html.noise-on) :where(
     body,
-    section.red,
-    div.red,
-    .spacer,
-    section.black,
-    div.black,
-    section.white,
-    div.white,
+    section.black, div.black,
+    section.white, div.white,
+    .spacer, .spacer-mini,
     .horizontal-gallery__item
 )::before {
     content: "";
@@ -38,64 +66,18 @@ html.noise-on :is(
     border-radius: inherit;
     pointer-events: none;
     background: var(--noise) repeat;
-    background-size: var(--noise-size);
-    mix-blend-mode: var(--noise-blend);
-    filter: contrast(var(--noise-contrast)) brightness(var(--noise-brightness));
-    opacity: var(--noise-opacity);
+    background-size: var(--surface-noise-size);
+    filter: contrast(var(--surface-noise-contrast)) brightness(var(--surface-noise-brightness));
+    opacity: var(--surface-noise-opacity);
 }
 
-html.noise-on :is(body, section.white, div.white, .horizontal-gallery__item) {
-    --noise-opacity: 0.04;
-    --noise-size: 203px;
-    --noise-contrast: 125%;
-    --noise-brightness: 67%;
-    --noise-blend: normal;
-}
-
-html.noise-on :is(section.red, div.red, .spacer) {
-    --noise-opacity: 0.06;
-    --noise-size: 203px;
-    --noise-contrast: 125%;
-    --noise-brightness: 67%;
-    --noise-blend: normal;
-}
-
-html.noise-on :is(section.black, div.black) {
-    --noise-opacity: 0.79;
-    --noise-size: 86px;
-    --noise-contrast: 210%;
-    --noise-brightness: 8%;
-    --noise-blend: normal;
-}
-
-html.noise-on :is(h1, h2, h3, h4, h5, p, a, span).red {
-    color: transparent !important;
+/* Coloured text */
+:where(html.noise-on) :where(h1, h2, h3, h4, h5, p, a, button, span, strong) {
+    color: transparent;
     overflow: visible;
-    text-shadow: 0 0 var(--red);
-    background-color: var(--red) !important;
-    background-image: var(--red-text-noise) !important;
-    background-size: 203px !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
+    background-color: var(--ink);
+    background-image: var(--text-noise);
+    background-size: var(--text-noise-size);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
-
-html.noise-on :is(h1, h2, h3, h4, h5).red {
-    padding-right: 0.04em;
-    padding-left: 0.04em;
-    margin-right: -0.04em;
-    margin-left: -0.04em;
-}
-
-html.noise-on .gong-dot::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    background: var(--noise) repeat;
-    background-size: 203px;
-    filter: contrast(125%) brightness(67%);
-    opacity: 0.06;
-}
-
-html.noise-on .gong-circle-noise {display: none;}

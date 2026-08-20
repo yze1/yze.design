@@ -1,4 +1,4 @@
-fetch("/m/scy/data/y-u.json?v=2")
+fetch("/m/scy/data/y-u.json?v=3")
     .then(response => {
         if (!response.ok) throw new Error(`Could not load Youth-Unlocked events: ${response.status}`);
         return response.json();

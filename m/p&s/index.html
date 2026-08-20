@@ -2,286 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png">
-    
-    <title>P&S</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <title>P&S</title>
     <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="/css/cursor.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css?v=2">
-    <link rel="stylesheet" href="./css/noise.css?v=2">
-    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/layout.css?v=3">
+    <link rel="stylesheet" href="./css/typography.css?v=7">
+    <link rel="stylesheet" href="./css/noise.css?v=7">
+    <link rel="stylesheet" href="./css/media.css?v=2">
+    <link rel="stylesheet" href="./css/landing.css?v=8">
     <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>
-    <style>
-        .gong-scroll {
-            position: relative;
-            height: 300vh;
-            padding: 0;
-            background: #000000;
-        }
-
-        .gong-frame {
-            grid-column: 1 / -1;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            background: #000000;
-        }
-
-        .gong-frame img {
-            width: calc(100% + var(--margin));
-            max-width: none;
-            height: 100%;
-            margin-left: calc(var(--margin) * -0.5);
-            object-fit: contain;
-            /* transform: scale(var(--gong-scale, 1)); */
-            mix-blend-mode: lighten;
-            will-change: transform;
-        }
-
-        .gong-dot {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: calc(var(--dot-radius, 0) * 2);
-            aspect-ratio: 1;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            will-change: width;
-        }
-
-        .gong-title {
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            left: 50%;
-            width: calc(100% - (var(--margin) * 2));
-            margin: 0;
-            text-align: center;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: calc(var(--spacing) * 0.75);
-        }
-
-        .gong-title :is(h2, h3, h4, h5) {
-            margin: 0;
-            line-height: 1;
-            color: inherit;
-        }
-
-        .gong-title h2 {
-            padding: 0.15em 0.08em;
-            margin: -0.15em -0.08em;
-        }
-
-        .gong-title strong {color: inherit;}
-        .gong-title .spread {width: max-content;}
-
-        .gong-title--blend {
-            color: var(--black);
-            clip-path: circle(var(--dot-radius, 0) at 50% 50%);
-            will-change: clip-path;
-        }
-
-        .gong-tagline {
-            position: absolute;
-            z-index: 1;
-            bottom: 0;
-            left: 50%;
-            width: calc(100% - var(--margin));
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform: translate(-50%, var(--tagline-offset, 35vh));
-            will-change: transform;
-            gap: var(--spacing);
-        }
-
-        .gong-tagline :is(h3, h5) {margin: 0; text-align: center;}
-        .gong-tagline h3 {
-            width: max-content;
-            padding-right: 0.04em;
-            padding-left: 0.04em;
-            margin-right: -0.04em;
-            margin-left: -0.04em;
-        }
-        .gong-tagline:not(.gong-tagline--blend) h3 {color: var(--red);}
-        .gong-tagline:not(.gong-tagline--blend) h5 {color: var(--white);}
-
-        .gong-tagline:not(.gong-tagline--blend) {
-            -webkit-mask-image: radial-gradient(
-                circle var(--dot-radius, 0) at 50% calc(100% - 50vh - var(--tagline-offset, 35vh)),
-                transparent 99%,
-                black 100%
-            );
-            mask-image: radial-gradient(
-                circle var(--dot-radius, 0) at 50% calc(100% - 50vh - var(--tagline-offset, 35vh)),
-                transparent 99%,
-                black 100%
-            );
-        }
-
-        .gong-tagline--blend {
-            color: var(--black);
-            clip-path: circle(var(--dot-radius, 0) at 50% calc(100% - 50vh - var(--tagline-offset, 35vh)));
-            will-change: clip-path, transform;
-        }
-
-        .gong-tagline--blend :is(h3, h5) {color: inherit;}
-
-        .gong-tagline .spacer.center {
-            margin: 0 auto var(--spacing);
-            background-color: var(--black);
-        }
-
-        .tagline-divider-placeholder {visibility: hidden;}
-
-        .gong-circle-noise {
-            display: none;
-            position: absolute;
-            z-index: 2;
-            inset: 0;
-            pointer-events: none;
-            background: var(--noise) repeat;
-            background-size: 200px 200px;
-            opacity: 0.15;
-            clip-path: circle(var(--dot-radius, 0) at 50% 50%);
-            will-change: clip-path;
-        }
-
-        img.gif {
-            display: block;
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        .quarter-divider {
-            grid-column: 1 / -1;
-            width: 25% !important;
-            margin-right: auto;
-            /* margin-bottom: 0 !important; */
-            margin-bottom: calc(var(--spacing) * 2) !important;
-            margin-left: auto;
-            margin-top: var(--tagline-lift, 0px) !important;
-        }
-
-        body.gong-active #header .header :is(a, button),
-        body.gong-active #cursor strong {
-            --gong-outer-colour: var(--red);
-            color: transparent !important;
-            background-image:
-                radial-gradient(
-                    circle var(--gong-radius, 0px) at 50vw 50vh,
-                    var(--black) 99%,
-                    transparent 100%
-                ),
-                var(--red-text-noise),
-                linear-gradient(var(--gong-outer-colour), var(--gong-outer-colour));
-            background-attachment: fixed;
-            background-size: auto, 203px, auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-
-        body.gong-active #header .caption a {
-            --gong-outer-colour: var(--white);
-            background-image:
-                radial-gradient(
-                    circle var(--gong-radius, 0px) at 50vw 50vh,
-                    var(--black) 99%,
-                    transparent 100%
-                ),
-                linear-gradient(var(--white), var(--white));
-            background-size: auto;
-        }
-
-        body.gong-active #header .caption a:hover {
-            background-image:
-                radial-gradient(
-                    circle var(--gong-radius, 0px) at 50vw 50vh,
-                    var(--white) 99%,
-                    transparent 100%
-                ),
-                var(--red-text-noise),
-                linear-gradient(var(--red), var(--red));
-            background-size: auto, 203px, auto;
-        }
-
-        body.gong-active #header .logo a:hover {
-            background-image: linear-gradient(var(--white), var(--white));
-            background-size: auto;
-        }
-
-        body.gong-active #cursor.over-red strong {
-            color: var(--black) !important;
-            background: none;
-            -webkit-background-clip: border-box;
-            background-clip: border-box;
-        }
-
-    </style>
-
-    <style>
-        .twenty-years {
-            position: relative;
-            display: block;
-            width: min(500px, 70vw);
-            aspect-ratio: 1;
-            animation: rotate-twenty-years 30s linear infinite;
-            /* filter: drop-shadow(0 4px 12px rgb(0 0 0 / 0.3)); */
-            filter: drop-shadow(0 4px 12px rgb(0 0 0 / 0.8));
-        }
-
-        .twenty-years::before,
-        .twenty-years::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            -webkit-mask: url("./assets/media/20years.png") center / contain no-repeat;
-            mask: url("./assets/media/20years.png") center / contain no-repeat;
-        }
-
-        .twenty-years::before {background: var(--red);}
-
-        .twenty-years::after {
-            background: var(--noise) repeat;
-            background-size: 203px;
-            filter: contrast(125%) brightness(67%);
-            opacity: 0;
-        }
-
-        html.noise-on .twenty-years::after {opacity: 0.06;}
-
-        .holding-video {position: relative;}
-
-        .twenty-years-overlay {
-            position: absolute;
-            z-index: 1;
-            inset: 0;
-            display: grid;
-            place-items: center;
-            pointer-events: none;
-        }
-
-        @keyframes rotate-twenty-years {to {transform: rotate(360deg);}}
-
-        @media (prefers-reduced-motion: reduce) {
-            .twenty-years {animation: none;}
-        }
-
-        html, body {background-color: var(--black);}
-    </style>
-
 </head>
-<body>
+<body class="noise-black-surface">
     <div id="cursor">
         <h4><strong>&</strong></h4>
     </div>
@@ -293,58 +25,20 @@
             <img src="./assets/media/record.gif" alt="Gong">
             <div class="gong-dot red" aria-hidden="true"></div>
 
-            <!-- <h2 class="gong-title red">Welcome to Pitch <strong>&</strong> Sync</h2>
-            <h2 class="gong-title gong-title--blend" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h2> -->
-            <!-- <h3 class="gong-title spread red logo">Welcome to Pitch <strong>&</strong> Sync</h3>
-            <h3 class="gong-title spread gong-title--blend logo" aria-hidden="true">Welcome to Pitch <strong>&</strong> Sync</h3> -->
-
             <div class="gong-title">
                 <h5 class="mono red caps">Welcome to</h5>
-                <div class="divider-mini"></div>
-                <!-- <h3 class="spread logo red">Pitch <strong>&</strong> Sync</h3> -->
-                 <h2 class="logo red spread">Pitch     <strong>&</strong>     Sync</h2>
-            </div>
-
-            <div class="gong-title gong-title--blend" aria-hidden="true">
-                <h5 class="mono caps">Welcome to</h5>
-                <div class="divider-mini"></div>
-                <!-- <h3 class="spread logo">Pitch <strong>&</strong> Sync</h3> -->
-                 <h2 class="logo spread">Pitch     <strong>&</strong>     Sync</h2>
+                <!-- <h2 class="logo red spread">Pitch   <strong>&</strong>   Sync</h2> -->
+                <h2 class="logo red spread">Pitch       <strong>&</strong>       Sync</h2>
             </div>
 
             <div class="gong-tagline">
                 <h3 class="logo red caps spread">A sound & music village stores</h3>
-                <!-- <h4 class="mono">music supervision, composition,<br>sound design, audio post</h4> -->
-                <!-- <h5 class="mono">music supervision, composition,<br>sound design, audio post</h5> -->
-                <h5 class="mono caps">music supervision   *   composition   *   sound design   *   audio post</h5>
-                <div class="spacer center quarter-divider tagline-divider-placeholder"></div>
-            </div>
-
-            <div class="gong-tagline gong-tagline--blend" aria-hidden="true">
-                <h3 class="logo caps spread">A sound & music village stores</h3>
-                <h5 class="mono caps">music supervision   *   composition   *   sound design   *   audio post</h5>
+                <h5 class="mono caps white">music supervision   *   composition   *   sound design   *   audio post</h5>
                 <div class="spacer center quarter-divider"></div>
             </div>
-
-            <div class="gong-circle-noise" aria-hidden="true"></div>
         </div>
     </section>
 
-    <!-- <section class="compact">
-        <div class="s12 bleed full">
-            <mux-player
-                playback-id="seRlvZoaZbGdWFzHkgx3GicgxrrjtUezC01yohrRoIHo"
-                metadata-video-title="reel"
-                autoplay="muted"
-                muted
-                loop
-                playsinline
-                no-muted-pref
-                aria-label="Play reel with sound"
-                tabindex="0"
-            ></mux-player>
-        </div>
-    </section> -->
     <section class="compact">
         <div class="s12 bleed full holding-video">
             <mux-player
@@ -409,7 +103,8 @@
     </section>
 
     <section class="black">
-        <div class="s12"><h2 class="red">Work</h2>
+        <div class="s12">
+            <h2 class="red-text">Work</h2>
             <div class="spacer"></div>
         </div>
 
@@ -450,93 +145,18 @@
             <img class="gif" src="./assets/media/gifs/violin.gif" alt="Violin">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/buttons.gif" alt="Buttons"> <!-- PLACEHOLDER -->
+            <img class="gif" src="./assets/media/gifs/buttons.gif" alt="Buttons">
         </div>
-
-        <!-- <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
-            <img class="gif" src="./assets/media/gif.svg">
-            <img class="gif" src="./assets/media/gif.svg">
-         </div>
-
-        <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
-            <img class="gif" src="./assets/media/gif.svg">
-            <img class="gif" src="./assets/media/gif.svg">
-         </div>
-
-        <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gif.svg">
-            <img class="gif" src="./assets/media/gif.svg">
-            <img class="gif" src="./assets/media/gif.svg">
-         </div> -->
     </section>
 
 
     <div id="footer"></div>
 
-    <script src="./js/cursor.js?v=3"></script>
-    <script src="./js/partials.js?v=3"></script>
-    <script src="./js/noise.js"></script>
-    <script src="./js/media.js"></script>
-    <script src="/js/layout.js?v=4"></script>
-    <script>
-        const gongScroll = document.querySelector(".gong-scroll");
-        const gongFrame = document.querySelector(".gong-frame");
-        // const circleStart = 0.5; // 0 = immediately, 1 = at the end of the scroll section.
-        const circleStart = 0.2; // 0 = immediately, 1 = at the end of the scroll section.
-
-        function fitGongTitles() {
-            gongFrame.style.setProperty("--tagline-lift", "0px");
-
-            document.querySelectorAll(".gong-title .spread, .gong-tagline h3.spread").forEach(title => {
-                const container = title.parentElement;
-                const containerStyle = getComputedStyle(container);
-                const availableWidth = container.clientWidth
-                    - parseFloat(containerStyle.paddingLeft)
-                    - parseFloat(containerStyle.paddingRight);
-
-                title.style.fontSize = "";
-                const naturalSize = parseFloat(getComputedStyle(title).fontSize);
-                const fill = title.closest(".gong-tagline") ? 0.6 : 0.98;
-                title.style.fontSize = `${naturalSize * availableWidth * fill / title.scrollWidth}px`;
-            });
-
-            const title = document.querySelector(".gong-title:not(.gong-title--blend)");
-            const tagline = document.querySelector(".gong-tagline:not(.gong-tagline--blend)");
-            const gap = gongFrame.clientHeight / 2
-                - title.offsetHeight / 2
-                - tagline.offsetHeight;
-
-            gongFrame.style.setProperty("--tagline-lift", `${Math.max(0, gap * 2 / 3)}px`);
-        }
-
-        function updateGong() {
-            const distance = gongScroll.offsetHeight - innerHeight;
-            const progress = Math.max(0, Math.min(1, -gongScroll.getBoundingClientRect().top / distance));
-            const dotProgress = Math.max(0, (progress - circleStart) / (1 - circleStart));
-
-            // gongFrame.style.setProperty("--gong-scale", 1 + Math.min(progress * 2, 1));
-            const radius = dotProgress * 0.75 * Math.max(innerWidth, innerHeight);
-            const gongActive = gongScroll.getBoundingClientRect().top <= 0
-                && gongScroll.getBoundingClientRect().bottom > 0;
-
-            gongFrame.style.setProperty("--dot-radius", `${radius}px`);
-            gongFrame.style.setProperty("--tagline-offset", `${(1 - dotProgress) * 35}vh`);
-            document.documentElement.style.setProperty("--gong-radius", `${radius}px`);
-            document.documentElement.style.setProperty("--dot-progress", dotProgress);
-            document.body.classList.toggle("gong-active", gongActive);
-            window.gongHeaderRed = false;
-            window.updateHeaderColor?.();
-        }
-
-        addEventListener("scroll", updateGong, {passive: true});
-        addEventListener("resize", updateGong);
-        addEventListener("resize", fitGongTitles);
-        document.fonts?.ready.then(fitGongTitles);
-        fitGongTitles();
-        updateGong();
-    </script>
+    <script src="./js/cursor.js?v=4"></script>
+    <script src="./js/partials.js?v=5"></script>
+    <script src="./js/noise.js?v=3"></script>
+    <script src="./js/layout.js?v=4"></script>
+    <script src="./js/gong.js?v=8"></script>
 
 </body>
 </html>

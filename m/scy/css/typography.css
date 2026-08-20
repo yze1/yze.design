@@ -176,6 +176,12 @@ a::after {content: ">";}
 
 .hob-event-link {text-decoration: none;}
 
+#hob-events img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+}
+
 
 .right {text-align: right; display: flex; justify-content: flex-end;}
 .social-links {align-items: flex-start; gap: 10px;}
