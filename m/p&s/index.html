@@ -6,11 +6,11 @@
     <link rel="icon" type="image/png" href="./assets/favicon.png">
     <title>P&S</title>
     <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./css/layout.css?v=3">
-    <link rel="stylesheet" href="./css/typography.css?v=9">
-    <link rel="stylesheet" href="./css/noise.css?v=8">
-    <link rel="stylesheet" href="./css/media.css?v=3">
-    <link rel="stylesheet" href="./css/landing.css?v=10">
+    <link rel="stylesheet" href="./css/layout.css?v=4">
+    <link rel="stylesheet" href="./css/typography.css?v=10">
+    <link rel="stylesheet" href="./css/noise.css?v=9">
+    <link rel="stylesheet" href="./css/media.css?v=7">
+    <link rel="stylesheet" href="./css/landing.css?v=15">
     <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>
 </head>
 <body class="noise-black-surface">
@@ -27,7 +27,6 @@
 
             <div class="gong-title">
                 <h5 class="mono red caps">Welcome to</h5>
-                <!-- <h2 class="logo red spread">Pitch   <strong>&</strong>   Sync</h2> -->
                 <h2 class="logo red spread">Pitch       <strong>&</strong>       Sync</h2>
             </div>
 
@@ -103,60 +102,70 @@
     </section>
 
     <section class="black">
-        <div class="s12">
-            <h2 class="red-text">Work</h2>
-            <div class="spacer"></div>
-        </div>
-
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/buttons.gif" alt="Buttons">
+            <img class="gif" src="./assets/media/gifs/posters/buttons.webp" data-animated-src="./assets/media/gifs/buttons.gif" alt="Buttons">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/dials.gif" alt="Dials">
+            <img class="gif" src="./assets/media/gifs/posters/dials.webp" data-animated-src="./assets/media/gifs/dials.gif" alt="Dials">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/keyboard.gif" alt="Keyboard">
+            <img class="gif" src="./assets/media/gifs/posters/keyboard.webp" data-animated-src="./assets/media/gifs/keyboard.gif" alt="Keyboard">
         </div>
 
         <div class="s3 t2 m2">
             <img class="gif" src="./assets/media/gifs/mic.png" alt="Microphone">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/pan.gif" alt="Panning">
+            <img class="gif" src="./assets/media/gifs/posters/pan.webp" data-animated-src="./assets/media/gifs/pan.gif" alt="Panning">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/paper.gif" alt="Paper">
-        </div>
-
-        <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/recording.gif" alt="Recording">
-        </div>
-        <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/rotate.gif" alt="Rotating">
-        </div>
-        <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/speakers.gif" alt="Speakers">
+            <img class="gif" src="./assets/media/gifs/posters/paper.webp" data-animated-src="./assets/media/gifs/paper.gif" alt="Paper">
         </div>
 
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/zoom.gif" alt="Zoom">
+            <img class="gif" src="./assets/media/gifs/posters/recording.webp" data-animated-src="./assets/media/gifs/recording.gif" alt="Recording">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/violin.gif" alt="Violin">
+            <img class="gif" src="./assets/media/gifs/posters/rotate.webp" data-animated-src="./assets/media/gifs/rotate.gif" alt="Rotating">
         </div>
         <div class="s3 t2 m2">
-            <img class="gif" src="./assets/media/gifs/buttons.gif" alt="Buttons">
+            <img class="gif" src="./assets/media/gifs/posters/speakers.webp" data-animated-src="./assets/media/gifs/speakers.gif" alt="Speakers">
+        </div>
+
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gifs/posters/zoom.webp" data-animated-src="./assets/media/gifs/zoom.gif" alt="Zoom">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gifs/posters/violin.webp" data-animated-src="./assets/media/gifs/violin.gif" alt="Violin">
+        </div>
+        <div class="s3 t2 m2">
+            <img class="gif" src="./assets/media/gifs/posters/buttons.webp" data-animated-src="./assets/media/gifs/buttons.gif" alt="Buttons">
         </div>
     </section>
 
+    <section class="black">
+        <div class="s12">
+            <h2 class="red-text">Work</h2>
+            <div class="spacer"></div>
+            <div class="portfolio-carousel" data-carousel>
+                <div class="portfolio-carousel__viewport">
+                    <div class="portfolio-carousel__stage"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact-partial"></div>
 
     <div id="footer"></div>
 
     <script src="./js/cursor.js?v=4"></script>
-    <script src="./js/partials.js?v=5"></script>
+    <script src="./js/partials.js?v=6"></script>
     <script src="./js/noise.js?v=3"></script>
     <script src="./js/layout.js?v=4"></script>
-    <script src="./js/gong.js?v=8"></script>
+    <script src="./js/gong.js?v=9"></script>
+    <script src="./js/contact.js?v=2"></script>
+    <script src="./js/media.js?v=4"></script>
 
 </body>
 </html>

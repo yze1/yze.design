@@ -5,7 +5,9 @@ const circleStart = 0.2;
 function updateGong() {
     const bounds = gongScroll.getBoundingClientRect();
     const frame = gongFrame.getBoundingClientRect();
-    const distance = gongScroll.offsetHeight - innerHeight;
+    const distance = matchMedia("(max-width: 768px)").matches
+        ? gongScroll.offsetHeight
+        : gongScroll.offsetHeight - innerHeight;
     const progress = Math.max(0, Math.min(1, -bounds.top / distance));
     const expansion = Math.max(0, (progress - circleStart) / (1 - circleStart));
     const radius = expansion * 0.75 * Math.max(innerWidth, innerHeight);

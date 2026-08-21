@@ -36,6 +36,12 @@ async function loadPartial(selector, filePath) {
 
         element.innerHTML = await response.text();
 
+        const partialUrl = new URL(filePath, projectRoot);
+
+        element.querySelectorAll("[src]").forEach(media => {
+            media.src = new URL(media.getAttribute("src"), partialUrl);
+        });
+
         element.querySelectorAll("[href^='/']").forEach(link => {
             link.href = new URL(link.getAttribute("href").slice(1), projectRoot);
         });

@@ -76,7 +76,7 @@ section > .row, .row div {flex-direction: row;}
     padding-left: var(--margin);
 }
 .bleed.full {padding-inline: 0;}
-.expansive {padding-inline: calc(var(--margin) * 0.5);}
+/* .expansive {padding-inline: calc(var(--margin) * 0.5);} */
 .spread {display: inline-block; white-space: pre; transform-origin: left top;}
 
 section.underlap {
@@ -101,12 +101,8 @@ iframe {display: block; width: 100%; border: 0;}
 }
 
 /* Responsive grid */
-@media (min-width: 1780px) {
-    :root {--margin: calc((100vw - 1480px) / 2);}
-}
-
 @media (max-width: 1024px) and (min-width: 769px) {
-    :root {--columns: 6; --margin: 100px; --gutter: 20px;}
+    :root {--columns: 6; --gutter: 20px;}
     :is(.s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12) {grid-column: span 6;}
     :is(.s6.end, .s10.center) {grid-column: span 6;}
     :is(.s3.end, .s4.end) {grid-column: span 2 / -1;}
@@ -118,7 +114,7 @@ iframe {display: block; width: 100%; border: 0;}
 }
 
 @media (max-width: 768px) {
-    :root {--columns: 4; --margin: 24px; --gutter: 20px;}
+    :root {--columns: 4; --gutter: 20px;}
     :is(.s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12) {grid-column: span 4;}
     :is(.s6.end, .s10.center) {grid-column: span 4;}
     :is(.s3.end, .s4.end, .s6.stubborn, .m2) {grid-column: span 2;}

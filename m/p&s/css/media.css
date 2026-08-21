@@ -1,9 +1,4 @@
-.horizontal-gallery {
-    display: block;
-    margin-right: calc(var(--margin) * -1);
-    overflow: hidden;
-}
-
+/* Mux player */
 mux-player {
     display: block;
     width: 100%;
@@ -11,13 +6,10 @@ mux-player {
     --controls: none;
 }
 
-/* Mux player anniversary overlay */
-.holding-video {
-    position: relative;
-}
-
+.holding-video {position: relative;}
 .holding-video mux-player {filter: brightness(0.7);}
 
+/* Anniversary overlay */
 .twenty-years-overlay {
     position: absolute;
     z-index: 1;
@@ -31,7 +23,8 @@ mux-player {
 .twenty-years {
     position: relative;
     display: block;
-    width: min(425px, 59.5%);
+    width: min(680px, 95.2%);
+    flex: 0 0 auto;
     aspect-ratio: 1;
     animation: rotate-twenty-years 30s linear infinite;
     filter: drop-shadow(0 4px 12px rgb(from var(--black) r g b / 0.8));
@@ -49,57 +42,92 @@ mux-player {
 }
 
 @keyframes rotate-twenty-years {to {transform: rotate(360deg);}}
-@media (prefers-reduced-motion: reduce) {
-    .twenty-years {animation: none;}
+
+/* Holding page */
+.holding-page .twenty-years-overlay {
+    flex-direction: column;
+    gap: var(--inner-gap);
+    text-align: center;
 }
 
-.horizontal-gallery__track {
+.holding-page .twenty-years {width: min(560px, 55%);}
+.holding-message {text-align: center;}
+.holding-message h3 {margin: 0; text-align: center;}
+.holding-message h3,
+.holding-ticker p {color: var(--red) !important; background: transparent !important;}
+
+.holding-ticker {
+    margin-inline: calc(var(--margin) * -1);
+    overflow: hidden;
+    padding-block: var(--spacing);
+    background: var(--black);
+}
+
+.holding-ticker__track {
     display: flex;
-    gap: var(--gutter);
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-x: contain;
-    scrollbar-width: none;
+    width: max-content;
+    animation: holding-ticker 45s linear infinite;
 }
 
-.horizontal-gallery__track::-webkit-scrollbar {
-    display: none;
+.holding-ticker p {padding-right: var(--gutter); white-space: nowrap;}
+
+@keyframes holding-ticker {to {transform: translateX(-50%);}}
+
+/* Portfolio carousel */
+.portfolio-carousel {
+    position: relative;
+    width: 100%;
+    touch-action: pan-y;
 }
 
-.horizontal-gallery__item {
-    flex: 0 0 clamp(260px, 38vw, 500px);
-    position: sticky;
-    left: var(--stack-left);
-    z-index: calc(var(--index) + 1);
-    background: var(--white);
+.portfolio-carousel__viewport {
+    position: relative;
+    height: min(70vh, 720px);
+    overflow: hidden;
 }
 
-.horizontal-gallery__item img {
-    display: block;
-    height: auto;
+.portfolio-carousel__stage {position: absolute; inset: 0; cursor: grab;}
+.portfolio-carousel__stage:active {cursor: grabbing;}
+
+.portfolio-carousel__card {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: min(32vw, 480px);
     aspect-ratio: 1;
+    transform: translate3d(0, -50%, 0);
+    will-change: transform;
+}
+
+.portfolio-carousel__media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.portfolio-carousel__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.horizontal-gallery__meta {
-    margin-top: calc(var(--spacing) / 2);
+.portfolio-carousel__caption {
+    position: absolute;
+    top: calc(100% + var(--inner-gap));
+    left: 0;
+    pointer-events: none;
 }
 
-.horizontal-gallery__item.is-stacked .horizontal-gallery__meta {
-    visibility: hidden;
-}
-
-.horizontal-gallery__meta p {
-    font-family: "JetBrains", monospace;
-    font-size: 14px;
-}
+.portfolio-carousel__caption p {margin: 0; font-size: 14px;}
 
 @media (max-width: 768px) {
-    .horizontal-gallery {
-        margin-right: calc(var(--margin) * -1);
-    }
+    mux-player {aspect-ratio: 1; --media-object-fit: cover;}
+    .portfolio-carousel__viewport {height: 70vw;}
+    .portfolio-carousel__card {width: 65vw;}
+}
 
-    .horizontal-gallery__item {
-        flex-basis: 75vw;
-    }
+@media (prefers-reduced-motion: reduce) {
+    .twenty-years, .holding-ticker__track {animation: none;}
 }

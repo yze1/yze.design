@@ -28,9 +28,12 @@ Pitch & Sync is a standalone website currently being developed inside `m/p&s/`. 
 - `css/noise.css` automatically applies the calibrated red, white, or black texture to coloured surfaces and text.
 - `css/media.css` contains shared media systems, including the Mux player and `20y.svg` anniversary overlay.
 - `css/landing.css` contains only landing-page presentation, including the single-layer gong transition.
+- `data/carousel.json` supplies the landing-page overlapping work carousel.
+- `js/media.js` builds the carousel and starts gallery GIFs only while hovered.
 - `js/layout.js` manages spread text, underlapping sections, matched dividers, footer sizing, and the London clock.
 - `js/gong.js` calculates the expanding circle radius and landing-page type layout.
 - `partials/header.html` and `partials/footer.html` provide site-wide navigation.
+- `partials/contact.html` provides the centred contact, mailing-list, and social-link section used by the landing and holding pages.
 
 Press `N` to outline every surface and text element receiving noise.
 

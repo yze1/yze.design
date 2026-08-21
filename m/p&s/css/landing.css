@@ -42,7 +42,7 @@
     z-index: 1;
     left: 50%;
     display: flex;
-    width: calc(100% - var(--margin));
+    width: calc(100% - var(--margin) - var(--margin));
     flex-direction: column;
     align-items: center;
     gap: var(--spacing);
@@ -101,16 +101,25 @@ body.gong-active #header strong {
 .gong-tagline h5 {--gong-colour: var(--white);}
 
 .gong-tagline .spacer.quarter-divider {
+    position: relative;
+    isolation: isolate;
     grid-column: 1 / -1;
     width: 25% !important;
     margin: var(--tagline-lift, 0px) auto calc(var(--spacing) * 2);
-    background-color: transparent;
-    background-image: var(--red-text-noise), radial-gradient(
-        circle at var(--gong-local-x, 50%) var(--gong-local-y, 50%),
-        var(--pure-black) 0 var(--gong-radius, 0px),
-        var(--red) var(--gong-radius, 0px)
-    );
-    background-size: 203px, auto;
+    background-color: var(--red);
+    background-image: var(--red-text-noise);
+    background-size: 203px;
+}
+
+.gong-tagline .spacer.quarter-divider::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--black);
+    background-image: var(--black-text-noise);
+    background-size: 86px;
+    -webkit-mask-image: radial-gradient(circle at var(--gong-local-x, 50%) var(--gong-local-y, 50%), #000 0 var(--gong-radius, 0px), transparent var(--gong-radius, 0px));
+    mask-image: radial-gradient(circle at var(--gong-local-x, 50%) var(--gong-local-y, 50%), #000 0 var(--gong-radius, 0px), transparent var(--gong-radius, 0px));
 }
 
 body.gong-active #header :is(a, button) {
@@ -135,3 +144,11 @@ body.gong-active #header .logo a:hover {--gong-colour: var(--white);}
 
 /* Landing media */
 img.gif {display: block; width: 100%; aspect-ratio: 1; object-fit: cover;}
+
+@media (max-width: 768px) {
+    .gong-scroll {height: auto; aspect-ratio: 1;}
+    .gong-frame {position: relative; top: auto; height: auto; aspect-ratio: 1;}
+    .gong-title, .gong-tagline {gap: var(--inner-gap);}
+    .gong-tagline h5 {font-size: 10px; line-height: 1.2;}
+    .gong-tagline .spacer.quarter-divider {margin-bottom: var(--spacing);}
+}

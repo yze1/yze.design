@@ -144,6 +144,11 @@ button.right {display: block; margin-right: 0; margin-left: auto;}
 #header.over-red :is(a, button) {--ink: var(--black); --text-noise: var(--black-text-noise); --text-noise-size: 86px;}
 #header.over-red :is(a, button):hover {--ink: var(--white); --text-noise: var(--white-text-noise); --text-noise-size: 161px;}
 
+.holding-header .header-row .caption a:not([href$="/contact/"]):not([href="#contact"]),
+.holding-header .mobile-menu a:not([href$="/contact/"]):not([href="#contact"]) {display: none;}
+#header .holding-header a {--ink: var(--red) !important; --text-noise: var(--red-text-noise) !important; --text-noise-size: 203px !important;}
+#header.over-red .holding-header a {--ink: var(--black) !important; --text-noise: var(--black-text-noise) !important; --text-noise-size: 86px !important;}
+
 /* Footer */
 #footer a {--ink: var(--white); --text-noise: var(--white-text-noise); --text-noise-size: 161px; text-decoration: none;}
 #footer a:hover {--ink: var(--red); --text-noise: var(--red-text-noise); --text-noise-size: 203px;}
@@ -190,6 +195,10 @@ img.logo, img.gif {background: rgb(from var(--white) r g b / 0.1);}
 
 ::selection {color: var(--black); background: var(--red);}
 .red ::selection {color: var(--red); background: var(--black);}
+
+.red :is(a) {
+    color: var(--black);
+}
 
 /* Responsive header and type */
 @media (max-width: 1024px) {

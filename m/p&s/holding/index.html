@@ -7,25 +7,18 @@
     <title>P&S</title>
 
     <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/noise.css">
-    <link rel="stylesheet" href="../css/media.css?v=3">
+    <link rel="stylesheet" href="../css/layout.css?v=4">
+    <link rel="stylesheet" href="../css/typography.css?v=10">
+    <link rel="stylesheet" href="../css/noise.css?v=9">
+    <link rel="stylesheet" href="../css/media.css?v=7">
     <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>
-    <style>
-        .holding-header .header-row .caption a:not([href$="/contact/"]):not([href="#contact"]),
-        .holding-header .mobile-menu a:not([href$="/contact/"]):not([href="#contact"]) {display: none;}
-    </style>
 </head>
-<body class="noise-black-surface">
+<body class="noise-black-surface holding-page">
     <div id="cursor">
         <h4><strong>&</strong></h4>
     </div>
 
     <div id="header" data-theme="holding-header"></div>
-
-
-
     <section class="compact underlap">
         <div class="s12 bleed full holding-video">
             <mux-player
@@ -41,20 +34,19 @@
             ></mux-player>
             <div class="twenty-years-overlay">
                 <span class="twenty-years" role="img" aria-label="20 Years of P&amp;S"></span>
+                <div class="holding-message">
+                    <h3 class="logo">New website coming soon</h3>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="red">
-        <div class="space"></div>
-        <div class="s12 center">
-            <h2>
-                New website
-                <br>coming soon
-            </h2>
-            <h4 class="mono caps">One short line on services</h4>
+    <div class="holding-ticker" aria-label="Services">
+        <div class="holding-ticker__track">
+            <p>AN INDEPENDENT MUSIC &amp; SOUND AGENCY * COMPOSITION * SEARCH &amp; LICENSING * AUDIO BRANDING * PRODUCTION MUSIC * AUDIO POST * SOUND DESIGN * VOICE OVER * MIXING * SOUND THERAPY</p>
+            <p aria-hidden="true">AN INDEPENDENT MUSIC &amp; SOUND AGENCY * COMPOSITION * SEARCH &amp; LICENSING * AUDIO BRANDING * PRODUCTION MUSIC * AUDIO POST * SOUND DESIGN * VOICE OVER * MIXING * SOUND THERAPY</p>
         </div>
-    </section>
+    </div>
 
     <div id="contact-partial"></div>
 
@@ -62,10 +54,10 @@
     <div id="footer"></div>
 
     <script src="../js/cursor.js?v=2"></script>
-    <script src="../js/partials.js?v=3"></script>
+    <script src="../js/partials.js?v=6"></script>
     <script src="../js/noise.js"></script>
     <script src="../js/contact.js"></script>
-    <script src="../js/media.js"></script>
+    <script src="../js/media.js?v=4"></script>
     <script src="../js/layout.js"></script>
 
 </body>

@@ -6,6 +6,9 @@
         gap: var(--inner-gap);
     }
 
+    #contact .contact-copy {align-items: center; text-align: center;}
+    #contact .contact-copy h5 {width: 100%; text-align: center; white-space: normal;}
+
     .mailing-list-form {
         display: flex;
         max-width: 100%;
@@ -48,17 +51,16 @@
 </style>
 
 <section id="contact" class="bleed red tall">
-    <div class="s10 center"><h2>Contact</h2></div>
-    <div class="s10 center"><h5 class="mono">For new projects:
-        <br><a href="mailto:Cat@pitchandsync.com">Cat@pitchandsync.com</a>
-        <br><br>
-        For composers/music submissions:
-        <br><a href="mailto:Info@pitchandsync.com">Info@pitchandsync.com</a>
-        <br><br>
-        Sign up to our mailing list:</h5>
+    <div class="s10 center contact-copy">
+        <h2>Contact</h2>
+        <h5 class="mono">For new projects:<br>
+            <a href="mailto:Cat@pitchandsync.com">Cat@pitchandsync.com</a><br><br>
+            For composers/music submissions:<br>
+            <a href="mailto:Info@pitchandsync.com">Info@pitchandsync.com</a><br><br>
+            Sign up to our mailing list:</h5>
         <form class="mailing-list-form">
             <label for="mailing-list-email" class="sr-only">Email address</label>
-            <input id="mailing-list-email" name="email" type="email" placeholder="Email input field" autocomplete="email" required>
+            <input id="mailing-list-email" name="email" type="email" placeholder="Email" autocomplete="email" required>
             <button type="submit" aria-label="Submit email address">
                 <img src="../assets/icons/play.svg" alt="">
             </button>

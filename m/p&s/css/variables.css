@@ -6,7 +6,9 @@
     --white: #FAF9F6;
     --red: #FF2E24;
     --noise-debug: #00FFFF;
-    --margin: 150px;
+
+    --margin: 75px;
+
     --columns: 12;
     --gutter: 25px;
     --spacing: 30px;
