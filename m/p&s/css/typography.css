@@ -17,7 +17,8 @@
     --text-noise-size: 86px;
 }
 
-:is(h1, h2, h3, h4, h5, p, a, button, span, strong).red {
+:is(h1, h2, h3, h4, h5, p, a, button, span, strong).red,
+.red-text {
     --ink: var(--red);
     --text-noise: var(--red-text-noise);
     --text-noise-size: 203px;
@@ -84,8 +85,6 @@ h4.scalable > strong {font-family: "CooperBold", serif;}
     white-space: pre-wrap;
 }
 
-.red-text { color: var(--red); }
-
 /* Type scale */
 h1 {font-size: 200px; line-height: 0.8; letter-spacing: -0.05em;}
 h2 {font-size: 128px; line-height: 0.8; letter-spacing: -0.05em;}
@@ -149,6 +148,7 @@ button.right {display: block; margin-right: 0; margin-left: auto;}
 #footer a {--ink: var(--white); --text-noise: var(--white-text-noise); --text-noise-size: 161px; text-decoration: none;}
 #footer a:hover {--ink: var(--red); --text-noise: var(--red-text-noise); --text-noise-size: 203px;}
 #footer .footer-socials a:hover .icon {background: var(--red);}
+#footer .footer-logo h2 {margin-bottom: 0; line-height: 0.8;}
 .spread-links {display: flex; width: 100%; justify-content: space-between;}
 
 @media (min-width: 1025px) {
@@ -157,7 +157,6 @@ button.right {display: block; margin-right: 0; margin-left: auto;}
     #footer .footer-address {grid-column: span 8; align-self: start; justify-content: flex-start;}
     #footer .footer-address p {margin: 0; line-height: 1; text-align: right;}
     #footer .footer-logo {grid-column: span 9;}
-    #footer .footer-logo h2 {margin-bottom: 0; line-height: 0.8;}
     #footer .footer-nav {grid-column: span 3; align-self: end; align-items: flex-end; justify-content: flex-end;}
     #footer .footer-nav .spread-links {flex-direction: column; align-items: flex-end;}
 }
@@ -210,7 +209,7 @@ img.logo, img.gif {background: rgb(from var(--white) r g b / 0.1);}
         align-self: start;
         justify-self: end;
     }
-    .menu-toggle {display: block; margin-left: auto; padding: 0; background: none; font-size: 28px;}
+    .menu-toggle {display: block; margin-left: auto; padding: 0; background: none; font-size: 28px; line-height: 1; white-space: nowrap;}
     .mobile-menu {
         display: none;
         position: absolute;

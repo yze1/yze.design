@@ -3,7 +3,7 @@
     position: relative;
     height: 300vh;
     padding: 0;
-    background: var(--black);
+    background: var(--pure-black);
 }
 
 .gong-frame {
@@ -13,7 +13,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: var(--black);
+    background: var(--pure-black);
 }
 
 .gong-frame > img {
@@ -61,6 +61,7 @@
 
 .gong-title :is(h2, h5),
 .gong-tagline :is(h3, h5) {
+    --ink: var(--black);
     margin-block: -0.15em;
     padding-block: 0.15em;
     color: transparent !important;
@@ -68,7 +69,7 @@
     background-color: transparent !important;
     background-image: var(--text-noise), radial-gradient(
         circle at var(--gong-local-x, 50%) var(--gong-local-y, 50%),
-        var(--black) 0 var(--gong-radius, 0px),
+        var(--ink) 0 var(--gong-radius, 0px),
         var(--gong-colour) var(--gong-radius, 0px)
     ) !important;
     background-attachment: local;
@@ -106,19 +107,20 @@ body.gong-active #header strong {
     background-color: transparent;
     background-image: var(--red-text-noise), radial-gradient(
         circle at var(--gong-local-x, 50%) var(--gong-local-y, 50%),
-        var(--black) 0 var(--gong-radius, 0px),
+        var(--pure-black) 0 var(--gong-radius, 0px),
         var(--red) var(--gong-radius, 0px)
     );
     background-size: 203px, auto;
 }
 
 body.gong-active #header :is(a, button) {
+    --ink: var(--black) !important;
     --gong-colour: var(--white);
     color: transparent !important;
     background-color: transparent !important;
     background-image: var(--text-noise), radial-gradient(
         circle at var(--gong-center-x, 50vw) var(--gong-center-y, 50vh),
-        var(--black) 0 var(--gong-radius, 0px),
+        var(--ink) 0 var(--gong-radius, 0px),
         var(--gong-colour) var(--gong-radius, 0px)
     ) !important;
     background-attachment: local, fixed;
@@ -133,4 +135,3 @@ body.gong-active #header .logo a:hover {--gong-colour: var(--white);}
 
 /* Landing media */
 img.gif {display: block; width: 100%; aspect-ratio: 1; object-fit: cover;}
-.holding-video mux-player {filter: brightness(0.9);}

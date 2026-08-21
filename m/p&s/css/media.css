@@ -22,15 +22,16 @@ mux-player {
     position: absolute;
     z-index: 1;
     inset: 0;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     pointer-events: none;
 }
 
 .twenty-years {
     position: relative;
     display: block;
-    width: min(500px, 70vw);
+    width: min(425px, 59.5%);
     aspect-ratio: 1;
     animation: rotate-twenty-years 30s linear infinite;
     filter: drop-shadow(0 4px 12px rgb(from var(--black) r g b / 0.8));

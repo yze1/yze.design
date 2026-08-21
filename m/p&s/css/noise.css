@@ -16,15 +16,6 @@ body,
     --surface-noise-brightness: 200%;
 }
 
-:is(section, div).red,
-.spacer,
-.spacer-mini {
-    --surface-noise-opacity: var(--red-noise-opacity);
-    --surface-noise-size: 203px;
-    --surface-noise-contrast: 125%;
-    --surface-noise-brightness: 67%;
-}
-
 body.noise-black-surface,
 :is(section, div).black {
     --surface-noise-opacity: 0.79;
@@ -45,7 +36,6 @@ html.noise-on :is(section.red, div.red, .spacer, .spacer-mini) {
     body,
     section.black, div.black,
     section.white, div.white,
-    .spacer, .spacer-mini,
     .horizontal-gallery__item
 ) {
     position: relative;
@@ -56,7 +46,6 @@ html.noise-on :is(section.red, div.red, .spacer, .spacer-mini) {
     body,
     section.black, div.black,
     section.white, div.white,
-    .spacer, .spacer-mini,
     .horizontal-gallery__item
 )::before {
     content: "";
