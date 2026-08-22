@@ -14,7 +14,7 @@ function updateLayout() {
         }
     });
 
-    document.querySelectorAll(".spacer, .spacer-mini").forEach(spacer => {
+    document.querySelectorAll(".spacer:not(.quarter-divider), .spacer-mini").forEach(spacer => {
         if (spacer.previousElementSibling) {
             spacer.style.width = `${spacer.previousElementSibling.getBoundingClientRect().width}px`;
         }
