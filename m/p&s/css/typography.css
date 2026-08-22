@@ -1,39 +1,33 @@
 /* Colour context */
 :root {
     --ink: var(--black);
-    --text-noise: var(--black-text-noise);
-    --text-noise-size: 86px;
+    --text-noise: var(--black-noise);
 }
 
 :is(section, div).black {
     --ink: var(--white);
-    --text-noise: var(--white-text-noise);
-    --text-noise-size: 161px;
+    --text-noise: var(--white-noise);
 }
 
 :is(section, div).red {
     --ink: var(--black);
-    --text-noise: var(--black-text-noise);
-    --text-noise-size: 86px;
+    --text-noise: var(--black-noise);
 }
 
 :is(h1, h2, h3, h4, h5, p, a, button, span, strong).red,
 .red-text {
     --ink: var(--red);
-    --text-noise: var(--red-text-noise);
-    --text-noise-size: 203px;
+    --text-noise: var(--red-noise);
 }
 
 :is(h1, h2, h3, h4, h5, p, a, button, span, strong).white {
     --ink: var(--white);
-    --text-noise: var(--white-text-noise);
-    --text-noise-size: 161px;
+    --text-noise: var(--white-noise);
 }
 
 :is(h1, h2, h3, h4, h5, p, a, button, span, strong).black {
     --ink: var(--black);
-    --text-noise: var(--black-text-noise);
-    --text-noise-size: 86px;
+    --text-noise: var(--black-noise);
 }
 
 html {background: var(--black);}
@@ -51,8 +45,8 @@ body {background: var(--white); cursor: none; overscroll-behavior-y: none;}
 }
 #cursor h4 {margin: 0; line-height: 1; white-space: nowrap;}
 #cursor img {display: block; width: 40px; height: 40px;}
-#cursor strong, #cursor.video-hover h4 {--ink: var(--red);}
-#cursor.over-red :is(h4, strong) {--ink: var(--black);}
+#cursor strong, #cursor.video-hover h4 {--ink: var(--red); --text-noise: var(--red-noise);}
+#cursor.over-red :is(h4, strong) {--ink: var(--black); --text-noise: var(--black-noise);}
 #cursor.over-red img {filter: brightness(0) invert(11%);}
 
 /* Fonts */
@@ -101,8 +95,7 @@ h1:has(strong) {line-height: 0;}
 a, button {
     font-family: "JetBrains", monospace;
     --ink: var(--red);
-    --text-noise: var(--red-text-noise);
-    --text-noise-size: 203px;
+    --text-noise: var(--red-noise);
 }
 a {text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px;}
 button {
@@ -137,21 +130,21 @@ button.right {display: block; margin-right: 0; margin-left: auto;}
 
 #header a {font-family: "GeistMono", monospace; text-decoration: none;}
 #header .caption {text-transform: uppercase;}
-#header:has(+ .underlap) .caption a {--ink: var(--white); --text-noise: var(--white-text-noise); --text-noise-size: 161px;}
-#header:has(+ .underlap) .logo a {--ink: var(--red); --text-noise: var(--red-text-noise); --text-noise-size: 203px;}
-#header:has(+ .underlap) .caption a:hover {--ink: var(--red); --text-noise: var(--red-text-noise); --text-noise-size: 203px;}
-#header:has(+ .underlap) .logo a:hover {--ink: var(--white); --text-noise: var(--white-text-noise); --text-noise-size: 161px;}
-#header.over-red :is(a, button) {--ink: var(--black); --text-noise: var(--black-text-noise); --text-noise-size: 86px;}
-#header.over-red :is(a, button):hover {--ink: var(--white); --text-noise: var(--white-text-noise); --text-noise-size: 161px;}
+#header:has(+ .underlap) .caption a {--ink: var(--white); --text-noise: var(--white-noise);}
+#header:has(+ .underlap) .logo a {--ink: var(--red); --text-noise: var(--red-noise);}
+#header:has(+ .underlap) .caption a:hover {--ink: var(--red); --text-noise: var(--red-noise);}
+#header:has(+ .underlap) .logo a:hover {--ink: var(--white); --text-noise: var(--white-noise);}
+#header.over-red :is(a, button) {--ink: var(--black); --text-noise: var(--black-noise);}
+#header.over-red :is(a, button):hover {--ink: var(--white); --text-noise: var(--white-noise);}
 
 .holding-header .header-row .caption a:not([href$="/contact/"]):not([href="#contact"]),
 .holding-header .mobile-menu a:not([href$="/contact/"]):not([href="#contact"]) {display: none;}
-#header .holding-header a {--ink: var(--red) !important; --text-noise: var(--red-text-noise) !important; --text-noise-size: 203px !important;}
-#header.over-red .holding-header a {--ink: var(--black) !important; --text-noise: var(--black-text-noise) !important; --text-noise-size: 86px !important;}
+#header .holding-header a {--ink: var(--red) !important; --text-noise: var(--red-noise) !important;}
+#header.over-red .holding-header a {--ink: var(--black) !important; --text-noise: var(--black-noise) !important;}
 
 /* Footer */
-#footer a {--ink: var(--white); --text-noise: var(--white-text-noise); --text-noise-size: 161px; text-decoration: none;}
-#footer a:hover {--ink: var(--red); --text-noise: var(--red-text-noise); --text-noise-size: 203px;}
+#footer a {--ink: var(--white); --text-noise: var(--white-noise); text-decoration: none;}
+#footer a:hover {--ink: var(--red); --text-noise: var(--red-noise);}
 #footer .footer-socials a:hover .icon {background: var(--red);}
 #footer .footer-logo h2 {margin-bottom: 0; line-height: 0.8;}
 .spread-links {display: flex; width: 100%; justify-content: space-between;}
@@ -196,9 +189,7 @@ img.logo, img.gif {background: rgb(from var(--white) r g b / 0.1);}
 ::selection {color: var(--black); background: var(--red);}
 .red ::selection {color: var(--red); background: var(--black);}
 
-.red :is(a) {
-    color: var(--black);
-}
+.red a {--ink: var(--black); --text-noise: var(--black-noise);}
 
 /* Responsive header and type */
 @media (max-width: 1024px) {

@@ -1,71 +1,41 @@
 :root {
-    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    --red-text-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='203' height='203'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.8375 0 0 0 -.08375 0 .8375 0 0 -.08375 0 0 .8375 0 -.08375 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.12'/%3E%3C/svg%3E");
-    --white-text-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='161' height='161'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='2 0 0 0 0 0 2 0 0 0 0 0 2 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.04'/%3E%3C/svg%3E");
-    --black-text-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='86'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.168 0 0 0 -.044 0 .168 0 0 -.044 0 0 .168 0 -.044 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.79'/%3E%3C/svg%3E");
+    --red-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='203' height='203'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' type='saturate' values='0' result='gray'/%3E%3CfeComponentTransfer in='gray'%3E%3CfeFuncR type='linear' slope='1.8' intercept='-.4'/%3E%3CfeFuncG type='linear' slope='1.8' intercept='-.4'/%3E%3CfeFuncB type='linear' slope='1.8' intercept='-.4'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.25'/%3E%3C/svg%3E");
+    --white-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='161' height='161'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='2 0 0 0 0 0 2 0 0 0 0 0 2 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.08'/%3E%3C/svg%3E");
+    --black-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='86'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.168 0 0 0 -.044 0 .168 0 0 -.044 0 0 .168 0 -.044 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.9'/%3E%3C/svg%3E");
 }
 
-/* Coloured surfaces */
-body,
-:is(section, div).white,
-.horizontal-gallery__item {
-    --surface-noise-opacity: 0.04;
-    --surface-noise-size: 161px;
-    --surface-noise-contrast: 100%;
-    --surface-noise-brightness: 200%;
-}
-
-body.noise-black-surface,
-:is(section, div).black {
-    --surface-noise-opacity: 0.79;
-    --surface-noise-size: 86px;
-    --surface-noise-contrast: 210%;
-    --surface-noise-brightness: 8%;
-}
-
-body.noise-black-surface {background: var(--black);}
-
-html.noise-on :is(section.red, div.red, .spacer, .spacer-mini) {
+/* Coloured elements */
+html.noise-on :where(.red, .red-text, .spacer, .spacer-mini) {
     background-color: var(--red);
-    background-image: var(--red-text-noise);
-    background-size: 203px;
+    background-image: var(--red-noise);
 }
 
-:where(html.noise-on) :where(
-    body,
-    section.black, div.black,
-    section.white, div.white,
-    .horizontal-gallery__item
-) {
-    position: relative;
-    isolation: isolate;
+html.noise-on :where(.white, body, .horizontal-gallery__item) {
+    background-color: var(--white);
+    background-image: var(--white-noise);
 }
 
-:where(html.noise-on) :where(
-    body,
-    section.black, div.black,
-    section.white, div.white,
-    .horizontal-gallery__item
-)::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    background: var(--noise) repeat;
-    background-size: var(--surface-noise-size);
-    filter: contrast(var(--surface-noise-contrast)) brightness(var(--surface-noise-brightness));
-    opacity: var(--surface-noise-opacity);
+html.noise-on :where(.black, body.noise-black-surface) {
+    background-color: var(--black);
+    background-image: var(--black-noise);
+}
+
+html.noise-on .red :is(.spacer, .spacer-mini) {
+    background-color: var(--black);
+    background-image: var(--black-noise);
 }
 
 /* Coloured text */
-:where(html.noise-on) :where(h1, h2, h3, h4, h5, p, a, button, span, strong) {
+html.noise-on :where(h1, h2, h3, h4, h5, p, a, button, span, strong) {
     color: transparent;
     overflow: visible;
     background-color: var(--ink);
     background-image: var(--text-noise);
-    background-size: var(--text-noise-size);
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+html.noise-on :where(h1, h2, h3, h4, h5, p, a, span, strong) {
+    margin-inline: -0.06em;
+    padding-inline: 0.06em;
 }

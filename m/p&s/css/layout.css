@@ -39,7 +39,10 @@ section > :is(.s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12) {
     gap: var(--inner-gap);
 }
 
-#header {position: relative; z-index: 10;}
+#header {
+    padding-top: calc(var(--spacing) * 0.5);
+    position: relative;
+    z-index: 10;}
 #footer {margin-top: auto;}
 #footer > .black {padding-block: calc(var(--spacing) * 2);}
 

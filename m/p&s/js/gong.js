@@ -1,14 +1,18 @@
 const gongScroll = document.querySelector(".gong-scroll");
 const gongFrame = document.querySelector(".gong-frame");
 const circleStart = 0.2;
+const mobileGong = matchMedia("(max-width: 768px)");
+let mobileProgress = 0;
+let mobileGongComplete = false;
+let touchY = 0;
 
 function updateGong() {
     const bounds = gongScroll.getBoundingClientRect();
     const frame = gongFrame.getBoundingClientRect();
-    const distance = matchMedia("(max-width: 768px)").matches
-        ? gongScroll.offsetHeight
-        : gongScroll.offsetHeight - innerHeight;
-    const progress = Math.max(0, Math.min(1, -bounds.top / distance));
+    const distance = gongScroll.offsetHeight - innerHeight;
+    const progress = mobileGong.matches
+        ? mobileProgress
+        : Math.max(0, Math.min(1, -bounds.top / distance));
     const expansion = Math.max(0, (progress - circleStart) / (1 - circleStart));
     const radius = expansion * 0.75 * Math.max(innerWidth, innerHeight);
 
@@ -54,6 +58,23 @@ function fitGong() {
     gongFrame.style.setProperty("--gong-content-shift", `${frame.top + frame.height / 2 - contentMiddle}px`);
     updateGong();
 }
+
+function consumeMobileScroll(delta, event) {
+    if (!mobileGong.matches || mobileGongComplete || delta <= 0 && mobileProgress === 0) return;
+
+    event.preventDefault();
+    mobileProgress = Math.max(0, Math.min(1, mobileProgress + delta / (innerHeight * 2)));
+    mobileGongComplete = mobileProgress === 1;
+    updateGong();
+}
+
+addEventListener("wheel", event => consumeMobileScroll(event.deltaY, event), {passive: false});
+addEventListener("touchstart", event => touchY = event.touches[0].clientY, {passive: true});
+addEventListener("touchmove", event => {
+    const nextY = event.touches[0].clientY;
+    consumeMobileScroll(touchY - nextY, event);
+    touchY = nextY;
+}, {passive: false});
 
 addEventListener("scroll", updateGong, {passive: true});
 addEventListener("resize", fitGong);

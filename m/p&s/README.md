@@ -29,7 +29,8 @@ Pitch & Sync is a standalone website currently being developed inside `m/p&s/`. 
 - `css/media.css` contains shared media systems, including the Mux player and `20y.svg` anniversary overlay.
 - `css/landing.css` contains only landing-page presentation, including the single-layer gong transition.
 - `data/carousel.json` supplies the landing-page overlapping work carousel.
-- `js/media.js` builds the carousel and starts gallery GIFs only while hovered.
+- `js/media.js` starts gallery GIFs only while hovered.
+- `js/carousel.js` builds the JSON-driven, scroll-overlap work carousel.
 - `js/layout.js` manages spread text, underlapping sections, matched dividers, footer sizing, and the London clock.
 - `js/gong.js` calculates the expanding circle radius and landing-page type layout.
 - `partials/header.html` and `partials/footer.html` provide site-wide navigation.

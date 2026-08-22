@@ -17,8 +17,8 @@ fetch(projectsUrl("data/projects.json"), { cache: "no-store" })
                         <img src="${projectsUrl(project.thumbnail)}" alt="${project.title}">
                     </a>
                     <div class="metadata">
-                        <h4>${project.title}</h4>
-                        <p>${project.year}</p>
+                        <h4 class="logo">${project.title}</h4>
+                        <p class="mono">${project.year}</p>
                     </div>
                     <p>${project.client}</p>
                 </article>

@@ -35,8 +35,7 @@ mux-player {
     position: absolute;
     inset: 0;
     background-color: var(--red);
-    background-image: var(--red-text-noise);
-    background-size: 203px;
+    background-image: var(--red-noise);
     -webkit-mask: url("../assets/media/20y.svg") center / contain no-repeat;
     mask: url("../assets/media/20y.svg") center / contain no-repeat;
 }
@@ -50,7 +49,6 @@ mux-player {
     text-align: center;
 }
 
-.holding-page .twenty-years {width: min(560px, 55%);}
 .holding-message {text-align: center;}
 .holding-message h3 {margin: 0; text-align: center;}
 .holding-message h3,
@@ -77,39 +75,29 @@ mux-player {
 .portfolio-carousel {
     position: relative;
     width: 100%;
-    touch-action: pan-y;
 }
 
 .portfolio-carousel__viewport {
-    position: relative;
-    height: min(70vh, 720px);
+    position: sticky;
+    top: 0;
+    height: 100vh;
     overflow: hidden;
 }
 
-.portfolio-carousel__stage {position: absolute; inset: 0; cursor: grab;}
-.portfolio-carousel__stage:active {cursor: grabbing;}
+.portfolio-carousel__stage {position: absolute; inset: 0;}
 
 .portfolio-carousel__card {
     position: absolute;
     top: 50%;
     left: 0;
     width: min(32vw, 480px);
-    aspect-ratio: 1;
-    transform: translate3d(0, -50%, 0);
-    will-change: transform;
+    transform: translate3d(var(--x, 0), -50%, 0);
 }
 
-.portfolio-carousel__media {
+.portfolio-carousel__card img {
     display: block;
     width: 100%;
     aspect-ratio: 1;
-    overflow: hidden;
-}
-
-.portfolio-carousel__media img {
-    display: block;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -117,14 +105,15 @@ mux-player {
     position: absolute;
     top: calc(100% + var(--inner-gap));
     left: 0;
+    opacity: 0;
     pointer-events: none;
+    transition: opacity 0.2s linear;
 }
 
 .portfolio-carousel__caption p {margin: 0; font-size: 14px;}
 
 @media (max-width: 768px) {
     mux-player {aspect-ratio: 1; --media-object-fit: cover;}
-    .portfolio-carousel__viewport {height: 70vw;}
     .portfolio-carousel__card {width: 65vw;}
 }
 

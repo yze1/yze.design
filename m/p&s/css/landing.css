@@ -73,7 +73,7 @@
         var(--gong-colour) var(--gong-radius, 0px)
     ) !important;
     background-attachment: local;
-    background-size: var(--text-noise-size), auto !important;
+    background-size: auto !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
 }
@@ -107,8 +107,7 @@ body.gong-active #header strong {
     width: 25% !important;
     margin: var(--tagline-lift, 0px) auto calc(var(--spacing) * 2);
     background-color: var(--red);
-    background-image: var(--red-text-noise);
-    background-size: 203px;
+    background-image: var(--red-noise);
 }
 
 .gong-tagline .spacer.quarter-divider::before {
@@ -116,8 +115,7 @@ body.gong-active #header strong {
     position: absolute;
     inset: 0;
     background-color: var(--black);
-    background-image: var(--black-text-noise);
-    background-size: 86px;
+    background-image: var(--black-noise);
     -webkit-mask-image: radial-gradient(circle at var(--gong-local-x, 50%) var(--gong-local-y, 50%), #000 0 var(--gong-radius, 0px), transparent var(--gong-radius, 0px));
     mask-image: radial-gradient(circle at var(--gong-local-x, 50%) var(--gong-local-y, 50%), #000 0 var(--gong-radius, 0px), transparent var(--gong-radius, 0px));
 }
@@ -133,7 +131,7 @@ body.gong-active #header :is(a, button) {
         var(--gong-colour) var(--gong-radius, 0px)
     ) !important;
     background-attachment: local, fixed;
-    background-size: var(--text-noise-size), auto !important;
+    background-size: auto !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
 }
