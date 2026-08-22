@@ -117,7 +117,7 @@ iframe {display: block; width: 100%; border: 0;}
 }
 
 @media (max-width: 768px) {
-    :root {--columns: 4; --gutter: 20px;}
+    :root {--margin: 25px; --columns: 4; --gutter: 20px;}
     :is(.s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12) {grid-column: span 4;}
     :is(.s6.end, .s10.center) {grid-column: span 4;}
     :is(.s3.end, .s4.end, .s6.stubborn, .m2) {grid-column: span 2;}

@@ -63,7 +63,7 @@ function consumeMobileScroll(delta, event) {
     if (!mobileGong.matches || mobileGongComplete || delta <= 0 && mobileProgress === 0) return;
 
     event.preventDefault();
-    mobileProgress = Math.max(0, Math.min(1, mobileProgress + delta / (innerHeight * 2)));
+    mobileProgress = Math.max(0, Math.min(1, mobileProgress + delta / innerHeight));
     mobileGongComplete = mobileProgress === 1;
     updateGong();
 }

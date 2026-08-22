@@ -50,8 +50,7 @@ mux-player {
 }
 
 .holding-message {text-align: center;}
-.holding-message h3 {margin: 0; text-align: center;}
-.holding-message h3,
+.holding-message h3 {--ink: var(--red); --text-noise: var(--red-noise); margin: 0; text-align: center;}
 .holding-ticker p {color: var(--red) !important; background: transparent !important;}
 
 .holding-ticker {
@@ -114,6 +113,8 @@ mux-player {
 
 @media (max-width: 768px) {
     mux-player {aspect-ratio: 1; --media-object-fit: cover;}
+    .holding-page .twenty-years-overlay {gap: var(--spacing);}
+    .holding-page .twenty-years {width: 55%;}
     .portfolio-carousel__card {width: 65vw;}
 }
 

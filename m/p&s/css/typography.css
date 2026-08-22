@@ -226,5 +226,11 @@ img.logo, img.gif {background: rgb(from var(--white) r g b / 0.1);}
 
 @media (max-width: 768px) {
     .header {padding-top: calc(var(--inner-gap) / 2);}
+    #footer .footer-socials,
+    #footer .footer-address,
+    #footer .footer-logo {grid-column: 1 / -1;}
+    #footer .footer-address {align-items: flex-start;}
+    #footer .footer-address p {text-align: left;}
+    #footer .footer-logo h2 {font-size: min(20vw, 80px);}
     #footer .spread-links {flex-wrap: wrap; gap: var(--spacing) var(--gutter);}
 }
