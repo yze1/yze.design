@@ -135,6 +135,7 @@ button.right {display: block; margin-right: 0; margin-left: auto;}
 #header:has(+ .underlap) .caption a:hover {--ink: var(--red); --text-noise: var(--red-noise);}
 #header:has(+ .underlap) .logo a:hover {--ink: var(--white); --text-noise: var(--white-noise);}
 #header.over-red :is(a, button) {--ink: var(--black); --text-noise: var(--black-noise);}
+#header.over-red :is(.logo, .caption) a {--ink: var(--black); --text-noise: var(--black-noise);}
 #header.over-red :is(a, button):hover {--ink: var(--white); --text-noise: var(--white-noise);}
 
 .holding-header .header-row .caption a:not([href$="/contact/"]):not([href="#contact"]),
